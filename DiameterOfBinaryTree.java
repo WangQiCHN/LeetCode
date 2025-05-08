@@ -1,6 +1,3 @@
-import java.util.Queue;
-import java.util.LinkedList;
-
 public class DiameterOfBinaryTree {
     public static int maxDepth = 0;
 
