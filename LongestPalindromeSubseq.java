@@ -2,7 +2,8 @@ class LongestPalindromeSubseq {
     public static void main() {
         LongestPalindromeSubseq c = new LongestPalindromeSubseq();
         String s = "cbbdcedfc";
-        c.longestPalindromeSubseq(s);
+        int result = c.longestPalindromeSubseq(s);
+        System.out.println(result);
     }
     private int[][] memo;
     public int longestPalindromeSubseq(String s) {
