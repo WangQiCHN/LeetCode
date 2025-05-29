@@ -24,11 +24,21 @@ public class PickIndex {
     }
 
     private int leftBound(int[] nums, int target) {
-        int i = 1;
-        while (nums[i] < target && i < nums.length + 1) {
-            i++;
-        }
+        // int i = 1;
+        // while (nums[i] < target && i < nums.length + 1) {
+        //     i++;
+        // }
+        int left = 0, right = nums.length;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            int v = nums[mid];
+            if (v >= target) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        } 
 
-        return i;
+        return left;
     }
 }
