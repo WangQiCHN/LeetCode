@@ -1,4 +1,3 @@
-package second;
 import java.util.*;
 
 class NQueens {

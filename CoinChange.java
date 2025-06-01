@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class Solution {
+class CoinChange {
     public static final int INIT_VALUE = -666;
     public static void main() {
         int[] coins = {1,2,5};
