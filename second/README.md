@@ -7,3 +7,4 @@ The second round of my LEETCODE, I will record the status of it
 4. 51 - **N-Queens** - Hard - 33'43"
 5. 111 - **Minimum Depth of Binary Tree** - Easy - 3'56"
 6. 752 - **Open the Lock** - Normal - 24'0"
+7. 104 - **Maximum Depth of Binary Tree** - Easy - 1'25"
