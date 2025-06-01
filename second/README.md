@@ -8,3 +8,4 @@ The second round of my LEETCODE, I will record the status of it
 5. 111 - **Minimum Depth of Binary Tree** - Easy - 3'56"
 6. 752 - **Open the Lock** - Normal - 24'0"
 7. 104 - **Maximum Depth of Binary Tree** - Easy - 1'25"
+8. 144 - **Binary Tree Preorder Traversal** - Easy - 1'52"
