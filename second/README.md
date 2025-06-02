@@ -9,4 +9,5 @@ The second round of my LEETCODE, I will record the status of it
 6. 752 - **Open the Lock** - Normal - 24'0"
 7. 104 - **Maximum Depth of Binary Tree** - Easy - 1'25"
 8. 144 - **Binary Tree Preorder Traversal** - Easy - 1'52"
-8. <span style="color:blue">543</span> - <span style="color:blue">**Diameter of Binary Tree**</span> - Easy - 10'24"
+9. 543 - **Diameter of Binary Tree** - Easy - 10'24"
+    > Error, do it again
