@@ -9,8 +9,6 @@ The second round of my LEETCODE, I will record the status of it
 6. 752 - **Open the Lock** - Normal - 24'0"
 7. 104 - **Maximum Depth of Binary Tree** - Easy - 1'25"
 8. 144 - **Binary Tree Preorder Traversal** - Easy - 1'52"
-9. 543 - **Diameter of Binary Tree** - Easy - 10'24"
-    > Error, do it again
+9. Error - 543 - **Diameter of Binary Tree** - Easy - 10'24"
 10. 704 - **Binary Search** - Easy - 1'52"
-11. 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 17'53"
-    > Error, do it again
+11. Error - 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 17'53"
