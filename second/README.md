@@ -12,3 +12,5 @@ The second round of my LEETCODE, I will record the status of it
 9. 543 - **Diameter of Binary Tree** - Easy - 10'24"
     > Error, do it again
 10. 704 - **Binary Search** - Easy - 1'52"
+11. 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 17'53"
+    > Error, do it again
