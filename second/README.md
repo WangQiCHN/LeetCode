@@ -11,3 +11,4 @@ The second round of my LEETCODE, I will record the status of it
 8. 144 - **Binary Tree Preorder Traversal** - Easy - 1'52"
 9. 543 - **Diameter of Binary Tree** - Easy - 10'24"
     > Error, do it again
+10. 543 - **Diameter of Binary Tree** - Easy - 10'24"
