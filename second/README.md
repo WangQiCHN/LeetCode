@@ -13,3 +13,4 @@ The second round of my LEETCODE, I will record the status of it
 10. 704 - **Binary Search** - Easy - 1'52"
 11. Error - 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 17'53"
 12. 76 - **Minimum Window Substring** - Hard - 41'56"
+13. 438 - **Find All Anagrams in a String** - Normal - 37'46"
