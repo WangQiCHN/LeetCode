@@ -15,3 +15,4 @@ The second round of my LEETCODE, I will record the status of it
 12. 76 - **Minimum Window Substring** - Hard - 41'56"
 13. 438 - **Find All Anagrams in a String** - Normal - 37'46"
 14. 3 - **Longest Substring Without Repeating Characters** - Normal - 13'54"
+15. 21 - **Merge Two Sorted Lists** - Easy - 2'22"
