@@ -19,3 +19,5 @@ The second round of my LEETCODE, I will record the status of it
 16. 21 - **Merge Two Sorted Lists** - Easy - 2'22"
 17. 23 - **Merge K Sorted Lists** - Hard - 13'49"
 18. 19 - **Remove Nth Node From End of List** - Normal - 7'38"
+19. 876 - **Middle of the Linked List** - Easy - 3'10"
+20. 141 - **Linked List Cycle** - Easy - 2'42"
