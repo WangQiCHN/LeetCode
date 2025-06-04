@@ -21,3 +21,5 @@ The second round of my LEETCODE, I will record the status of it
 18. 19 - **Remove Nth Node From End of List** - Normal - 7'38"
 19. 876 - **Middle of the Linked List** - Easy - 3'10"
 20. 141 - **Linked List Cycle** - Easy - 2'42"
+21. Error - 142 - **Linked List Cycle II** - Normal - 17'51"
+21. Error - 160 - **Intersection of Two Linked Lists** - Easy - 18'40"
