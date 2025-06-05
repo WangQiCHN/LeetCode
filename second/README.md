@@ -31,3 +31,4 @@ The second round of my LEETCODE, I will record the status of it
 28. 344 - **Reverse String** - Easy - 1'25"
 29. 5 - **Longest Palindromic Substring** - Normal - 22'10"
 30. 303 - **Range Sum Query - Immutable** - Easy - 8'31"
+31. 304 - **Range Sum Query 2D - Immutable** - Normal - 10'37"
