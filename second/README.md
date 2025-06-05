@@ -29,3 +29,4 @@ The second round of my LEETCODE, I will record the status of it
 26. 283 - **Move Zeroes** - Easy - 1'54"
 27. 167 - **Two Sum II - Input Array Is Sorted** - Normal - 3'08"
 28. 344 - **Reverse String** - Easy - 1'25"
+29. 5 - **Longest Palindromic Substring** - Normal - 22'10"
