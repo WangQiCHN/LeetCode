@@ -27,4 +27,5 @@ The second round of my LEETCODE, I will record the status of it
 24. 83 - **Remove Duplicates from Sorted List** - Easy - 3'35"
 25. 27 - **Remove Element** - Easy - 1'24"
 26. 283 - **Move Zeroes** - Easy - 1'54"
-26. 167 - **Two Sum II - Input Array Is Sorted** - Normal - 3'08"
+27. 167 - **Two Sum II - Input Array Is Sorted** - Normal - 3'08"
+28. 344 - **Reverse String** - Easy - 1'25"
