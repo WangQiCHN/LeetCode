@@ -33,3 +33,4 @@ The second round of my LEETCODE, I will record the status of it
 30. 303 - **Range Sum Query - Immutable** - Easy - 8'31"
 31. 304 - **Range Sum Query 2D - Immutable** - Normal - 10'37"
 32. 370 - **Range Addition** - Normal - 6'06"
+33. 1109 - **Corporate Flight Bookings** - Normal - 2'56"
