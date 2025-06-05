@@ -35,3 +35,4 @@ The second round of my LEETCODE, I will record the status of it
 32. 370 - **Range Addition** - Normal - 6'06"
 33. 1109 - **Corporate Flight Bookings** - Normal - 2'56"
 34. 1094 - **Car Pooling** - Normal - 12'54"
+35. Error - 146 - **LRU Cache** - Normal - 65'23"
