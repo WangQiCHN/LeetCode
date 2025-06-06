@@ -46,3 +46,4 @@ The second round of my LEETCODE, I will record the status of it
 43. 226 - **Invert Binary Tree** - Easy - 3'16"
 44. 116 - **Populating Next Right Pointers in Each Node** - Normal - 5'2"
 45. 114 - **Flatten binary Tree to Linked List** - Normal - 3'34"
+46. 654 - **Maximum Binary Tree** - Normal - 10'02"
