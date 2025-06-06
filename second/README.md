@@ -44,3 +44,5 @@ The second round of my LEETCODE, I will record the status of it
 41. 503 - **Next Greater Element II** - Normal - 6'23"
 42. 239 - **Sliding Window Maximum** - Hard - 33'03"
 43. 226 - **Invert Binary Tree** - Easy - 3'16"
+44. 116 - **Populating Next Right Pointers in Each Node** - Normal - 5'2"
+44. 116 - **Populating Next Right Pointers in Each Node** - Normal - 5'2"
