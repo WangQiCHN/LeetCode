@@ -43,3 +43,4 @@ The second round of my LEETCODE, I will record the status of it
 40. 739 - **Daily Temperatures** - Normal - 11'18"
 41. 503 - **Next Greater Element II** - Normal - 6'23"
 42. 239 - **Sliding Window Maximum** - Hard - 33'03"
+43. 226 - **Invert Binary Tree** - Easy - 3'16"
