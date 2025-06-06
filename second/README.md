@@ -37,3 +37,5 @@ The second round of my LEETCODE, I will record the status of it
 34. 1094 - **Car Pooling** - Normal - 12'54"
 35. Error - 146 - **LRU Cache** - Normal - 65'23"
 36. Error - 460 - **LFU Cache** - Hard - 43'07"
+37. Error - 380 - **Insert Delete GetRandom O(1)** - Normal - 27'14"
+
