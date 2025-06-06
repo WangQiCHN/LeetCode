@@ -40,3 +40,4 @@ The second round of my LEETCODE, I will record the status of it
 37. Error - 380 - **Insert Delete GetRandom O(1)** - Normal - 27'14"
 38. 710 - **Random Pick with Blacklist** - Hard - 9'40"
 39. 496 - **Next Greater Element I** - Easy - 16'18"
+40. 739 - **Daily Temperatures** - Normal - 11'18"
