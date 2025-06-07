@@ -48,3 +48,4 @@ The second round of my LEETCODE, I will record the status of it
 45. 114 - **Flatten binary Tree to Linked List** - Normal - 3'34"
 46. 654 - **Maximum Binary Tree** - Normal - 10'02"
 47. 105 - **Construct Binary Tree from Preorder and Inorder** - Normal - 21'55"
+48. 106 - **Construct Binary Tree from Inorder and Postorder** - Normal - 8'02"
