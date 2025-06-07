@@ -49,4 +49,4 @@ The second round of my LEETCODE, I will record the status of it
 46. 654 - **Maximum Binary Tree** - Normal - 10'02"
 47. 105 - **Construct Binary Tree from Preorder and Inorder** - Normal - 21'55"
 48. 106 - **Construct Binary Tree from Inorder and Postorder** - Normal - 8'02"
-48. 889 - **Construct Binary Tree from Preorder and Postorder** - Normal - 15'06"
+49. 889 - **Construct Binary Tree from Preorder and Postorder** - Normal - 15'06"
