@@ -50,3 +50,4 @@ The second round of my LEETCODE, I will record the status of it
 47. 105 - **Construct Binary Tree from Preorder and Inorder** - Normal - 21'55"
 48. 106 - **Construct Binary Tree from Inorder and Postorder** - Normal - 8'02"
 49. 889 - **Construct Binary Tree from Preorder and Postorder** - Normal - 15'06"
+37. Error - 297 - **Serialize and Deserialize Binary Tree** - Hard - 35'13"
