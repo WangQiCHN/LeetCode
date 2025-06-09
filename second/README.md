@@ -59,3 +59,4 @@ The second round of my LEETCODE, I will record the status of it
 56. 700 - **Search in a Binary Search Tree** - Easy - 1'32"
 57. 701 - **Insert into a Binary Search Tree** - Normal - 9'32"
 58. Error - 450 - **Delete Node in a BST** - Normal - 19'34"
+59. Error - 215 - **Kth Largest Element in an Array** - Normal - 24'16"
