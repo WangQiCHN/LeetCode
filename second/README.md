@@ -57,3 +57,4 @@ The second round of my LEETCODE, I will record the status of it
 54. 538 - **Convert BST to Greater Tree** - Normal - 2'04"
 55. Error - 98 - **Validate Binary Search Tree** - Normal - 33'11"
 56. 700 - **Search in a Binary Search Tree** - Easy - 1'32"
+57. 701 - **Insert into a Binary Search Tree** - Normal - 9'32"
