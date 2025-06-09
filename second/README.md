@@ -53,3 +53,4 @@ The second round of my LEETCODE, I will record the status of it
 50. Error - 297 - **Serialize and Deserialize Binary Tree** - Hard - 35'13"
 51. 912 - **Sort an Array** - Normal - 17'46"
 52. 315 - **Count of Smaller Numbers After Self** - Hard - 21'48"
+53. 230 - **Kth Smallest Element in a BST** - Normal - 4'05"
