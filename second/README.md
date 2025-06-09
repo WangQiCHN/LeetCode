@@ -55,3 +55,4 @@ The second round of my LEETCODE, I will record the status of it
 52. 315 - **Count of Smaller Numbers After Self** - Hard - 21'48"
 53. 230 - **Kth Smallest Element in a BST** - Normal - 4'05"
 54. 538 - **Convert BST to Greater Tree** - Normal - 2'04"
+55. Error - 98 - **Validate Binary Search Tree** - Normal - 33'11"
