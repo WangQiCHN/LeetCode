@@ -63,3 +63,5 @@ The second round of my LEETCODE, I will record the status of it
 60. 797 - **All Paths From Source to Target** - Normal - 15'31"
 61. 323 - **Number of Connected Components in an Undirected Graph** - Normal - 17'14"
 62. 130 - **Surrounded Regions** - Normal - 27'56"
+63. 990 - **Satisfiability of Equality Equations** - Normal - 8'25"
+64. 261 - **Graph Valid Tree** - Normal - 2'26"
