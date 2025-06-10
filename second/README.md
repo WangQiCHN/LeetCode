@@ -65,3 +65,4 @@ The second round of my LEETCODE, I will record the status of it
 62. 130 - **Surrounded Regions** - Normal - 27'56"
 63. 990 - **Satisfiability of Equality Equations** - Normal - 8'25"
 64. 261 - **Graph Valid Tree** - Normal - 2'26"
+65. 1135 - **Connecting Cities With Minimum Cost** - Normal - 10'51"
