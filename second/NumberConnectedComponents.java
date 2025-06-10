@@ -51,4 +51,11 @@ class UF {
 
         return x;
     }
+
+    public boolean isConnect(int p, int q) {
+        int rootP = findParent(p);
+        int rootQ = findParent(q);
+
+        return rootP == rootQ;
+    }
 }
