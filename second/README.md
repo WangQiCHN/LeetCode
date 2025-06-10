@@ -66,3 +66,4 @@ The second round of my LEETCODE, I will record the status of it
 63. 990 - **Satisfiability of Equality Equations** - Normal - 8'25"
 64. 261 - **Graph Valid Tree** - Normal - 2'26"
 65. 1135 - **Connecting Cities With Minimum Cost** - Normal - 10'51"
+66. 1584 - **Min Cost to Connect All Points** - Normal - 2'18"
