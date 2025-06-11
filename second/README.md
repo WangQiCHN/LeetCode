@@ -69,3 +69,4 @@ The second round of my LEETCODE, I will record the status of it
 66. 1584 - **Min Cost to Connect All Points** - Normal - 2'18"
 67. 78 - **Subsets** - Normal - 9'13"
 68. 77 - **Combinations** - Normal - 4'57"
+69. 46 - **Permutations** - Normal - 8'20"
