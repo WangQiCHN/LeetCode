@@ -68,3 +68,4 @@ The second round of my LEETCODE, I will record the status of it
 65. 1135 - **Connecting Cities With Minimum Cost** - Normal - 10'51"
 66. 1584 - **Min Cost to Connect All Points** - Normal - 2'18"
 67. 78 - **Subsets** - Normal - 9'13"
+68. 77 - **Combinations** - Normal - 4'57"
