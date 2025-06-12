@@ -4,7 +4,7 @@ import java.util.Stack;
 public class PartitionK {
     public static void main() {
         PartitionK p = new PartitionK();
-        int[] nums = {4,3,2,3,5,2,1};
+        int[] nums = {1,1,1,1,2,2,2,2};
         boolean result = p.canPartitionKSubsets(nums, 4);
         System.out.println(result);
     }
@@ -40,14 +40,25 @@ public class PartitionK {
                 if (stack.size() == n) {
                     return true;
                 }
+                System.out.print(index);
                 index = 0;
                 sum = 0;
             } else if (sum > target) {
+                index = stack.pop();
                 sum -= nums[index];
                 used[index] = false;
                 index = stack.pop();
+                sum -= nums[index];
                 used[index] = false;
-                index++;
+                if (sum == 0) {
+                    sum = target;
+                    index = stack.pop();
+                    sum -= nums[index];
+                    used[index] = false;
+                    index++;
+                } else {
+                    index++;
+                }
             } else {
                 index++;
             }
