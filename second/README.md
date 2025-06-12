@@ -78,3 +78,5 @@ The second round of my LEETCODE, I will record the status of it
 75. 200 - **Number of Islands** - Normal - 6'21"
 76. 1254 - **Number of Closed Islands** - Normal - 15'16"
 77. 695 - **Max Area of Island** - Normal - 5'36"
+
+79. 694 - **Number of Distinct Islands** - Normal - 34'43"
