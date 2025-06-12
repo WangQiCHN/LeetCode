@@ -83,3 +83,4 @@ The second round of my LEETCODE, I will record the status of it
 80. 694 - **Number of Distinct Islands** - Normal - 34'43"
 81. 773 - **Sliding Puzzle** - Normal - 28'04"
 82. 931 - **Minimum Falling Path Sum** - Normal - 31'23"
+83. 300 - **Longest Increasing Subsequence** - Normal - 7'24"
