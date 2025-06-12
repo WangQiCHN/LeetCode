@@ -82,3 +82,4 @@ The second round of my LEETCODE, I will record the status of it
 79. 1905 - **Count Sub Islands** - Normal - 5'58"
 80. 694 - **Number of Distinct Islands** - Normal - 34'43"
 81. 773 - **Sliding Puzzle** - Normal - 28'04"
+82. 931 - **Minimum Falling Path Sum** - Normal - 31'23"
