@@ -77,3 +77,4 @@ The second round of my LEETCODE, I will record the status of it
 74. Error - 698 - **Partition to K Equal Sum Subsets** - Normal - 45'14"
 75. 200 - **Number of Islands** - Normal - 6'21"
 76. 1254 - **Number of Closed Islands** - Normal - 15'16"
+77. 695 - **Max Area of Island** - Normal - 5'36"
