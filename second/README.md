@@ -91,3 +91,5 @@ The second round of my LEETCODE, I will record the status of it
 88. 583 - **Delete Operation for Two Strings** - Normal - 5'42"
 89. 712 - **Minimum ASCII Delete Sum for Two Strings** - Normal - 4'08"
 90. Error - 10 - **Regular Expression Matching** - Hard - 21'10"
+91. Error - 516 - **Longest Palindromic Subsequence** - Normal - 20'00"
+92. 1312 - **Minimum Insertion Steps to Make a String Palindrome** - Normal - 20'00"
