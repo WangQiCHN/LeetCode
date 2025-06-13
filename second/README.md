@@ -86,3 +86,4 @@ The second round of my LEETCODE, I will record the status of it
 83. 300 - **Longest Increasing Subsequence** - Normal - 7'24"
 84. Error - 354 - **Russian Doll Envelopes** - Hard - 25'23"
 85. 53 - **Maximum Subarray** - Normal - 9'16"
+86. 72 - **Edit Distance** - Normal - 10'21"
