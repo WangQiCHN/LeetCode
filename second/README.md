@@ -89,3 +89,4 @@ The second round of my LEETCODE, I will record the status of it
 86. 72 - **Edit Distance** - Normal - 10'21"
 87. 1143 - **Longest Common Subsequence** - Normal - 7'41"
 88. 583 - **Delete Operation for Two Strings** - Normal - 5'42"
+89. 712 - **Minimum ASCII Delete Sum for Two Strings** - Normal - 4'08"
