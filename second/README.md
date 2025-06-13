@@ -93,3 +93,4 @@ The second round of my LEETCODE, I will record the status of it
 90. Error - 10 - **Regular Expression Matching** - Hard - 21'10"
 91. Error - 516 - **Longest Palindromic Subsequence** - Normal - 20'00"
 92. 1312 - **Minimum Insertion Steps to Make a String Palindrome** - Normal - 5'00"
+93. Error - 416 - **Partition Equal Subset Sum** - Normal - 6'49"
