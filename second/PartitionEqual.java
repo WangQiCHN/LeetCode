@@ -23,6 +23,7 @@ public class PartitionEqual {
             for (int j = sum; j >= 0; j--) {
                 if (j - nums[i] >= 0) {
                     dp[j] = dp[j] || dp[j - nums[i]];
+                    System.out.println("i: " + i + ", j: " + j + ", nums[i]: " + nums[i] + ", dp[j]: " + dp[j]);
                 }
             }
         }
