@@ -103,3 +103,4 @@ The second round of my LEETCODE, I will record the status of it
 100. Error - 92 - **Reverse Linked List II** - Normal - 29'02"
 101. 870 - **Advantage Shuffle** - Normal - 17'08"
 102. Error - 316 - **Remove Duplicate Letters** - Normal - 17'08" - 反正不会做！！！
+103. 528 - **Random Pick with Weights** - Normal - 2'24"
