@@ -104,3 +104,4 @@ The second round of my LEETCODE, I will record the status of it
 101. 870 - **Advantage Shuffle** - Normal - 17'08"
 102. Error - 316 - **Remove Duplicate Letters** - Normal - 17'08" - 反正不会做！！！
 103. 528 - **Random Pick with Weights** - Normal - 2'24"
+104. 875 - **Koko Eating Bananas** - Normal - 11'56"
