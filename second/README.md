@@ -99,3 +99,4 @@ The second round of my LEETCODE, I will record the status of it
 96. Error - 174 - **Dungeon Game** - Hard - 23'59"
 97. Error - 887 - **Super Egg Drop** - Hard - 24'41"
 98. Error - 312 - **Burst Balloons** - Hard - 24'41" - 反正不会做！！！
+99. 206 - **Reverse Linked List** - Easy - 13'17"
