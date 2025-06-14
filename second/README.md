@@ -101,3 +101,4 @@ The second round of my LEETCODE, I will record the status of it
 98. Error - 312 - **Burst Balloons** - Hard - 24'41" - 反正不会做！！！
 99. 206 - **Reverse Linked List** - Easy - 13'17"
 100. Error - 92 - **Reverse Linked List II** - Normal - 29'02"
+101. 870 - **Advantage Shuffle** - Normal - 17'08"
