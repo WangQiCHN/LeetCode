@@ -123,7 +123,7 @@ The second round of my LEETCODE, I will record the status of it
 21. 142 - **Linked List Cycle II** - Normal - 3'25"
 22. 160 - **Intersection of Two Linked Lists** - Easy - 0'56"
 35. 146 - **LRU Cache** - Normal - 21'14"
-36. Error - 460 - **LFU Cache** - Hard - 43'07"
+36. 460 - **LFU Cache** - Hard - 29'40"
 37. Error - 380 - **Insert Delete GetRandom O(1)** - Normal - 27'14"
 50. Error - 297 - **Serialize and Deserialize Binary Tree** - Hard - 35'13"
 55. Error - 98 - **Validate Binary Search Tree** - Normal - 33'11"
