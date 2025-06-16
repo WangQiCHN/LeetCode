@@ -128,7 +128,7 @@ The second round of my LEETCODE, I will record the status of it
 50. 297 - **Serialize and Deserialize Binary Tree** - Hard - 7'51"
 55. 98 - **Validate Binary Search Tree** - Normal - 5'25"
 58. 450 - **Delete Node in a BST** - Normal - 7'23"
-59. Error - 215 - **Kth Largest Element in an Array** - Normal - 24'16"
+59. 215 - **Kth Largest Element in an Array** - Normal - 5'49"
 74. Error - 698 - **Partition to K Equal Sum Subsets** - Normal - 45'14"
 84. Error - 354 - **Russian Doll Envelopes** - Hard - 25'23"
 90. Error - 10 - **Regular Expression Matching** - Hard - 21'10"
