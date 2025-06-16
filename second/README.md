@@ -121,7 +121,7 @@ The second round of my LEETCODE, I will record the status of it
 9. 543 - **Diameter of Binary Tree** - Easy - 2'03"
 11. 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 2'54"
 21. 142 - **Linked List Cycle II** - Normal - 3'25"
-22. Error - 160 - **Intersection of Two Linked Lists** - Easy - 18'40"
+22. 160 - **Intersection of Two Linked Lists** - Easy - 0'56"
 35. Error - 146 - **LRU Cache** - Normal - 65'23"
 36. Error - 460 - **LFU Cache** - Hard - 43'07"
 37. Error - 380 - **Insert Delete GetRandom O(1)** - Normal - 27'14"
