@@ -126,7 +126,7 @@ The second round of my LEETCODE, I will record the status of it
 36. 460 - **LFU Cache** - Hard - 29'40"
 37. 380 - **Insert Delete GetRandom O(1)** - Normal - 20'00"
 50. 297 - **Serialize and Deserialize Binary Tree** - Hard - 7'51"
-55. Error - 98 - **Validate Binary Search Tree** - Normal - 33'11"
+55. 98 - **Validate Binary Search Tree** - Normal - 5'25"
 58. Error - 450 - **Delete Node in a BST** - Normal - 19'34"
 59. Error - 215 - **Kth Largest Element in an Array** - Normal - 24'16"
 74. Error - 698 - **Partition to K Equal Sum Subsets** - Normal - 45'14"
