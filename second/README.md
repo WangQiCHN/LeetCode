@@ -116,3 +116,26 @@ The second round of my LEETCODE, I will record the status of it
 113. 1650 - **Lowest Common Ancestor of a Binary Tree III** - Normal - 8'9"
 114. 1676 - **Lowest Common Ancestor of a Binary Tree IV** - Normal - 16'24"
 115. 235 - **Lowest Common Ancestor of a Binary Search Tree** - Normal - 3'47"
+
+
+9. 543 - **Diameter of Binary Tree** - Easy - 2'03"
+11. Error - 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 17'53"
+21. Error - 142 - **Linked List Cycle II** - Normal - 17'51"
+22. Error - 160 - **Intersection of Two Linked Lists** - Easy - 18'40"
+35. Error - 146 - **LRU Cache** - Normal - 65'23"
+36. Error - 460 - **LFU Cache** - Hard - 43'07"
+37. Error - 380 - **Insert Delete GetRandom O(1)** - Normal - 27'14"
+50. Error - 297 - **Serialize and Deserialize Binary Tree** - Hard - 35'13"
+55. Error - 98 - **Validate Binary Search Tree** - Normal - 33'11"
+58. Error - 450 - **Delete Node in a BST** - Normal - 19'34"
+59. Error - 215 - **Kth Largest Element in an Array** - Normal - 24'16"
+74. Error - 698 - **Partition to K Equal Sum Subsets** - Normal - 45'14"
+84. Error - 354 - **Russian Doll Envelopes** - Hard - 25'23"
+90. Error - 10 - **Regular Expression Matching** - Hard - 21'10"
+91. Error - 516 - **Longest Palindromic Subsequence** - Normal - 20'00"
+93. Error - 416 - **Partition Equal Subset Sum** - Normal - 6'49"
+96. Error - 174 - **Dungeon Game** - Hard - 23'59"
+97. Error - 887 - **Super Egg Drop** - Hard - 24'41"
+98. Error - 312 - **Burst Balloons** - Hard - 24'41" - 反正不会做！！！
+100. Error - 92 - **Reverse Linked List II** - Normal - 29'02"
+102. Error - 316 - **Remove Duplicate Letters** - Normal - 17'08" - 反正不会做！！！
