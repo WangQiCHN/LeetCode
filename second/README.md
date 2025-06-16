@@ -120,7 +120,7 @@ The second round of my LEETCODE, I will record the status of it
 
 9. 543 - **Diameter of Binary Tree** - Easy - 2'03"
 11. 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 2'54"
-21. Error - 142 - **Linked List Cycle II** - Normal - 17'51"
+21. 142 - **Linked List Cycle II** - Normal - 3'25"
 22. Error - 160 - **Intersection of Two Linked Lists** - Easy - 18'40"
 35. Error - 146 - **LRU Cache** - Normal - 65'23"
 36. Error - 460 - **LFU Cache** - Hard - 43'07"
@@ -139,3 +139,14 @@ The second round of my LEETCODE, I will record the status of it
 98. Error - 312 - **Burst Balloons** - Hard - 24'41" - 反正不会做！！！
 100. Error - 92 - **Reverse Linked List II** - Normal - 29'02"
 102. Error - 316 - **Remove Duplicate Letters** - Normal - 17'08" - 反正不会做！！！
+
+
+
+
+
+
+
+
+
+# 疑问
+1. 为什么34题用的是right = mid - 1，而之后的内容是right = mid
