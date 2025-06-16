@@ -124,7 +124,7 @@ The second round of my LEETCODE, I will record the status of it
 22. 160 - **Intersection of Two Linked Lists** - Easy - 0'56"
 35. 146 - **LRU Cache** - Normal - 21'14"
 36. 460 - **LFU Cache** - Hard - 29'40"
-37. Error - 380 - **Insert Delete GetRandom O(1)** - Normal - 27'14"
+37. 380 - **Insert Delete GetRandom O(1)** - Normal - 20'00"
 50. Error - 297 - **Serialize and Deserialize Binary Tree** - Hard - 35'13"
 55. Error - 98 - **Validate Binary Search Tree** - Normal - 33'11"
 58. Error - 450 - **Delete Node in a BST** - Normal - 19'34"
