@@ -130,7 +130,7 @@ The second round of my LEETCODE, I will record the status of it
 58. 450 - **Delete Node in a BST** - Normal - 7'23"
 59. 215 - **Kth Largest Element in an Array** - Normal - 5'49"
 74. 698 - **Partition to K Equal Sum Subsets** - Normal - 8'48"
-84. Error - 354 - **Russian Doll Envelopes** - Hard - 25'23"
+84. 354 - **Russian Doll Envelopes** - Hard - 7'53"
 90. Error - 10 - **Regular Expression Matching** - Hard - 21'10"
 91. Error - 516 - **Longest Palindromic Subsequence** - Normal - 20'00"
 93. Error - 416 - **Partition Equal Subset Sum** - Normal - 6'49"
