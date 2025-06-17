@@ -132,7 +132,7 @@ The second round of my LEETCODE, I will record the status of it
 74. 698 - **Partition to K Equal Sum Subsets** - Normal - 8'48"
 84. 354 - **Russian Doll Envelopes** - Hard - 7'53"
 90. 10 - **Regular Expression Matching** - Hard - 8'16"
-91. Error - 516 - **Longest Palindromic Subsequence** - Normal - 20'00"
+91. 516 - **Longest Palindromic Subsequence** - Normal - 3'16"
 93. Error - 416 - **Partition Equal Subset Sum** - Normal - 6'49"
 96. Error - 174 - **Dungeon Game** - Hard - 23'59"
 97. Error - 887 - **Super Egg Drop** - Hard - 24'41"
