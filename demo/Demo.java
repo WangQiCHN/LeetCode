@@ -4,58 +4,61 @@ import java.util.*;
 public class Demo {
     public static void main(String[] args) {
         Demo d = new Demo();
-        int[] nums = {4,3,2,3,5,2,1};
-        int k = 4;
-        boolean result = d.canPartitionKSubsets(nums, k);
-        System.out.println("Can partition into " + k + " subsets: " + result);
+        String s = "aab";
+        String p = "c*a*b";
+        boolean result = d.isMatch(s, p);
+        System.out.println("Is match: " + result);
     }
-    private int used = 0;
-    private HashMap<Integer, Boolean> memo = new HashMap<>();
-    public boolean canPartitionKSubsets(int[] nums, int k) {
-        int sum = 0;
-        for (int i : nums) {
-            sum += i;
+    private int[][] memo;
+    public boolean isMatch(String s, String p) {
+        int m = s.length();
+        int n = p.length();
+        memo = new int[m][n];
+        for (int[] me : memo) {
+            Arrays.fill(me, -1);
         }
-        if (sum % k != 0) return false;
-        int size = sum / k;
-
-        return calculate(nums, size, 0, 0, k);
+        return calculate(s, p, 0, 0);
     }
 
-    private boolean calculate(int[] nums, int size, int start, int current, int total) {
-        if (total == 0) {
+    private boolean calculate(String s, String p, int sIndex, int pIndex) {
+        if (pIndex == p.length()) {
+            return sIndex == s.length();
+        }
+
+        if (sIndex == s.length()) {
+            if ((p.length() - pIndex) % 2 == 1) {
+                return false;
+            }
+
+            for (int i = pIndex; i < p.length(); i += 2) {
+                if (i + 1 < p.length() && p.charAt(i + 1) != '*') {
+                    return false;
+                }
+            }
+
             return true;
         }
 
-        if (size == current) {
-            boolean result = calculate(nums, size, 0, 0, total - 1);
-            memo.put(used, result);
-            return result;
+        if (memo[sIndex][pIndex] != -1) {
+            return true;
         }
 
-        if (memo.containsKey(used)) {
-            return memo.get(used);
-        }
-
-        for (int i = start; i < nums.length; i++) {
-            if (((used >> i) & 1) == 1) {
-                continue;
-            }
-
-            if (nums[i] + current > size) {
-                continue;
+        boolean result = false;
+        if (s.charAt(sIndex) == p.charAt(pIndex) || p.charAt(pIndex) == '.') {
+            if (pIndex < p.length() - 1 && p.charAt(pIndex + 1) == '*') {
+                result = (calculate(s, p, sIndex + 1, pIndex) || calculate(s, p, sIndex, pIndex + 2));
             } else {
-                used |= (1 << i);
-                current += nums[i];
-                if (calculate(nums, size, i + 1, current, total)) {
-                    return true;
-                }
-                current -= nums[i];
-                used ^= (1 << i);
+                result = calculate(s, p, sIndex + 1, pIndex + 1);
+            }
+        } else {
+            if (pIndex < p.length() - 1 && p.charAt(pIndex + 1) == '*') {
+                result = calculate(s, p, sIndex, pIndex + 2);
+            } else {
+                result = false;
             }
         }
-
-        return false;
+        memo[pIndex][sIndex] = result ? 1: 0;
+        return result;
     }
 }
 

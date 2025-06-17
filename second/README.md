@@ -131,7 +131,7 @@ The second round of my LEETCODE, I will record the status of it
 59. 215 - **Kth Largest Element in an Array** - Normal - 5'49"
 74. 698 - **Partition to K Equal Sum Subsets** - Normal - 8'48"
 84. 354 - **Russian Doll Envelopes** - Hard - 7'53"
-90. Error - 10 - **Regular Expression Matching** - Hard - 21'10"
+90. 10 - **Regular Expression Matching** - Hard - 8'16"
 91. Error - 516 - **Longest Palindromic Subsequence** - Normal - 20'00"
 93. Error - 416 - **Partition Equal Subset Sum** - Normal - 6'49"
 96. Error - 174 - **Dungeon Game** - Hard - 23'59"
@@ -149,4 +149,5 @@ The second round of my LEETCODE, I will record the status of it
 
 
 # 疑问
-1. 为什么34题用的是right = mid - 1，而之后的内容是right = mid
+1. 为什么34题用的是right = mid - 1，而之后的内容是right = mid，是左闭右闭
+2. 为什么354题用的是right = mid，因为left < right，是左闭右开
