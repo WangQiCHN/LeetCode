@@ -4,51 +4,58 @@ import java.util.*;
 public class Demo {
     public static void main(String[] args) {
         Demo d = new Demo();
-        d.insert(1);
-        d.remove(2);
-        d.insert(2);
-        d.getRandom();
-        d.remove(1);
-        d.insert(2);
-        d.getRandom();
+        int[] nums = {4,3,2,3,5,2,1};
+        int k = 4;
+        boolean result = d.canPartitionKSubsets(nums, k);
+        System.out.println("Can partition into " + k + " subsets: " + result);
     }
-    private List<Integer> cache = new ArrayList<>();
-    private Map<Integer, Integer> val2Index = new HashMap<>();
-    public Demo() {
-        
+    private int used = 0;
+    private HashMap<Integer, Boolean> memo = new HashMap<>();
+    public boolean canPartitionKSubsets(int[] nums, int k) {
+        int sum = 0;
+        for (int i : nums) {
+            sum += i;
+        }
+        if (sum % k != 0) return false;
+        int size = sum / k;
+
+        return calculate(nums, size, 0, 0, k);
     }
-    
-    public boolean insert(int val) {
-        if (val2Index.containsKey(val)) {
-            return false;
-        } else {
-            cache.add(val);
-            int size = cache.size();
-            val2Index.put(val, size - 1);
+
+    private boolean calculate(int[] nums, int size, int start, int current, int total) {
+        if (total == 0) {
             return true;
         }
-    }
-    
-    public boolean remove(int val) {
-        if (val2Index.containsKey(val)) {
-            int size = cache.size();
-            int index = val2Index.get(val);
-            if (size - 1 != index) {
-                int temp = cache.get(size - 1);
-                val2Index.put(temp, index);
-                cache.set(index, temp);
+
+        if (size == current) {
+            boolean result = calculate(nums, size, 0, 0, total - 1);
+            memo.put(used, result);
+            return result;
+        }
+
+        if (memo.containsKey(used)) {
+            return memo.get(used);
+        }
+
+        for (int i = start; i < nums.length; i++) {
+            if (((used >> i) & 1) == 1) {
+                continue;
             }
-            val2Index.remove(val);
-            cache.remove(size - 1);
-            return true;
-        } else {
-            return false;
+
+            if (nums[i] + current > size) {
+                continue;
+            } else {
+                used |= (1 << i);
+                current += nums[i];
+                if (calculate(nums, size, i + 1, current, total)) {
+                    return true;
+                }
+                current -= nums[i];
+                used ^= (1 << i);
+            }
         }
-    }
-    
-    public int getRandom() {
-        Random r = new Random();
-        return cache.get(r.nextInt() % cache.size());
+
+        return false;
     }
 }
 
