@@ -1,29 +1,35 @@
 package demo;
 
 public class Demo {
-    private int[][] memo;
     public static void main(String[] args) {
         Demo d = new Demo();
-        int k = 3; 
-        int n = 14;
-        System.out.println("Minimum number of moves: " + d.superEggDrop(k, n));
+        int[] nums = {3, 1, 5, 8};
+        System.out.println("Maximum coins: " + d.maxCoins(nums));
     }
 
-    public int superEggDrop(int k, int n) {
-        memo = new int[k + 1][n + 1];
+    public int maxCoins(int[] nums) {
+        int n = nums.length;
+        int[] points = new int[n + 2];
+        int[][] dps = new int[n + 2][n + 2];
 
-        return calculate(k, n);
-    }
-
-    private int calculate(int K, int N) {
-        int m = 0;
-        while (memo[K][m] < N) {
-            m++;
-            for (int i = 1; i <= K; i++)
-                memo[i][m] = memo[i][m - 1] + memo[i - 1][m - 1] + 1;
+        points[0] = points[n + 1] = 1;
+        for (int i = 1; i <= n; i++) {
+            points[i] = nums[i - 1];
         }
 
-        return m;
+        for (int i = n; i >= 0; i--) {
+            for (int j = i + 2; j <= n + 1; j++) {
+                for (int k = i + 1; k < j; k++) {
+                    int temp1 = dps[i][k];
+                    int temp2 = dps[k][j];
+                    int temp3 = points[i] * points[k] * points[j];
+                    int temp = temp1 + temp2 + temp3;
+                    dps[i][j] = Math.max(dps[i][j], temp);
+                }
+            }
+        }
+
+        return dps[0][n + 1];
     }
 
 }
