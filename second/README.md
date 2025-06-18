@@ -138,7 +138,7 @@ The second round of my LEETCODE, I will record the status of it
 97. Error - 887 - **Super Egg Drop** - Hard - 24'41"
 98. Error - 312 - **Burst Balloons** - Hard - 24'41" - 反正不会做！！！
 100. 92 - **Reverse Linked List II** - Normal - 2'18"
-102. Error - 316 - **Remove Duplicate Letters** - Normal - 17'08" - 反正不会做！！！
+102. 316 - **Remove Duplicate Letters** - Normal - 7'20"
 
 
 
