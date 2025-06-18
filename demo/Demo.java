@@ -1,51 +1,29 @@
 package demo;
 
 public class Demo {
+    private int[][] memo;
     public static void main(String[] args) {
         Demo d = new Demo();
-        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
-        ListNode result = d.reverseBetween(head, 2, 4);
-        System.out.println("Reversed List: " + result.val);
+        int k = 3; 
+        int n = 14;
+        System.out.println("Minimum number of moves: " + d.superEggDrop(k, n));
     }
 
-    private ListNode successor;
+    public int superEggDrop(int k, int n) {
+        memo = new int[k + 1][n + 1];
 
-    public ListNode reverseBetween(ListNode head, int left, int right) {
-        if (left == 1) {
-            return reverseN(head, right);
+        return calculate(k, n);
+    }
+
+    private int calculate(int K, int N) {
+        int m = 0;
+        while (memo[K][m] < N) {
+            m++;
+            for (int i = 1; i <= K; i++)
+                memo[i][m] = memo[i][m - 1] + memo[i - 1][m - 1] + 1;
         }
 
-        head.next = reverseBetween(head.next, left - 1, right - 1);
-        return head;
+        return m;
     }
 
-    private ListNode reverseN(ListNode head, int n) {
-        if (n == 1) {
-            successor = head.next;
-            return head;
-        }
-
-        ListNode lastNode = reverseN(head.next, n - 1);
-        head.next.next = head;
-        head.next = successor;
-
-        return lastNode;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
 }

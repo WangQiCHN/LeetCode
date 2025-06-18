@@ -136,7 +136,7 @@ The second round of my LEETCODE, I will record the status of it
 93. 416 - **Partition Equal Subset Sum** - Normal - 3'22"
 96. 174 - **Dungeon Game** - Hard - 11'05"
 97. 887 - **Super Egg Drop** - Hard - 8'36"
-98. Error - 312 - **Burst Balloons** - Hard - 24'41" - 反正不会做！！！
+98. 312 - **Burst Balloons** - Hard - 3'10"
 100. 92 - **Reverse Linked List II** - Normal - 2'18"
 102. 316 - **Remove Duplicate Letters** - Normal - 7'20"
 
