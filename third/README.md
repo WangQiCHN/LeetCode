@@ -1,5 +1,5 @@
 | No. | Name | Diff. | Time | Efficiency |
-|-----|------|-------|------|------------|
+|:----|------|-------|-----:|-----------:|
 | 509 | **Fibonacci Number** | Easy | 3'14" | 100.00% |
 | 302 | **Coin Change** | Normal | Fail% | - |
 | 46 | **Permutations** | Normal | 5'50" | 13.68% |
