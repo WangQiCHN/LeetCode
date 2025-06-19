@@ -1,3 +1,8 @@
+| No. | Name | Diff. | Time | Efficiency |
+|-----|------|-------|------|------------|
+| 509 | **Fibonacci Number** | Easy | 3'14" | 100.00% |
+
+
 1. 509 - **Fibonacci Number** - Easy - 3'14" - 100.00%
 2. 322 - **Coin Change** - Normal - Fail%
 3. 46 - **Permutations** - Normal - 5'50 - 13.68%
