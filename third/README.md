@@ -1,7 +1,7 @@
 | No. | Name | Diff. | Time | Efficiency |
 |:----|------|-------|-----:|-----------:|
 | 509 | **Fibonacci Number** | Easy | 3'14" | 100.00% |
-| 302 | **Coin Change** | Normal | Fail% | - |
+| 322 | **Coin Change** | Normal | 4'44" | 5.12% |
 | 46 | **Permutations** | Normal | 5'50" | 13.68% |
 | 51 | **N-Queens** | Hard | 16'44" | 31.56% |
 | 111 | **Minimum Depth of Binary Tree** | Easy | 9'8" | 97.73% |
