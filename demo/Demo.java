@@ -1,35 +1,70 @@
 package demo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 public class Demo {
+
     public static void main(String[] args) {
         Demo d = new Demo();
-        int[] nums = {3, 1, 5, 8};
-        System.out.println("Maximum coins: " + d.maxCoins(nums));
+        String s = "cbaebabacd";
+        String t = "abc";
+        List<Integer> result = d.findAnagrams(s, t);
+        System.out.println("Result: " + result);
     }
-
-    public int maxCoins(int[] nums) {
-        int n = nums.length;
-        int[] points = new int[n + 2];
-        int[][] dps = new int[n + 2][n + 2];
-
-        points[0] = points[n + 1] = 1;
-        for (int i = 1; i <= n; i++) {
-            points[i] = nums[i - 1];
-        }
-
-        for (int i = n; i >= 0; i--) {
-            for (int j = i + 2; j <= n + 1; j++) {
-                for (int k = i + 1; k < j; k++) {
-                    int temp1 = dps[i][k];
-                    int temp2 = dps[k][j];
-                    int temp3 = points[i] * points[k] * points[j];
-                    int temp = temp1 + temp2 + temp3;
-                    dps[i][j] = Math.max(dps[i][j], temp);
-                }
+    private Map<Character, Integer> count = new HashMap<>();
+    public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> result = new ArrayList<>();
+        for (char c : p.toCharArray()) {
+            if (count.containsKey(c)) {
+                int v = count.get(c);
+                count.put(c, v + 1);
+            } else {
+                count.put(c, 1);
             }
         }
 
-        return dps[0][n + 1];
+        int left = 0, right = 0;
+        int s1 = s.length(), p1 = p.length();
+
+        while (right < s1) {
+            char c = s.charAt(right);
+            right++;
+
+            updateCount(c, -1);
+            if (right - left == p1) {
+                if (isValid()) {
+                    result.add(left);
+                }
+                char d = s.charAt(left);
+                updateCount(d, 1);
+                left++;
+            }
+        }
+
+    return result;
     }
 
+    private void updateCount(char c, int v) {
+        if (count.containsKey(c)) {
+            int v1 = count.get(c);
+            count.put(c, v + v1);
+        }
+    }
+
+    private boolean isValid() {
+        Iterator<Character> iter = count.keySet().iterator();
+
+        while (iter.hasNext()) {
+            char c = iter.next();
+            if (count.get(c) != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

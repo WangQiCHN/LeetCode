@@ -1,18 +1,18 @@
-1. 509 - **Fibonacci Number** - Easy - 3'12"
-2. 322 - **Coin Change** - Normal - 19'6"
-3. 46 - **Permutations** - Normal - 11'15"
-4. 51 - **N-Queens** - Hard - 33'43"
-5. 111 - **Minimum Depth of Binary Tree** - Easy - 3'56"
-6. 752 - **Open the Lock** - Normal - 24'0"
-7. 104 - **Maximum Depth of Binary Tree** - Easy - 1'25"
-8. 144 - **Binary Tree Preorder Traversal** - Easy - 1'52"
-9. 543 - **Diameter of Binary Tree** - Easy - 10'24"
-10. 704 - **Binary Search** - Easy - 1'52"
-11. 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 17'53"
-12. 76 - **Minimum Window Substring** - Hard - 41'56"
-13. 567 - **Permutation is String** - Normal - 13'21"
-14. 438 - **Find All Anagrams in a String** - Normal - 37'46"
-15. 3 - **Longest Substring Without Repeating Characters** - Normal - 13'54"
+1. 509 - **Fibonacci Number** - Easy - 3'14" - 100.00%
+2. 322 - **Coin Change** - Normal - Fail
+3. 46 - **Permutations** - Normal - 5'50 - 13.68%
+4. 51 - **N-Queens** - Hard - 16'44" - 31.56%
+5. 111 - **Minimum Depth of Binary Tree** - Easy - 9'8" - 97.73%
+6. 752 - **Open the Lock** - Normal - 14'43" - 17.53%
+7. 104 - **Maximum Depth of Binary Tree** - Easy - 2'05" - 100.00%
+8. 144 - **Binary Tree Preorder Traversal** - Easy - 1'29" - 100.00%
+9. 543 - **Diameter of Binary Tree** - Easy - 5'23" - 5.11%
+10. 704 - **Binary Search** - Easy - 1'43" - 100.00%
+11. 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 7'57" - 100.00%
+12. 76 - **Minimum Window Substring** - Hard - Fail
+13. 567 - **Permutation is String** - Normal - 18'56" - 21.73%
+14. 438 - **Find All Anagrams in a String** - Normal - 13'07" - 100%
+15. 3 - **Longest Substring Without Repeating Characters** - Normal - 5'43" - 66.10%
 16. 21 - **Merge Two Sorted Lists** - Easy - 2'22"
 17. 23 - **Merge K Sorted Lists** - Hard - 13'49"
 18. 19 - **Remove Nth Node From End of List** - Normal - 7'38"
