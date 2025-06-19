@@ -1,13 +1,13 @@
 | No. | Name | Diff. | Time | Efficiency |
 |-----|------|-------|------|------------|
 | 509 | **Fibonacci Number** | Easy | 3'14" | 100.00% |
+| 302 | **Coin Change** | Normal | Fail% | - |
+| 46 | **Permutations** | Normal | 5'50" | 13.68% |
+| 51 | **N-Queens** | Hard | 16'44" | 31.56% |
+| 111 | **Minimum Depth of Binary Tree** | Easy | 9'8" | 97.73% |
 
 
-1. 509 - **Fibonacci Number** - Easy - 3'14" - 100.00%
-2. 322 - **Coin Change** - Normal - Fail%
-3. 46 - **Permutations** - Normal - 5'50 - 13.68%
-4. 51 - **N-Queens** - Hard - 16'44" - 31.56%
-5. 111 - **Minimum Depth of Binary Tree** - Easy - 9'8" - 97.73%
+
 6. 752 - **Open the Lock** - Normal - 14'43" - 17.53%
 7. 104 - **Maximum Depth of Binary Tree** - Easy - 2'05" - 100.00%
 8. 144 - **Binary Tree Preorder Traversal** - Easy - 1'29" - 100.00%
