@@ -1,5 +1,7 @@
 import java.util.HashMap;
 
+import first.ListNode;
+
 public class LRUCache {
     public static void main() {
         // [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]

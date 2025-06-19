@@ -1,5 +1,8 @@
 import java.util.*;
 
+import first.LFUCache;
+import first.Node;
+
 class LFUCache {
     public static void main() {
         // [[2],[1,1],[2,2],[1],[3,3],[2],[3],[4,4],[1],[3],[4]]

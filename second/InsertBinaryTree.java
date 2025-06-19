@@ -1,3 +1,5 @@
+import first.TreeNode;
+
 public class InsertBinaryTree {
     public static void main() {
         InsertBinaryTree i = new InsertBinaryTree();

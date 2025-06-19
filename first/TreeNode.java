@@ -1,5 +1,6 @@
-import first.TreeNode;
+import TreeNode;
 
+package first;
 public class TreeNode {
     int val;
     TreeNode left;

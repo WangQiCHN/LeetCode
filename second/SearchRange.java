@@ -1,3 +1,5 @@
+import first.SearchRange;
+
 public class SearchRange {
     public static void main() {
         int[] coins = {5,7,7,8,8,10};

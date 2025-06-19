@@ -3,6 +3,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import first.FourSum;
+
 public class FourSum {
     public static void main(String[] args) {
         FourSum m = new FourSum();

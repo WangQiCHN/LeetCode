@@ -1,3 +1,5 @@
+import first.TreeNode;
+
 public class ValidateBinarySearchTree {
     public static void main() {
         TreeNode node1 = new TreeNode(45);

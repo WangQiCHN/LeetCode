@@ -1,5 +1,7 @@
 import java.util.*;
 
+import first.OpenLock;
+
 class OpenLock {
     public static void main() {
         OpenLock o2 = new OpenLock();

@@ -1,3 +1,5 @@
+import first.SurroundedRegions;
+
 public class SurroundedRegions {
     public static void main() {
         SurroundedRegions s = new SurroundedRegions();
