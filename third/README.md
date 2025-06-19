@@ -13,16 +13,16 @@
 13. 567 - **Permutation is String** - Normal - 18'56" - 21.73%
 14. 438 - **Find All Anagrams in a String** - Normal - 13'07" - 100%
 15. 3 - **Longest Substring Without Repeating Characters** - Normal - 5'43" - 66.10%
-16. 21 - **Merge Two Sorted Lists** - Easy - 2'22"
-17. 23 - **Merge K Sorted Lists** - Hard - 13'49"
-18. 19 - **Remove Nth Node From End of List** - Normal - 7'38"
-19. 876 - **Middle of the Linked List** - Easy - 3'10"
-20. 141 - **Linked List Cycle** - Easy - 2'42"
-21. 142 - **Linked List Cycle II** - Normal - 17'51"
-22. 160 - **Intersection of Two Linked Lists** - Easy - 18'40"
-23. 26 - **Remove Duplicates from Sorted Array** - Easy - 3'46"
-24. 83 - **Remove Duplicates from Sorted List** - Easy - 3'35"
-25. 27 - **Remove Element** - Easy - 1'24"
+16. 21 - **Merge Two Sorted Lists** - Easy - 2'42" - 100%
+17. 23 - **Merge K Sorted Lists** - Hard - 7'4" - 73.34%
+18. 19 - **Remove Nth Node From End of List** - Normal - 7'38" - 100.00%
+19. 876 - **Middle of the Linked List** - Easy - 0'54" - 100.00%
+20. 141 - **Linked List Cycle** - Easy - 1'55" - 100.00%
+21. 142 - **Linked List Cycle II** - Normal - 1'35" - 100.00%
+22. 160 - **Intersection of Two Linked Lists** - Easy - 1'48" - 99.87%
+23. 26 - **Remove Duplicates from Sorted Array** - Easy - 4'49" - 100.00%
+24. 83 - **Remove Duplicates from Sorted List** - Easy - 2'57" - 100.00%
+25. 27 - **Remove Element** - Easy - 7'12" - 100.00%
 26. 283 - **Move Zeroes** - Easy - 1'54"
 27. 167 - **Two Sum II - Input Array Is Sorted** - Normal - 3'08"
 28. 344 - **Reverse String** - Easy - 1'25"

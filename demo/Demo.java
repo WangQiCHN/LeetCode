@@ -10,61 +10,25 @@ public class Demo {
 
     public static void main(String[] args) {
         Demo d = new Demo();
-        String s = "cbaebabacd";
-        String t = "abc";
-        List<Integer> result = d.findAnagrams(s, t);
-        System.out.println("Result: " + result);
+        int[] s = {0,1,2,2,3,0,4,2};
+        int t = 2; 
+        System.out.println("Original array: " + d.removeElement(s, t));
     }
-    private Map<Character, Integer> count = new HashMap<>();
-    public List<Integer> findAnagrams(String s, String p) {
-        List<Integer> result = new ArrayList<>();
-        for (char c : p.toCharArray()) {
-            if (count.containsKey(c)) {
-                int v = count.get(c);
-                count.put(c, v + 1);
+    public int removeElement(int[] nums, int val) {
+        int left = 0, right = 0, n = nums.length;
+        for (; right < n; right++) {
+            if (nums[right] == val) {
+                continue;
             } else {
-                count.put(c, 1);
-            }
-        }
-
-        int left = 0, right = 0;
-        int s1 = s.length(), p1 = p.length();
-
-        while (right < s1) {
-            char c = s.charAt(right);
-            right++;
-
-            updateCount(c, -1);
-            if (right - left == p1) {
-                if (isValid()) {
-                    result.add(left);
+                if (left != right) {
+                    nums[left] = nums[right];
+                    left++;
+                } else {
+                    left++;
                 }
-                char d = s.charAt(left);
-                updateCount(d, 1);
-                left++;
             }
         }
 
-    return result;
-    }
-
-    private void updateCount(char c, int v) {
-        if (count.containsKey(c)) {
-            int v1 = count.get(c);
-            count.put(c, v + v1);
-        }
-    }
-
-    private boolean isValid() {
-        Iterator<Character> iter = count.keySet().iterator();
-
-        while (iter.hasNext()) {
-            char c = iter.next();
-            if (count.get(c) != 0) {
-                return false;
-            }
-        }
-
-        return true;
+        return left;
     }
 }
