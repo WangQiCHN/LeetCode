@@ -7,19 +7,18 @@
 | 46 | **Permutations** | Normal | 5'50" | 13.68% |
 | 51 | **N-Queens** | Hard | 16'44" | 31.56% |
 | 111 | **Minimum Depth of Binary Tree** | Easy | 9'8" | 97.73% |
+| 752 | **Open the Lock** | Normal | 14'43" | 17.53% |
+| 104 | **Maximum Depth of Binary Tree** | Easy | 2'5" | 100.00% |
+| 144 | **Binary Tree Preorder Traversal** | Easy | 1'29" | 100.00% |
+| 543 | **Diameter of Binary Tree** | Easy | 5'23" | 5.11% |
+| 704 | **Binary Search** | Easy | 1'43" | 100.00% |
+| 34 | **Find First and Last Position of Element in Sorted Array** | Normal | 7'57" | 100.00% |
+| 76 | **Minimum Window Substring** | Hard | Fail% | - |
+| 567 | **Permutation is String** | Normal | 18'56" | 21.73% |
+| 438 | **Find All Anagrams in a String** | Normal | 13'07" | 100.00% |
+| 3 | **Longest Substring Without Repeating Characters** | Normal | 5'43" | 66.10% |
 
 
-
-6. 752 - **Open the Lock** - Normal - 14'43" - 17.53%
-7. 104 - **Maximum Depth of Binary Tree** - Easy - 2'05" - 100.00%
-8. 144 - **Binary Tree Preorder Traversal** - Easy - 1'29" - 100.00%
-9. 543 - **Diameter of Binary Tree** - Easy - 5'23" - 5.11%
-10. 704 - **Binary Search** - Easy - 1'43" - 100.00%
-11. 34 - **Find First and Last Position of Element in Sorted Array** - Normal - 7'57" - 100.00%
-12. 76 - **Minimum Window Substring** - Hard - Fail%
-13. 567 - **Permutation is String** - Normal - 18'56" - 21.73%
-14. 438 - **Find All Anagrams in a String** - Normal - 13'07" - 100%
-15. 3 - **Longest Substring Without Repeating Characters** - Normal - 5'43" - 66.10%
 16. 21 - **Merge Two Sorted Lists** - Easy - 2'42" - 100%
 17. 23 - **Merge K Sorted Lists** - Hard - 7'4" - 73.34%
 18. 19 - **Remove Nth Node From End of List** - Normal - 7'38" - 100.00%
@@ -35,6 +34,9 @@
 28. 344 - **Reverse String** - Easy - 1'49" - 100.00%
 29. 5 - **Longest Palindromic Substring** - Normal - 6'56" - 91.24%
 30. 303 - **Range Sum Query - Immutable** - Easy - 4'38" - 100.00%
+
+
+
 31. 304 - **Range Sum Query 2D - Immutable** - Normal - 10'37"
 32. 370 - **Range Addition** - Normal - 6'06"
 33. 1109 - **Corporate Flight Bookings** - Normal - 2'56"
