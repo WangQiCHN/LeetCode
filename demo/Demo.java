@@ -1,34 +1,31 @@
 package demo;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
+import java.util.Stack;
+import java.util.HashMap;
 
 public class Demo {
-
-    public static void main(String[] args) {
+    public static void main() {
         Demo d = new Demo();
-        int[] s = {0,1,2,2,3,0,4,2};
-        int t = 2; 
-        System.out.println("Original array: " + d.removeElement(s, t));
+        int[] temperatures = {89,62,70,58,47,47,46,76,100,70};
+        d.dailyTemperatures(temperatures);
     }
-    public int removeElement(int[] nums, int val) {
-        int left = 0, right = 0, n = nums.length;
-        for (; right < n; right++) {
-            if (nums[right] == val) {
-                continue;
-            } else {
-                if (left != right) {
-                    nums[left] = nums[right];
-                    left++;
-                } else {
-                    left++;
-                }
+    public int[] dailyTemperatures(int[] temperatures) {
+        int[] result  = new int[temperatures.length];
+        Stack<Integer> s = new Stack<>();
+        for (int i = temperatures.length - 1; i >= 0; i--) {
+            while (!s.isEmpty() && temperatures[s.peek()] < temperatures[i]) {
+                s.pop();
             }
+            if (s.isEmpty()) {
+                result[i] = 0;
+            } else {
+                result[i] = s.peek() - i;
+            }
+            
+            s.push(i);
         }
 
-        return left;
+        return result;
     }
 }

@@ -1,4 +1,4 @@
-## Finish 29, Fail 1
+## Finish 39, Fail 1
 
 | No. | Name | Diff. | Time | Efficiency |
 |:----|------|-------|-----:|-----------:|
@@ -17,36 +17,34 @@
 | 567 | **Permutation is String** | Normal | 18'56" | 21.73% |
 | 438 | **Find All Anagrams in a String** | Normal | 13'07" | 100.00% |
 | 3 | **Longest Substring Without Repeating Characters** | Normal | 5'43" | 66.10% |
+| 21 | **Merge Two Sorted Lists** | Easy | 2'42" | 100.00% |
+| 23 | **Merge K Sorted Lists** | Hard | 7'4" | 73.34% |
+| 19 | **Remove Nth Node From End of List** | Normal | 7'38" | 100.00% |
+| 876 | **Middle of the Linked List** | Easy | 0'54" | 100.00% |
+| 141 | **Linked List Cycle** | Easy | 1'55" | 100.00% |
+| 142 | **Linked List Cycle II** | Normal | 1'35" | 100.00% |
+| 160 | **Intersection of Two Linked Lists** | Easy | 1'48" | 99.87% |
+| 26 | **Remove Duplicates from Sorted Array** | Easy | 4'49" | 100.00% |
+| 83 | **Remove Duplicates from Sorted List** | Easy | 2'57" | 100.00% |
+| 27 | **Remove Element** | Easy | 7'12" | 100.00% |
+| 283 | **Move Zeroes** | Easy | 5'54" | 40.20% |
+| 167 | **Two Sum II - Input Array Is Sorted** | Normal | 2'39" | 99.49% |
+| 344 | **Reverse String** | Easy | 1'49" | 100.00% |
+| 5 | **Longest Palindromic Substring** | Normal | 6'56" | 91.24% |
+| 303 | **Range Sum Query - Immutable** | Easy | 4'38" | 100.00% |
+| 304 | **Range Sum Query 2D - Immutable** | Normal | 24'13" | 79.36% |
+| 370 | **Range Addition** | Normal | 6'22" | 100.00% |
+| 1109 | **Corporate Flight Bookings** | Normal | 2'56" | 100.00% |
+| 1094 | **Car Pooling** | Normal | 5'49" | 99.50% |
+| 146 | **LRU Cache** | Normal | 21'59" | 75.72% |
+| 460 | **LFU Cache** | Normal | 10'17" | 91.21% |
+| 380 | **Insert Delete GetRandom O(1)** | Hard | 27'50" | 37.62% |
+| 710 | **Random Pick with Blacklist** | Hard | 8'21" | 49.43% |
+| 496 | **Next Greater Element I** | Easy | 16'18" | 93.93% |
+| 739 | **Daily Temperatures** | Normal | 11'08" | 11.84% |
 
 
-16. 21 - **Merge Two Sorted Lists** - Easy - 2'42" - 100%
-17. 23 - **Merge K Sorted Lists** - Hard - 7'4" - 73.34%
-18. 19 - **Remove Nth Node From End of List** - Normal - 7'38" - 100.00%
-19. 876 - **Middle of the Linked List** - Easy - 0'54" - 100.00%
-20. 141 - **Linked List Cycle** - Easy - 1'55" - 100.00%
-21. 142 - **Linked List Cycle II** - Normal - 1'35" - 100.00%
-22. 160 - **Intersection of Two Linked Lists** - Easy - 1'48" - 99.87%
-23. 26 - **Remove Duplicates from Sorted Array** - Easy - 4'49" - 100.00%
-24. 83 - **Remove Duplicates from Sorted List** - Easy - 2'57" - 100.00%
-25. 27 - **Remove Element** - Easy - 7'12" - 100.00%
-26. 283 - **Move Zeroes** - Easy - 5'54" - 40.20%
-27. 167 - **Two Sum II - Input Array Is Sorted** - Normal - 2'39" - 99.49%
-28. 344 - **Reverse String** - Easy - 1'49" - 100.00%
-29. 5 - **Longest Palindromic Substring** - Normal - 6'56" - 91.24%
-30. 303 - **Range Sum Query - Immutable** - Easy - 4'38" - 100.00%
 
-
-
-31. 304 - **Range Sum Query 2D - Immutable** - Normal - 10'37"
-32. 370 - **Range Addition** - Normal - 6'06"
-33. 1109 - **Corporate Flight Bookings** - Normal - 2'56"
-34. 1094 - **Car Pooling** - Normal - 12'54"
-35. 146 - **LRU Cache** - Normal - 65'23"
-36. 460 - **LFU Cache** - Hard - 43'07"
-37. 380 - **Insert Delete GetRandom O(1)** - Normal - 27'14"
-38. 710 - **Random Pick with Blacklist** - Hard - 9'40"
-39. 496 - **Next Greater Element I** - Easy - 16'18"
-40. 739 - **Daily Temperatures** - Normal - 11'18"
 41. 503 - **Next Greater Element II** - Normal - 6'23"
 42. 239 - **Sliding Window Maximum** - Hard - 33'03"
 43. 226 - **Invert Binary Tree** - Easy - 3'16"
