@@ -1,4 +1,6 @@
-## Finish 61, Fail 4
+## Finish 62, Fail 3
+
+### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 
 |  | No. | Name | Diff. | Time | Efficiency |
 |:--|:----|------|-------|-----:|-----------:|
@@ -52,7 +54,7 @@
 | 48 | 106 | **Construct Binary Tree from Inorder and Postorder** | Normal | 12'47" | 40.80% |
 | 49 | 889 | **Construct Binary Tree from Preorder and Postorder** | Normal | 23'18" | 100.00% |
 | 50 | 297 | **Serialize and Deserialize Binary Tree** | Hard | 8'32" | 94.91% |
-| 51 | 912 | **Sort an Array** | Normal | Fail% | - |
+| 51 | 912 | **Sort an Array** | Normal | 5'4" | 76.56% |
 | 52 | 315 | **Count of Smaller Numbers After Self** | Hard | Fail% | - |
 | 53 | 230 | **Kth Smallest Element in a BST** | Normal | 13'04" | 100.00% |
 | 54 | 538 | **Convert BST to Greater Tree** | Normal | 3'19" | 100.00% |
