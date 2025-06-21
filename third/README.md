@@ -1,4 +1,4 @@
-## Finish 39, Fail 1
+## Finish 48, Fail 2
 
 | No. | Name | Diff. | Time | Efficiency |
 |:----|------|-------|-----:|-----------:|
@@ -42,19 +42,17 @@
 | 710 | **Random Pick with Blacklist** | Hard | 8'21" | 49.43% |
 | 496 | **Next Greater Element I** | Easy | 16'18" | 93.93% |
 | 739 | **Daily Temperatures** | Normal | 11'08" | 11.84% |
+| 503 | **Next Greater Element II** | Normal | 4'50" | 14.27% |
+| 239 | **Sliding Window Maximum** | Hard | Fail% | - |
+| 226 | **Invert Binary Tree** | Easy | 1'24" | 100.00% |
+| 116 | **Populating Next Right Pointers in Each Node** | Normal | 3'25" | 55.74% |
+| 114 | **Flatten binary Tree to Linked List** | Normal | 4'42" | 100.00% |
+| 654 | **Maximum Binary Tree** | Normal | 5'36" | 97.82% |
+| 105 | **Construct Binary Tree from Preorder and Inorder** | Normal | 13'34" | 37.00% |
+| 106 | **Construct Binary Tree from Inorder and Postorder** | Normal | 12'47" | 40.80% |
+| 889 | **Construct Binary Tree from Preorder and Postorder** | Normal | 23'18" | 100.00% |
+| 297 | **Serialize and Deserialize Binary Tree** | Hard | 8'32" | 94.91% |
 
-
-
-41. 503 - **Next Greater Element II** - Normal - 6'23"
-42. 239 - **Sliding Window Maximum** - Hard - 33'03"
-43. 226 - **Invert Binary Tree** - Easy - 3'16"
-44. 116 - **Populating Next Right Pointers in Each Node** - Normal - 5'2"
-45. 114 - **Flatten binary Tree to Linked List** - Normal - 3'34"
-46. 654 - **Maximum Binary Tree** - Normal - 10'02"
-47. 105 - **Construct Binary Tree from Preorder and Inorder** - Normal - 21'55"
-48. 106 - **Construct Binary Tree from Inorder and Postorder** - Normal - 8'02"
-49. 889 - **Construct Binary Tree from Preorder and Postorder** - Normal - 15'06"
-50. 297 - **Serialize and Deserialize Binary Tree** - Hard - 35'13"
 51. 912 - **Sort an Array** - Normal - 17'46"
 52. 315 - **Count of Smaller Numbers After Self** - Hard - 21'48"
 53. 230 - **Kth Smallest Element in a BST** - Normal - 4'05"
