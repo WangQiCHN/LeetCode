@@ -1,4 +1,4 @@
-## Finish 56, Fail 4
+## Finish 61, Fail 4
 
 |  | No. | Name | Diff. | Time | Efficiency |
 |:--|:----|------|-------|-----:|-----------:|
@@ -62,13 +62,12 @@
 | 58 | 450 | **Delete Node in a BST** | Normal | 14'36" | 100.00% |
 | 59 | 215 | **Kth Largest Element in an Array** | Normal | 16'13" | 8.12% |
 | 60 | 797 | **All Paths From Source to Target** | Normal | 8'25" | 92.76% |
+| 61 | 323 | **Number of Connected Components in an Undirected Graph** | Normal | 16'48" | 57.85% |
+| 62 | 130 | **NSurrounded Regions** | Normal | 27'54" | 5.20% |
+| 63 | 990 | **Satisfiability of Equality Equations** | Normal | 3'59" | 80.30% |
+| 64 | 261 | **Graph Valid Tree** | Normal | 4'32" | 73.79% |
+| 65 | 1135 | **Connecting Cities With Minimum Cost** | Normal | 8'52" | 22.62% |
 
-
-61. 323 - **Number of Connected Components in an Undirected Graph** - Normal - 17'14"
-62. 130 - **Surrounded Regions** - Normal - 27'56"
-63. 990 - **Satisfiability of Equality Equations** - Normal - 8'25"
-64. 261 - **Graph Valid Tree** - Normal - 2'26"
-65. 1135 - **Connecting Cities With Minimum Cost** - Normal - 10'51"
 66. 1584 - **Min Cost to Connect All Points** - Normal - 2'18"
 67. 78 - **Subsets** - Normal - 9'13"
 68. 77 - **Combinations** - Normal - 4'57"

@@ -1,57 +1,117 @@
 package demo;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Demo {
     public static void main() {
         Demo d = new Demo();
-        int[] nums = {3, 2, 1, 5, 6, 4};
-        int k = 2;
-        int result = d.findKthLargest(nums, k);
-        System.out.println("The " + k + "th largest element is: " + result);
+        char[][] board = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
+        d.solve(board);
     }
 
-    private int answer;
-    public int findKthLargest(int[] nums, int k) {
-        int n = nums.length;
-        int realK = n - k;
-        traverse(nums, 0, n - 1, realK);
-        return answer;
-    }
+    public void solve(char[][] board) {
+        int m = board.length;
+        int n = board[0].length;
+        UF uf = new UF(m * n + 1);
+        int dummy = m*n;
 
-    private void traverse(int[] nums, int left, int right, int k) {
-        int j = partition(nums, left, right);
-        if (j == k) {
-            answer=nums[k];
-        } else if (j < k) {
-            traverse(nums, j + 1, right, k);
-        } else {
-            traverse(nums, left, j - 1, k);
+        for (int i = 0; i < n; i++) {
+            if (board[0][i] == 'O') {
+                uf.connect(dummy, i);
+            }
+            if (board[m - 1][i] == 'O') {
+                uf.connect(dummy,(m - 1) * n + i);
+            }
+        }
+        for (int j = 0; j < m; j++) {
+            if (board[j][0] == 'O') {
+                uf.connect(dummy, j * n);
+            }
+            if (board[j][n - 1] == 'O') {
+                uf.connect(dummy, j * n + n - 1);
+            }
+        }
+
+        for (int i = 1; i < m -1; i++) {
+            for (int j = 1; j < n - 1; j++) {
+                if (board[i][j] == '0') {
+                    if (board[i - 1][j] == 'O') {
+                        uf.connect(i * n + j, (i - 1) * n + j);
+                    }
+                    if (board[i + 1][j] == 'O') {
+                        uf.connect(i * n + j, (i + 1) * n + j);
+                    }
+                    if (board[i][j - 1] == 'O') {
+                        uf.connect(i * n + j, i * n + j - 1);
+                    }
+                    if (board[i][j + 1] == 'O') {
+                        uf.connect(i * n + j, i * n + j + 1);
+                    }
+                }
+            }
+        }
+
+        for (int i = 1; i < m -1; i++) {
+            for (int j = 1; j < n - 1; j++) {
+                if (board[i][j] == 'O') {
+                    if (!uf.isConnect(i * n + j, dummy)) {
+                        board[i][j] = 'X';
+                    }
+                }
+            }
         }
     }
 
-    private int partition(int[] nums, int left, int right) {
-        int p = nums[left];
-        int i = left + 1, j = right;
-        while (i <= j) {
-            while (i <= right && nums[i] <= p) {
-                i++;
-            }
-            while (j > left && nums[j] > p) {
-                j--;
-            }
+}
 
-            if (i > j) {
-                break;
-            }
-            swap(nums, i, j);
+
+class UF {
+    int count;
+    int[] parents;
+
+    public UF(int size) {
+        this.count = size;
+        parents = new int[size];
+        for (int i = 0; i < count; i++) {
+            parents[i] = i;
         }
-        swap(nums, left, j);
-
-        return j;
     }
 
-    private void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
+    public void connect(int p, int q) {
+        int parentP = find(p);
+        int parentQ = find(q);
+
+        if (parentP == parentQ) {
+            return;
+        }
+
+        parents[q] = parentP;
+        parents[parentQ] = parentP;
+        count--;
+    }
+
+    private int find(int p) {
+        List<Integer> buffer = new ArrayList<>();
+        while (parents[p] != p) {
+            buffer.add(p);
+            p = parents[p];
+        }
+
+        for (Integer b : buffer) {
+            parents[b] = p;
+        }
+
+        return p;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public boolean isConnect(int p, int q) {
+        int parentP = find(p);
+        int parentQ = find(q);
+
+        return (parentP == parentQ);
     }
 }
