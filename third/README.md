@@ -30,7 +30,7 @@
 | 26 | 283 | **Move Zeroes** | Easy | 5'54" | 40.20% |
 | 27 | 167 | **Two Sum II - Input Array Is Sorted** | Normal | 2'39" | 99.49% |
 | 28 | 344 | **Reverse String** | Easy | 1'49" | 100.00% |
-| 29 | 2 | 5 | **Longest Palindromic Substring** | Normal | 6'56" | 91.24% |
+| 29 | 5 | **Longest Palindromic Substring** | Normal | 6'56" | 91.24% |
 | 30 | 303 | **Range Sum Query - Immutable** | Easy | 4'38" | 100.00% |
 | 31 | 304 | **Range Sum Query 2D - Immutable** | Normal | 24'13" | 79.36% |
 | 32 | 370 | **Range Addition** | Normal | 6'22" | 100.00% |
