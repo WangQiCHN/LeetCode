@@ -3,56 +3,55 @@ package demo;
 public class Demo {
     public static void main() {
         Demo d = new Demo();
-        int[] preorder = {8,6,1,9,10,3,4,7,2,5};
-        int[] postorder ={9,1,6,2,7,4,3,5,10,8};
-        d.constructFromPrePost(preorder, postorder);
+        int[] nums = {3, 2, 1, 5, 6, 4};
+        int k = 2;
+        int result = d.findKthLargest(nums, k);
+        System.out.println("The " + k + "th largest element is: " + result);
     }
 
-    public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {
-        TreeNode root = createTree(preorder, 0, preorder.length - 1, postorder, 0, postorder.length - 1);
-
-        return root;
+    private int answer;
+    public int findKthLargest(int[] nums, int k) {
+        int n = nums.length;
+        int realK = n - k;
+        traverse(nums, 0, n - 1, realK);
+        return answer;
     }
 
-    private TreeNode createTree(int[] preorder, int prs, int pre, int[] postorder, int pos, int poe) {
-        if (prs > pre) return null;
-        int v = preorder[prs];
-        TreeNode node = new TreeNode(v);
+    private void traverse(int[] nums, int left, int right, int k) {
+        int j = partition(nums, left, right);
+        if (j == k) {
+            answer=nums[k];
+        } else if (j < k) {
+            traverse(nums, j + 1, right, k);
+        } else {
+            traverse(nums, left, j - 1, k);
+        }
+    }
 
-        // find the second node
-        if (pos < poe) {
-            int rightTop = postorder[poe - 1];
-            int index = prs + 1;
-            for (int i = prs + 1; i <= pre; i++) {
-                if (preorder[i] == rightTop) {
-                    index = i;
-                    break;
-                }
+    private int partition(int[] nums, int left, int right) {
+        int p = nums[left];
+        int i = left + 1, j = right;
+        while (i <= j) {
+            while (i <= right && nums[i] <= p) {
+                i++;
+            }
+            while (j > left && nums[j] > p) {
+                j--;
             }
 
-            node.left = createTree(preorder, prs + 1, index - 1, postorder, pos, pos + index - prs - 1 - 1);
-            node.right = createTree(preorder, index, pre, postorder, pos + index - prs - 1, poe - 1);
+            if (i > j) {
+                break;
+            }
+            swap(nums, i, j);
         }
+        swap(nums, left, j);
 
-        return node;
-    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
+        return j;
     }
 
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }

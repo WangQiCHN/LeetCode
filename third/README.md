@@ -1,4 +1,4 @@
-## Finish 48, Fail 2
+## Finish 56, Fail 4
 
 | No. | Name | Diff. | Time | Efficiency |
 |:----|------|-------|-----:|-----------:|
@@ -52,17 +52,18 @@
 | 106 | **Construct Binary Tree from Inorder and Postorder** | Normal | 12'47" | 40.80% |
 | 889 | **Construct Binary Tree from Preorder and Postorder** | Normal | 23'18" | 100.00% |
 | 297 | **Serialize and Deserialize Binary Tree** | Hard | 8'32" | 94.91% |
+| 912 | **Sort an Array** | Normal | Fail% | - |
+| 315 | **Count of Smaller Numbers After Self** | Hard | Fail% | - |
+| 230 | **Kth Smallest Element in a BST** | Normal | 13'04" | 100.00% |
+| 538 | **Convert BST to Greater Tree** | Normal | 3'19" | 100.00% |
+| 98 | **Validate Binary Search Tree** | Normal | 7'28" | 100.00% |
+| 700 | **Search in a Binary Search Tree** | Easy | 1'50" | 100.00% |
+| 701 | **Insert into a Binary Search Tree** | Normal | 4'51" | 100.00% |
+| 450 | **Delete Node in a BST** | Normal | 14'36" | 100.00% |
+| 215 | **Kth Largest Element in an Array** | Normal | 16'13" | 8.12% |
+| 797 | **All Paths From Source to Target** | Normal | 8'25" | 92.76% |
 
-51. 912 - **Sort an Array** - Normal - 17'46"
-52. 315 - **Count of Smaller Numbers After Self** - Hard - 21'48"
-53. 230 - **Kth Smallest Element in a BST** - Normal - 4'05"
-54. 538 - **Convert BST to Greater Tree** - Normal - 2'04"
-55. 98 - **Validate Binary Search Tree** - Normal - 33'11"
-56. 700 - **Search in a Binary Search Tree** - Easy - 1'32"
-57. 701 - **Insert into a Binary Search Tree** - Normal - 9'32"
-58. 450 - **Delete Node in a BST** - Normal - 19'34"
-59. 215 - **Kth Largest Element in an Array** - Normal - 24'16"
-60. 797 - **All Paths From Source to Target** - Normal - 15'31"
+
 61. 323 - **Number of Connected Components in an Undirected Graph** - Normal - 17'14"
 62. 130 - **Surrounded Regions** - Normal - 27'56"
 63. 990 - **Satisfiability of Equality Equations** - Normal - 8'25"
