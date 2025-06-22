@@ -1,4 +1,4 @@
-## Finish 72, Fail 3
+## Finish 77, Fail 3
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 
@@ -79,12 +79,13 @@
 | 73 | 39 | **Combination Sum** | Normal | 1‘18" | 89.61% |
 | 74 | 698 | **Partition to K Equal Sum Subsets** | Normal | 22'28" | 36.49% |
 | 75 | 200 | **Number of Islands** | Normal | 5'50" | 100.00% |
+| 76 | 1254 | **Number of Closed Islands** | Normal | 7'44" | 61.80% |
+| 77 | 1020 | **Number of Enclaves** | Normal | 3'26" | 45.02% |
+| 78 | 695 | **Max Area of Island** | Normal | 1'56" | 100.00% |
+| 79 | 1905 | **Count Sub Islands** | Normal | 4'30" | 82.10% |
+| 80 | 694 | **Number of Distinct Islands** | Normal | 4'32" | 85.00% |
 
-76. 1254 - **Number of Closed Islands** - Normal - 15'16"
-77. 1020 - **Number of Enclaves** - Normal - 3'24"
-78. 695 - **Max Area of Island** - Normal - 5'36"
-79. 1905 - **Count Sub Islands** - Normal - 5'58"
-80. 694 - **Number of Distinct Islands** - Normal - 34'43"
+
 81. 773 - **Sliding Puzzle** - Normal - 28'04"
 82. 931 - **Minimum Falling Path Sum** - Normal - 31'23"
 83. 300 - **Longest Increasing Subsequence** - Normal - 7'24"
