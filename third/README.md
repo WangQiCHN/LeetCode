@@ -74,12 +74,12 @@
 | 68 | 77 | **Combinations** | Normal | 3'28" | 23.04% |
 | 69 | 46 | **Permutations** | Normal | 5'10" | 13.48% |
 | 70 | 90 | **Subsets II** | Normal | 2'30" | 97.52% |
+| 71 | 40 | **Combination Sum II** | Normal | 8'31" | 99.84% |
+| 72 | 47 | **Permutations II** | Normal | 5'16" | 12.27% |
+| 73 | 39 | **Combination Sum** | Normal | 1‘18" | 89.61% |
+| 74 | 698 | **Partition to K Equal Sum Subsets** | Normal | 22'28" | 36.49% |
+| 75 | 200 | **Number of Islands** | Normal | 5'50" | 100.00% |
 
-71. 40 - **Combination Sum II** - Normal - 6'11"
-72. 47 - **Subsets II** - Normal - 10'19"
-73. 39 - **Combination Sum** - Normal - 5'12"
-74. 698 - **Partition to K Equal Sum Subsets** - Normal - 45'14"
-75. 200 - **Number of Islands** - Normal - 6'21"
 76. 1254 - **Number of Closed Islands** - Normal - 15'16"
 77. 1020 - **Number of Enclaves** - Normal - 3'24"
 78. 695 - **Max Area of Island** - Normal - 5'36"

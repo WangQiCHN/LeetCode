@@ -72,7 +72,7 @@ The second round of my LEETCODE, I will record the status of it
 69. 46 - **Permutations** - Normal - 8'20"
 70. 90 - **Subsets II** - Normal - 4'20"
 71. 40 - **Combination Sum II** - Normal - 6'11"
-72. 47 - **Subsets II** - Normal - 10'19"
+72. 47 - **Permutations II** - Normal - 10'19"
 73. 39 - **Combination Sum** - Normal - 5'12"
 74. Error - 698 - **Partition to K Equal Sum Subsets** - Normal - 45'14"
 75. 200 - **Number of Islands** - Normal - 6'21"
