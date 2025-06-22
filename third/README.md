@@ -1,4 +1,4 @@
-## Finish 62, Fail 3
+## Finish 67, Fail 3
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 
@@ -69,12 +69,12 @@
 | 63 | 990 | **Satisfiability of Equality Equations** | Normal | 3'59" | 80.30% |
 | 64 | 261 | **Graph Valid Tree** | Normal | 4'32" | 73.79% |
 | 65 | 1135 | **Connecting Cities With Minimum Cost** | Normal | 8'52" | 22.62% |
+| 66 | 1584 | **Min Cost to Connect All Points** | Normal | 9'56" | 55.58% |
+| 67 | 78 | **Subsets** | Normal | 6'21" | 100.00% |
+| 68 | 77 | **Combinations** | Normal | 3'28" | 23.04% |
+| 69 | 46 | **Permutations** | Normal | 5'10" | 13.48% |
+| 70 | 90 | **Subsets II** | Normal | 2'30" | 97.52% |
 
-66. 1584 - **Min Cost to Connect All Points** - Normal - 2'18"
-67. 78 - **Subsets** - Normal - 9'13"
-68. 77 - **Combinations** - Normal - 4'57"
-69. 46 - **Permutations** - Normal - 8'20"
-70. 90 - **Subsets II** - Normal - 4'20"
 71. 40 - **Combination Sum II** - Normal - 6'11"
 72. 47 - **Subsets II** - Normal - 10'19"
 73. 39 - **Combination Sum** - Normal - 5'12"
