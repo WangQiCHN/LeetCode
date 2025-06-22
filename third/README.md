@@ -89,13 +89,13 @@
 | 83 | 300 | **Longest Increasing Subsequence** | Normal | 13'50" | 87.38% |
 | 84 | 354 | **Russian Doll Envelopes** | Hard | 13'11" | 68.29% |
 | 85 | 53 | **Maximum Subarray** | Normal | 2'48" | 100.00% |
+| 86 | 72 | **Edit Distance** | Normal | 11'11" | 97.86% |
+| 87 | 1143 | **Longest Common Subsequence** | Normal | 4'50" | 5.78% |
+| 88 | 583 | **Delete Operation for Two Strings** | Normal | 3'01" | 9.62% |
+| 89 | 712 | **Minimum ASCII Delete Sum for Two Strings** | Normal | 3'28" | 12.03% |
+| 90 | 10 | **Regular Expression Matching** | Hard | 17'37" | 100.00% |
 
 
-86. 72 - **Edit Distance** - Normal - 10'21"
-87. 1143 - **Longest Common Subsequence** - Normal - 7'41"
-88. 583 - **Delete Operation for Two Strings** - Normal - 5'42"
-89. 712 - **Minimum ASCII Delete Sum for Two Strings** - Normal - 4'08"
-90. 10 - **Regular Expression Matching** - Hard - 21'10"
 91. 516 - **Longest Palindromic Subsequence** - Normal - 20'00"
 92. 1312 - **Minimum Insertion Steps to Make a String Palindrome** - Normal - 5'00"
 93. 416 - **Partition Equal Subset Sum** - Normal - 6'49"
