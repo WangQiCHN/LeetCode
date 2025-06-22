@@ -1,67 +1,38 @@
 package demo;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Demo {
     public static void main() {
         Demo d = new Demo();
-        int[] nums = {2,2,2,2,3,4,5};
-        int k = 4;
-        System.out.println(d.canPartitionKSubsets(nums, k));
+        int nums[] = {10, 9, 2, 5, 3, 7, 101, 18};
+        System.out.println(d.lengthOfLIS(nums));
     }
 
-    private Map<Integer, Boolean> memo = new HashMap<>();
-    public boolean canPartitionKSubsets(int[] nums, int k) {
-        int sum = 0;
-        for (int i : nums) {
-            sum += i;
-        }
+    public int lengthOfLIS(int[] nums) {
+        int piles = 0;
+        int n = nums.length;
+        int[] tops = new int[n];
 
-        if (sum % k != 0) {
-            return false;
-        }
-        sum /= k;
-
-        Arrays.sort(nums);
-
-        int used = 0;
-
-        return calculate(nums, sum, 0, k, used);
-    }
-
-    private boolean calculate(int[] nums, int sum, int current, int k, int used) {
-        if (k == 0) {
-            return true;
-        }
-        if (sum == current) {
-            return calculate(nums, sum, 0, k - 1, used);
-        }
-
-        if (memo.containsKey(used)) {
-            return memo.get(used);
-        }
-
-        boolean result = false;
-        for (int i = 0; i < nums.length; i++) {
-            if((used & (1 << i)) > 0) {
-                continue;
-            }
+        for (int i = 0; i < n; i++) {
             int v = nums[i];
-            if (v + current <= sum) {
-                used |= (1 << i);
-                if (calculate(nums, sum, current + v, k, used)) {
-                    result = true;
-                    break;
+            int left = 0, right = piles;
+            while (left < right) {
+                int mid = left + (right - left) / 2;
+                if (tops[mid] > v) {
+                    right = mid;
+                } else {
+                    left = mid + 1;
                 }
-                used ^= (1 << i);
+            }
+
+            if (left == piles) {
+                tops[piles] = v;
+                piles++;
             } else {
-                break;
+                tops[left] = v;
             }
         }
 
-        memo.put(used, result);
-        return result;
+        return piles;
     }
 }

@@ -1,4 +1,4 @@
-## Finish 77, Fail 3
+## Finish 82, Fail 3
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 
@@ -84,13 +84,13 @@
 | 78 | 695 | **Max Area of Island** | Normal | 1'56" | 100.00% |
 | 79 | 1905 | **Count Sub Islands** | Normal | 4'30" | 82.10% |
 | 80 | 694 | **Number of Distinct Islands** | Normal | 4'32" | 85.00% |
+| 81 | 773 | **Sliding Puzzle** | Hard | 20'30" | 90.25% |
+| 82 | 931 | **Minimum Falling Path Sum** | Normal | 17'53" | 96.81% |
+| 83 | 300 | **Longest Increasing Subsequence** | Normal | 13'50" | 87.38% |
+| 84 | 354 | **Russian Doll Envelopes** | Hard | 13'11" | 68.29% |
+| 85 | 53 | **Maximum Subarray** | Normal | 2'48" | 100.00% |
 
 
-81. 773 - **Sliding Puzzle** - Normal - 28'04"
-82. 931 - **Minimum Falling Path Sum** - Normal - 31'23"
-83. 300 - **Longest Increasing Subsequence** - Normal - 7'24"
-84. 354 - **Russian Doll Envelopes** - Hard - 25'23"
-85. 53 - **Maximum Subarray** - Normal - 9'16"
 86. 72 - **Edit Distance** - Normal - 10'21"
 87. 1143 - **Longest Common Subsequence** - Normal - 7'41"
 88. 583 - **Delete Operation for Two Strings** - Normal - 5'42"
