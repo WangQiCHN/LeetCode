@@ -1,4 +1,4 @@
-## Finish 82, Fail 3
+## Finish 90, Fail 5
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 
@@ -94,13 +94,13 @@
 | 88 | 583 | **Delete Operation for Two Strings** | Normal | 3'01" | 9.62% |
 | 89 | 712 | **Minimum ASCII Delete Sum for Two Strings** | Normal | 3'28" | 12.03% |
 | 90 | 10 | **Regular Expression Matching** | Hard | 17'37" | 100.00% |
+| 91 | 516 | **Longest Palindromic Subsequence** | Normal | 31'26" | 5.96% |
+| 92 | 1312 | **Minimum Insertion Steps to Make a String Palindrome** | Harad | 1'20" | 9.46% |
+| 93 | 416 | **Partition Equal Subset Sum** | Normal | Fail% | - |
+| 94 | 518 | **Coin Change II** | Normal | Fail% | - |
+| 95 | 64 | **Minimum Path Sum** | Normal | 6'42" | 99.79% |
 
 
-91. 516 - **Longest Palindromic Subsequence** - Normal - 20'00"
-92. 1312 - **Minimum Insertion Steps to Make a String Palindrome** - Normal - 5'00"
-93. 416 - **Partition Equal Subset Sum** - Normal - 6'49"
-94. 518 - **Coin Change II** - Normal - 4'22"
-95. 64 - **Minimum Path Sum** - Normal - 5'12"
 96. 174 - **Dungeon Game** - Hard - 23'59"
 97. 887 - **Super Egg Drop** - Hard - 24'41"
 98. 312 - **Burst Balloons** - Hard - 24'41" - 反正不会做！！！

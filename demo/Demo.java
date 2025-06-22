@@ -1,38 +1,41 @@
 package demo;
 
+import java.util.Arrays;
 
 public class Demo {
     public static void main() {
         Demo d = new Demo();
-        int nums[] = {10, 9, 2, 5, 3, 7, 101, 18};
-        System.out.println(d.lengthOfLIS(nums));
+        int[] nums = {1,2,5};
+        int amount = 5;
+        System.out.println(d.change(amount, nums));
     }
 
-    public int lengthOfLIS(int[] nums) {
-        int piles = 0;
-        int n = nums.length;
-        int[] tops = new int[n];
-
+    private int answer = 0;
+    public int change(int amount, int[] coins) {
+        if (amount == 0) return 1;
+        Arrays.sort(coins);
+        int n = coins.length;
         for (int i = 0; i < n; i++) {
-            int v = nums[i];
-            int left = 0, right = piles;
-            while (left < right) {
-                int mid = left + (right - left) / 2;
-                if (tops[mid] > v) {
-                    right = mid;
-                } else {
-                    left = mid + 1;
-                }
+            int v = coins[i];
+            if (v > amount) {
+                continue;
             }
-
-            if (left == piles) {
-                tops[piles] = v;
-                piles++;
-            } else {
-                tops[left] = v;
-            }
+            calculate(coins, amount - v, i);
         }
+        return answer;
+    }
 
-        return piles;
+    private void calculate(int[] coins, int amount, int start) {
+        if (amount == 0) {
+            answer++;
+        }
+        int n = coins.length;
+        for (int i = start; i < n; i++) {
+            int v = coins[i];
+            if (v > amount) {
+                continue;
+            }
+            calculate(coins, amount - v, i);
+        }
     }
 }
