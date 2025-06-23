@@ -1,34 +1,41 @@
 package demo;
 
+import java.util.Stack;
 
 public class Demo {
     public static void main() {
-        Demo d = new Demo();
-        int[] nums = {3, 1, 5, 8};
-        System.out.println(d.maxCoins(nums));
+        int[] nums = {1,3,5};
+        Demo d = new Demo(nums);
+        for (int i = 0; i < 9; i++) {
+            System.out.println(d.pickIndex(i));
+        }
     }
 
-    int[][] memo;
-    public int maxCoins(int[] nums) {
-        int n = nums.length;
-        int[] points = new int[n + 2];
-        points[0] = points[n + 1] = 1;
-        for(int i = 1; i < n + 1; i++) {
-            points[i] = nums[i - 1];
+    private int[] p;
+    private int sum;
+    public Demo(int[] w) {
+        int n = w.length;
+        p = new int[n + 1];
+        for (int i = 1; i < n + 1; i++) {
+            sum += w[i - 1];
+            p[i] = sum;
         }
+    }
+    
+    public int pickIndex(int v) {
+        // int v = (int)(Math.random() * sum);
 
-        memo = new int[n + 2][n + 2];
-        for (int i = n - 1; i >= 0; i--) {
-            for (int j = i + 1; j <= n + 1; j++) {
-                for(int k = i + 1; k < j; k++) {
-                    memo[i][j] = Math.max(
-                        memo[i][j],
-                        memo[i][k] + memo[k][j] + points[i] * points[k] * points[j]
-                    );
-                }
+        int left = 0, right = p.length - 1;
+        while (left < right) {
+            int mid = (right - left) / 2 + left;
+            if (p[mid] > v) {
+                right = mid;
+            } else {
+                left = mid + 1;
             }
         }
 
-        return memo[0][n + 1];
+        return left - 1;
+
     }
 }

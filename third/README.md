@@ -1,6 +1,7 @@
-## Finish 95, Fail 5
+## Finish 100, Fail 5
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
+### 103如何使用二分查找？
 
 |  | No. | Name | Diff. | Time | Efficiency |
 |:--|:----|------|-------|-----:|-----------:|
@@ -104,13 +105,12 @@
 | 98 | 312 | **Burst Balloons** | Hard | 25'12" | 92.75% |
 | 99 | 206 | **Reverse Linked List** | Easy | 2'49" | 100.00% |
 | 100 | 92 | **Reverse Linked List II** | Normal | 9'38" | 100.00% |
+| 101 | 870 | **Advantage Shuffle** | Normal | 10'43" | 24.90% |
+| 102 | 316 | **Remove Duplicate Letters** | Normal | 18'12" | 70.83% |
+| 103 | 528 | **Random Pick with Weights** | Normal | 9'52" | 57.10% |
+| 104 | 875 | **Koko Eating Bananas** | Normal | 6'27" | 53.74% |
+| 105 | 1011 | **Capacity To Ship Packages Within D Days** | Normal | 6'47" | 86.26% |
 
-
-101. 870 - **Advantage Shuffle** - Normal - 17'08"
-102. 316 - **Remove Duplicate Letters** - Normal - 17'08" - 反正不会做！！！
-103. 528 - **Random Pick with Weights** - Normal - 2'24"
-104. 875 - **Koko Eating Bananas** - Normal - 11'56"
-105. 1011 - **Capacity To Ship Packages Within D Days** - Normal - 16'55"
 106. 410 - **Split Array Largest Sum** - Hard - 9'52"
 107. 42 - **Trapping Rain Water** - Hard - 6'34"
 108. 11 - **Container With Most Water** - Normal - 10'48"
