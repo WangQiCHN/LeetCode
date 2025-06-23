@@ -1,4 +1,4 @@
-## Finish 90, Fail 5
+## Finish 95, Fail 5
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 
@@ -99,13 +99,13 @@
 | 93 | 416 | **Partition Equal Subset Sum** | Normal | Fail% | - |
 | 94 | 518 | **Coin Change II** | Normal | Fail% | - |
 | 95 | 64 | **Minimum Path Sum** | Normal | 6'42" | 99.79% |
+| 96 | 174 | **Dungeon Game** | Hard | 11'44" | 100.00% |
+| 97 | 887 | **Super Egg Drop** | Hard | 24'14" | 52.35% |
+| 98 | 312 | **Burst Balloons** | Hard | 25'12" | 92.75% |
+| 99 | 206 | **Reverse Linked List** | Easy | 2'49" | 100.00% |
+| 100 | 92 | **Reverse Linked List II** | Normal | 9'38" | 100.00% |
 
 
-96. 174 - **Dungeon Game** - Hard - 23'59"
-97. 887 - **Super Egg Drop** - Hard - 24'41"
-98. 312 - **Burst Balloons** - Hard - 24'41" - 反正不会做！！！
-99. 206 - **Reverse Linked List** - Easy - 13'17"
-100. 92 - **Reverse Linked List II** - Normal - 29'02"
 101. 870 - **Advantage Shuffle** - Normal - 17'08"
 102. 316 - **Remove Duplicate Letters** - Normal - 17'08" - 反正不会做！！！
 103. 528 - **Random Pick with Weights** - Normal - 2'24"

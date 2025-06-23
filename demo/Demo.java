@@ -1,41 +1,34 @@
 package demo;
 
-import java.util.Arrays;
 
 public class Demo {
     public static void main() {
         Demo d = new Demo();
-        int[] nums = {1,2,5};
-        int amount = 5;
-        System.out.println(d.change(amount, nums));
+        int[] nums = {3, 1, 5, 8};
+        System.out.println(d.maxCoins(nums));
     }
 
-    private int answer = 0;
-    public int change(int amount, int[] coins) {
-        if (amount == 0) return 1;
-        Arrays.sort(coins);
-        int n = coins.length;
-        for (int i = 0; i < n; i++) {
-            int v = coins[i];
-            if (v > amount) {
-                continue;
-            }
-            calculate(coins, amount - v, i);
+    int[][] memo;
+    public int maxCoins(int[] nums) {
+        int n = nums.length;
+        int[] points = new int[n + 2];
+        points[0] = points[n + 1] = 1;
+        for(int i = 1; i < n + 1; i++) {
+            points[i] = nums[i - 1];
         }
-        return answer;
-    }
 
-    private void calculate(int[] coins, int amount, int start) {
-        if (amount == 0) {
-            answer++;
-        }
-        int n = coins.length;
-        for (int i = start; i < n; i++) {
-            int v = coins[i];
-            if (v > amount) {
-                continue;
+        memo = new int[n + 2][n + 2];
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = i + 1; j <= n + 1; j++) {
+                for(int k = i + 1; k < j; k++) {
+                    memo[i][j] = Math.max(
+                        memo[i][j],
+                        memo[i][k] + memo[k][j] + points[i] * points[k] * points[j]
+                    );
+                }
             }
-            calculate(coins, amount - v, i);
         }
+
+        return memo[0][n + 1];
     }
 }
