@@ -1,69 +1,62 @@
 package demo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int x) {
+        val = x;
+    }
+}
 
 public class Demo {
+    private boolean isFound;
+
     public static void main() {
-        int[] nums = {1000000000,1000000000,1000000000,1000000000};
         Demo d = new Demo();
-        int target = -294967296;
-        System.out.println(d.fourSum(nums, target));
+        TreeNode p = new TreeNode(4611);
+        TreeNode q = new TreeNode(10604);
+        d.lowestCommonAncestor(null, null, null);
     }
 
-    private List<List<Integer>> result = new ArrayList<>();
-    private List<Integer> item = new LinkedList<>();
-    public List<List<Integer>> fourSum(int[] nums, int target) {
-        int n = nums.length;
-        Arrays.sort(nums);
-        for (int i = 0; i < n - 3; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) continue;
-            for (int j = i + 1; j < n - 2; j++) {
-                if (j > i + 1 && nums[j] == nums[j - 1]) continue;
-                long v = target - nums[i] - nums[j];
-                item.addLast(nums[i]);
-                item.addLast(nums[j]);
-                calculate2(nums, v, j);
-                item.removeLast();
-                item.removeLast();
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null)
+            return null;
+        if (root.val == p.val) {
+            if (find(root, q)) {
+                isFound = true;
             }
+            return root;
+        }
+        if (root.val == q.val) {
+            if (find(root, p)) {
+                isFound = true;
+            }
+            return root;
         }
 
-        return result;
-    }
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-    private void calculate2(int[] nums, long total, int start) {
-        int left = start + 1, right = nums.length - 1;
-        while (left < right) {
-            int l = nums[left];
-            int r = nums[right];
-            long sum = l + r;
-            if (sum > total) {
-                right--;
-            } else if (sum < total) {
-                left++;
+        if (left != null && right != null) {
+            isFound = true;
+            return root;
+        } else {
+            if (!isFound) {
+                return null;
             } else {
-                item.addLast(l);
-                item.addLast(r);
-                result.add(new ArrayList<>(item));
-                item.removeLast();
-                item.removeLast();
-                left++;
-                right--;
-
-                while (left < right && nums[left] == l) {
-                    left++;
-                }
-
-                while (right > left && nums[right] == r) {
-                    right--;
-                }
-
-                if (left >= right) break;
+                return left == null ? right : left;
             }
         }
+    }
+
+    private boolean find(TreeNode node, TreeNode child) {
+        if (node == null)
+            return false;
+        else if (node.val == child.val)
+            return true;
+        else
+            return find(node.left, child) || find(node.right, child);
     }
 }

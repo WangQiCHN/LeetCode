@@ -1,4 +1,4 @@
-## Finish 105, Fail 5
+## Finish 110, Fail 5
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 ### 103如何使用二分查找？
@@ -115,9 +115,8 @@
 | 108 | 11 | **Container With Most Water** | Normal | 3'20" | 94.18% |
 | 109 | 15 | **3Sum** | Normal | 14'54" | 32.53% |
 | 110 | 18 | **4Sum** | Normal | 22'33" | 31.68% |
-
-111. 236 - **Lowest Common Ancestor of a Binary Tree** - Normal - 10'14"
-112. 1644 - **Lowest Common Ancestor of a Binary Tree II** - Normal - 21'17"
-113. 1650 - **Lowest Common Ancestor of a Binary Tree III** - Normal - 8'9"
-114. 1676 - **Lowest Common Ancestor of a Binary Tree IV** - Normal - 16'24"
-115. 235 - **Lowest Common Ancestor of a Binary Search Tree** - Normal - 3'47"
+| 111 | 236 | **Lowest Common Ancestor of a Binary Tree** | Normal | 2'22" | 99.73% |
+| 112 | 1644 | **Lowest Common Ancestor of a Binary Tree II** | Normal | 30'16" | 100.00% |
+| 113 | 1650 | **Lowest Common Ancestor of a Binary Tree III** | Normal | 8'51" | 75.00% |
+| 114 | 1676 | **Lowest Common Ancestor of a Binary Tree IV** | Normal | 9'38" | 5.81% |
+| 115 | 235 | **Lowest Common Ancestor of a Binary Search Tree** | Normal | 2'11" | 99.91% |
