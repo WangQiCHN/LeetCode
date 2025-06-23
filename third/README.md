@@ -110,12 +110,12 @@
 | 103 | 528 | **Random Pick with Weights** | Normal | 9'52" | 57.10% |
 | 104 | 875 | **Koko Eating Bananas** | Normal | 6'27" | 53.74% |
 | 105 | 1011 | **Capacity To Ship Packages Within D Days** | Normal | 6'47" | 86.26% |
+| 106 | 410 | **Split Array Largest Sum** | Hard | 1'51" | 100.00% |
+| 107 | 42 | **Trapping Rain Water** | Hard | 6'30" | 24.96% |
+| 108 | 11 | **Container With Most Water** | Normal | 3'20" | 94.18% |
+| 109 | 15 | **3Sum** | Normal | 14'54" | 32.53% |
+| 110 | 18 | **4Sum** | Normal | 22'33" | 31.68% |
 
-106. 410 - **Split Array Largest Sum** - Hard - 9'52"
-107. 42 - **Trapping Rain Water** - Hard - 6'34"
-108. 11 - **Container With Most Water** - Normal - 10'48"
-109. 15 - **3Sum** - Normal - 15'15"
-110. 18 - **4Sum** - Normal - 19'44"
 111. 236 - **Lowest Common Ancestor of a Binary Tree** - Normal - 10'14"
 112. 1644 - **Lowest Common Ancestor of a Binary Tree II** - Normal - 21'17"
 113. 1650 - **Lowest Common Ancestor of a Binary Tree III** - Normal - 8'9"
