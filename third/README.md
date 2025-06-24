@@ -1,8 +1,10 @@
-## Finish 111, Fail 4
+## Finish 112, Fail 3
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 ### 103如何使用二分查找？
 ### 315还需要再做一下
+### 416有好多种方法
+### 518这个还要在做一遍,322
 
 |  | No. | Name | Diff. | Time | Efficiency |
 |:--|:----|------|-------|-----:|-----------:|
@@ -98,8 +100,8 @@
 | 90 | 10 | **Regular Expression Matching** | Hard | 17'37" | 100.00% |
 | 91 | 516 | **Longest Palindromic Subsequence** | Normal | 31'26" | 5.96% |
 | 92 | 1312 | **Minimum Insertion Steps to Make a String Palindrome** | Harad | 1'20" | 9.46% |
-| 93 | 416 | **Partition Equal Subset Sum** | Normal | Fail% | - |
-| 94 | 518 | **Coin Change II** | Normal | Fail% | - |
+| 93 | 416 | **Partition Equal Subset Sum** | Normal | 25'59" | 55.43% |
+| 94 | 518 | **Coin Change II** | Normal | 25'59" | 84.70% |
 | 95 | 64 | **Minimum Path Sum** | Normal | 6'42" | 99.79% |
 | 96 | 174 | **Dungeon Game** | Hard | 11'44" | 100.00% |
 | 97 | 887 | **Super Egg Drop** | Hard | 24'14" | 52.35% |
