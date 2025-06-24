@@ -2,6 +2,7 @@
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 ### 103如何使用二分查找？
+### 315还需要再做一下
 
 |  | No. | Name | Diff. | Time | Efficiency |
 |:--|:----|------|-------|-----:|-----------:|
@@ -56,7 +57,7 @@
 | 49 | 889 | **Construct Binary Tree from Preorder and Postorder** | Normal | 23'18" | 100.00% |
 | 50 | 297 | **Serialize and Deserialize Binary Tree** | Hard | 8'32" | 94.91% |
 | 51 | 912 | **Sort an Array** | Normal | 5'4" | 76.56% |
-| 52 | 315 | **Count of Smaller Numbers After Self** | Hard | Fail% | - |
+| 52 | 315 | **Count of Smaller Numbers After Self** | Hard | 20'00" | 49.58% |
 | 53 | 230 | **Kth Smallest Element in a BST** | Normal | 13'04" | 100.00% |
 | 54 | 538 | **Convert BST to Greater Tree** | Normal | 3'19" | 100.00% |
 | 55 | 98 | **Validate Binary Search Tree** | Normal | 7'28" | 100.00% |
