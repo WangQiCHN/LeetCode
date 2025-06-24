@@ -46,7 +46,7 @@
 | 39 | 496 | **Next Greater Element I** | Easy | 16'18" | 93.93% |
 | 40 | 739 | **Daily Temperatures** | Normal | 11'08" | 11.84% |
 | 41 | 503 | **Next Greater Element II** | Normal | 4'50" | 14.27% |
-| 42 | 239 | **Sliding Window Maximum** | Hard | Fail% | - |
+| 42 | 239 | **Sliding Window Maximum** | Hard | 22'21" | 95.85% |
 | 43 | 226 | **Invert Binary Tree** | Easy | 1'24" | 100.00% |
 | 44 | 116 | **Populating Next Right Pointers in Each Node** | Normal | 3'25" | 55.74% |
 | 45 | 114 | **Flatten binary Tree to Linked List** | Normal | 4'42" | 100.00% |
