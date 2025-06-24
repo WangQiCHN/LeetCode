@@ -1,4 +1,4 @@
-## Finish 110, Fail 5
+## Finish 111, Fail 4
 
 ### 归并排序是先左和右搞定，在合并成一个，不要在搞错了！
 ### 103如何使用二分查找？
@@ -16,7 +16,7 @@
 | 9 | 543 | **Diameter of Binary Tree** | Easy | 5'23" | 5.11% |
 | 10 | 704 | **Binary Search** | Easy | 1'43" | 100.00% |
 | 11 | 34 | **Find First and Last Position of Element in Sorted Array** | Normal | 7'57" | 100.00% |
-| 12 | 76 | **Minimum Window Substring** | Hard | Fail% | - |
+| 12 | 76 | **Minimum Window Substring** | Hard | 17'08" | 5.35 |
 | 13 | 567 | **Permutation is String** | Normal | 18'56" | 21.73% |
 | 14 | 438 | **Find All Anagrams in a String** | Normal | 13'07" | 100.00% |
 | 15 | 3 | **Longest Substring Without Repeating Characters** | Normal | 5'43" | 66.10% |

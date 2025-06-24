@@ -1,62 +1,114 @@
 package demo;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
 
 public class Demo {
-    private boolean isFound;
 
     public static void main() {
         Demo d = new Demo();
-        TreeNode p = new TreeNode(4611);
-        TreeNode q = new TreeNode(10604);
-        d.lowestCommonAncestor(null, null, null);
+        int[] nums1 = {4,5,6,8,9};
+        int[] nums2 = {};
+        // int[] nums1 = {1, 2};
+        double result = d.findMedianSortedArrays(nums1, nums2);
+        System.out.println(result);
     }
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null)
-            return null;
-        if (root.val == p.val) {
-            if (find(root, q)) {
-                isFound = true;
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int m = nums1.length;
+        int n = nums2.length;
+        int total = m + n;
+        if (total == 1 || total == 2) {
+            int sum = 0;
+            for (int i : nums1) {
+                sum += i;
             }
-            return root;
-        }
-        if (root.val == q.val) {
-            if (find(root, p)) {
-                isFound = true;
+            for (int i : nums2) {
+                sum += i;
             }
-            return root;
+            return sum * 1.0 / total;
         }
-
-        TreeNode left = lowestCommonAncestor(root.left, p, q);
-        TreeNode right = lowestCommonAncestor(root.right, p, q);
-
-        if (left != null && right != null) {
-            isFound = true;
-            return root;
+        int left, right;
+        // 1-> 0, 2 -> 0, 1, 3 -> 1, 4 -> 1,2
+        if (total % 2 == 0) {
+            left = total / 2;
+            right = total / 2 + 1;
         } else {
-            if (!isFound) {
-                return null;
-            } else {
-                return left == null ? right : left;
-            }
+            left = right = total / 2 + 1;
         }
+        if (left == right)
+            return getLeft(nums1, nums2, m, n, left);
+        else
+            return getRight(nums1, nums2, m, n, left, right);
     }
 
-    private boolean find(TreeNode node, TreeNode child) {
-        if (node == null)
-            return false;
-        else if (node.val == child.val)
-            return true;
-        else
-            return find(node.left, child) || find(node.right, child);
+    private double getLeft(int[] nums1, int[] nums2, int m, int n, int left) {
+        int i = 0, j = 0;
+        int last = 0;
+        while (left > 0 && i < m && j < n) {
+            if (nums1[i] > nums2[j]) {
+                last = nums2[j];
+                j++;
+            } else {
+                last = nums2[i];
+                i++;
+            }
+            left--;
+        }
+        if (left == 0) {
+            return (double)last;
+        }
+        if (i == m) {
+            while (left > 0) {
+                last = nums2[j];
+                j++;
+                left--;
+            }
+        }
+        if (j == n) {
+            while (left > 0) {
+                last = nums1[i];
+                i++;
+                left--;
+            }
+        }
+
+        return last;
+    }
+
+    private double getRight(int[] nums1, int[] nums2, int m, int n, int left, int right) {
+        int i = 0, j = 0;
+        int last0 = 0, last1 = 0;
+        while (right > 0 && i < m && j < n) {
+            if (nums1[i] > nums2[j]) {
+                last1 = last0;
+                last0 = nums2[j];
+                j++;
+            } else {
+                last1 = last0;
+                last0 = nums1[i];
+                i++;
+            }
+            right--;
+        }
+        if (right == 0) {
+            return (double)((last0 + last1) / 2.0);
+        }
+        if (i == m) {
+            while (right > 0) {
+                last1 = last0;
+                last0 = nums2[j];
+                j++;
+                right--;
+            }
+        }
+        if (j == n) {
+            while (right > 0) {
+                last1 = last0;
+                last0 = nums1[i];
+                i++;
+                right--;
+            }
+        }
+
+        return (double)((last0 + last1) / 2.0);
     }
 }
