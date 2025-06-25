@@ -99,7 +99,7 @@
 | 89 | 712 | **Minimum ASCII Delete Sum for Two Strings** | Normal | 3'28" | 12.03% |
 | 90 | 10 | **Regular Expression Matching** | Hard | 17'37" | 100.00% |
 | 91 | 516 | **Longest Palindromic Subsequence** | Normal | 31'26" | 5.96% |
-| 92 | 1312 | **Minimum Insertion Steps to Make a String Palindrome** | Harad | 1'20" | 9.46% |
+| 92 | 1312 | **Minimum Insertion Steps to Make a String Palindrome** | Hard | 1'20" | 9.46% |
 | 93 | 416 | **Partition Equal Subset Sum** | Normal | 25'59" | 55.43% |
 | 94 | 518 | **Coin Change II** | Normal | 25'59" | 84.70% |
 | 95 | 64 | **Minimum Path Sum** | Normal | 6'42" | 99.79% |
