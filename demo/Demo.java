@@ -1,40 +1,55 @@
 package demo;
 
-import java.util.Arrays;
-
 public class Demo {
 
     public static void main() {
-        int[] w = {1,3};
-        Demo d = new Demo(w);
-        for (int i = 0; i < 4; i++) {
-            System.out.println(d.pickIndex(i));
-        }
+        Demo d = new Demo();
+        String s1 = "trinitrophenylmethylnitramine";
+        String s2 = "dinitrophenylhydrazinetrinitrophenylmethylnitramine";
+        System.out.println(d.checkInclusion(s1, s2 ));
     }
 
 
-    int[] p;
-    public Demo(int[] w) {
-        p = new int[w.length + 1];
-        p[0] = 0;
-        for (int i = 1; i < w.length + 1; i++) {
-            p[i] = p[i - 1] + w[i - 1];
+    private int[] count = new int[26];
+    private int[] window = new int[26];
+    private int size = 0;
+    public boolean checkInclusion(String s1, String s2) {
+        int total = 0;
+        for (char c : s1.toCharArray()) {
+            count[c - 'a']++;
         }
-    }
-    
-    public int pickIndex(int i) {
-        int sum = p[p.length - 1];
-        int index = i;// (int)(Math.random() * sum);
-        int left = 0, right = p.length - 1;
-        while (left < right) {
-            int mid = (right - left) / 2 + left;
-            if (p[mid] > index) {
-                right = mid;
-            } else {
-                left = mid + 1;
+        for (int i : count) {
+            if (i > 0) {
+                total++;
+            }
+        }
+        size = s1.length();
+
+        int left = 0, right = 0;
+        int correct = 0;
+        int s2Len = s2.length();
+
+        while (right < s2Len) {
+            char c = s2.charAt(right);
+            right++;
+            window[c - 'a']++;
+            if (window[c - 'a'] == count[c - 'a']) {
+                correct++;
+            }
+            if (total == correct) {
+                return true;
+            }
+            if (right - left >= size) {
+                char d = s2.charAt(left);
+                window[d - 'a']--;
+                if (window[d - 'a'] - count[d - 'a'] == -1) {
+                    correct--;
+                }
+                left++;
             }
         }
 
-        return left - 1;
+        return false;
     }
+
 }

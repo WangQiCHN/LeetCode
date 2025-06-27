@@ -14,15 +14,15 @@
 | 10 | 704 | **Binary Search** | 不说了 |
 | 11* | 34 | **Find First and Last Position of Element in Sorted Array** | 这道题目，还是要注意一下，用例子好！ |
 | 12 | 76 | **Minimum Window Substring** | 思路一样，还是数组比map速度快，同 46 |
-| 13 | 567 | **Permutation is String** | 18'56" | 21.73% |
-| 14 | 438 | **Find All Anagrams in a String** | 13'07" | 100.00% |
-| 15 | 3 | **Longest Substring Without Repeating Characters** | Normal | 5'43" | 66.10% |
-| 16 | 21 | **Merge Two Sorted Lists** | Easy | 2'42" | 100.00% |
-| 17 | 23 | **Merge K Sorted Lists** | Hard | 7'4" | 73.34% |
-| 18 | 19 | **Remove Nth Node From End of List** | Normal | 7'38" | 100.00% |
-| 19 | 876 | **Middle of the Linked List** | Easy | 0'54" | 100.00% |
-| 20 | 141 | **Linked List Cycle** | Easy | 1'55" | 100.00% |
-| 21 | 142 | **Linked List Cycle II** | Normal | 1'35" | 100.00% |
+| 13 | 567 | **Permutation is String** | 这个不就是一样的最小窗口，然后用数组而不是map比较么，我证明了，对的 |
+| 14 | 438 | **Find All Anagrams in a String** | 和567一模一样 |
+| 15 | 3 | **Longest Substring Without Repeating Characters** | 这个也是左右窗口，加统计啦 |
+| 16 | 21 | **Merge Two Sorted Lists** | 简单 |
+| 17 | 23 | **Merge K Sorted Lists** | 明明是高难度，为啥我觉得很简单 |
+| 18 | 19 | **Remove Nth Node From End of List** | 就是快慢指针 |
+| 19 | 876 | **Middle of the Linked List** | 就是快慢指针 |
+| 20 | 141 | **Linked List Cycle** | 就是快慢指针 |
+| 21 | 142 | **Linked List Cycle II** | 就是快慢指针，然后把一个指针移动到开始，再走到一起 |
 | 22 | 160 | **Intersection of Two Linked Lists** | Easy | 1'48" | 99.87% |
 | 23 | 26 | **Remove Duplicates from Sorted Array** | Easy | 4'49" | 100.00% |
 | 24 | 83 | **Remove Duplicates from Sorted List** | Easy | 2'57" | 100.00% |
@@ -81,7 +81,7 @@
 | 77 | 1020 | **Number of Enclaves** | Normal | 3'26" | 45.02% |
 | 78 | 695 | **Max Area of Island** | Normal | 1'56" | 100.00% |
 | 79 | 1905 | **Count Sub Islands** | Normal | 4'30" | 82.10% |
-| 80 | 694 | **Number of Distinct Islands** | Normal | 4'32" | 85.00% |
+| 80 | 694 plus | **Number of Distinct Islands** | 需要记录每次前进和后退的方向 |
 | 81 | 773 | **Sliding Puzzle** | Hard | 20'30" | 90.25% |
 | 82 | 931 | **Minimum Falling Path Sum** | Normal | 17'53" | 96.81% |
 | 83 | 300 | **Longest Increasing Subsequence** | Normal | 13'50" | 87.38% |
@@ -113,7 +113,7 @@
 | 109 | 15 | **3Sum** | Normal | 14'54" | 32.53% |
 | 110 | 18 | **4Sum** | Normal | 22'33" | 31.68% |
 | 111 | 236 | **Lowest Common Ancestor of a Binary Tree** | Normal | 2'22" | 99.73% |
-| 112 | 1644 | **Lowest Common Ancestor of a Binary Tree II** | Normal | 30'16" | 100.00% |
-| 113 | 1650 | **Lowest Common Ancestor of a Binary Tree III** | Normal | 8'51" | 75.00% |
-| 114 | 1676 | **Lowest Common Ancestor of a Binary Tree IV** | Normal | 9'38" | 5.81% |
+| 112 | 1644 plus | **Lowest Common Ancestor of a Binary Tree II** | 需要记录那个找到的点，否则靠递归会晕的 |
+| 113 | 1650 plus | **Lowest Common Ancestor of a Binary Tree III** | 这个只需要不断的找parent，两个点的parent重复就行了 |
+| 114 | 1676 plus | **Lowest Common Ancestor of a Binary Tree IV** | 这个其实和两个点是一样的，只不过要都浏览一下 |
 | 115 | 235 | **Lowest Common Ancestor of a Binary Search Tree** | Normal | 2'11" | 99.91% |
