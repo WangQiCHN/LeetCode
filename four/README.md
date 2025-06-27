@@ -3,19 +3,19 @@
 |  | No. | Name | Desc. |
 |:--|:----|------|-------|
 | 1 | 509 | **Fibonacci Number** | 没什么说的，用一下memo就可以了 | 
-| 2 | 322 | **Coin Change** | Normal | 这个需要用到背包问题，还是我薄弱的地方 |
-| 3 | 46 | **Permutations** | Normal | 递归问题，传入一个计数器即可，用数组比用map快 |
-| 4 | 51 | **N-Queens** | Hard | 虽然有点慢，但是思路很对，就不纠结了 |
-| 5 | 111 | **Minimum Depth of Binary Tree** | Easy | 广度优先，判定节点空的情况 |
-| 6 | 752 | **Open the Lock** | Normal | 双向奔赴，就快了；从起始点和结束点同时开始广度优先 |
-| 7 | 104 | **Maximum Depth of Binary Tree** | Easy | 这个不说了 |
-| 8 | 144 | **Binary Tree Preorder Traversal** | Easy | 这个不说了 |
-| 9 | 543 | **Diameter of Binary Tree** | Easy | 直接使用maxDepth进行递归 |
-| 10 | 704 | **Binary Search** | Easy | 不说了 |
-| 11* | 34 | **Find First and Last Position of Element in Sorted Array** | Normal | 这道题目，还是要注意一下，用例子好！ |
-| 12 | 76 | **Minimum Window Substring** | Hard | 思路一样，还是数组比map速度快，同 46 |
-| 13 | 567 | **Permutation is String** | Normal | 18'56" | 21.73% |
-| 14 | 438 | **Find All Anagrams in a String** | Normal | 13'07" | 100.00% |
+| 2 | 322 | **Coin Change** | 这个需要用到背包问题，还是我薄弱的地方 |
+| 3 | 46 | **Permutations** | 递归问题，传入一个计数器即可，用数组比用map快 |
+| 4 | 51 | **N-Queens** | 虽然有点慢，但是思路很对，就不纠结了 |
+| 5 | 111 | **Minimum Depth of Binary Tree** | 广度优先，判定节点空的情况 |
+| 6 | 752 | **Open the Lock** | 双向奔赴，就快了；从起始点和结束点同时开始广度优先 |
+| 7 | 104 | **Maximum Depth of Binary Tree** | 这个不说了 |
+| 8 | 144 | **Binary Tree Preorder Traversal** | 这个不说了 |
+| 9 | 543 | **Diameter of Binary Tree** | 直接使用maxDepth进行递归 |
+| 10 | 704 | **Binary Search** | 不说了 |
+| 11* | 34 | **Find First and Last Position of Element in Sorted Array** | 这道题目，还是要注意一下，用例子好！ |
+| 12 | 76 | **Minimum Window Substring** | 思路一样，还是数组比map速度快，同 46 |
+| 13 | 567 | **Permutation is String** | 18'56" | 21.73% |
+| 14 | 438 | **Find All Anagrams in a String** | 13'07" | 100.00% |
 | 15 | 3 | **Longest Substring Without Repeating Characters** | Normal | 5'43" | 66.10% |
 | 16 | 21 | **Merge Two Sorted Lists** | Easy | 2'42" | 100.00% |
 | 17 | 23 | **Merge K Sorted Lists** | Hard | 7'4" | 73.34% |
@@ -62,11 +62,11 @@
 | 58 | 450 | **Delete Node in a BST** | Normal | 14'36" | 100.00% |
 | 59 | 215 | **Kth Largest Element in an Array** | Normal | 16'13" | 8.12% |
 | 60 | 797 | **All Paths From Source to Target** | Normal | 8'25" | 92.76% |
-| 61 | 323 plus | **Number of Connected Components in an Undirected Graph** | Normal | 用Union Form做，加入size快很多 |
+| 61 | 323 plus | **Number of Connected Components in an Undirected Graph** | 用Union Form做，加入size快很多 |
 | 62 | 130 | **NSurrounded Regions** | Normal | 27'54" | 5.20% |
 | 63 | 990 | **Satisfiability of Equality Equations** | Normal | 3'59" | 80.30% |
-| 64 | 261 plus | **Graph Valid Tree** | Normal | 同323 |
-| 65 | 1135 plus | **Connecting Cities With Minimum Cost** | Normal | 同323 |
+| 64 | 261 plus | **Graph Valid Tree** | 同323 |
+| 65 | 1135 plus | **Connecting Cities With Minimum Cost** | 同323 |
 | 66 | 1584 | **Min Cost to Connect All Points** | Normal | 9'56" | 55.58% |
 | 67 | 78 | **Subsets** | Normal | 6'21" | 100.00% |
 | 68 | 77 | **Combinations** | Normal | 3'28" | 23.04% |
