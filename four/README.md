@@ -23,11 +23,11 @@
 | 19 | 876 | **Middle of the Linked List** | 就是快慢指针 |
 | 20 | 141 | **Linked List Cycle** | 就是快慢指针 |
 | 21 | 142 | **Linked List Cycle II** | 就是快慢指针，然后把一个指针移动到开始，再走到一起 |
-| 22 | 160 | **Intersection of Two Linked Lists** | Easy | 1'48" | 99.87% |
-| 23 | 26 | **Remove Duplicates from Sorted Array** | Easy | 4'49" | 100.00% |
-| 24 | 83 | **Remove Duplicates from Sorted List** | Easy | 2'57" | 100.00% |
-| 25 | 27 | **Remove Element** | Easy | 7'12" | 100.00% |
-| 26 | 283 | **Move Zeroes** | Easy | 5'54" | 40.20% |
+| 22 | 160 | **Intersection of Two Linked Lists** | 走一遍，碰到就碰到，不碰到就是没有 |
+| 23 | 26 | **Remove Duplicates from Sorted Array** | 左右指针，重复不动，不重复右移 |
+| 24 | 83 | **Remove Duplicates from Sorted List** | 同26，也是指针 |
+| 25 | 27 | **Remove Element** | 和26几乎一模一样，最多就是要检查后面的内容 |
+| 26 | 283 | **Move Zeroes** | 就是把非0的往前移动，最后都设置成0 |
 | 27 | 167 | **Two Sum II - Input Array Is Sorted** | Normal | 2'39" | 99.49% |
 | 28 | 344 | **Reverse String** | Easy | 1'49" | 100.00% |
 | 29 | 5 | **Longest Palindromic Substring** | Normal | 6'56" | 91.24% |
