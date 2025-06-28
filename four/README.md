@@ -28,20 +28,20 @@
 | 24 | 83 | **Remove Duplicates from Sorted List** | 同26，也是指针 |
 | 25 | 27 | **Remove Element** | 和26几乎一模一样，最多就是要检查后面的内容 |
 | 26 | 283 | **Move Zeroes** | 就是把非0的往前移动，最后都设置成0 |
-| 27 | 167 | **Two Sum II - Input Array Is Sorted** | Normal | 2'39" | 99.49% |
-| 28 | 344 | **Reverse String** | Easy | 1'49" | 100.00% |
-| 29 | 5 | **Longest Palindromic Substring** | Normal | 6'56" | 91.24% |
-| 30 | 303 | **Range Sum Query - Immutable** | Easy | 4'38" | 100.00% |
-| 31 | 304 | **Range Sum Query 2D - Immutable** | Normal | 24'13" | 79.36% |
+| 27 | 167 | **Two Sum II - Input Array Is Sorted** | 又是一道左右指针的题目 |
+| 28 | 344 | **Reverse String** | 不会做是傻子 |
+| 29 | 5 | **Longest Palindromic Substring** | 判定两种情况，i和i，i+1 |
+| 30 | 303 | **Range Sum Query - Immutable** | 需要创建一个presum数组，一维的 |
+| 31 | 304 | **Range Sum Query 2D - Immutable** | 需要创建一个presum数组，二维的 |
 | 32 | 370 plus | **Range Addition** | Normal | 就是用差数列，然后再计算，是一道plus |
-| 33 | 1109 | **Corporate Flight Bookings** | Normal | 2'56" | 100.00% |
-| 34 | 1094 | **Car Pooling** | Normal | 5'49" | 99.50% |
-| 35 | 146 | **LRU Cache** | Normal | 21'59" | 75.72% |
-| 36 | 460 | **LFU Cache** | Normal | 10'17" | 91.21% |
-| 37 | 380 | **Insert Delete GetRandom O(1)** | Hard | 27'50" | 37.62% |
-| 38 | 710 | **Random Pick with Blacklist** | Hard | 8'21" | 49.43% |
-| 39 | 496 | **Next Greater Element I** | Easy | 16'18" | 93.93% |
-| 40 | 739 | **Daily Temperatures** | Normal | 11'08" | 11.84% |
+| 33 | 1109 | **Corporate Flight Bookings** | 就是一个差分数组，添加第一项和第N + 1 项 |
+| 34 | 1094 | **Car Pooling** | 和1109类似，但是需要结束的条件不同，因为第N项就下车了 |
+| 35 | 146 | **LRU Cache** | DoulbeLink很好，解决很方便 |
+| 36 | 460 | **LFU Cache** | DoulbeLink很好，解决很方便 |
+| 37 | 380 | **Insert Delete GetRandom O(1)** | 思路是一样的，不过一个用了List，一个是array |
+| 38 | 710 | **Random Pick with Blacklist** | 原来是Random的不同，好吧 |
+| 39 | 496 | **Next Greater Element I** | 用堆记录最近一个大的数值，如果小了，就抛出 |
+| 40 | 739 | **Daily Temperatures** | 用一个堆来计算，不过记录的是index，不是value |
 | 41 | 503 | **Next Greater Element II** | Normal | 4'50" | 14.27% |
 | 42 | 239 | **Sliding Window Maximum** | Hard | 22'21" | 95.85% |
 | 43 | 226 | **Invert Binary Tree** | Easy | 1'24" | 100.00% |
