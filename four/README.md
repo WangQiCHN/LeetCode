@@ -33,7 +33,7 @@
 | 29 | 5 | **Longest Palindromic Substring** | 判定两种情况，i和i，i+1 |
 | 30 | 303 | **Range Sum Query - Immutable** | 需要创建一个presum数组，一维的 |
 | 31 | 304 | **Range Sum Query 2D - Immutable** | 需要创建一个presum数组，二维的 |
-| 32 | 370 plus | **Range Addition** | Normal | 就是用差数列，然后再计算，是一道plus |
+| 32 | 370 plus | **Range Addition** | 就是用差数列，然后再计算，是一道plus |
 | 33 | 1109 | **Corporate Flight Bookings** | 就是一个差分数组，添加第一项和第N + 1 项 |
 | 34 | 1094 | **Car Pooling** | 和1109类似，但是需要结束的条件不同，因为第N项就下车了 |
 | 35 | 146 | **LRU Cache** | DoulbeLink很好，解决很方便 |
