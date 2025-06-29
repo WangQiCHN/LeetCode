@@ -42,21 +42,21 @@
 | 38 | 710 | **Random Pick with Blacklist** | 原来是Random的不同，好吧 |
 | 39 | 496 | **Next Greater Element I** | 用堆记录最近一个大的数值，如果小了，就抛出 |
 | 40 | 739 | **Daily Temperatures** | 用一个堆来计算，不过记录的是index，不是value |
-| 41 | 503 | **Next Greater Element II** | Normal | 4'50" | 14.27% |
-| 42 | 239 | **Sliding Window Maximum** | Hard | 22'21" | 95.85% |
-| 43 | 226 | **Invert Binary Tree** | Easy | 1'24" | 100.00% |
-| 44 | 116 | **Populating Next Right Pointers in Each Node** | Normal | 3'25" | 55.74% |
-| 45 | 114 | **Flatten binary Tree to Linked List** | Normal | 4'42" | 100.00% |
-| 46 | 654 | **Maximum Binary Tree** | Normal | 5'36" | 97.82% |
-| 47 | 105 | **Construct Binary Tree from Preorder and Inorder** | Normal | 13'34" | 37.00% |
-| 48 | 106 | **Construct Binary Tree from Inorder and Postorder** | Normal | 12'47" | 40.80% |
-| 49 | 889 | **Construct Binary Tree from Preorder and Postorder** | Normal | 23'18" | 100.00% |
-| 50 | 297 | **Serialize and Deserialize Binary Tree** | Hard | 8'32" | 94.91% |
-| 51 | 912 | **Sort an Array** | Normal | 5'4" | 76.56% |
-| 52 | 315 | **Count of Smaller Numbers After Self** | Hard | 20'00" | 49.58% |
-| 53 | 230 | **Kth Smallest Element in a BST** | Normal | 13'04" | 100.00% |
-| 54 | 538 | **Convert BST to Greater Tree** | Normal | 3'19" | 100.00% |
-| 55 | 98 | **Validate Binary Search Tree** | Normal | 7'28" | 100.00% |
+| 41 | 503 | **Next Greater Element II** | 这个其实不难，就是要计算2n - 1 而不是n - 1，并且加入的是index会快 |
+| 42 | 239 | **Sliding Window Maximum** | 也是加入index好算很多 |
+| 43 | 226 | **Invert Binary Tree** | 把左右子树换一下 |
+| 44 | 116 | **Populating Next Right Pointers in Each Node** | 就是需要考虑三种情况，左左右，左右右左，右左右，用广度遍历更好做 |
+| 45 | 114 | **Flatten binary Tree to Linked List** | 就是递归，把左右拉平，然后左先放入右，再添加右 |
+| 46 | 654 | **Maximum Binary Tree** | 找到最大节点，然后左边的构建左子树，右边构建右子树 |
+| 47 | 105 | **Construct Binary Tree from Preorder and Inorder** | 方式很简单，加一个查找map就可以了 |
+| 48 | 106 | **Construct Binary Tree from Inorder and Postorder** | 和上面那个一样 |
+| 49 | 889 | **Construct Binary Tree from Preorder and Postorder** | 这个有两种可能性 |
+| 50 | 297 | **Serialize and Deserialize Binary Tree** | 前序遍历，很好的解决了问题 |
+| 51 | 912 | **Sort an Array** | 记住归并排序，我还希望写一下快速排序 |
+| 52 | 315 | **Count of Smaller Numbers After Self** | 用归并排序中，左边数组的交换情况记录smaller数据的情况 |
+| 53 | 230 | **Kth Smallest Element in a BST** | 计算左子树，如果大了，就不计算；如果刚好，就返回；如果小了，就计算右子树 |
+| 54 | 538 | **Convert BST to Greater Tree** | 从最右边的节点开始计算，然后累加；类似中序，但是先算右子树 |
+| 55 | 98 | **Validate Binary Search Tree** | 从根节点开始，左边需要根节点作为最大值；右边需要根节点作为最小值 |
 | 56 | 700 | **Search in a Binary Search Tree** | Easy | 1'50" | 100.00% |
 | 57 | 701 | **Insert into a Binary Search Tree** | Normal | 4'51" | 100.00% |
 | 58 | 450 | **Delete Node in a BST** | Normal | 14'36" | 100.00% |
