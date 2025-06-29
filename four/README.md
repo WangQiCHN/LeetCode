@@ -57,11 +57,11 @@
 | 53 | 230 | **Kth Smallest Element in a BST** | 计算左子树，如果大了，就不计算；如果刚好，就返回；如果小了，就计算右子树 |
 | 54 | 538 | **Convert BST to Greater Tree** | 从最右边的节点开始计算，然后累加；类似中序，但是先算右子树 |
 | 55 | 98 | **Validate Binary Search Tree** | 从根节点开始，左边需要根节点作为最大值；右边需要根节点作为最小值 |
-| 56 | 700 | **Search in a Binary Search Tree** | Easy | 1'50" | 100.00% |
-| 57 | 701 | **Insert into a Binary Search Tree** | Normal | 4'51" | 100.00% |
-| 58 | 450 | **Delete Node in a BST** | Normal | 14'36" | 100.00% |
-| 59 | 215 | **Kth Largest Element in an Array** | Normal | 16'13" | 8.12% |
-| 60 | 797 | **All Paths From Source to Target** | Normal | 8'25" | 92.76% |
+| 56 | 700 | **Search in a Binary Search Tree** | 这个太简单了 |
+| 57 | 701 | **Insert into a Binary Search Tree** | 如果小于根节点，看看能不能创建左节点；反之右节点 |
+| 58 | 450 | **Delete Node in a BST** | 关键是找到右边的最小节点或者左边的最大节点 |
+| 59 | 215 | **Kth Largest Element in an Array** | 需要优化一下，通过快速排序，找到第K个 |
+| 60 | 797 | **All Paths From Source to Target** | 加节点，然后看一下节点的路径，深度优先 |
 | 61 | 323 plus | **Number of Connected Components in an Undirected Graph** | 用Union Form做，加入size快很多 |
 | 62 | 130 | **NSurrounded Regions** | Normal | 27'54" | 5.20% |
 | 63 | 990 | **Satisfiability of Equality Equations** | Normal | 3'59" | 80.30% |
