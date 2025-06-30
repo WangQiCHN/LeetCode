@@ -77,16 +77,16 @@
 | 73 | 39 | **Combination Sum** | 这个可以用背包问题，但是它要的是具体结果，不是统计数量 |
 | 74 | 698 | **Partition to K Equal Sum Subsets** | 需要通过memo防止重复计算 |
 | 75 | 200 | **Number of Islands** | 典型的深度优先，回溯算法 |
-| 76 | 1254 | **Number of Closed Islands** | Normal | 7'44" | 61.80% |
-| 77 | 1020 | **Number of Enclaves** | Normal | 3'26" | 45.02% |
-| 78 | 695 | **Max Area of Island** | Normal | 1'56" | 100.00% |
-| 79 | 1905 | **Count Sub Islands** | Normal | 4'30" | 82.10% |
+| 76 | 1254 | **Number of Closed Islands** | 在计算边界的时候可以少算两次 |
+| 77 | 1020 | **Number of Enclaves** | 最后一次是累加，不用再深度了 |
+| 78 | 695 | **Max Area of Island** | 设定一个成员变量，算一下最大值 |
+| 79 | 1905 | **Count Sub Islands** | 去除不可能是sub island的部分，然后计算个数 |
 | 80 | 694 plus | **Number of Distinct Islands** | 需要记录每次前进和后退的方向 |
-| 81 | 773 | **Sliding Puzzle** | Hard | 20'30" | 90.25% |
-| 82 | 931 | **Minimum Falling Path Sum** | Normal | 17'53" | 96.81% |
-| 83 | 300 | **Longest Increasing Subsequence** | Normal | 13'50" | 87.38% |
-| 84 | 354 | **Russian Doll Envelopes** | Hard | 13'11" | 68.29% |
-| 85 | 53 | **Maximum Subarray** | Normal | 2'48" | 100.00% |
+| 81 | 773 | **Sliding Puzzle** | 这个其实简单的，需要把二维变成一维；然后算一下可以走的方式 |
+| 82 | 931 | **Minimum Falling Path Sum** | 这就是经典的回溯啊 |
+| 83 | 300 | **Longest Increasing Subsequence** | 用二分牌堆算法，最快了 |
+| 84 | 354 | **Russian Doll Envelopes** | 同300 |
+| 85 | 53 | **Maximum Subarray** | 如果是正值那么统计下一个，否则下一个单独统计 |
 | 86 | 72 | **Edit Distance** | Normal | 11'11" | 97.86% |
 | 87 | 1143 | **Longest Common Subsequence** | Normal | 4'50" | 5.78% |
 | 88 | 583 | **Delete Operation for Two Strings** | Normal | 3'01" | 9.62% |
