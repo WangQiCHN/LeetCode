@@ -110,8 +110,8 @@
 | 106 | 410 | **Split Array Largest Sum** | 类似875 |
 | 107 | 42 | **Trapping Rain Water** | 从左算最大值和右算最大值，然后计算 |
 | 108 | 11 | **Container With Most Water** | 和42类似，还简单一些，因为计算方便 |
-| 109 | 15 | **3Sum** | Normal | 如果在计算两数和的时候，使用二分法会更快 |
-| 110 | 18 | **4Sum** | Normal | 需要关注，target可能变成long |
+| 109 | 15 | **3Sum** | 如果在计算两数和的时候，使用二分法会更快 |
+| 110 | 18 | **4Sum** | 需要关注，target可能变成long |
 | 111 | 236 | **Lowest Common Ancestor of a Binary Tree** | 这个比较直接，和1676一样的 |
 | 112 | 1644 plus | **Lowest Common Ancestor of a Binary Tree II** | 需要记录那个找到的点，否则靠递归会晕的 |
 | 113 | 1650 plus | **Lowest Common Ancestor of a Binary Tree III** | 这个只需要不断的找parent，两个点的parent重复就行了 |

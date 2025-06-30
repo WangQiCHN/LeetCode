@@ -6,8 +6,8 @@
 | 5 | **Longest Palindromic Substring** | 判定两种情况，i和i，i+1 |
 | 10 | **Regular Expression Matching** | 这个就不说了，分析之后就可以了 |
 | 11 | **Container With Most Water** | 和42类似，还简单一些，因为计算方便 |
-| 15 | **3Sum** | Normal | 如果在计算两数和的时候，使用二分法会更快 |
-| 18 | **4Sum** | Normal | 需要关注，target可能变成long |
+| 15 | **3Sum** | 如果在计算两数和的时候，使用二分法会更快 |
+| 18 | **4Sum** | 需要关注，target可能变成long |
 | 19 | **Remove Nth Node From End of List** | 就是快慢指针 |
 | 21 | **Merge Two Sorted Lists** | 简单 |
 | 23 | **Merge K Sorted Lists** | 明明是高难度，为啥我觉得很简单 |
