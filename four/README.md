@@ -87,11 +87,11 @@
 | 83 | 300 | **Longest Increasing Subsequence** | 用二分牌堆算法，最快了 |
 | 84 | 354 | **Russian Doll Envelopes** | 同300 |
 | 85 | 53 | **Maximum Subarray** | 如果是正值那么统计下一个，否则下一个单独统计 |
-| 86 | 72 | **Edit Distance** | Normal | 11'11" | 97.86% |
-| 87 | 1143 | **Longest Common Subsequence** | Normal | 4'50" | 5.78% |
-| 88 | 583 | **Delete Operation for Two Strings** | Normal | 3'01" | 9.62% |
-| 89 | 712 | **Minimum ASCII Delete Sum for Two Strings** | Normal | 3'28" | 12.03% |
-| 90 | 10 | **Regular Expression Matching** | Hard | 17'37" | 100.00% |
+| 86 | 72 | **Edit Distance** | 更新有三种情况，a前进，b前进，或者ab同时前进；同时三个数字比大小 |
+| 87 | 1143 | **Longest Common Subsequence** | 和72很像，通过背包问题，就是在dps[i][j] 是i和j时候，最多的common数量|
+| 88 | 583 | **Delete Operation for Two Strings** | 同1143，所以可以练一下背包 |
+| 89 | 712 | **Minimum ASCII Delete Sum for Two Strings** | 同1143，所以可以练一下背包 |
+| 90 | 10 | **Regular Expression Matching** | 这个就不说了，分析之后就可以了 |
 | 91 | 516 | **Longest Palindromic Subsequence** | Normal | 31'26" | 5.96% |
 | 92 | 1312 | **Minimum Insertion Steps to Make a String Palindrome** | Hard | 1'20" | 9.46% |
 | 93 | 416 | **Partition Equal Subset Sum** | Normal | 25'59" | 55.43% |
@@ -116,4 +116,4 @@
 | 112 | 1644 plus | **Lowest Common Ancestor of a Binary Tree II** | 需要记录那个找到的点，否则靠递归会晕的 |
 | 113 | 1650 plus | **Lowest Common Ancestor of a Binary Tree III** | 这个只需要不断的找parent，两个点的parent重复就行了 |
 | 114 | 1676 plus | **Lowest Common Ancestor of a Binary Tree IV** | 这个其实和两个点是一样的，只不过要都浏览一下 |
-| 115 | 235 | **Lowest Common Ancestor of a Binary Search Tree** | Normal | 2'11" | 99.91% |
+| 115 | 235 | **Lowest Common Ancestor of a Binary Search Tree** | 是搜索二叉树，就可以只比较左边或者右边 |
