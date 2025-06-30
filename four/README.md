@@ -63,20 +63,20 @@
 | 59 | 215 | **Kth Largest Element in an Array** | 需要优化一下，通过快速排序，找到第K个 |
 | 60 | 797 | **All Paths From Source to Target** | 加节点，然后看一下节点的路径，深度优先 |
 | 61 | 323 plus | **Number of Connected Components in an Undirected Graph** | 用Union Form做，加入size快很多 |
-| 62 | 130 | **NSurrounded Regions** | Normal | 27'54" | 5.20% |
-| 63 | 990 | **Satisfiability of Equality Equations** | Normal | 3'59" | 80.30% |
+| 62 | 130 | **Surrounded Regions** | 深度优先，改坐标；当然了，用uf也行 |
+| 63 | 990 | **Satisfiability of Equality Equations** | 这个用uf是很好的 |
 | 64 | 261 plus | **Graph Valid Tree** | 同323 |
 | 65 | 1135 plus | **Connecting Cities With Minimum Cost** | 同323 |
-| 66 | 1584 | **Min Cost to Connect All Points** | Normal | 9'56" | 55.58% |
-| 67 | 78 | **Subsets** | Normal | 6'21" | 100.00% |
-| 68 | 77 | **Combinations** | Normal | 3'28" | 23.04% |
-| 69 | 46 | **Permutations** | Normal | 5'10" | 13.48% |
-| 70 | 90 | **Subsets II** | Normal | 2'30" | 97.52% |
-| 71 | 40 | **Combination Sum II** | Normal | 8'31" | 99.84% |
-| 72 | 47 | **Permutations II** | Normal | 5'16" | 12.27% |
-| 73 | 39 | **Combination Sum** | Normal | 1‘18" | 89.61% |
-| 74 | 698 | **Partition to K Equal Sum Subsets** | Normal | 22'28" | 36.49% |
-| 75 | 200 | **Number of Islands** | Normal | 5'50" | 100.00% |
+| 66 | 1584 | **Min Cost to Connect All Points** | 也是323啊 |
+| 67 | 78 | **Subsets** | 深度优先，不过有顺序 |
+| 68 | 77 | **Combinations** | 判定一下有没有到确认大小，深度遍历，有顺序 |
+| 69 | 46 | **Permutations** | 用了数组，就快很多 |
+| 70 | 90 | **Subsets II** | 先排序，然后判定在同层循环时，i + 1和之前那个不重复 |
+| 71 | 40 | **Combination Sum II** | 这个没法用背包问题解决的原因是，前n个可能有重复情况，比如i和i+1都是1，那么会被计算2次 |
+| 72 | 47 | **Permutations II** | 看来还是差别在数组和map了 |
+| 73 | 39 | **Combination Sum** | 这个可以用背包问题，但是它要的是具体结果，不是统计数量 |
+| 74 | 698 | **Partition to K Equal Sum Subsets** | 需要通过memo防止重复计算 |
+| 75 | 200 | **Number of Islands** | 典型的深度优先，回溯算法 |
 | 76 | 1254 | **Number of Closed Islands** | Normal | 7'44" | 61.80% |
 | 77 | 1020 | **Number of Enclaves** | Normal | 3'26" | 45.02% |
 | 78 | 695 | **Max Area of Island** | Normal | 1'56" | 100.00% |
