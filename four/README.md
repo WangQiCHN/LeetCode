@@ -92,27 +92,27 @@
 | 88 | 583 | **Delete Operation for Two Strings** | 同1143，所以可以练一下背包 |
 | 89 | 712 | **Minimum ASCII Delete Sum for Two Strings** | 同1143，所以可以练一下背包 |
 | 90 | 10 | **Regular Expression Matching** | 这个就不说了，分析之后就可以了 |
-| 91 | 516 | **Longest Palindromic Subsequence** | Normal | 31'26" | 5.96% |
-| 92 | 1312 | **Minimum Insertion Steps to Make a String Palindrome** | Hard | 1'20" | 9.46% |
-| 93 | 416 | **Partition Equal Subset Sum** | Normal | 25'59" | 55.43% |
-| 94 | 518 | **Coin Change II** | Normal | 25'59" | 84.70% |
-| 95 | 64 | **Minimum Path Sum** | Normal | 6'42" | 99.79% |
-| 96 | 174 | **Dungeon Game** | Hard | 11'44" | 100.00% |
-| 97 | 887 | **Super Egg Drop** | Hard | 24'14" | 52.35% |
-| 98 | 312 | **Burst Balloons** | Hard | 25'12" | 92.75% |
-| 99 | 206 | **Reverse Linked List** | Easy | 2'49" | 100.00% |
-| 100 | 92 | **Reverse Linked List II** | Normal | 9'38" | 100.00% |
-| 101 | 870 | **Advantage Shuffle** | Normal | 10'43" | 24.90% |
-| 102 | 316 | **Remove Duplicate Letters** | Normal | 18'12" | 70.83% |
-| 103 | 528 | **Random Pick with Weights** | Normal | 9'52" | 57.10% |
-| 104 | 875 | **Koko Eating Bananas** | Normal | 6'27" | 53.74% |
-| 105 | 1011 | **Capacity To Ship Packages Within D Days** | Normal | 6'47" | 86.26% |
-| 106 | 410 | **Split Array Largest Sum** | Hard | 1'51" | 100.00% |
-| 107 | 42 | **Trapping Rain Water** | Hard | 6'30" | 24.96% |
-| 108 | 11 | **Container With Most Water** | Normal | 3'20" | 94.18% |
-| 109 | 15 | **3Sum** | Normal | 14'54" | 32.53% |
-| 110 | 18 | **4Sum** | Normal | 22'33" | 31.68% |
-| 111 | 236 | **Lowest Common Ancestor of a Binary Tree** | Normal | 2'22" | 99.73% |
+| 91 | 516 | **Longest Palindromic Subsequence** | 又是一道背包问题，可以好好看一下 |
+| 92 | 1312 | **Minimum Insertion Steps to Make a String Palindrome** | 可以用二维先试试，一维有点搞不清楚 |
+| 93 | 416 | **Partition Equal Subset Sum** | 这个很熟悉了 |
+| 94 | 518 | **Coin Change II** | 也是一样的，很熟悉了，之前不会 |
+| 95 | 64 | **Minimum Path Sum** | 回溯问题 |
+| 96 | 174 | **Dungeon Game** | 从终点开始计算，看看需要多少血，血如果是正数，表示1足够 |
+| 97 | 887 | **Super Egg Drop** | 分析上面和下面的，上面的鸡蛋不碎，下面的碎了；另外一种方式就是增加次数，看哪一次达到了需求 |
+| 98 | 312 | **Burst Balloons** | 左右需要增加两个新虚拟气球，并且关键是状态转换 |
+| 99 | 206 | **Reverse Linked List** | head.next.next = head; 这句话是关键 |
+| 100 | 92 | **Reverse Linked List II** | 先找到节点，然后反向，记录最后一个节点的next，因为需要连起来 |
+| 101 | 870 | **Advantage Shuffle** | 只需要构建第二个，因为需要获得index |
+| 102 | 316 | **Remove Duplicate Letters** | 记录每个单词的数量，并且需要记录是否在堆中 |
+| 103 | 528 | **Random Pick with Weights** | 这个关键的是确认范围，别增大了，之前犯错误，原来这个也可以差那么多 |
+| 104 | 875 | **Koko Eating Bananas** | 计算函数，方法可以的 |
+| 105 | 1011 | **Capacity To Ship Packages Within D Days** | 类似875 |
+| 106 | 410 | **Split Array Largest Sum** | 类似875 |
+| 107 | 42 | **Trapping Rain Water** | 从左算最大值和右算最大值，然后计算 |
+| 108 | 11 | **Container With Most Water** | 和42类似，还简单一些，因为计算方便 |
+| 109 | 15 | **3Sum** | Normal | 如果在计算两数和的时候，使用二分法会更快 |
+| 110 | 18 | **4Sum** | Normal | 需要关注，target可能变成long |
+| 111 | 236 | **Lowest Common Ancestor of a Binary Tree** | 这个比较直接，和1676一样的 |
 | 112 | 1644 plus | **Lowest Common Ancestor of a Binary Tree II** | 需要记录那个找到的点，否则靠递归会晕的 |
 | 113 | 1650 plus | **Lowest Common Ancestor of a Binary Tree III** | 这个只需要不断的找parent，两个点的parent重复就行了 |
 | 114 | 1676 plus | **Lowest Common Ancestor of a Binary Tree IV** | 这个其实和两个点是一样的，只不过要都浏览一下 |
