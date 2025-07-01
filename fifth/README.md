@@ -8,7 +8,7 @@
 
 | Index. | No. | Name | Result. |
 |:-------|:----|------|---------|
-| 1.     | 3 | **～～Longest Substring Without Repeating Characters～～** |    |
+| 1.     | 3 | **~~Longest Substring Without Repeating Characters~~** |    |
 | 2.     | 5 | **Longest Palindromic Substring** |    |
 | 3.     | 10 | **Regular Expression Matching** |    |
 | 4.     | 11 | **Container With Most Water** |    |
