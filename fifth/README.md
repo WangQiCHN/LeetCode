@@ -10,10 +10,10 @@
 |:-------|:----|------|---------|
 | ~~1.~~ | 3 | **~~Longest Substring Without Repeating Characters~~** |    |
 | ~~2.~~ | 5 | **~~Longest Palindromic Substring~~** |    |
-| 3.     | 10 | **Regular Expression Matching** |    |
-| 4.     | 11 | **Container With Most Water** |    |
-| 5.     | 15 | **3Sum** |    |
-| 1.     | 18 | **4Sum** |    |
+| ~~3.~~ | 10 | **~~Regular Expression Matching~~** |    |
+| ~~4.~~ | 11 | **~~Container With Most Water~~** |    |
+| ~~5.~~ | 15 | **~~3Sum~~** |    |
+| ~~6.~~ | 18 | **~~4Sum~~** |    |
 | 1.     | 19 | **Remove Nth Node From End of List** |    |
 | 1.     | 21 | **Merge Two Sorted Lists** |    |
 | 1.     | 23 | **Merge K Sorted Lists** |    |
