@@ -8,8 +8,8 @@
 
 | Index. | No. | Name | Result. |
 |:-------|:----|------|---------|
-| 1.     | 3 | **Longest Substring Without Repeating Characters** |    |
-| 2.     | 5 | **Longest Palindromic Substring** |    |
+| 1.     | 3 | **~~Longest Substring Without Repeating Characters~~** |    |
+| 2.     | 5 | **~~Longest Palindromic Substring~~** |    |
 | 3.     | 10 | **Regular Expression Matching** |    |
 | 4.     | 11 | **Container With Most Water** |    |
 | 5.     | 15 | **3Sum** |    |
@@ -118,7 +118,7 @@
 | 1.     | 1254 | **Number of Closed Islands** |    |
 | 1.     | 1312 | **Minimum Insertion Steps to Make a String Palindrome** |    |
 | 1.     | 1584 | **Min Cost to Connect All Points** |    |
-| 1.     | 1644 plus | **~~Lowest Common Ancestor of a Binary Tree II~~** |    |
-| 1.     | 1650 plus | **~~Lowest Common Ancestor of a Binary Tree III~~** |    |
-| 1.     | 1676 plus | **~~Lowest Common Ancestor of a Binary Tree IV~~** |    |
+| 111.   | 1644 plus | **~~Lowest Common Ancestor of a Binary Tree II~~** |    |
+| 112.   | 1650 plus | **~~Lowest Common Ancestor of a Binary Tree III~~** |    |
+| 113.   | 1676 plus | **~~Lowest Common Ancestor of a Binary Tree IV~~** |    |
 | 1.     | 1905 | **Count Sub Islands** |    |
