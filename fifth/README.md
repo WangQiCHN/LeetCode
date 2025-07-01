@@ -1,8 +1,11 @@
 ## 我不希望调用调试，错了就重来，看看结果
 
 
-|  | No. | Name | Desc. |
-|:--|:----|------|-------|
+
+
+
+
+
 | Index. | No. | Name | Result. |
 |:-------|:----|------|---------|
 | 1.     | 3 | **Longest Substring Without Repeating Characters** |    |
