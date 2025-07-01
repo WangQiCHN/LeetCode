@@ -118,7 +118,7 @@
 | 1.     | 1254 | **Number of Closed Islands** |    |
 | 1.     | 1312 | **Minimum Insertion Steps to Make a String Palindrome** |    |
 | 1.     | 1584 | **Min Cost to Connect All Points** |    |
-| 1.     | 1644 plus | **Lowest Common Ancestor of a Binary Tree II** |    |
-| 1.     | 1650 plus | **Lowest Common Ancestor of a Binary Tree III** |    |
-| 1.     | 1676 plus | **Lowest Common Ancestor of a Binary Tree IV** |    |
+| 1.     | 1644 plus | **~~Lowest Common Ancestor of a Binary Tree II~~** |    |
+| 1.     | 1650 plus | **~~Lowest Common Ancestor of a Binary Tree III~~** |    |
+| 1.     | 1676 plus | **~~Lowest Common Ancestor of a Binary Tree IV~~** |    |
 | 1.     | 1905 | **Count Sub Islands** |    |
