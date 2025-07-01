@@ -15,8 +15,8 @@
 | ~~5.~~ | 15 | **~~3Sum~~** |    |
 | ~~6.~~ | 18 | **~~4Sum~~** |    |
 | ~~7.~~ | 19 | **~~Remove Nth Node From End of List~~** |    |
-| 1.     | 21 | **Merge Two Sorted Lists** |    |
-| 1.     | 23 | **Merge K Sorted Lists** |    |
+| ~~8.~~ | 21 | **~~Merge Two Sorted Lists~~** |    |
+| ~~9.~~ | 23 | **~~Merge K Sorted Lists~~** |    |
 | 1.     | 26 | **Remove Duplicates from Sorted Array** |    |
 | 1.     | 27 | **Remove Element** |    |
 | 1.     | 34 | **Find First and Last Position of Element in Sorted Array** |    |
