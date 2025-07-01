@@ -8,8 +8,8 @@
 
 | Index. | No. | Name | Result. |
 |:-------|:----|------|---------|
-| 1.     | 3 | **~~Longest Substring Without Repeating Characters~~** |    |
-| 2.     | 5 | **~~Longest Palindromic Substring~~** |    |
+| ~~1.~~ | 3 | **~~Longest Substring Without Repeating Characters~~** |    |
+| ~~2.~~ | 5 | **~~Longest Palindromic Substring~~** |    |
 | 3.     | 10 | **Regular Expression Matching** |    |
 | 4.     | 11 | **Container With Most Water** |    |
 | 5.     | 15 | **3Sum** |    |
@@ -58,7 +58,7 @@
 | 1.     | 235 | **Lowest Common Ancestor of a Binary Search Tree** |    |
 | 1.     | 236 | **Lowest Common Ancestor of a Binary Tree** |    |
 | 1.     | 239 | **Sliding Window Maximum** |    |
-| 51.    | 261 plus | **~~Graph Valid Tree~~** |   |
+| ~~51.~~| 261 plus | **~~Graph Valid Tree~~** |   |
 | 1.     | 283 | **Move Zeroes** |    |
 | 1.     | 297 | **Serialize and Deserialize Binary Tree** |    |
 | 1.     | 300 | **Longest Increasing Subsequence** |    |
@@ -68,10 +68,10 @@
 | 1.     | 315 | **Count of Smaller Numbers After Self** |    |
 | 1.     | 316 | **Remove Duplicate Letters** |    |
 | 1.     | 322 | **Coin Change** |    |
-| 61.    | 323 plus | **~~Number of Connected Components in an Undirected Graph~~** | 唯一要注意的就是findParent |
+| ~~61.~~| 323 plus | **~~Number of Connected Components in an Undirected Graph~~** | 唯一要注意的就是findParent |
 | 1.     | 344 | **Reverse String** |    |
 | 1.     | 354 | **Russian Doll Envelopes** |    |
-| 64.    | 370 plus | **~~Range Addition~~** |    |
+| ~~64.~~| 370 plus | **~~Range Addition~~** |    |
 | 1.     | 380 | **Insert Delete GetRandom O(1)** |    |
 | 1.     | 410 | **Split Array Largest Sum** |    |
 | 1.     | 416 | **Partition Equal Subset Sum** |    |
@@ -89,7 +89,7 @@
 | 1.     | 567 | **Permutation is String** |    |
 | 1.     | 583 | **Delete Operation for Two Strings** |    |
 | 1.     | 654 | **Maximum Binary Tree** |    |
-| 82.    | 694 plus | **~~Number of Distinct Islands~~** |    |
+| ~~82.~~| 694 plus | **~~Number of Distinct Islands~~** |    |
 | 1.     | 695 | **Max Area of Island** |    |
 | 1.     | 698 | **Partition to K Equal Sum Subsets** |    |
 | 1.     | 700 | **Search in a Binary Search Tree** |    |
@@ -113,12 +113,12 @@
 | 1.     | 1020 | **Number of Enclaves** |    |
 | 1.     | 1094 | **Car Pooling** |    |
 | 1.     | 1109 | **Corporate Flight Bookings** |    |
-| 106.   | 1135 plus | **~~Connecting Cities With Minimum Cost~~** |    |
+| ~~106.~~| 1135 plus | **~~Connecting Cities With Minimum Cost~~** |    |
 | 1.     | 1143 | **Longest Common Subsequence** |    |
 | 1.     | 1254 | **Number of Closed Islands** |    |
 | 1.     | 1312 | **Minimum Insertion Steps to Make a String Palindrome** |    |
 | 1.     | 1584 | **Min Cost to Connect All Points** |    |
-| 111.   | 1644 plus | **~~Lowest Common Ancestor of a Binary Tree II~~** |    |
-| 112.   | 1650 plus | **~~Lowest Common Ancestor of a Binary Tree III~~** |    |
-| 113.   | 1676 plus | **~~Lowest Common Ancestor of a Binary Tree IV~~** |    |
+| ~~111.~~| 1644 plus | **~~Lowest Common Ancestor of a Binary Tree II~~** |    |
+| ~~112.~~| 1650 plus | **~~Lowest Common Ancestor of a Binary Tree III~~** |    |
+| ~~113.~~| 1676 plus | **~~Lowest Common Ancestor of a Binary Tree IV~~** |    |
 | 1.     | 1905 | **Count Sub Islands** |    |
