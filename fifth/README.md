@@ -24,11 +24,11 @@
 | ~~14.~~| 40 | **~~Combination Sum II~~** |    |
 | ~~15.~~| 42 | **~~Trapping Rain Water~~** |    |
 | ~~16.~~| 46 | **~~Permutations~~** |    |
-| 1.     | 47 | **Permutations II** |    |
-| 1.     | 51 | **N-Queens** |    |
-| 1.     | 53 | **Maximum Subarray** |    |
-| 1.     | 64 | **Minimum Path Sum** |    |
-| 1.     | 72 | **Edit Distance** |    |
+| ~~17.~~| 47 | **~~Permutations II~~** |    |
+| ~~18.~~| 51 | **~~N-Queens~~** |    |
+| ~~19.~~| 53 | **~~Maximum Subarray~~** |    |
+| ~~20.~~| 64 | **~~Minimum Path Sum~~** |    |
+| ~~21.~~| 72 | **~~Edit Distance~~** |    |
 | 1.     | 76 | **Minimum Window Substring** |    |
 | 1.     | 77 | **Combinations** |    |
 | 1.     | 78 | **Subsets** |    |
