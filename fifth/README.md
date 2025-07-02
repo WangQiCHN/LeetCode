@@ -19,11 +19,11 @@
 | ~~9.~~ | 23 | **~~Merge K Sorted Lists~~** |    |
 | ~~10.~~| 26 | **~~Remove Duplicates from Sorted Array~~** |    |
 | ~~11.~~| 27 | **~~Remove Element~~** |    |
-| 1.     | 34 | **Find First and Last Position of Element in Sorted Array** |    |
-| 1.     | 39 | **Combination Sum** |    |
-| 1.     | 40 | **Combination Sum II** |    |
-| 1.     | 42 | **Trapping Rain Water** |    |
-| 1.     | 46 | **Permutations** |    |
+| ~~12.~~| 34 | **~~Find First and Last Position of Element in Sorted Array~~** |    |
+| ~~13.~~| 39 | **~~Combination Sum~~** |    |
+| ~~14.~~| 40 | **~~Combination Sum II~~** |    |
+| ~~15.~~| 42 | **~~Trapping Rain Water~~** |    |
+| ~~16.~~| 46 | **~~Permutations~~** |    |
 | 1.     | 47 | **Permutations II** |    |
 | 1.     | 51 | **N-Queens** |    |
 | 1.     | 53 | **Maximum Subarray** |    |
