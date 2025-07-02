@@ -29,11 +29,11 @@
 | ~~19.~~| 53 | **~~Maximum Subarray~~** |    |
 | ~~20.~~| 64 | **~~Minimum Path Sum~~** |    |
 | ~~21.~~| 72 | **~~Edit Distance~~** |    |
-| 1.     | 76 | **Minimum Window Substring** |    |
-| 1.     | 77 | **Combinations** |    |
-| 1.     | 78 | **Subsets** |    |
-| 1.     | 83 | **Remove Duplicates from Sorted List** |    |
-| 1.     | 90 | **Subsets II** |    |
+| ~~22.~~| 76 | **~~Minimum Window Substring~~** |    |
+| ~~23.~~| 77 | **~~Combinations~~** |    |
+| ~~24.~~| 78 | **~~Subsets~~** |    |
+| ~~25.~~| 83 | **~~Remove Duplicates from Sorted List~~** |    |
+| ~~26.~~| 90 | **~~Subsets II~~** |    |
 | 1.     | 92 | **Reverse Linked List II** |    |
 | 1.     | 98 | **Validate Binary Search Tree** |    |
 | 1.     | 104 | **Maximum Depth of Binary Tree** |    |
