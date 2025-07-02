@@ -34,11 +34,11 @@
 | ~~24.~~| 78 | **~~Subsets~~** |    |
 | ~~25.~~| 83 | **~~Remove Duplicates from Sorted List~~** |    |
 | ~~26.~~| 90 | **~~Subsets II~~** |    |
-| 1.     | 92 | **Reverse Linked List II** |    |
-| 1.     | 98 | **Validate Binary Search Tree** |    |
-| 1.     | 104 | **Maximum Depth of Binary Tree** |    |
-| 1.     | 105 | **Construct Binary Tree from Preorder and Inorder** |    |
-| 1.     | 106 | **Construct Binary Tree from Inorder and Postorder** |    |
+| ~~27.~~| 92 | **~~Reverse Linked List II~~** | 还是不太熟悉！   |
+| ~~28.~~| 98 | **~~Validate Binary Search Tree~~** |    |
+| ~~29.~~| 104 | **~~Maximum Depth of Binary Tree~~** |    |
+| ~~30.~~| 105 | **~~Construct Binary Tree from Preorder and Inorder~~** |    |
+| ~~31.~~| 106 | **~~Construct Binary Tree from Inorder and Postorder~~** |    |
 | 1.     | 111 | **Minimum Depth of Binary Tree** |    |
 | 1.     | 114 | **Flatten binary Tree to Linked List** |    |
 | 1.     | 116 | **Populating Next Right Pointers in Each Node** |    |
