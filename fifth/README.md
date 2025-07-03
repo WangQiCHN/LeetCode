@@ -50,11 +50,11 @@
 | ~~40.~~| 160 | **~~Intersection of Two Linked Lists~~** |    |
 | ~~41.~~| 167 | **~~Two Sum II - Input Array Is Sorted~~** |    |
 | ~~42.~~| 174 | **~~Dungeon Game~~** |    |
-| 1.     | 200 | **Number of Islands** |    |
-| 1.     | 206 | **Reverse Linked List** |    |
-| 1.     | 215 | **Kth Largest Element in an Array** |    |
-| 1.     | 226 | **Invert Binary Tree** |    |
-| 1.     | 230 | **Kth Smallest Element in a BST** |    |
+| ~~43.~~| 200 | **~~Number of Islands~~** |    |
+| ~~44.~~| 206 | **~~Reverse Linked List~~** |    |
+| ~~45.~~| 215 | **~~Kth Largest Element in an Array~~** | 失败了！！！    |
+| ~~46.~~| 226 | **~~Invert Binary Tree~~** |    |
+| ~~47.~~| 230 | **~~Kth Smallest Element in a BST~~** |    |
 | 1.     | 235 | **Lowest Common Ancestor of a Binary Search Tree** |    |
 | 1.     | 236 | **Lowest Common Ancestor of a Binary Tree** |    |
 | 1.     | 239 | **Sliding Window Maximum** |    |
