@@ -39,11 +39,11 @@
 | ~~29.~~| 104 | **~~Maximum Depth of Binary Tree~~** |    |
 | ~~30.~~| 105 | **~~Construct Binary Tree from Preorder and Inorder~~** |    |
 | ~~31.~~| 106 | **~~Construct Binary Tree from Inorder and Postorder~~** |    |
-| 1.     | 111 | **Minimum Depth of Binary Tree** |    |
-| 1.     | 114 | **Flatten binary Tree to Linked List** |    |
-| 1.     | 116 | **Populating Next Right Pointers in Each Node** |    |
-| 1.     | 130 | **Surrounded Regions** |    |
-| 1.     | 141 | **Linked List Cycle** |    |
+| ~~32.~~| 111 | **~~Minimum Depth of Binary Tree~~** |    |
+| ~~33.~~| 114 | **~~Flatten binary Tree to Linked List~~** |    |
+| ~~34.~~| 116 | **~~Populating Next Right Pointers in Each Node~~** |    |
+| ~~35.~~| 130 | **~~Surrounded Regions~~** |    |
+| ~~36.~~| 141 | **~~Linked List Cycle~~** |    |
 | 1.     | 142 | **Linked List Cycle II** |    |
 | 1.     | 144 | **Binary Tree Preorder Traversal** |    |
 | 1.     | 146 | **LRU Cache** |    |
