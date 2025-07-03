@@ -44,8 +44,8 @@
 | ~~34.~~| 116 | **~~Populating Next Right Pointers in Each Node~~** |    |
 | ~~35.~~| 130 | **~~Surrounded Regions~~** |    |
 | ~~36.~~| 141 | **~~Linked List Cycle~~** |    |
-| 1.     | 142 | **Linked List Cycle II** |    |
-| 1.     | 144 | **Binary Tree Preorder Traversal** |    |
+| ~~37.~~| 142 | **~~Linked List Cycle II~~** |    |
+| ~~38.~~| 144 | **~~Binary Tree Preorder Traversal~~** |    |
 | 1.     | 146 | **LRU Cache** |    |
 | 1.     | 160 | **Intersection of Two Linked Lists** |    |
 | 1.     | 167 | **Two Sum II - Input Array Is Sorted** |    |
