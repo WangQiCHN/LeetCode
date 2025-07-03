@@ -46,10 +46,10 @@
 | ~~36.~~| 141 | **~~Linked List Cycle~~** |    |
 | ~~37.~~| 142 | **~~Linked List Cycle II~~** |    |
 | ~~38.~~| 144 | **~~Binary Tree Preorder Traversal~~** |    |
-| 1.     | 146 | **LRU Cache** |    |
-| 1.     | 160 | **Intersection of Two Linked Lists** |    |
-| 1.     | 167 | **Two Sum II - Input Array Is Sorted** |    |
-| 1.     | 174 | **Dungeon Game** |    |
+| ~~39.~~| 146 | **~~LRU Cache~~** |    |
+| ~~40.~~| 160 | **~~Intersection of Two Linked Lists~~** |    |
+| ~~41.~~| 167 | **~~Two Sum II - Input Array Is Sorted~~** |    |
+| ~~42.~~| 174 | **~~Dungeon Game~~** |    |
 | 1.     | 200 | **Number of Islands** |    |
 | 1.     | 206 | **Reverse Linked List** |    |
 | 1.     | 215 | **Kth Largest Element in an Array** |    |
