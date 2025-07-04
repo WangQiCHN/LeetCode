@@ -63,11 +63,11 @@
 | ~~53.~~| 297 | **~~Serialize and Deserialize Binary Tree~~** |    |
 | ~~54.~~| 300 | **~~Longest Increasing Subsequence~~** |    |
 | ~~55.~~| 303 | **~~Range Sum Query - Immutable~~** |    |
-| 1.     | 304 | **Range Sum Query 2D - Immutable** |    |
-| 1.     | 312 | **Burst Balloons** |    |
-| 1.     | 315 | **Count of Smaller Numbers After Self** |    |
-| 1.     | 316 | **Remove Duplicate Letters** |    |
-| 1.     | 322 | **Coin Change** |    |
+| ~~56.~~| 304 | **~~Range Sum Query 2D - Immutable~~** |    |
+| ~~57.~~| 312 | **~~Burst Balloons~~** |    |
+| ~~58.~~| 315 | **~~Count of Smaller Numbers After Self~~** |    |
+| ~~59.~~| 316 | **~~Remove Duplicate Letters~~** |    |
+| ~~60.~~| 322 | **~~Coin Change~~** |    |
 | ~~61.~~| 323 plus | **~~Number of Connected Components in an Undirected Graph~~** | 唯一要注意的就是findParent |
 | 1.     | 344 | **Reverse String** |    |
 | 1.     | 354 | **Russian Doll Envelopes** |    |
