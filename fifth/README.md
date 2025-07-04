@@ -75,11 +75,11 @@
 | ~~65.~~| 380 | **~~Insert Delete GetRandom O(1)~~** |    |
 | ~~66.~~| 410 | **~~Split Array Largest Sum~~** |    |
 | ~~67.~~| 416 | **~~Partition Equal Subset Sum~~** |    |
-| 1.     | 438 | **Find All Anagrams in a String** |    |
-| 1.     | 450 | **Delete Node in a BST** |    |
+| ~~68.~~| 438 | **~~Find All Anagrams in a String~~** |    |
+| ~~69.~~| 450 | **~~Delete Node in a BST~~** |    |
 | 1.     | 460 | **LFU Cache** |    |
-| 1.     | 496 | **Next Greater Element I** |    |
-| 1.     | 503 | **Next Greater Element II** |    |
+| ~~71.~~| 496 | **~~Next Greater Element I~~** |    |
+| ~~72.~~| 503 | **~~Next Greater Element II~~** |    |
 | 1.     | 509 | **Fibonacci Number** |  | 
 | 1.     | 516 | **Longest Palindromic Subsequence** |    |
 | 1.     | 518 | **Coin Change II** |    |
