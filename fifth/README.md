@@ -55,14 +55,14 @@
 | ~~45.~~| 215 | **~~Kth Largest Element in an Array~~** | 失败了！！！    |
 | ~~46.~~| 226 | **~~Invert Binary Tree~~** |    |
 | ~~47.~~| 230 | **~~Kth Smallest Element in a BST~~** |    |
-| 1.     | 235 | **Lowest Common Ancestor of a Binary Search Tree** |    |
-| 1.     | 236 | **Lowest Common Ancestor of a Binary Tree** |    |
-| 1.     | 239 | **Sliding Window Maximum** |    |
+| ~~48.~~| 235 | **~~Lowest Common Ancestor of a Binary Search Tree~~** |    |
+| ~~49~~ | 236 | **~~Lowest Common Ancestor of a Binary Tree~~** |    |
+| ~~50.~~| 239 | **~~Sliding Window Maximum~~** |    |
 | ~~51.~~| 261 plus | **~~Graph Valid Tree~~** |   |
-| 1.     | 283 | **Move Zeroes** |    |
-| 1.     | 297 | **Serialize and Deserialize Binary Tree** |    |
-| 1.     | 300 | **Longest Increasing Subsequence** |    |
-| 1.     | 303 | **Range Sum Query - Immutable** |    |
+| ~~52.~~| 283 | **~~Move Zeroes~~** |    |
+| ~~53.~~| 297 | **~~Serialize and Deserialize Binary Tree~~** |    |
+| ~~54.~~| 300 | **~~Longest Increasing Subsequence~~** |    |
+| ~~55.~~| 303 | **~~Range Sum Query - Immutable~~** |    |
 | 1.     | 304 | **Range Sum Query 2D - Immutable** |    |
 | 1.     | 312 | **Burst Balloons** |    |
 | 1.     | 315 | **Count of Smaller Numbers After Self** |    |
