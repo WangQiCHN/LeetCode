@@ -27,34 +27,55 @@ public class Demo {
 
     public static void main() {
         Demo d = new Demo();
-        int[] inorder  = {9,3,15,20,7};
-        int[] postorder = {9,15,7,20,3};
-        TreeNode root = d.buildTree(inorder, postorder);
-        System.out.println(root.val); // Should print 3
+        int k = 5;
+        int[] nums = {2,3,1,1,1,1,1};
+        int result = d.splitArray(nums, k);
+        System.out.println(result); // Should print 3
     }
 
-    HashMap<Integer, Integer> valToIndex = new HashMap<>();
-
-    public TreeNode buildTree(int[] inorder, int[] postorder) {
-        TreeNode root = createTree(inorder, 0, inorder.length - 1, postorder, 0, postorder.length - 1);
-        for (int i = 0; i < inorder.length; i++) {
-            valToIndex.put(inorder[i], i);
+    public int splitArray(int[] nums, int k) {
+        int min = 0, max = 0, bound = 0;
+        for (int n : nums) {
+            if (n > min) {
+                min = n;
+            }
+            max += n;
         }
 
-        return root;
+        while (min <= max) {
+            int mid = (max + min) / 2;
+            int k1 = calculate(nums, mid);
+            if (k1 > k) {
+                min = mid + 1;
+            } else {
+                if (k1 == k) {
+                    bound = mid;
+                }
+                max = mid - 1;
+            }
+        }
+
+        return bound;
     }
 
-    private TreeNode createTree(int[] inorder, int is, int ie, int[] postorder, int ps, int pe) {
-        if (is > ie)
-            return null;
-        int v = postorder[pe];
-        TreeNode node = new TreeNode(v);
+    private int calculate(int[] nums, int capacity) {
+        int c = capacity;
+        int k = 0;
+        for (int n : nums) {
+            c -= n;
+            if (c == 0) {
+                k++;
+                c = capacity;
+            } else if (c < 0) {
+                c = capacity - n;
+                k++;
+            }
+        }
 
-        int index = valToIndex.get(v);
+        if (c < capacity) {
+            k++;
+        }
 
-        node.left = createTree(inorder, is, index - 1, postorder, ps, ps + index - is - 1);
-        node.right = createTree(inorder, index + 1, ie, postorder, ps + index - is, pe - 1);
-
-        return node;
+        return k;
     }
 }

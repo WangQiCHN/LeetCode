@@ -69,12 +69,12 @@
 | ~~59.~~| 316 | **~~Remove Duplicate Letters~~** |    |
 | ~~60.~~| 322 | **~~Coin Change~~** |    |
 | ~~61.~~| 323 plus | **~~Number of Connected Components in an Undirected Graph~~** | 唯一要注意的就是findParent |
-| 1.     | 344 | **Reverse String** |    |
-| 1.     | 354 | **Russian Doll Envelopes** |    |
+| ~~63.~~| 344 | **~~Reverse String~~** |    |
+| ~~64.~~| 354 | **~~Russian Doll Envelopes~~** |    |
 | ~~64.~~| 370 plus | **~~Range Addition~~** |    |
-| 1.     | 380 | **Insert Delete GetRandom O(1)** |    |
-| 1.     | 410 | **Split Array Largest Sum** |    |
-| 1.     | 416 | **Partition Equal Subset Sum** |    |
+| ~~65.~~| 380 | **~~Insert Delete GetRandom O(1)~~** |    |
+| ~~66.~~| 410 | **~~Split Array Largest Sum~~** |    |
+| ~~67.~~| 416 | **~~Partition Equal Subset Sum~~** |    |
 | 1.     | 438 | **Find All Anagrams in a String** |    |
 | 1.     | 450 | **Delete Node in a BST** |    |
 | 1.     | 460 | **LFU Cache** |    |
