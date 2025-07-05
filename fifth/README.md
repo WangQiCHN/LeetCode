@@ -87,7 +87,7 @@
 | ~~77.~~| 538 | **~~Convert BST to Greater Tree~~** |    |
 | ~~78.~~| 543 | **~~Diameter of Binary Tree~~** |    |
 | ~~79.~~| 567 | **~~Permutation is String~~** |    |
-| ~~80.~~| 583 | **~~Delete Operation for Two Strings~~** |    |
+| ~~80.~~| 583 | **~~Delete Operation for Two Strings~~** | 用背包问题再解决一下   |
 | ~~81.~~| 654 | **~~Maximum Binary Tree~~** |    |
 | ~~82.~~| 694 plus | **~~Number of Distinct Islands~~** |    |
 | 1.     | 695 | **Max Area of Island** |    |
@@ -114,11 +114,11 @@
 | 1.     | 1094 | **Car Pooling** |    |
 | 1.     | 1109 | **Corporate Flight Bookings** |    |
 | ~~106.~~| 1135 plus | **~~Connecting Cities With Minimum Cost~~** |    |
-| 1.     | 1143 | **Longest Common Subsequence** |    |
-| 1.     | 1254 | **Number of Closed Islands** |    |
-| 1.     | 1312 | **Minimum Insertion Steps to Make a String Palindrome** |    |
-| 1.     | 1584 | **Min Cost to Connect All Points** |    |
+| ~~107.~~| 1143 | **~~Longest Common Subsequence~~** | 这个和1312其实一样，看看   |
+| ~~108.~~| 1254 | **~~Number of Closed Islands~~** |    |
+| ~~109.~~| 1312 | **~~Minimum Insertion Steps to Make a String Palindrome~~** | 在背包试试，这个基本对了   |
+| ~~110.~~| 1584 | **~~Min Cost to Connect All Points~~** |    |
 | ~~111.~~| 1644 plus | **~~Lowest Common Ancestor of a Binary Tree II~~** |    |
 | ~~112.~~| 1650 plus | **~~Lowest Common Ancestor of a Binary Tree III~~** |    |
 | ~~113.~~| 1676 plus | **~~Lowest Common Ancestor of a Binary Tree IV~~** |    |
-| 1.     | 1905 | **Count Sub Islands** |    |
+| ~~114.~~| 1905 | **~~Count Sub Islands~~** |    |
