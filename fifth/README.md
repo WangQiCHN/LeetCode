@@ -84,11 +84,11 @@
 | ~~74.~~| 516 | **~~Longest Palindromic Subsequence~~** | 这个可以再巩固一下！   |
 | ~~75.~~| 518 | **~~Coin Change II~~** |    |
 | ~~76.~~| 528 | **~~Random Pick with Weights~~** | 再用double试一下    |
-| 1.     | 538 | **Convert BST to Greater Tree** |    |
-| 1.     | 543 | **Diameter of Binary Tree** |    |
-| 1.     | 567 | **Permutation is String** |    |
-| 1.     | 583 | **Delete Operation for Two Strings** |    |
-| 1.     | 654 | **Maximum Binary Tree** |    |
+| ~~77.~~| 538 | **~~Convert BST to Greater Tree~~** |    |
+| ~~78.~~| 543 | **~~Diameter of Binary Tree~~** |    |
+| ~~79.~~| 567 | **~~Permutation is String~~** |    |
+| ~~80.~~| 583 | **~~Delete Operation for Two Strings~~** |    |
+| ~~81.~~| 654 | **~~Maximum Binary Tree~~** |    |
 | ~~82.~~| 694 plus | **~~Number of Distinct Islands~~** |    |
 | 1.     | 695 | **Max Area of Island** |    |
 | 1.     | 698 | **Partition to K Equal Sum Subsets** |    |
