@@ -77,13 +77,13 @@
 | ~~67.~~| 416 | **~~Partition Equal Subset Sum~~** |    |
 | ~~68.~~| 438 | **~~Find All Anagrams in a String~~** |    |
 | ~~69.~~| 450 | **~~Delete Node in a BST~~** |    |
-| 1.     | 460 | **LFU Cache** |    |
+| ~~70.~~| 460 | **~~LFU Cache~~** |    |
 | ~~71.~~| 496 | **~~Next Greater Element I~~** |    |
 | ~~72.~~| 503 | **~~Next Greater Element II~~** |    |
-| 1.     | 509 | **Fibonacci Number** |  | 
-| 1.     | 516 | **Longest Palindromic Subsequence** |    |
-| 1.     | 518 | **Coin Change II** |    |
-| 1.     | 528 | **Random Pick with Weights** |    |
+| ~~73.~~| 509 | **~~Fibonacci Number~~** |  | 
+| ~~74.~~| 516 | **~~Longest Palindromic Subsequence~~** | 这个可以再巩固一下！   |
+| ~~75.~~| 518 | **~~Coin Change II~~** |    |
+| ~~76.~~| 528 | **~~Random Pick with Weights~~** | 再用double试一下    |
 | 1.     | 538 | **Convert BST to Greater Tree** |    |
 | 1.     | 543 | **Diameter of Binary Tree** |    |
 | 1.     | 567 | **Permutation is String** |    |
