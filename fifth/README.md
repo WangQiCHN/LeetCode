@@ -101,18 +101,18 @@
 | ~~91.~~| 752 | **~~Open the Lock~~** |    |
 | ~~92.~~| 773 | **~~Sliding Puzzle~~** |    |
 | ~~93.~~| 797 | **~~All Paths From Source to Target~~** |    |
-| 1.     | 870 | **Advantage Shuffle** |    |
-| 1.     | 875 | **Koko Eating Bananas** |    |
-| 1.     | 876 | **Middle of the Linked List** |    |
+| ~~94.~~| 870 | **~~Advantage Shuffle~~** |    |
+| ~~95.~~| 875 | **~~Koko Eating Bananas~~** |    |
+| ~~96.~~| 876 | **~~Middle of the Linked List~~** |    |
 | 1.     | 887 | **Super Egg Drop** |    |
 | 1.     | 889 | **Construct Binary Tree from Preorder and Postorder** |    |
 | 1.     | 912 | **Sort an Array** |    |
-| 1.     | 931 | **Minimum Falling Path Sum** |    |
-| 1.     | 990 | **Satisfiability of Equality Equations** |    |
-| 1.     | 1011 | **Capacity To Ship Packages Within D Days** |    |
-| 1.     | 1020 | **Number of Enclaves** |    |
-| 1.     | 1094 | **Car Pooling** |    |
-| 1.     | 1109 | **Corporate Flight Bookings** |    |
+| ~~100.~~| 931 | **~~Minimum Falling Path Sum~~** |    |
+| ~~101.~~| 990 | **~~Satisfiability of Equality Equations~~** |    |
+| ~~102.~~| 1011 | **~~Capacity To Ship Packages Within D Days~~** |    |
+| ~~103.~~| 1020 | **~~Number of Enclaves~~** |    |
+| ~~104.~~| 1094 | **~~Car Pooling~~** |    |
+| ~~105.~~| 1109 | **~~Corporate Flight Bookings~~** |    |
 | ~~106.~~| 1135 plus | **~~Connecting Cities With Minimum Cost~~** |    |
 | ~~107.~~| 1143 | **~~Longest Common Subsequence~~** | 这个和1312其实一样，看看   |
 | ~~108.~~| 1254 | **~~Number of Closed Islands~~** |    |
