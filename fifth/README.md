@@ -104,9 +104,9 @@
 | ~~94.~~| 870 | **~~Advantage Shuffle~~** |    |
 | ~~95.~~| 875 | **~~Koko Eating Bananas~~** |    |
 | ~~96.~~| 876 | **~~Middle of the Linked List~~** |    |
-| 1.     | 887 | **Super Egg Drop** |    |
-| 1.     | 889 | **Construct Binary Tree from Preorder and Postorder** |    |
-| 1.     | 912 | **Sort an Array** |    |
+| ~~97.~~| 887 | **~~Super Egg Drop~~** | 尝试普通的背包方式   |
+| ~~98.~~| 889 | **~~Construct Binary Tree from Preorder and Postorder~~** |    |
+| ~~99.~~| 912 | **~~Sort an Array~~** | 看来快速排序，还是不大熟悉啊   |
 | ~~100.~~| 931 | **~~Minimum Falling Path Sum~~** |    |
 | ~~101.~~| 990 | **~~Satisfiability of Equality Equations~~** |    |
 | ~~102.~~| 1011 | **~~Capacity To Ship Packages Within D Days~~** |    |
