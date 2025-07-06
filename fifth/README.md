@@ -90,11 +90,11 @@
 | ~~80.~~| 583 | **~~Delete Operation for Two Strings~~** | 用背包问题再解决一下   |
 | ~~81.~~| 654 | **~~Maximum Binary Tree~~** |    |
 | ~~82.~~| 694 plus | **~~Number of Distinct Islands~~** |    |
-| 1.     | 695 | **Max Area of Island** |    |
-| 1.     | 698 | **Partition to K Equal Sum Subsets** |    |
-| 1.     | 700 | **Search in a Binary Search Tree** |    |
-| 1.     | 701 | **Insert into a Binary Search Tree** |    |
-| 1.     | 704 | **Binary Search** |    |
+| ~~83.~~| 695 | **~~Max Area of Island~~** |    |
+| ~~84.~~| 698 | **~~Partition to K Equal Sum Subsets~~** | 看一下如何有更好的方案，之前那个太烦了    |
+| ~~85.~~| 700 | **~~Search in a Binary Search Tree~~** |    |
+| ~~86.~~| 701 | **~~Insert into a Binary Search Tree~~** |    |
+| ~~87.~~| 704 | **~~Binary Search~~** |    |
 | 1.     | 710 | **Random Pick with Blacklist** |    |
 | 1.     | 712 | **Minimum ASCII Delete Sum for Two Strings** |    |
 | 1.     | 739 | **Daily Temperatures** |    |
