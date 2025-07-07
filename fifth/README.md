@@ -34,7 +34,7 @@
 | ~~24.~~| 78 | **~~Subsets~~** |    |
 | ~~25.~~| 83 | **~~Remove Duplicates from Sorted List~~** |    |
 | ~~26.~~| 90 | **~~Subsets II~~** |    |
-| ~~27.~~| 92 | **~~Reverse Linked List II~~** | 还是不太熟悉！   |
+| ~~27.~~| 92 | **~~Reverse Linked List II~~** | 还是不太熟悉！，换了思路，果然好了很多   |
 | ~~28.~~| 98 | **~~Validate Binary Search Tree~~** |    |
 | ~~29.~~| 104 | **~~Maximum Depth of Binary Tree~~** |    |
 | ~~30.~~| 105 | **~~Construct Binary Tree from Preorder and Inorder~~** |    |
@@ -52,7 +52,7 @@
 | ~~42.~~| 174 | **~~Dungeon Game~~** |    |
 | ~~43.~~| 200 | **~~Number of Islands~~** |    |
 | ~~44.~~| 206 | **~~Reverse Linked List~~** |    |
-| ~~45.~~| 215 | **~~Kth Largest Element in an Array~~** | 失败了！！！    |
+| ~~45.~~| 215 | **~~Kth Largest Element in an Array~~** | 失败了！需要用更好的思路，否则超时了，这个思路好，起码保证了第一个数不会无法交换 |
 | ~~46.~~| 226 | **~~Invert Binary Tree~~** |    |
 | ~~47.~~| 230 | **~~Kth Smallest Element in a BST~~** |    |
 | ~~48.~~| 235 | **~~Lowest Common Ancestor of a Binary Search Tree~~** |    |

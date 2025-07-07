@@ -1,81 +1,55 @@
 package demo;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
 public class Demo {
-
-    public static void main() {
-        Demo d = new Demo();
-        int k = 5;
-        int[] nums = {2,3,1,1,1,1,1};
-        int result = d.splitArray(nums, k);
-        System.out.println(result); // Should print 3
+    public static void main(String[] args) {
+        int[] nums = {3, 2, 1, 5, 6, 4};
+        int k = 2;
+        Demo demo = new Demo();
+        int result = demo.findKthLargest(nums, k);
+        System.out.println("The " + k + "th largest element is: " + result);
     }
 
-    public int splitArray(int[] nums, int k) {
-        int min = 0, max = 0, bound = 0;
-        for (int n : nums) {
-            if (n > min) {
-                min = n;
-            }
-            max += n;
-        }
-
-        while (min <= max) {
-            int mid = (max + min) / 2;
-            int k1 = calculate(nums, mid);
-            if (k1 > k) {
-                min = mid + 1;
-            } else {
-                if (k1 == k) {
-                    bound = mid;
-                }
-                max = mid - 1;
-            }
-        }
-
-        return bound;
+    public int findKthLargest(int[] nums, int k) {
+        int n = nums.length;
+        int realK = n - k;
+        return quick_sort(nums, 0, n - 1, realK);
     }
 
-    private int calculate(int[] nums, int capacity) {
-        int c = capacity;
-        int k = 0;
-        for (int n : nums) {
-            c -= n;
-            if (c == 0) {
-                k++;
-                c = capacity;
-            } else if (c < 0) {
-                c = capacity - n;
-                k++;
+    private int quick_sort(int[] nums, int left, int right, int k) {
+        if (left == right) return nums[k];
+        int p = nums[left];
+        int lo = left - 1;
+        int hi = right + 1;
+        while (lo < hi) {
+            do lo++; while(nums[lo] < p);
+            do hi--; while(nums[hi] > p);
+
+            if (lo < hi) {
+                int temp=nums[lo];
+                nums[lo]=nums[hi];
+                nums[hi]=temp;
             }
         }
-
-        if (c < capacity) {
-            k++;
-        }
-
-        return k;
+        if(k <= hi) return quick_sort(nums, left, hi, k);
+        else return quick_sort(nums, hi + 1, right, k);
     }
+
+    // private int quick_sort(int[] nums, int left, int right, int k) {
+    //     if (left == right) return nums[k];
+    //     int p = nums[left];
+    //     int lo = left - 1;
+    //     int hi = right + 1;
+    //     while (lo < hi) {
+    //         do lo++; while(nums[lo] < p);
+    //         do hi--; while(nums[hi] > p);
+
+    //         if (lo < hi) {
+    //             int temp=nums[lo];
+    //             nums[lo]=nums[hi];
+    //             nums[hi]=temp;
+    //         }
+    //     }
+    //     if(k <= hi) return quick_sort(nums, left, hi, k);
+    //     else return quick_sort(nums, hi + 1, right, k);
+    // }
 }
