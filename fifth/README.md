@@ -81,7 +81,7 @@
 | ~~71.~~| 496 | **~~Next Greater Element I~~** |    |
 | ~~72.~~| 503 | **~~Next Greater Element II~~** |    |
 | ~~73.~~| 509 | **~~Fibonacci Number~~** |  | 
-| ~~74.~~| 516 | **~~Longest Palindromic Subsequence~~** | 这个可以再巩固一下！   |
+| ~~74.~~| 516 | **~~Longest Palindromic Subsequence~~** | 这个可以再巩固一下！我擦，很成功   |
 | ~~75.~~| 518 | **~~Coin Change II~~** |    |
 | ~~76.~~| 528 | **~~Random Pick with Weights~~** | 再用double试一下    |
 | ~~77.~~| 538 | **~~Convert BST to Greater Tree~~** |    |
