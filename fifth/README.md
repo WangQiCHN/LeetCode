@@ -68,7 +68,7 @@
 | ~~58.~~| 315 | **~~Count of Smaller Numbers After Self~~** |    |
 | ~~59.~~| 316 | **~~Remove Duplicate Letters~~** |    |
 | ~~60.~~| 322 | **~~Coin Change~~** |    |
-| ~~61.~~| 323 plus | **~~Number of Connected Components in an Undirected Graph~~** | 唯一要注意的就是findParent |
+| ~~61.~~| 323 plus | **~~Number of Connected Components in an Undirected Graph~~** | 唯一要注意的就是findParent，其实使用sizes会更好 |
 | ~~63.~~| 344 | **~~Reverse String~~** |    |
 | ~~64.~~| 354 | **~~Russian Doll Envelopes~~** |    |
 | ~~64.~~| 370 plus | **~~Range Addition~~** |    |
