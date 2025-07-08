@@ -1,55 +1,68 @@
 package demo;
 
-public class Demo {
+import java.util.Random;
+
+class Demo {
     public static void main(String[] args) {
-        int[] nums = {3, 2, 1, 5, 6, 4};
-        int k = 2;
-        Demo demo = new Demo();
-        int result = demo.findKthLargest(nums, k);
-        System.out.println("The " + k + "th largest element is: " + result);
+        int[] w = { 1, 3 };
+        Demo demo = new Demo(w);
+        for (int i = 0; i < 10; i++) {
+            System.out.println(demo.pickIndex(0.26));
+        }
     }
 
-    public int findKthLargest(int[] nums, int k) {
-        int n = nums.length;
-        int realK = n - k;
-        return quick_sort(nums, 0, n - 1, realK);
+    private double[] p;
+    private Random random;
+
+    // public Demo(int[] w) {
+    //     random = new Random();
+    //     int n = w.length;
+    //     p = new double[n + 1];
+    //     p[0] = 0;
+    //     for (int i = 0; i < n; i++) {
+    //         p[i + 1] = (p[i] + w[i]);
+    //     }
+    // }
+    public Demo(int[] w) {
+        random = new Random();
+        int n = w.length;
+        p = new double[n + 1];
+        p[0] = 0.0;
+        for (int i = 0; i < n; i++) {
+            p[i + 1] = (p[i] + w[i]);
+        }
+        for (int i = 0; i < n + 1; i++) {
+            p[i] /= p[n];
+        }
     }
 
-    private int quick_sort(int[] nums, int left, int right, int k) {
-        if (left == right) return nums[k];
-        int p = nums[left];
-        int lo = left - 1;
-        int hi = right + 1;
-        while (lo < hi) {
-            do lo++; while(nums[lo] < p);
-            do hi--; while(nums[hi] > p);
+    // public int pickIndex() {
+    // int sum = p[p.length - 1];
+    // int v = random.nextInt(sum) + 1;
+    // int left = 0, right = p.length - 1;
+    // while (left < right) {
+    // int mid = (left + right) >> 1;
+    // if (p[mid] < v) {
+    // left = mid + 1;
+    // } else {
+    // right = mid;
+    // }
+    // }
 
-            if (lo < hi) {
-                int temp=nums[lo];
-                nums[lo]=nums[hi];
-                nums[hi]=temp;
+    // return left - 1;
+    // }
+    public int pickIndex(double v) {
+        // double v = random.nextDouble();
+        int left = 0, right = p.length - 1;
+        while (left < right) {
+            int mid = (left + right) >> 1;
+            if (p[mid] < v) {
+                left = mid + 1;
+            } else {
+                right = mid;
             }
         }
-        if(k <= hi) return quick_sort(nums, left, hi, k);
-        else return quick_sort(nums, hi + 1, right, k);
+
+        return left - 1;
     }
-
-    // private int quick_sort(int[] nums, int left, int right, int k) {
-    //     if (left == right) return nums[k];
-    //     int p = nums[left];
-    //     int lo = left - 1;
-    //     int hi = right + 1;
-    //     while (lo < hi) {
-    //         do lo++; while(nums[lo] < p);
-    //         do hi--; while(nums[hi] > p);
-
-    //         if (lo < hi) {
-    //             int temp=nums[lo];
-    //             nums[lo]=nums[hi];
-    //             nums[hi]=temp;
-    //         }
-    //     }
-    //     if(k <= hi) return quick_sort(nums, left, hi, k);
-    //     else return quick_sort(nums, hi + 1, right, k);
-    // }
 }

@@ -83,7 +83,7 @@
 | ~~73.~~| 509 | **~~Fibonacci Number~~** |  | 
 | ~~74.~~| 516 | **~~Longest Palindromic Subsequence~~** | 这个可以再巩固一下！我擦，很成功   |
 | ~~75.~~| 518 | **~~Coin Change II~~** |    |
-| ~~76.~~| 528 | **~~Random Pick with Weights~~** | 再用double试一下    |
+| ~~76.~~| 528 | **~~Random Pick with Weights~~** | 再用double试一下，虽然过了，但是在0的时候，是有问题的，还是用整数吧    |
 | ~~77.~~| 538 | **~~Convert BST to Greater Tree~~** |    |
 | ~~78.~~| 543 | **~~Diameter of Binary Tree~~** |    |
 | ~~79.~~| 567 | **~~Permutation is String~~** |    |
