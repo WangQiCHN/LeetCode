@@ -1,7 +1,7 @@
 # LeetCode
 my code example for Leet Code
 
-## group 1
+## group 1 - 新方法太好了！
 1. 215 需要再做一下
 2. 912 可以了，和215合并来看
 
