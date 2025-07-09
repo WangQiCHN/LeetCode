@@ -1,68 +1,35 @@
 package demo;
 
-import java.util.Random;
-
 class Demo {
     public static void main(String[] args) {
-        int[] w = { 1, 3 };
-        Demo demo = new Demo(w);
-        for (int i = 0; i < 10; i++) {
-            System.out.println(demo.pickIndex(0.26));
-        }
+        Demo demo = new Demo();
+        int k = 2;
+        int n = 6;
+        int result = demo.superEggDrop(k, n);
+        System.out.println(result); // Output: 2
     }
 
-    private double[] p;
-    private Random random;
+    public int superEggDrop(int k, int n) {
+        int[][] dps = new int[k + 1][n + 1];
 
-    // public Demo(int[] w) {
-    //     random = new Random();
-    //     int n = w.length;
-    //     p = new double[n + 1];
-    //     p[0] = 0;
-    //     for (int i = 0; i < n; i++) {
-    //         p[i + 1] = (p[i] + w[i]);
-    //     }
-    // }
-    public Demo(int[] w) {
-        random = new Random();
-        int n = w.length;
-        p = new double[n + 1];
-        p[0] = 0.0;
-        for (int i = 0; i < n; i++) {
-            p[i + 1] = (p[i] + w[i]);
+        for (int i = 1; i <= k; i++) {
+            dps[i][1] = 1; // 1 floor requires 1 attempt
         }
-        for (int i = 0; i < n + 1; i++) {
-            p[i] /= p[n];
+        for (int j = 1; j <= n; j++) {
+            dps[1][j] = j; // 1 egg requires j attempts for
         }
-    }
 
-    // public int pickIndex() {
-    // int sum = p[p.length - 1];
-    // int v = random.nextInt(sum) + 1;
-    // int left = 0, right = p.length - 1;
-    // while (left < right) {
-    // int mid = (left + right) >> 1;
-    // if (p[mid] < v) {
-    // left = mid + 1;
-    // } else {
-    // right = mid;
-    // }
-    // }
-
-    // return left - 1;
-    // }
-    public int pickIndex(double v) {
-        // double v = random.nextDouble();
-        int left = 0, right = p.length - 1;
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (p[mid] < v) {
-                left = mid + 1;
-            } else {
-                right = mid;
+        for (int i = 2; i <= k; i++) {
+            for (int j = 2; j <= n; j++) {
+                for (int x = 1; x <= j; x++) {
+                    int temp = 1 + Math.max(dps[i - 1][x - 1], dps[i][j - x]);
+                    if (dps[i][j] == 0 || temp < dps[i][j]) {
+                        dps[i][j] = temp;
+                    }
+                }
             }
         }
 
-        return left - 1;
+        return dps[k][n];
     }
 }

@@ -87,16 +87,16 @@
 | ~~77.~~| 538 | **~~Convert BST to Greater Tree~~** |    |
 | ~~78.~~| 543 | **~~Diameter of Binary Tree~~** |    |
 | ~~79.~~| 567 | **~~Permutation is String~~** |    |
-| ~~80.~~| 583 | **~~Delete Operation for Two Strings~~** | 用背包问题再解决一下   |
+| ~~80.~~| 583 | **~~Delete Operation for Two Strings~~** | 用背包问题再解决一下，搞定了   |
 | ~~81.~~| 654 | **~~Maximum Binary Tree~~** |    |
 | ~~82.~~| 694 plus | **~~Number of Distinct Islands~~** |    |
 | ~~83.~~| 695 | **~~Max Area of Island~~** |    |
-| ~~84.~~| 698 | **~~Partition to K Equal Sum Subsets~~** | 看一下如何有更好的方案，之前那个太烦了    |
+| ~~84.~~| 698 | **~~Partition to K Equal Sum Subsets~~** | 看一下如何有更好的方案，之前那个太烦了，没有了，就这样了    |
 | ~~85.~~| 700 | **~~Search in a Binary Search Tree~~** |    |
 | ~~86.~~| 701 | **~~Insert into a Binary Search Tree~~** |    |
 | ~~87.~~| 704 | **~~Binary Search~~** |    |
 | ~~88.~~| 710 | **~~Random Pick with Blacklist~~** |    |
-| ~~89.~~| 712 | **~~Minimum ASCII Delete Sum for Two Strings~~** | 又是一道背包题    |
+| ~~89.~~| 712 | **~~Minimum ASCII Delete Sum for Two Strings~~** | 又是一道背包题，搞定了，就是583啊   |
 | ~~90.~~| 739 | **~~Daily Temperatures~~** |    |
 | ~~91.~~| 752 | **~~Open the Lock~~** |    |
 | ~~92.~~| 773 | **~~Sliding Puzzle~~** |    |
@@ -104,9 +104,9 @@
 | ~~94.~~| 870 | **~~Advantage Shuffle~~** |    |
 | ~~95.~~| 875 | **~~Koko Eating Bananas~~** |    |
 | ~~96.~~| 876 | **~~Middle of the Linked List~~** |    |
-| ~~97.~~| 887 | **~~Super Egg Drop~~** | 尝试普通的背包方式   |
+| ~~97.~~| 887 | **~~Super Egg Drop~~** | 尝试普通的背包方式，三层，搞定   |
 | ~~98.~~| 889 | **~~Construct Binary Tree from Preorder and Postorder~~** |    |
-| ~~99.~~| 912 | **~~Sort an Array~~** | 看来快速排序，还是不大熟悉啊   |
+| ~~99.~~| 912 | **~~Sort an Array~~** | 看来快速排序，还是不大熟悉啊，可以了   |
 | ~~100.~~| 931 | **~~Minimum Falling Path Sum~~** |    |
 | ~~101.~~| 990 | **~~Satisfiability of Equality Equations~~** |    |
 | ~~102.~~| 1011 | **~~Capacity To Ship Packages Within D Days~~** |    |
@@ -114,9 +114,9 @@
 | ~~104.~~| 1094 | **~~Car Pooling~~** |    |
 | ~~105.~~| 1109 | **~~Corporate Flight Bookings~~** |    |
 | ~~106.~~| 1135 plus | **~~Connecting Cities With Minimum Cost~~** |    |
-| ~~107.~~| 1143 | **~~Longest Common Subsequence~~** | 这个和1312其实一样，看看   |
+| ~~107.~~| 1143 | **~~Longest Common Subsequence~~** | 这个和1312其实一样，看看，搞定了   |
 | ~~108.~~| 1254 | **~~Number of Closed Islands~~** |    |
-| ~~109.~~| 1312 | **~~Minimum Insertion Steps to Make a String Palindrome~~** | 在背包试试，这个基本对了   |
+| ~~109.~~| 1312 | **~~Minimum Insertion Steps to Make a String Palindrome~~** | 在背包试试，这个基本对了，516的对称题   |
 | ~~110.~~| 1584 | **~~Min Cost to Connect All Points~~** |    |
 | ~~111.~~| 1644 plus | **~~Lowest Common Ancestor of a Binary Tree II~~** |    |
 | ~~112.~~| 1650 plus | **~~Lowest Common Ancestor of a Binary Tree III~~** |    |
