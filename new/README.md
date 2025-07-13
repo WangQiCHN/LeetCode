@@ -7,3 +7,8 @@
 | 4 | **Median of Two Sorted Arrays** | Hard | Every time remove half of one array |
 | 29 | **Divide Two Integers** | Normal | Using sub or bit operation |
 | 30 | **Substring with Concatenation** | Hard | How to resolve all 'a' |
+| 31 | **Next Permutation** | Normal | It is so hard to know how to resolve it |
+| 32 | **Longest Valid Parentheses** | Hard | Using stack and guard is easy to understand |
+| 33 | **Search in Rotated Sorted** | Normal | I need to think the ways simple |
+| 37 | **Sudoku Solver** | Hard | It is not so hard, only try the number one by one |
+

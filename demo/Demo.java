@@ -3,26 +3,25 @@ package demo;
 class Demo {
     public static void main(String[] args) {
         Demo demo = new Demo();
-        String k = "bbbab";
-        int result = demo.longestPalindromeSubseq(k);
-        System.out.println(result); // Output: 2
+        // int[] nums = { 4,5,6,7,0,1,2 };
+        int[] nums = { 1 };
+        int target = 1;
+        int answer = demo.searchInsert(nums, target);
+        System.out.println(answer);
     }
 
-    public int longestPalindromeSubseq(String s) {
-        int n = s.length();
-        char[] cs = s.toCharArray();
-        int[] dps = new int[n];
-
-        for (int i = n - 1; i >=0; i--) {
-            dps[i] = 1;
-            int prev = 0;
-            for (int j = i + 1; j < n; j++) {
-                int temp = dps[j];
-                dps[j] = (cs[i] == cs[j] ? (prev + 2) : Math.max(dps[j], dps[j - 1]));
-                prev = temp;
+    public int searchInsert(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int mid = (left + right) >> 1;
+            if (nums[mid] == target) return mid;
+            else if (nums[mid] > target) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
             }
         }
 
-        return dps[n - 1];
+        return nums[left] > target ? left : left + 1;
     }
 }
