@@ -11,4 +11,4 @@
 | 32 | **Longest Valid Parentheses** | Hard | Using stack and guard is easy to understand |
 | 33 | **Search in Rotated Sorted** | Normal | I need to think the ways simple |
 | 37 | **Sudoku Solver** | Hard | It is not so hard, only try the number one by one |
-
+| 41 | **First Missing Positive** | Hard | The solution is good, but why while not if |
