@@ -3,25 +3,31 @@ package demo;
 class Demo {
     public static void main(String[] args) {
         Demo demo = new Demo();
-        // int[] nums = { 4,5,6,7,0,1,2 };
-        int[] nums = { 1 };
-        int target = 1;
-        int answer = demo.searchInsert(nums, target);
-        System.out.println(answer);
+        int[][] matrix = {{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}};
+        demo.rotate(matrix);
+        // System.out.println(answer);
     }
 
-    public int searchInsert(int[] nums, int target) {
-        int left = 0, right = nums.length - 1;
-        while (left < right) {
-            int mid = (left + right) >> 1;
-            if (nums[mid] == target) return mid;
-            else if (nums[mid] > target) {
-                right = mid - 1;
-            } else {
-                left = mid + 1;
+    public void rotate(int[][] matrix) {
+        int n = matrix.length;
+        
+        // Step 1: Transpose the matrix (swap elements across the diagonal)
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
             }
         }
-
-        return nums[left] > target ? left : left + 1;
+        
+        // Step 2: Reverse each row
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n / 2; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[i][n - 1 - j];
+                matrix[i][n - 1 - j] = temp;
+            }
+        }
     }
+
 }
