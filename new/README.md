@@ -5,8 +5,8 @@
 | No. | Times. | Name | Diff. | Desc |
 |:--|:--|:----|------|-----------:|
 | 4  | 2  | **Median of Two Sorted Arrays** | Hard | Every time remove half of one array |
-| 29 | 1  | **Divide Two Integers** | Normal | Using sub or bit operation |
-| 30 | 1  | **Substring with Concatenation** | Hard | How to resolve all 'a' |
+| ~~29~~ | 1  | **~~Divide Two Integers~~** | Normal | Using sub or bit operation |
+| ~~30~~ | 1  | **~~Substring with Concatenation~~** | Hard | How to resolve all 'a' |
 | 31 | 1  | **Next Permutation** | Normal | It is so hard to know how to resolve it |
 | 32 | 1  | **Longest Valid Parentheses** | Hard | Using stack and guard is easy to understand |
 | 33 | 1  | **Search in Rotated Sorted** | Normal | I need to think the ways simple |
