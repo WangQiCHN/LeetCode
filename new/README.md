@@ -13,4 +13,4 @@
 | ~~37~~ | **~~Sudoku Solver~~** | Hard | It is not so hard, only try the number one by one |
 | ~~41~~ | **~~First Missing Positive~~** | Hard | The solution is good, but why while not if |
 | ~~48~~ | **~~Rotate Image~~** | Normal | Swap elements across the diagonal, Reverse each row  |
-| ~~50~~ | 1 | **~~Pow(x, n)~~** | Normal | We need the help from mathematics |
+| ~~50~~ | **~~Pow(x, n)~~** | Normal | We need the help from mathematics |
