@@ -14,3 +14,6 @@
 | ~~41~~ | **~~First Missing Positive~~** | Hard | The solution is good, but why while not if |
 | ~~48~~ | **~~Rotate Image~~** | Normal | Swap elements across the diagonal, Reverse each row  |
 | ~~50~~ | **~~Pow(x, n)~~** | Normal | We need the help from mathematics |
+| 84 | **Largest Rectangle in Histogram** | Hard |  |
+| 85 | **Maximal Rectangle** | Hard |  |
+| 87 | **Scramble String** | Hard |  |
