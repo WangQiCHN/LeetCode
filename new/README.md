@@ -17,3 +17,5 @@
 | 84 | **Largest Rectangle in Histogram** | Hard |  |
 | 85 | **Maximal Rectangle** | Hard |  |
 | 87 | **Scramble String** | Hard |  |
+| 95 | **Unique Binary Search Trees** | Normal |  |
+| 99 | **Recovver Binary Search Trees** | Normal |  |
