@@ -1,78 +1,63 @@
-package demo;
+class Solution {
+    private Map<String, Boolean> visited = new HashMap<>();
+    public boolean isScramble(String s1, String s2) {
+        String key = s1 + "#" + s2;
+        if(visited.containsKey(key)) {
+            return visited.get(key);
+        }
 
-import java.util.HashMap;
+        if(s1.length() != s2.length()) {
+            visited.put(key, false);
+            return false;
+        }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+        if (s1.equals(s2)) {
+            visited.put(key, true);
+            return true;
+        }
 
-    TreeNode() {
-    }
+        if(!areAnagrams(s1, s2)) {
+            visited.put(key, false);
+            return false;
+        }
 
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
-public class Demo {
-    public static void main(String[] args) {
-        Demo demo = new Demo();
-        TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(1);
-        root.right = new TreeNode(4);
-        root.right.left = new TreeNode(2);
-        demo.recoverTree(root);
-        System.out.println("Recovered tree root value: " + root.val); // Should print
-    }
-
-    private TreeNode first; // First node with incorrect value
-    private TreeNode second; // Second node with incorrect value
-    private TreeNode prev; // Previous node in inorder traversal
-
-    public void recoverTree(TreeNode root) {
-        // Initialize variables
-        first = null;
-        second = null;
-        prev = null;
-
-        // Perform inorder traversal to find the two swapped nodes
-        inorder(root);
-
-        // Swap the values of the two nodes
-        int temp = first.val;
-        first.val = second.val;
-        second.val = temp;
-    }
-
-    private void inorder(TreeNode root) {
-        if (root == null)
-            return;
-
-        // Traverse left subtree
-        inorder(root.left);
-
-        // Process current node
-        if (prev != null && prev.val > root.val) {
-            // If this is the first violation
-            if (first == null) {
-                first = prev;
-                second = root;
+        int n = s1.length();
+        for (int i = 1; i < n; i++) {
+            if (
+                isScramble(s1.substring(i), s2.substring(i)) &&
+                isScramble(s1.substring(0, i), s2.substring(0, i))
+            ) {
+                visited.put(key, true);
+                return true;
             }
-            // If this is the second violation
-            else {
-                second = root;
+            if (
+                isScramble(s1.substring(i), s2.substring(0, n - i)) &&
+                isScramble(s1.substring(0, i), s2.substring(n - i))
+            ) {
+                visited.put(key, true);
+                return true;
             }
         }
-        prev = root;
 
-        // Traverse right subtree
-        inorder(root.right);
+        visited.put(key, false);
+        return false;
+    }
+
+    private boolean areAnagrams(String s1, String s2) {
+        char[] c1 = s1.toCharArray();
+        char[] c2 = s2.toCharArray();
+        int n = c1.length;
+        int[] window = new int[26];
+        for (int i = 0; i < n; i++) {
+            window[c1[i] - 'a']++;
+        }
+        for (int i = 0; i < n; i++) {
+            window[c2[i] - 'a']--;
+        }
+        for (int i = 0; i < 26; i++) {
+            if (window[i] != 0) return false;
+        }
+
+        return true;
     }
 }
