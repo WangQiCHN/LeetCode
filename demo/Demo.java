@@ -7,152 +7,132 @@ import java.util.Map;
 public class Demo {
     public static void main(String[] args) {
         Demo demo = new Demo();
-        String beginWord = "red";
-        String endWord = "tax";
+        String beginWord = "cat";
+        String endWord = "fin";
         List<String> wordList = new ArrayList<>();
-        wordList.add("ted");
-        wordList.add("tex");
-        wordList.add("red");
-        wordList.add("tax");
-        wordList.add("tad");
-        wordList.add("den");
-        wordList.add("rex");
-        wordList.add("pee");
+       wordList.add("ion");wordList.add("rev");wordList.add("che");wordList.add("ind");wordList.add("lie");wordList.add("wis");wordList.add("oct");wordList.add("ham");wordList.add("jag");wordList.add("ray");wordList.add("nun");wordList.add("ref");wordList.add("wig");wordList.add("jul");wordList.add("ken");wordList.add("mit");wordList.add("eel");wordList.add("paw");wordList.add("per");wordList.add("ola");wordList.add("pat");wordList.add("old");wordList.add("maj");wordList.add("ell");wordList.add("irk");wordList.add("ivy");wordList.add("beg");wordList.add("fan");wordList.add("rap");wordList.add("sun");wordList.add("yak");wordList.add("sat");wordList.add("fit");wordList.add("tom");wordList.add("fin");wordList.add("bug");wordList.add("can");wordList.add("hes");wordList.add("col");wordList.add("pep");wordList.add("tug");wordList.add("ump");wordList.add("arc");wordList.add("fee");wordList.add("lee");wordList.add("ohs");wordList.add("eli");wordList.add("nay");wordList.add("raw");wordList.add("lot");wordList.add("mat");wordList.add("egg");wordList.add("cat");wordList.add("pol");wordList.add("fat");wordList.add("joe");wordList.add("pis");wordList.add("dot");wordList.add("jaw");wordList.add("hat");wordList.add("roe");wordList.add("ada");wordList.add("mac");
 
-        List<List<String>> result = demo.findLadders(beginWord, endWord, wordList);
-        for (List<String> item : result) {
-            System.out.println(item);
-
+        int result = demo.ladderLength(beginWord, endWord, wordList);
+        System.out.println("The length of the shortest transformation sequence is: " + result);
+    }
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        return findLadders(beginWord, endWord, wordList);
+    }
+    
+    public int findLadders(String beginWord, String endWord, List<String> wordList) {
+        Map<String, TreeNode> beginDict = new HashMap<>();
+        Map<String, TreeNode> endDict = new HashMap<>();
+        LinkedList<TreeNode> beginList = new LinkedList<>();
+        LinkedList<TreeNode> endList = new LinkedList<>();
+        if (!isInList(endWord, wordList)) {
+            return 0;
         }
 
+        TreeNode beginNode = new TreeNode(beginWord);
+        beginDict.put(beginWord, beginNode);
+        TreeNode endNode = new TreeNode(endWord);
+        endDict.put(endWord, endNode);
+        beginList.addLast(beginNode);
+        endList.addLast(endNode);
 
-    }
-    List<List<String>> result = new ArrayList<>();
-    Map<String, Integer> visited = new HashMap<String, Integer>();
-    Map<String, TreeNode> dict = new HashMap<String, TreeNode>();
-    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
-        if (!testLastWord(endWord, wordList)) return result;
-        TreeNode b = new TreeNode(beginWord);
-        visited.put(beginWord, 0);
-        dict.put(beginWord, b);
-        TreeNode e = new TreeNode(endWord);
-        visited.put(endWord, -1);
-        dict.put(endWord, e);
-        traverse(b, e, wordList);
+        boolean hasResult = false;
+        String sweet = null;
+        while (!beginList.isEmpty() && !endList.isEmpty()) {
+            if (hasResult) break;
+            int sz = beginList.size();
+            for (int i = 0; i < sz; i++) {
+                if (hasResult) break;
+                TreeNode n = beginList.pollFirst();
+                for (String w : wordList) {
+                    if (beginDict.containsKey(w)) {
+                        continue;
+                    } else {
+                        if (canTransfer(n.key, w)) {
+                            if (endDict.containsKey(w)) {
+                                hasResult = true;
+                            }
+                            TreeNode wn = new TreeNode(w);
+                            wn.parent = n;
+                            beginDict.put(w, wn);
+                            beginList.addLast(wn);
+                            if (hasResult) {
+                                sweet = w;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            if (hasResult) break;
+            sz = endList.size();
+            for (int i = 0; i < sz; i++) {
+                if (hasResult) break;
+                TreeNode n = endList.pollFirst();
+                for (String w : wordList) {
+                    if (endDict.containsKey(w)) {
+                        continue;
+                    } else {
+                        if (canTransfer(n.key, w)) {
+                            if (beginDict.containsKey(w)) {
+                                hasResult = true;
+                            }
+                            TreeNode wn = new TreeNode(w);
+                            wn.parent = n;
+                            endDict.put(w, wn);
+                            endList.addLast(wn);
+                            if (hasResult) {
+                                sweet = w;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        int result = 0;
+        if (sweet != null) {
+            TreeNode sn = beginDict.get(sweet);
+            while (sn != null) {
+                result++;
+                sn = sn.parent;
+            }
+            sn = endDict.get(sweet);
+            while (sn != null) {
+                result++;
+                sn = sn.parent;
+            }
+            result--;
+        }
+
         return result;
     }
 
-    private boolean testLastWord(String s, List<String> wordList) {
-        for (String w : wordList) {
-            if (s.equals(w)) return true;
+    private boolean canTransfer(String p, String q) {
+        char[] pc = p.toCharArray();
+        char[] qc = q.toCharArray();
+        int total = 0;
+        int n = pc.length;
+        for (int i = 0; i < n; i++) {
+            if (pc[i] != qc[i]) total++;
+        }
+
+        return total == 1;
+    }
+
+    private boolean isInList(String s, List<String> list) {
+        for (String l : list) {
+            if (l.equals(s)) return true;
         }
         return false;
-    }
-
-    private void traverse(TreeNode b, TreeNode e, List<String> wordList) {
-        if (canTransfer(b.key, e.key)) {
-            // get result
-            LinkedList<String> item = new LinkedList<>();
-            TreeNode t = e;
-            while (t != null) {
-                item.addLast(t.key);
-                t = t.parent;
-            }
-            t = b;
-            while (t != null) {
-                item.addFirst(t.key);
-                t = t.parent;
-            }
-            result.add(new ArrayList<>(item));
-            return ;
-        }
-        for (String w : wordList) {
-            if (visited.containsKey(w)) {
-                continue;
-            } else {
-                if (canTransfer(b.key, w)) {
-                    TreeNode wn = new TreeNode(w);
-                    wn.parent = b;
-                    b.next.add(wn);
-                    visited.put(w, 1);
-                    dict.put(w, wn);
-                }
-            }
-        }
-        boolean has = false;
-        for (String w : wordList) {
-            boolean isResult = false;
-            if (visited.containsKey(w)) {
-                int v = visited.get(w);
-                if (v == -1) continue;
-                else if (v == 1) isResult = true;
-            }
-            boolean isTran = canTransfer(e.key, w);
-            if (isTran && !isResult) {
-                TreeNode wn = new TreeNode(w);
-                wn.parent = e;
-                e.next.add(wn);
-                visited.put(w, -1);
-                dict.put(w, wn);
-            } else if (isTran && isResult) {
-                // get result
-                LinkedList<String> item = new LinkedList<>();
-                TreeNode t = e;
-                while (t != null) {
-                    item.addLast(t.key);
-                    t = t.parent;
-                }
-                TreeNode other = dict.get(w);
-                while (other != null) {
-                    item.addFirst(other.key);
-                    other = other.parent;
-                }
-                result.add(new ArrayList<>(item));
-                has = true;
-            }
-        }
-        if (has) return;
-
-        List<TreeNode> bn = b.next;
-        List<TreeNode> en = e.next;
-
-        if (bn.size() == 0 || en.size() == 0) return;
-        else {
-            for (TreeNode bx : bn) {
-                for (TreeNode ex : en) {
-                    traverse(bx, ex, wordList);
-                    visited.remove(ex.key);
-                    dict.remove(ex.key);
-                }
-                visited.remove(bx.key);
-                dict.remove(bx.key);
-            }
-        }
-    }
-
-    
-
-    private boolean canTransfer(String s1, String s2) {
-        char[] c1 = s1.toCharArray();
-        char[] c2 = s2.toCharArray();
-
-        int n = c1.length;
-        int total = 0;
-        for (int i = 0; i < n; i++) {
-            if (c1[i] != c2[i]) total++;
-        }
-        return total == 1 ? true : false;
     }
 }
 
 class TreeNode {
     String key;
-    List<TreeNode> next;
     TreeNode parent;
 
     public TreeNode(String key) {
         this.key = key;
-        this.next = new ArrayList<>();
         this.parent = null;
     }
 }
