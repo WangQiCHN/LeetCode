@@ -16,6 +16,6 @@
 | ~~50~~ | **~~Pow(x, n)~~** | Normal | We need the help from mathematics |
 | ~~84~~ | **~~Largest Rectangle in Histogram~~** | Hard | Using stack to record the max value list |
 | ~~85~~ | **~~Maximal Rectangle~~** | Hard | The same as 84 |
-| 87 | **Scramble String** | Hard | Try every step to scramble one string |
+| ~~87~~ | **~~Scramble String~~** | Hard | Try every step to scramble one string |
 | ~~95~~ | **~~Unique Binary Search Trees~~** | Normal | I know how to create left tree and right tree first  |
 | ~~99~~ | **Recovver Binary Search Trees** | Normal | By using inorder, the prev should small than next |
