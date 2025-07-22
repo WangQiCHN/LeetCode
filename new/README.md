@@ -18,4 +18,7 @@
 | ~~85~~ | **~~Maximal Rectangle~~** | Hard | The same as 84 |
 | ~~87~~ | **~~Scramble String~~** | Hard | Try every step to scramble one string |
 | ~~95~~ | **~~Unique Binary Search Trees~~** | Normal | I know how to create left tree and right tree first  |
-| ~~99~~ | **Recovver Binary Search Trees** | Normal | By using inorder, the prev should small than next |
+| ~~99~~ | **~~Recovver Binary Search Trees~~** | Normal | By using inorder, the prev should small than next |
+| 123 | **Best Time to Buy and Sell Stock III** | Hard |  |
+| 124 | **Binary Tree Maximum Path Sum** | Hard |  |
+| 126 | **Word Ladder II** | Hard |  |
