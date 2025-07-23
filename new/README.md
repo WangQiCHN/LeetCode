@@ -22,4 +22,6 @@
 | 123 | **Best Time to Buy and Sell Stock III** | Hard |  |
 | 124 | **Binary Tree Maximum Path Sum** | Hard |  |
 | 126 | **Word Ladder II** | Hard |  |
-| 128 | **Longest Consecutive Sequence** | Normal |  |
+| ~~128~~ | **~~Longest Consecutive Sequence~~** | Normal | It is easy, but the space has some |
+| 132 | **Palindrome Partitioning II** | Hard |  |
+| 135 | **Candy** | Hard |  |

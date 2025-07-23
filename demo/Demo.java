@@ -1,138 +1,114 @@
-import java.util.ArrayList;
-import java.util.HashMap;   
-import java.util.LinkedList;
 import java.util.List;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.Queue;
+import java.util.LinkedList;
+import java.util.Collections;
 
 public class Demo {
-    public static void main(String[] args) {
-        Demo demo = new Demo();
-        String beginWord = "cat";
-        String endWord = "fin";
-        List<String> wordList = new ArrayList<>();
-       wordList.add("ion");wordList.add("rev");wordList.add("che");wordList.add("ind");wordList.add("lie");wordList.add("wis");wordList.add("oct");wordList.add("ham");wordList.add("jag");wordList.add("ray");wordList.add("nun");wordList.add("ref");wordList.add("wig");wordList.add("jul");wordList.add("ken");wordList.add("mit");wordList.add("eel");wordList.add("paw");wordList.add("per");wordList.add("ola");wordList.add("pat");wordList.add("old");wordList.add("maj");wordList.add("ell");wordList.add("irk");wordList.add("ivy");wordList.add("beg");wordList.add("fan");wordList.add("rap");wordList.add("sun");wordList.add("yak");wordList.add("sat");wordList.add("fit");wordList.add("tom");wordList.add("fin");wordList.add("bug");wordList.add("can");wordList.add("hes");wordList.add("col");wordList.add("pep");wordList.add("tug");wordList.add("ump");wordList.add("arc");wordList.add("fee");wordList.add("lee");wordList.add("ohs");wordList.add("eli");wordList.add("nay");wordList.add("raw");wordList.add("lot");wordList.add("mat");wordList.add("egg");wordList.add("cat");wordList.add("pol");wordList.add("fat");wordList.add("joe");wordList.add("pis");wordList.add("dot");wordList.add("jaw");wordList.add("hat");wordList.add("roe");wordList.add("ada");wordList.add("mac");
-
-        int result = demo.ladderLength(beginWord, endWord, wordList);
-        System.out.println("The length of the shortest transformation sequence is: " + result);
-    }
-    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        return findLadders(beginWord, endWord, wordList);
-    }
-    
-    public int findLadders(String beginWord, String endWord, List<String> wordList) {
-        Map<String, TreeNode> beginDict = new HashMap<>();
-        Map<String, TreeNode> endDict = new HashMap<>();
-        LinkedList<TreeNode> beginList = new LinkedList<>();
-        LinkedList<TreeNode> endList = new LinkedList<>();
-        if (!isInList(endWord, wordList)) {
-            return 0;
+    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+        // Convert wordList to a set for O(1) lookup
+        Set<String> dict = new HashSet<>(wordList);
+        List<List<String>> result = new ArrayList<>();
+        
+        // If endWord is not in wordList, no solution exists
+        if (!dict.contains(endWord)) {
+            return result;
         }
-
-        TreeNode beginNode = new TreeNode(beginWord);
-        beginDict.put(beginWord, beginNode);
-        TreeNode endNode = new TreeNode(endWord);
-        endDict.put(endWord, endNode);
-        beginList.addLast(beginNode);
-        endList.addLast(endNode);
-
-        boolean hasResult = false;
-        String sweet = null;
-        while (!beginList.isEmpty() && !endList.isEmpty()) {
-            if (hasResult) break;
-            int sz = beginList.size();
-            for (int i = 0; i < sz; i++) {
-                if (hasResult) break;
-                TreeNode n = beginList.pollFirst();
-                for (String w : wordList) {
-                    if (beginDict.containsKey(w)) {
-                        continue;
-                    } else {
-                        if (canTransfer(n.key, w)) {
-                            if (endDict.containsKey(w)) {
-                                hasResult = true;
-                            }
-                            TreeNode wn = new TreeNode(w);
-                            wn.parent = n;
-                            beginDict.put(w, wn);
-                            beginList.addLast(wn);
-                            if (hasResult) {
-                                sweet = w;
-                                break;
-                            }
+        
+        // Map to store the shortest distance from beginWord to each word
+        Map<String, Integer> distance = new HashMap<>();
+        // Map to store the neighbors (previous words) for each word in the path
+        Map<String, List<String>> neighbors = new HashMap<>();
+        // BFS queue
+        Queue<String> queue = new LinkedList<>();
+        
+        // Initialize BFS
+        distance.put(beginWord, 0);
+        queue.offer(beginWord);
+        boolean found = false;
+        
+        // BFS to build the shortest path graph
+        while (!queue.isEmpty() && !found) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                String curr = queue.poll();
+                int currDistance = distance.get(curr);
+                
+                // Get all possible next words by changing one character
+                List<String> nextWords = getNextWords(curr, dict);
+                for (String next : nextWords) {
+                    // Initialize neighbors list if not present
+                    neighbors.computeIfAbsent(next, k -> new ArrayList<>());
+                    
+                    // If this is the first time visiting the word or at the same distance
+                    if (!distance.containsKey(next)) {
+                        distance.put(next, currDistance + 1);
+                        queue.offer(next);
+                        neighbors.get(next).add(curr);
+                        if (next.equals(endWord)) {
+                            found = true;
                         }
-                    }
-                }
-            }
-            if (hasResult) break;
-            sz = endList.size();
-            for (int i = 0; i < sz; i++) {
-                if (hasResult) break;
-                TreeNode n = endList.pollFirst();
-                for (String w : wordList) {
-                    if (endDict.containsKey(w)) {
-                        continue;
-                    } else {
-                        if (canTransfer(n.key, w)) {
-                            if (beginDict.containsKey(w)) {
-                                hasResult = true;
-                            }
-                            TreeNode wn = new TreeNode(w);
-                            wn.parent = n;
-                            endDict.put(w, wn);
-                            endList.addLast(wn);
-                            if (hasResult) {
-                                sweet = w;
-                                break;
-                            }
-                        }
+                    } else if (distance.get(next) == currDistance + 1) {
+                        neighbors.get(next).add(curr);
                     }
                 }
             }
         }
-        int result = 0;
-        if (sweet != null) {
-            TreeNode sn = beginDict.get(sweet);
-            while (sn != null) {
-                result++;
-                sn = sn.parent;
-            }
-            sn = endDict.get(sweet);
-            while (sn != null) {
-                result++;
-                sn = sn.parent;
-            }
-            result--;
+        
+        // If endWord was not reached, return empty result
+        if (!distance.containsKey(endWord)) {
+            return result;
         }
-
+        
+        // DFS to construct all shortest paths
+        List<String> path = new ArrayList<>();
+        path.add(endWord);
+        dfs(endWord, beginWord, neighbors, path, result);
+        
         return result;
     }
-
-    private boolean canTransfer(String p, String q) {
-        char[] pc = p.toCharArray();
-        char[] qc = q.toCharArray();
-        int total = 0;
-        int n = pc.length;
-        for (int i = 0; i < n; i++) {
-            if (pc[i] != qc[i]) total++;
+    
+    // Helper function to get all valid next words by changing one character
+    private List<String> getNextWords(String word, Set<String> dict) {
+        List<String> nextWords = new ArrayList<>();
+        char[] chars = word.toCharArray();
+        
+        for (int i = 0; i < chars.length; i++) {
+            char original = chars[i];
+            for (char c = 'a'; c <= 'z'; c++) {
+                if (c != original) {
+                    chars[i] = c;
+                    String newWord = new String(chars);
+                    if (dict.contains(newWord)) {
+                        nextWords.add(newWord);
+                    }
+                }
+            }
+            chars[i] = original; // Restore original character
         }
-
-        return total == 1;
+        return nextWords;
     }
-
-    private boolean isInList(String s, List<String> list) {
-        for (String l : list) {
-            if (l.equals(s)) return true;
+    
+    // DFS to build all shortest paths from endWord to beginWord
+    private void dfs(String curr, String beginWord, Map<String, List<String>> neighbors, 
+                    List<String> path, List<List<String>> result) {
+        if (curr.equals(beginWord)) {
+            // Reverse the path and add to result
+            List<String> newPath = new ArrayList<>(path);
+            Collections.reverse(newPath);
+            result.add(newPath);
+            return;
         }
-        return false;
-    }
-}
-
-class TreeNode {
-    String key;
-    TreeNode parent;
-
-    public TreeNode(String key) {
-        this.key = key;
-        this.parent = null;
+        
+        // Explore all previous neighbors
+        for (String prev : neighbors.getOrDefault(curr, new ArrayList<>())) {
+            path.add(prev);
+            dfs(prev, beginWord, neighbors, path, result);
+            path.remove(path.size() - 1); // Backtrack
+        }
     }
 }
