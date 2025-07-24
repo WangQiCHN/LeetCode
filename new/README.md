@@ -19,9 +19,9 @@
 | ~~87~~ | **~~Scramble String~~** | Hard | Try every step to scramble one string |
 | ~~95~~ | **~~Unique Binary Search Trees~~** | Normal | I know how to create left tree and right tree first  |
 | ~~99~~ | **~~Recovver Binary Search Trees~~** | Normal | By using inorder, the prev should small than next |
-| 123 | **Best Time to Buy and Sell Stock III** | Hard |  |
-| 124 | **Binary Tree Maximum Path Sum** | Hard |  |
+| ~~123~~ | **~~Best Time to Buy and Sell Stock III~~** | Hard | The algorithm is so good |
+| ~~124~~ | **~~Binary Tree Maximum Path Sum~~** | Hard | Think it as it is |
 | 126 | **Word Ladder II** | Hard |  |
 | ~~128~~ | **~~Longest Consecutive Sequence~~** | Normal | It is easy, but the space has some |
-| 132 | **Palindrome Partitioning II** | Hard |  |
-| 135 | **Candy** | Hard |  |
+| ~~132~~ | **~~Palindrome Partitioning II~~** | Hard |  |
+| ~~135~~ | **Candy** | Hard | Scan twices, but I don't know how to do it in scan |
