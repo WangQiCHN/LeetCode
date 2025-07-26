@@ -1,77 +1,99 @@
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
+public class Demo {
+    private DoubleList buffer;
+    public static void main(String[] args) {
+        Demo demo = new Demo();
+        demo.push(3);
+        demo.push(5);
+        System.out.println(demo.getMin()); // 3
+        demo.push(2);
+        demo.push(1);
+        System.out.println(demo.getMin()); // 1
+        demo.pop();
+        System.out.println(demo.getMin()); // 2
+        System.out.println(demo.top()); // 2
     }
-
-    ListNode(int val) {
-        this.val = val;
+    public Demo() {
+        buffer = new DoubleList();
     }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
+    
+    public void push(int val) {
+        buffer.add(val);
+    }
+    
+    public void pop() {
+        buffer.remove();
+    }
+    
+    public int top() {
+        return buffer.getLast();
+    }
+    
+    public int getMin() {
+        return buffer.getMin();
     }
 }
 
-public class Demo {
-    public static void main(String[] args) {
-        // Example usage
-        List<Integer> arr = new ArrayList<>();
-        arr.reduce((a, b) -> a + b); // This line is not valid; it should be replaced with a valid operation.
-        System.out.println("Original array: " + Arrays.toString(arr));
-        System.out.println("Sorted array: " + Arrays.toString(arr));
+class Node {
+    int v;
+    Node prev;
+    Node next;
+
+    public Node(int v) {
+        this.v = v;
     }
-    public void reorderList(ListNode head) {
-        if (head == null || head.next == null)
-            return;
-        ListNode fast = head, slow = head;
-        while (fast.next != null) {
-            fast = fast.next;
-            if (fast.next != null) {
-                fast = fast.next;
-                slow = slow.next;
+}
+
+class DoubleList {
+    Node head;
+    Node tail;
+    int min;
+
+    public DoubleList() {
+        head = new Node(0);
+        tail = new Node(0);
+        head.next = tail;
+        tail.prev = head;
+        min = Integer.MAX_VALUE;
+    }
+
+    public void add(int v) {
+        Node n = new Node(v);
+        tail.prev.next = n;
+        n.prev = tail.prev;
+        n.next = tail;
+        tail.prev = n;
+        if (min > n.v) min = n.v;
+    }
+
+    public void remove() {
+        if (tail.prev.equals(head)) return;
+        Node r = tail.prev;
+        r.prev.next = tail;
+        tail.prev = r.prev;
+        r.prev = null;
+        r.next = null;
+        if (r.v == min) {
+            Node p = head.next;
+            min = Integer.MAX_VALUE;
+            while (p != tail) {
+                if (p.v < min) {
+                    min = p.v;
+                }
             }
         }
-
-        ListNode last = slow;
-        ListNode otherHead = reverse(last.next);
-
-        head = merge(head, otherHead);
     }
 
-    private ListNode merge(ListNode p, ListNode q) {
-        ListNode dummy = new ListNode();
-        ListNode m = dummy;
-        while (p != null && q != null) {
-            m.next = p;
-            p = p.next;
-            m = m.next;
-            m.next = q;
-            q = q.next;
-            m = m.next;
+    public int getLast() {
+        if (tail.prev.equals(head)) return 0;
+        else {
+            return tail.prev.v;
         }
-        if (p == null) {
-            m.next = q;
-        } else {
-            m.next = p;
-        }
-
-        return dummy.next;
     }
 
-    private ListNode reverse(ListNode p) {
-        if (p == null || p.next == null)
-            return p;
-        ListNode last = reverse(p.next);
-        p.next.next = p;
-        p.next = null;
-        return last;
+    public int getMin() {
+        return min;
     }
+
 
 }
