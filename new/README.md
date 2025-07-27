@@ -27,3 +27,4 @@
 | ~~135~~ | **Candy** | Hard | Scan twices, but I don't know how to do it in scan |
 | 148 | **Sort List** | Normal | Merge sort and find middle node |
 | 149 | **Max Points on a Line** | Hard | How to find the line |
+| 166 | **Fraction to Recurring Decimal** | Normal |  |

@@ -2,16 +2,9 @@
 public class Demo {
     private DoubleList buffer;
     public static void main(String[] args) {
-        Demo demo = new Demo();
-        demo.push(3);
-        demo.push(5);
-        System.out.println(demo.getMin()); // 3
-        demo.push(2);
-        demo.push(1);
-        System.out.println(demo.getMin()); // 1
-        demo.pop();
-        System.out.println(demo.getMin()); // 2
-        System.out.println(demo.top()); // 2
+        String v = "1.2";
+        String[] result = v.split("\\.");
+        System.out.println(result.length);
     }
     public Demo() {
         buffer = new DoubleList();
