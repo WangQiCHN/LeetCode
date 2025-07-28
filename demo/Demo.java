@@ -1,7 +1,7 @@
 
 public class Demo {
     private DoubleList buffer;
-    public static void main(String[] args) {
+    void main(String[] args) {
         String v = "1.2";
         String[] result = v.split("\\.");
         System.out.println(result.length);
