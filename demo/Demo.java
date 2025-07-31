@@ -1,44 +1,58 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Demo {
     void main(String[] args) {
-        String result = new Demo().fractionToDecimal(1,2);
-        System.out.println("Maximum points on a line: " + result);
+        Demo d = new Demo();
+        d.addWord("bad");
+        d.addWord("dad");
+        boolean result = d.search("bad");
+        System.out.println("Search 'bad': " + result);
+        result = d.search(".ad");
+        System.out.println("Search '.ad': " + result);
     }
 
-    public String fractionToDecimal(int numerator, int denominator) {
-        if (numerator == 0) return "0";
+    Set<String> dict = new HashSet<>();
+    public Demo() {
         
-        StringBuilder result = new StringBuilder();
-        // Handle sign: negative if exactly one of numerator or denominator is negative
-        if (numerator < 0 ^ denominator < 0) result.append("-");
-        
-        // Convert to long to avoid overflow
-        long num = Math.abs((long) numerator);
-        long den = Math.abs((long) denominator);
-        
-        // Integer part
-        result.append(num / den);
-        long remainder = num % den;
-        if (remainder == 0) return result.toString();
-        
-        // Fractional part
-        result.append(".");
-        Map<Long, Integer> remainderMap = new HashMap<>();
-        while (remainder != 0) {
-            if (remainderMap.containsKey(remainder)) {
-                // Repeating decimal found
-                result.insert(remainderMap.get(remainder), "(");
-                result.append(")");
-                break;
+    }
+    
+    public void addWord(String word) {
+        dict.add(word);
+    }
+    
+    public boolean search(String word) {
+        int index = word.indexOf(".");
+        if (index == -1) {
+            return dict.contains(word);
+        } else {
+            char[] cs = word.toCharArray();
+            int first = -1, second = -1;
+            for (int i = 0; i < cs.length; i++) {
+                if (cs[i] == '.') {
+                    if (first == -1) first = i;
+                    else {
+                        second = i;
+                        break;
+                    }
+                }
             }
-            remainderMap.put(remainder, result.length());
-            remainder *= 10;
-            result.append(remainder / den);
-            remainder %= den;
+            return checkDotWord(word, first, second);
         }
-        
-        return result.toString();
+    }
+
+    private boolean checkDotWord(String word, int first, int second) {
+        char[] cs = word.toCharArray();
+        for (int i = 0; i < 26; i++) {
+            cs[first] = (char)(i + 'a');
+            String v = new String(cs);
+            if (dict.contains(v)) return true;
+        }
+
+        return false;
     }
 }
