@@ -25,9 +25,9 @@
 | ~~128~~ | **~~Longest Consecutive Sequence~~** | Normal | It is easy, but the space has some |
 | ~~132~~ | **~~Palindrome Partitioning II~~** | Hard |  |
 | ~~135~~ | **Candy** | Hard | Scan twices, but I don't know how to do it in scan |
-| 148 | **Sort List** | Normal | Merge sort and find middle node |
-| 149 | **Max Points on a Line** | Hard | How to find the line |
-| 166 | **Fraction to Recurring Decimal** | Normal |  |
-| 201 | **Bitwise AND of Numbers Range** | Normal |  |
-| 202 | **Happy Number** | Easy |  |
+| ~~148~~ | **~~Sort List~~** | Normal | Merge sort and find middle node, set the slow.next to null |
+| ~~149~~ | **~~Max Points on a Line~~** | Hard | Using multiple to calculate to 'a' |
+| ~~166~~ | **~~Fraction to Recurring Decimal~~** | Normal | insert and length function int StringBuilder |
+| ~~201~~ | **~~Bitwise AND of Numbers Range~~** | Normal | Right bit shift and compare two numbers |
+| ~~202~~ | **~~Happy Number~~** | Easy | The max number of sum is 729 |
 | 204 | **Count Primes** | Normal |  |
