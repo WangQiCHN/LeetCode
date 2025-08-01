@@ -31,3 +31,5 @@
 | ~~201~~ | **~~Bitwise AND of Numbers Range~~** | Normal | Right bit shift and compare two numbers |
 | ~~202~~ | **~~Happy Number~~** | Easy | The max number of sum is 729 |
 | 204 | **Count Primes** | Normal |  |
+| 212 | **Word Search II** | Hard |  |
+| 214 | **Shortest Palindrome** | Hard |  |
