@@ -1,104 +1,86 @@
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class Demo {
-    void main(String[] args) {
-        Demo d = new Demo();
-        char[][] board = {
-            {'o', 'a', 'a', 'n'},
-            {'e', 't', 'a', 'e'},
-            {'i', 'h', 'k', 'r'},
-            {'i', 'f', 'l', 'v'}
-        };
-        String[] words = {"oath", "pea", "eat", "rain"};
-        List<String> result = d.findWords(board, words);
-        System.out.println(result); // Output: 3
+    public static void main(String[] args) {
+        Demo demo = new Demo();
+        int[] nums = {1,2,3,1};
+        int indexDiff = 3;
+        int valueDiff = 0;
+        boolean result = demo.containsNearbyAlmostDuplicate(nums, indexDiff, valueDiff);
+        System.out.println("Result: " + result); // Expected output: true
     }
+    DoubleList buffer = new DoubleList();
+    Map<Integer, Node> dict = new HashMap<>();
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {
+        int n = nums.length;
+        int left = 0, right = 0;
+        while (right < n) {
+            int v = nums[right];
+            if (isFound(right, v, valueDiff)) {
+                return true;
+            }
+            right++;
 
-    class TrieNode {
-        TrieNode[] children = new TrieNode[26]; // For lowercase letters a-z
-        String word = null; // Store the complete word at the end of a path
-    }
-    
-    private char[][] board;
-    private List<String> result;
-    
-    public List<String> findWords(char[][] board, String[] words) {
-        this.board = board;
-        this.result = new ArrayList<>();
-        
-        // Step 1: Build the Trie
-        TrieNode root = new TrieNode();
-        for (String word : words) {
-            insert(word, root);
-        }
-        
-        // Step 2: Start DFS from each cell
-        int rows = board.length;
-        int cols = board[0].length;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (root.children[board[i][j] - 'a'] != null) {
-                    dfs(i, j, root);
-                }
+            if (right - left > indexDiff) {
+                Node node = dict.get(left);
+                node.prev.next = node.next;
+                node.next.prev = node.prev;
+                node.next = null;
+                node.prev = null;
+                left++;
             }
-        }
-        
-        return result;
-    }
-    
-    // Insert a word into the Trie
-    private void insert(String word, TrieNode root) {
-        TrieNode node = root;
-        for (char c : word.toCharArray()) {
-            int index = c - 'a';
-            if (node.children[index] == null) {
-                node.children[index] = new TrieNode();
-            }
-            node = node.children[index];
-        }
-        node.word = word; // Mark the end of the word
-    }
-    
-    // DFS to explore the board and match words in the Trie
-    private void dfs(int row, int col, TrieNode node) {
-        char c = board[row][col];
-        
-        // Base cases: invalid cell or no matching prefix
-        if (c == '#') {
-            return;
         }
 
-        TrieNode curr = node.children[c - 'a'];
-        if (curr == null) {
-            return; // No matching prefix in the Trie
-        }
-        
-        // If a word is found, add it to the result and clear it to avoid duplicates
-        if (curr.word != null) {
-            result.add(curr.word);
-            curr.word = null;
-        }
-        
-        // Mark the current cell as visited
-        board[row][col] = '#';
-        
-        // Explore all four directions: up, right, down, left
-        int[][] directions = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
-        for (int[] dir : directions) {
-            int newRow = row + dir[0];
-            int newCol = col + dir[1];
-            if (newRow >= 0 && newRow < board.length && newCol >= 0 && newCol < board[0].length) {
-                dfs(newRow, newCol, curr);
+        return false;
+    }
+
+    private boolean isFound(int index, int value, int diff) {
+        Node p = buffer.head.next;
+        Node tail = buffer.tail;
+        while (p != tail) {
+            if (p.key == value) return true;
+            else if (p.key < value) {
+                if (value - p.key <= diff) return true;
+                p = p.next;
+            } else {
+                if (p.key - value <= diff) return true;
+                Node n = new Node(value);
+                n.next = p;
+                n.prev = p.prev;
+                p.prev = n;
+                dict.put(index, n);
+                return false;
             }
         }
-        
-        // Restore the cell
-        board[row][col] = c;
+        Node n = new Node(value);
+        n.next = tail;
+        n.prev = tail.prev;
+        tail.prev = n;
+        dict.put(index, n);
+        return false;
+    }
+}
+
+class Node {
+    int key;
+    Node next;
+    Node prev;
+
+    public Node(int key) {
+        this.key = key;
+    }
+}
+
+class DoubleList {
+    Node head;
+    Node tail;
+
+    public DoubleList() {
+        head = new Node(Integer.MIN_VALUE);
+        tail = new Node(Integer.MAX_VALUE);
+        head.next = tail;
+        tail.prev = head;
     }
 }
 
