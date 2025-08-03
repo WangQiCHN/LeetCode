@@ -34,3 +34,6 @@
 | 212 | **Word Search II** | Hard |  |
 | 214 | **Shortest Palindrome** | Hard |  |
 | 218 | **The Skyline Problem** | Hard |  |
+| 221 | **Maximal Square** | Normal |  |
+| 223 | **Rectangle Area** | Normal |  |
+| 224 | **Basic Calculator** | Hard |  |
