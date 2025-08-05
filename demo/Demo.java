@@ -1,72 +1,73 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.Stack;
 
 class Demo {
     void main() {
         Demo d = new Demo();
-        int[][] buildings = {
-            {2,9,10},{3,7,15},{5,12,12},{15,20,10},{19,24,8}
-        };
-        List<List<Integer>> result = d.getSkyline(buildings);
-        for (List<Integer> r : result) {
-            System.out.print(r.get(0));
-            System.out.print(",");
-            System.out.print(r.get(1));
-            System.out.println();
-        }
+        // String s = "0-2147483647";
+        String s = "1*2-3/4+5*6-7*8+9/10";
+        int result = d.calculate(s);
+        System.out.println(result);
+
+        // 2-0c
     }
-    public List<List<Integer>> getSkyline(int[][] buildings) {
-        // Create a list to store all critical points (start and end of buildings)
-        List<int[]> points = new ArrayList<>();
-        for (int[] building : buildings) {
-            // Add start point with negative height to distinguish it
-            points.add(new int[]{building[0], -building[2]});
-            // Add end point with positive height
-            points.add(new int[]{building[1], building[2]});
-        }
-        
-        // Sort points by x-coordinate; if x-coordinates are equal, sort by height
-        // For same x, start points with higher height come first (negative height),
-        // and end points with lower height come first
-        Collections.sort(points, (a, b) -> {
-            if (a[0] != b[0]) {
-                return a[0] - b[0];
+    public int calculate(String s) {
+        Stack<String> stack = new Stack<>();
+        int n = s.length();
+        int cnt = 0;
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            if (c >= '0' && c <= '9') {
+                cnt = cnt * 10 + (c - '0');
+            } else if (c == '+' || c == '-') {
+                cnt = tryToCal(stack, c, cnt);
+                stack.push("" + cnt);
+                stack.push("" + c);
+                cnt = 0;
+            } else if (c == '*' || c == '/') {
+                cnt = tryToCal(stack, c, cnt);
+                stack.push("" + cnt);
+                stack.push("" + c);
+                cnt = 0;
             }
-            return a[1] - b[1];
-        });
-        
-        // Max heap to store active building heights (store negative to make it a max heap)
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
-        maxHeap.offer(0); // Ground level
-        List<List<Integer>> result = new ArrayList<>();
-        int prevHeight = 0;
-        
-        // Process each point
-        for (int[] point : points) {
-            int x = point[0];
-            int height = point[1];
-            
-            if (height < 0) {
-                // Start of a building, add its height to the heap
-                maxHeap.offer(-height);
+        }
+        while (!stack.isEmpty()) {
+            String opt = stack.pop();
+            String num1 = stack.pop();
+            cnt = cal(num1, opt, cnt);
+        }
+
+        return cnt;
+    }
+
+    private int tryToCal(Stack<String> s, char c, int cnt) {
+        while (!s.isEmpty()) {
+            String opt = s.pop();
+            String num1 = s.pop();
+            if (c == '*' || c == '/') {
+                if (opt.equals("*") || opt.equals("/")) {
+                    cnt = cal(num1, opt, cnt);
+                } else {
+                    s.push(num1);
+                    s.push(opt);
+                    return cnt;
+                }
             } else {
-                // End of a building, remove its height from the heap
-                maxHeap.remove(height);
-            }
-            
-            // Get the current maximum height
-            int currHeight = maxHeap.peek();
-            
-            // If the height changes, add a new key point to the result
-            if (currHeight != prevHeight) {
-                result.add(Arrays.asList(x, currHeight));
-                prevHeight = currHeight;
+                cnt = cal(num1, opt, cnt);
             }
         }
-        
-        return result;
+        return cnt;
+    }
+
+    private int cal(String snum, String opt, int num2) {
+        int num1 = Integer.parseInt(snum);
+        if (opt.equals("+")) {
+            return num1 + num2;
+        } else if (opt.equals("-")) {
+            return num1 - num2;
+        } else if (opt.equals("*")) {
+            return num1 * num2;
+        } else {
+            return num1 / num2;
+        }
     }
 }
