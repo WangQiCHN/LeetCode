@@ -30,10 +30,10 @@
 | ~~166~~ | **~~Fraction to Recurring Decimal~~** | Normal | insert and length function int StringBuilder |
 | ~~201~~ | **~~Bitwise AND of Numbers Range~~** | Normal | Right bit shift and compare two numbers |
 | ~~202~~ | **~~Happy Number~~** | Easy | The max number of sum is 729 |
-| 204 | **Count Primes** | Normal |  |
-| 212 | **Word Search II** | Hard |  |
-| 214 | **Shortest Palindrome** | Hard |  |
-| 218 | **The Skyline Problem** | Hard |  |
-| 221 | **Maximal Square** | Normal |  |
+| 204 | **Count Primes** | Normal | Using i * i and j = j + i to calcuate not prime |
+| 212 | **Word Search II** | Hard | Don't use map as visited |
+| 214 | **Shortest Palindrome** | Hard | It is the KMP, I learned it in 2000 |
+| 218 | **The Skyline Problem** | Hard | A bit hard for myself |
+| 221 | **Maximal Square** | Normal | Using dp is so easy |
 | 223 | **Rectangle Area** | Normal |  |
 | 224 | **Basic Calculator** | Hard |  |
