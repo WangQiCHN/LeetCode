@@ -33,7 +33,7 @@
 | 204 | **Count Primes** | Normal | Using i * i and j = j + i to calcuate not prime |
 | 212 | **Word Search II** | Hard | Don't use map as visited |
 | 214 | **Shortest Palindrome** | Hard | It is the KMP, I learned it in 2000 |
-| 218 | **The Skyline Problem** | Hard | A bit hard for myself |
+| 218 | **The Skyline Problem** | Hard | The sort is important and a good solution |
 | 221 | **Maximal Square** | Normal | Using dp is so easy |
 | 223 | **Rectangle Area** | Normal |  |
 | 224 | **Basic Calculator** | Hard |  |
