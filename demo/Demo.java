@@ -1,17 +1,21 @@
-import java.util.Stack;
+import java.util.ArrayList;
+import java.util.List;
 
 class Demo {
     void main() {
         Demo d = new Demo();
         // String s = "0-2147483647";
-        String s = "1*2-3/4+5*6-7*8+9/10";
+        String s = "2*3+4";
         int result = d.calculate(s);
         System.out.println(result);
 
         // 2-0c
     }
     public int calculate(String s) {
-        Stack<String> stack = new Stack<>();
+        List<Integer> nums = new ArrayList<>();
+        List<Character> ops = new ArrayList<>();
+        boolean has = false;
+
         int n = s.length();
         int cnt = 0;
         for (int i = 0; i < n; i++) {
@@ -19,55 +23,62 @@ class Demo {
             if (c >= '0' && c <= '9') {
                 cnt = cnt * 10 + (c - '0');
             } else if (c == '+' || c == '-') {
-                cnt = tryToCal(stack, c, cnt);
-                stack.push("" + cnt);
-                stack.push("" + c);
+                nums.add(cnt);
+                ops.add(c);
                 cnt = 0;
             } else if (c == '*' || c == '/') {
-                cnt = tryToCal(stack, c, cnt);
-                stack.push("" + cnt);
-                stack.push("" + c);
+                nums.add(cnt);
+                ops.add(c);
                 cnt = 0;
+                has = true;
             }
         }
-        while (!stack.isEmpty()) {
-            String opt = stack.pop();
-            String num1 = stack.pop();
-            cnt = cal(num1, opt, cnt);
-        }
+        nums.add(cnt);
 
-        return cnt;
-    }
-
-    private int tryToCal(Stack<String> s, char c, int cnt) {
-        while (!s.isEmpty()) {
-            String opt = s.pop();
-            String num1 = s.pop();
-            if (c == '*' || c == '/') {
-                if (opt.equals("*") || opt.equals("/")) {
-                    cnt = cal(num1, opt, cnt);
+        if (has) {
+            List<Integer> tnums = new ArrayList<>();
+            List<Character> tops = new ArrayList<>();
+            cnt = 0;
+            int index = -1;
+            for (int i = 0; i < ops.size(); i++) {
+                char c = ops.get(i);
+                if (c == '+' || c == '-') {
+                    if (index != -1) {
+                        tnums.add(cnt);
+                        cnt = 0;
+                        index = -1;
+                    } else {
+                        tnums.add(nums.get(i));
+                    }
+                    tops.add(c);
                 } else {
-                    s.push(num1);
-                    s.push(opt);
-                    return cnt;
+                    if (index == -1) {
+                        index = i;
+                        cnt = nums.get(i);
+                    }
+                    if (c == '*') {
+                        cnt *= nums.get(i + 1);
+                    } else {
+                        cnt /= nums.get(i + 1);
+                    }
                 }
-            } else {
-                cnt = cal(num1, opt, cnt);
             }
+            if (index == -1) {
+                tnums.add(nums.get(ops.size()));
+            } else {
+                tnums.add(cnt);
+            }
+            nums = tnums;
+            ops = tops;
         }
-        return cnt;
-    }
 
-    private int cal(String snum, String opt, int num2) {
-        int num1 = Integer.parseInt(snum);
-        if (opt.equals("+")) {
-            return num1 + num2;
-        } else if (opt.equals("-")) {
-            return num1 - num2;
-        } else if (opt.equals("*")) {
-            return num1 * num2;
-        } else {
-            return num1 / num2;
+        cnt = nums.get(0);
+        for (int i = 0; i < ops.size(); i++) {
+            char c = ops.get(i);
+            if (c == '+') cnt += nums.get(i + 1);
+            else cnt -= nums.get(i + 1);
         }
+
+        return cnt;
     }
 }
