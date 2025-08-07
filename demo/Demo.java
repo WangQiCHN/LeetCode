@@ -1,84 +1,43 @@
-import java.util.ArrayList;
-import java.util.List;
-
-class Demo {
+public class Demo {
     void main() {
         Demo d = new Demo();
-        // String s = "0-2147483647";
-        String s = "2*3+4";
-        int result = d.calculate(s);
+        // int[][] matrix = {{1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30}};
+        // int[][] matrix = {{1,4},{2,5}};
+        int[][] matrix = {{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20},{21,22,23,24,25}};
+        // int target = 20;
+        int target = 15;
+        boolean result = d.searchMatrix(matrix, target);
         System.out.println(result);
 
-        // 2-0c
     }
-    public int calculate(String s) {
-        List<Integer> nums = new ArrayList<>();
-        List<Character> ops = new ArrayList<>();
-        boolean has = false;
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int m = matrix.length;
+        int n = matrix[0].length;
 
-        int n = s.length();
-        int cnt = 0;
-        for (int i = 0; i < n; i++) {
-            char c = s.charAt(i);
-            if (c >= '0' && c <= '9') {
-                cnt = cnt * 10 + (c - '0');
-            } else if (c == '+' || c == '-') {
-                nums.add(cnt);
-                ops.add(c);
-                cnt = 0;
-            } else if (c == '*' || c == '/') {
-                nums.add(cnt);
-                ops.add(c);
-                cnt = 0;
-                has = true;
+        return search(matrix, target, 0, 0, m - 1, n - 1);
+    }
+
+    private boolean search(int[][] matrix, int target, int si, int sj, int ei, int ej) {
+        if (si > ei || sj > ej) return false;
+        if (si == ei) {
+            for (int j = 0; j <= ej; j++) {
+                if (matrix[si][j] == target) return true;
             }
+            // return false; 
         }
-        nums.add(cnt);
-
-        if (has) {
-            List<Integer> tnums = new ArrayList<>();
-            List<Character> tops = new ArrayList<>();
-            cnt = 0;
-            int index = -1;
-            for (int i = 0; i < ops.size(); i++) {
-                char c = ops.get(i);
-                if (c == '+' || c == '-') {
-                    if (index != -1) {
-                        tnums.add(cnt);
-                        cnt = 0;
-                        index = -1;
-                    } else {
-                        tnums.add(nums.get(i));
-                    }
-                    tops.add(c);
-                } else {
-                    if (index == -1) {
-                        index = i;
-                        cnt = nums.get(i);
-                    }
-                    if (c == '*') {
-                        cnt *= nums.get(i + 1);
-                    } else {
-                        cnt /= nums.get(i + 1);
-                    }
-                }
+        if (sj == ej) {
+            for (int i = 0; i <= ei; i++) {
+                if (matrix[i][sj] == target) return true;
             }
-            if (index == -1) {
-                tnums.add(nums.get(ops.size()));
-            } else {
-                tnums.add(cnt);
-            }
-            nums = tnums;
-            ops = tops;
+            // return false;
         }
-
-        cnt = nums.get(0);
-        for (int i = 0; i < ops.size(); i++) {
-            char c = ops.get(i);
-            if (c == '+') cnt += nums.get(i + 1);
-            else cnt -= nums.get(i + 1);
+        if (sj == ej || si == ei) return false;
+        int v = matrix[(si + ei) / 2][(sj + ej) / 2];
+        if (v == target) return true;
+        else if (v > target) {
+            return search(matrix, target, si, sj, (si + ei) / 2, (sj + ej) / 2);
+        } else {
+            return search(matrix, target, (si + ei) / 2 + 1, (sj + ej) / 2 + 1, ei, ej);
         }
-
-        return cnt;
     }
 }

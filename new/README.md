@@ -36,4 +36,6 @@
 | ~~218~~ | **~~The Skyline Problem~~** | Hard | The sort is important and a good solution |
 | ~~221~~ | **~~Maximal Square~~** | Normal | Using dp is so easy |
 | 223 | **Rectangle Area** | Normal |  |
-| 224 | **Basic Calculator** | Hard |  |
+| ~~224~~ | **~~Basic Calculator~~** | Hard | I resolve it by my solution |
+| 233 | **Number of Digit One** | Hard |  |
+| 240 | **Search a 2D Matrix II** | Normal |  |
