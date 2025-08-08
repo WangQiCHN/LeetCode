@@ -35,7 +35,7 @@
 | ~~214~~ | **~~Shortest Palindrome~~** | Hard | It is the KMP, I learned it in 2000 |
 | ~~218~~ | **~~The Skyline Problem~~** | Hard | The sort is important and a good solution |
 | ~~221~~ | **~~Maximal Square~~** | Normal | Using dp is so easy |
-| ~~223~~ | **~~Rectangle Area~~** | Normal | When I know the method, it is so easy |
+| 223 | **Rectangle Area** | Normal | When I know the method, it is so easy |
 | ~~224~~ | **~~Basic Calculator~~** | Hard | I resolve it by my solution |
 | 233 | **Number of Digit One** | Hard | I don't understand after analyzing it |
 | ~~240~~ | **~~Search a 2D Matrix II~~** | Normal | Transfer it from top right |
