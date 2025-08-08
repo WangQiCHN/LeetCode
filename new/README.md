@@ -39,3 +39,4 @@
 | ~~224~~ | **~~Basic Calculator~~** | Hard | I resolve it by my solution |
 | 233 | **Number of Digit One** | Hard |  |
 | 240 | **Search a 2D Matrix II** | Normal |  |
+| 241 | **Different Ways to Add Parentheses** | Normal |  |
