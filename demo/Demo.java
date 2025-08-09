@@ -1,7 +1,7 @@
 public class Demo {
     void main() {
         Demo d = new Demo();
-        int n = 13;
+        int n = 118;
         int result = d.countDigitOne(n);
         System.out.println(result);
     }
