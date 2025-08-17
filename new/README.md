@@ -41,3 +41,5 @@
 | ~~240~~ | **~~Search a 2D Matrix II~~** | Normal | Transfer it from top right |
 | ~~241~~ | **~~Different Ways to Add Parentheses~~** | Normal | Building one tree to calculate it |
 264
+282
+284

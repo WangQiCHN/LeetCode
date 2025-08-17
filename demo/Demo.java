@@ -1,36 +1,60 @@
-public class Demo {
-    void main() {
-        Demo d = new Demo();
-        int n = 18;
-        int result = d.nthUglyNumber(n);
-        System.out.println(result);
+import java.util.ArrayList;
+import java.util.List;
+
+class Demo {
+    void main(String[] args) {
+        String num = "123";
+        int target = 6;
+        List<String> results = addOperators(num, target);
+        System.out.println(results); // Output: ["1+2+3", "1*2*3"]
     }
-    public int nthUglyNumber(int n) {
-        // Array to store ugly numbers, 1-based indexing for simplicity
-        long[] ugly = new long[n + 1];
-        ugly[1] = 1; // First ugly number is 1
-        
-        // Pointers for the next multiples of 2, 3, and 5
-        int i2 = 1, i3 = 1, i5 = 1;
-        
-        // Generate ugly numbers from 2nd to nth
-        for (int i = 2; i <= n; i++) {
-            // Compute next possible ugly numbers
-            long next2 = ugly[i2] * 2;
-            long next3 = ugly[i3] * 3;
-            long next5 = ugly[i5] * 5;
-            
-            // Take the minimum to ensure the sequence is in order
-            long nextUgly = Math.min(next2, Math.min(next3, next5));
-            ugly[i] = nextUgly;
-            
-            // Increment the pointer(s) corresponding to the chosen multiple
-            if (nextUgly == next2) i2++;
-            if (nextUgly == next3) i3++;
-            if (nextUgly == next5) i5++;
+
+    public List<String> addOperators(String num, int target) {
+        List<String> results = new ArrayList<>();
+        backtrack(num, target, 0, 0, 0, "", results);
+        return results;
+    }
+
+    private void backtrack(String num, int target, int index, long prevOperand, long currentValue, String expression,
+            List<String> results) {
+        // Base case: if we've processed the entire string
+        if (index == num.length()) {
+            if (currentValue == target) {
+                results.add(expression);
+            }
+            return;
         }
-        
-        // Return the nth ugly number
-        return (int) ugly[n];
+
+        // Build the current operand by considering digits from index to i кив
+        long currentOperand = 0;
+        StringBuilder currentOperandStr = new StringBuilder();
+
+        // Iterate through possible operand lengths
+        for (int i = index; i < num.length(); i++) {
+            // Avoid leading zeros
+            if (i > index && num.charAt(index) == '0') {
+                break;
+            }
+            currentOperandStr.append(num.charAt(i));
+            currentOperand = Long.parseLong(currentOperandStr.toString());
+
+            // If this is the first operand, no operator is needed
+            if (index == 0) {
+                backtrack(num, target, i + 1, currentOperand, currentOperand, currentOperandStr.toString(), results);
+            } else {
+                // Try adding '+'
+                backtrack(num, target, i + 1, currentOperand, currentValue + currentOperand,
+                        expression + "+" + currentOperandStr, results);
+                // Try adding '-'
+                backtrack(num, target, i + 1, -currentOperand, currentValue - currentOperand,
+                        expression + "-" + currentOperandStr, results);
+                // Try adding '*' (adjust for precedence)
+                backtrack(num, target, i + 1, prevOperand * currentOperand,
+                        currentValue - prevOperand + (prevOperand * currentOperand),
+                        expression + "*" + currentOperandStr, results);
+            }
+            // Reset the operand string for the next iteration
+            // currentOperandStr.setLength(0);
+        }
     }
 }
