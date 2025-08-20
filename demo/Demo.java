@@ -1,3 +1,5 @@
+import java.util.PriorityQueue;
+
 class AVLTree {
     // Node class for AVL tree
     class Node {
@@ -139,21 +141,31 @@ class AVLTree {
     }
 
     // Main method for testing
-    public static void main(String[] args) {
-        AVLTree tree = new AVLTree();
+    // public static void main(String[] args) {
+    //     AVLTree tree = new AVLTree();
 
-        // Insert some nodes
-        tree.insert(10);
-        tree.insert(20);
-        tree.insert(30);
-        tree.insert(40);
-        tree.insert(50);
-        tree.insert(25);
+    //     // Insert some nodes
+    //     tree.insert(10);
+    //     tree.insert(20);
+    //     tree.insert(30);
+    //     tree.insert(40);
+    //     tree.insert(50);
+    //     tree.insert(25);
 
-        // Print preorder traversal
-        System.out.println("Preorder traversal of constructed AVL tree:");
-        // tree.preOrder();
-        int mid = tree.getNode().key;
-        System.out.println("Mid value of the AVL tree: " + mid);
+    //     // Print preorder traversal
+    //     System.out.println("Preorder traversal of constructed AVL tree:");
+    //     // tree.preOrder();
+    //     int mid = tree.getNode().key;
+    //     System.out.println("Mid value of the AVL tree: " + mid);
+    // }
+    void main() {
+        System.out.println("AVL Tree Demo");
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a); // Max-heap
+        pq.add(10);
+        pq.add(20);
+        pq.add(30);
+        pq.add(40);
+        pq.add(50);
+        System.out.println("Priority Queue: " + pq);
     }
 }

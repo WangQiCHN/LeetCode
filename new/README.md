@@ -41,6 +41,6 @@
 | ~~240~~ | **~~Search a 2D Matrix II~~** | Normal | Transfer it from top right |
 | ~~241~~ | **~~Different Ways to Add Parentheses~~** | Normal | Building one tree to calculate it |
 | ~~264~~ | **~~Ugly Number II~~** | Normal | I find the method to calcuate by previous result |
-282
+| ~~282~~ | **~~Expression Add Operators~~** | Hard | Analyze the expression |
 | ~~284~~ | **~~Peeking Iterator~~** | Normal | Get the result first, when invoke next, try to return the value and get next later |
-295
+| ~~295~~ | **~~Find Median from Data Stream~~** | Hard | Using PriorityQueue, it becomes easy |
