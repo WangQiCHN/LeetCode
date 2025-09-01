@@ -55,3 +55,7 @@
 | 31 | **~~Next Permutation~~** | Failed |
 | ~~32~~ | **~~Longest Valid Parentheses~~** | Success |
 | ~~33~~ | **~~Search in Rotated Sorted~~** | Success |
+
+
+# Daily
+| 1792 | **Maximum Average Pass Ratio** | Failed |
