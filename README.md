@@ -14,6 +14,7 @@
 | ~~41~~ | **~~First Missing Positive~~** | Hard | The solution is good, but why while not if |
 | ~~48~~ | **~~Rotate Image~~** | Normal | Swap elements across the diagonal, Reverse each row  |
 | ~~50~~ | **~~Pow(x, n)~~** | Normal | We need the help from mathematics |
+
 | ~~84~~ | **~~Largest Rectangle in Histogram~~** | Hard | Using stack to record the max value list |
 | ~~85~~ | **~~Maximal Rectangle~~** | Hard | The same as 84 |
 | ~~87~~ | **~~Scramble String~~** | Hard | Try every step to scramble one string |
@@ -50,12 +51,17 @@
 
 # The second round
 | 4  | **Median of Two Sorted Arrays** | Failed |
-| ~~29~~ | **~~Divide Two Integers~~** | Success |
-| ~~30~~ | **~~Substring with Concatenation~~** | Success |
-| 31 | **~~Next Permutation~~** | Failed |
-| ~~32~~ | **~~Longest Valid Parentheses~~** | Success |
-| ~~33~~ | **~~Search in Rotated Sorted~~** | Success |
+| 29 | **Divide Two Integers** | Success |
+| 30 | **Substring with Concatenation** | Success |
+| 31 | **Next Permutation** | Failed |
+| 32 | **Longest Valid Parentheses** | Success |
+| 33 | **Search in Rotated Sorted** | Success |
+| 37 | **Sudoku Solver** | Failed |
+| 41 | **First Missing Positive** | Failed |
+| 48 | **Rotate Image** | Success |
+| 50 | **Pow(x, n)** | Failed |
 
 
 # Daily
 | 1792 | **Maximum Average Pass Ratio** | Failed |
+| 3025 | **Find the Number of Ways to Place People I** | Success |
