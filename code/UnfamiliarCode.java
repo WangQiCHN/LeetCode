@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Arrays;
 
 public class UnfamiliarCode {
     public void numberOfPairs(int[][] ps) {
@@ -15,10 +16,33 @@ public class UnfamiliarCode {
             points.add(new Point(x, y));
         }
         // 如何进行数组排序不熟悉，不知道如何使用Comparator
+        // arrays是数组，collections是集合
         Comparator<Point> comparator = (p1, p2) -> {
-            if (p1.y == p2.y) return p1.x - p2.x;
-            else return p2.y - p1.y;
+            if (p1.y == p2.y)
+                return p1.x - p2.x;
+            else
+                return p2.y - p1.y;
         };
         Collections.sort(points, comparator);
+        Collections.sort(points, new Comparator<Point>() {
+            @Override
+            public int compare(Point p1, Point p2) {
+                if (p1.y == p2.y)
+                    return p1.x - p2.x;
+                else
+                    return p2.y - p1.y;
+            }
+        });
+
+        // 按姓名升序
+        Arrays.sort(ps, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] a, int[] b) {
+                return a[1] - b[1];
+            }
+        });
+
+        // Lambda 简化
+        Arrays.sort(ps, (a, b) -> a[0] - b[0]);
     }
 }
