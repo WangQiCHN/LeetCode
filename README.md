@@ -14,12 +14,12 @@
 | ~~41~~ | **~~First Missing Positive~~** | Hard | The solution is good, but why while not if |
 | ~~48~~ | **~~Rotate Image~~** | Normal | Swap elements across the diagonal, Reverse each row  |
 | ~~50~~ | **~~Pow(x, n)~~** | Normal | We need the help from mathematics |
-
 | ~~84~~ | **~~Largest Rectangle in Histogram~~** | Hard | Using stack to record the max value list |
 | ~~85~~ | **~~Maximal Rectangle~~** | Hard | The same as 84 |
 | ~~87~~ | **~~Scramble String~~** | Hard | Try every step to scramble one string |
 | ~~95~~ | **~~Unique Binary Search Trees~~** | Normal | I know how to create left tree and right tree first  |
 | ~~99~~ | **~~Recovver Binary Search Trees~~** | Normal | By using inorder, the prev should small than next |
+
 | ~~123~~ | **~~Best Time to Buy and Sell Stock III~~** | Hard | The algorithm is so good |
 | ~~124~~ | **~~Binary Tree Maximum Path Sum~~** | Hard | Think it as it is |
 | ~~126~~ | **~~Word Ladder II~~** | Hard |  |
@@ -60,8 +60,16 @@
 | 41 | **First Missing Positive** | Failed |
 | 48 | **Rotate Image** | Success |
 | 50 | **Pow(x, n)** | Failed |
+| 84 | **Largest Rectangle in Histogram** | Fail |
+| 85 | **Maximal Rectangle** | Success |
+| 87 | **Scramble String** | Success |
+| 95 | **Unique Binary Search Trees** | Success |
+| 99 | **Recovver Binary Search Trees** | Success |
+
+
 
 
 # Daily
 | 1792 | **Maximum Average Pass Ratio** | Failed |
 | 3025 | **Find the Number of Ways to Place People I** | Success |
+| 3027 | **Find the Number of Ways to Place People II** | Success |
