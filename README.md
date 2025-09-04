@@ -79,3 +79,4 @@
 | 1792 | **Maximum Average Pass Ratio** | Failed |
 | 3025 | **Find the Number of Ways to Place People I** | Success |
 | 3027 | **Find the Number of Ways to Place People II** | Success |
+| 3516 | **Find Closest Person** | Success |
