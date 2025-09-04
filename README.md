@@ -19,12 +19,12 @@
 | ~~87~~ | **~~Scramble String~~** | Hard | Try every step to scramble one string |
 | ~~95~~ | **~~Unique Binary Search Trees~~** | Normal | I know how to create left tree and right tree first  |
 | ~~99~~ | **~~Recovver Binary Search Trees~~** | Normal | By using inorder, the prev should small than next |
-
 | ~~123~~ | **~~Best Time to Buy and Sell Stock III~~** | Hard | The algorithm is so good |
 | ~~124~~ | **~~Binary Tree Maximum Path Sum~~** | Hard | Think it as it is |
 | ~~126~~ | **~~Word Ladder II~~** | Hard |  |
 | ~~128~~ | **~~Longest Consecutive Sequence~~** | Normal | It is easy, but the space has some |
 | ~~132~~ | **~~Palindrome Partitioning II~~** | Hard |  |
+
 | ~~135~~ | **Candy** | Hard | Scan twices, but I don't know how to do it in scan |
 | ~~148~~ | **~~Sort List~~** | Normal | Merge sort and find middle node, set the slow.next to null |
 | ~~149~~ | **~~Max Points on a Line~~** | Hard | Using multiple to calculate to 'a' |
@@ -65,6 +65,12 @@
 | 87 | **Scramble String** | Success |
 | 95 | **Unique Binary Search Trees** | Success |
 | 99 | **Recovver Binary Search Trees** | Success |
+| 123 | **Best Time to Buy and Sell Stock III** | Failed |
+| 124 | **Binary Tree Maximum Path Sum** | Failed | I resolve it but too complicated
+| 126 | **Word Ladder II** | Success | So complicated!!!!
+| 128 | **Longest Consecutive Sequence** | Failed |
+| 132 | **Palindrome Partitioning II** | Failed |
+
 
 
 
