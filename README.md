@@ -24,13 +24,13 @@
 | ~~126~~ | **~~Word Ladder II~~** | Hard |  |
 | ~~128~~ | **~~Longest Consecutive Sequence~~** | Normal | It is easy, but the space has some |
 | ~~132~~ | **~~Palindrome Partitioning II~~** | Hard |  |
-
 | ~~135~~ | **Candy** | Hard | Scan twices, but I don't know how to do it in scan |
 | ~~148~~ | **~~Sort List~~** | Normal | Merge sort and find middle node, set the slow.next to null |
 | ~~149~~ | **~~Max Points on a Line~~** | Hard | Using multiple to calculate to 'a' |
 | ~~166~~ | **~~Fraction to Recurring Decimal~~** | Normal | insert and length function int StringBuilder |
 | ~~201~~ | **~~Bitwise AND of Numbers Range~~** | Normal | Right bit shift and compare two numbers |
 | ~~202~~ | **~~Happy Number~~** | Easy | The max number of sum is 729 |
+
 | ~~204~~ | **~~Count Primes~~** | Normal | Using i * i and j = j + i to calcuate not prime |
 | ~~212~~ | **~~Word Search II~~** | Hard | Don't use map as visited |
 | ~~214~~ | **~~Shortest Palindrome~~** | Hard | It is the KMP, I learned it in 2000 |
@@ -70,6 +70,12 @@
 | 126 | **Word Ladder II** | Success | So complicated!!!!
 | 128 | **Longest Consecutive Sequence** | Failed |
 | 132 | **Palindrome Partitioning II** | Failed |
+| 135 | **Candy** | Success |
+| 148 | **Sort List** | Success |
+| 149 | **Max Points on a Line** | Success |
+| 201 | **Bitwise AND of Numbers Range** | Success |
+| 202 | **Happy Number** | Success |
+
 
 
 
@@ -80,3 +86,4 @@
 | 3025 | **Find the Number of Ways to Place People I** | Success |
 | 3027 | **Find the Number of Ways to Place People II** | Success |
 | 3516 | **Find Closest Person** | Success |
+| 2749 | **Minimum Operations to Make the Integer Zero** | Fail |
