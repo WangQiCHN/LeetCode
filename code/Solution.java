@@ -2,17 +2,31 @@ package code;
 
 public class Solution {
     void main() {
-        int num1 = 700000000, num2 = 2147483641;
-        int step = rangeBitwiseAnd(num1, num2);
+        int[][] n = {{2,6}};
+        long step = minOperations(n);
         System.out.println(step);
     }
-
-    public int rangeBitwiseAnd(int left, int right) {
-        int result = left;
-        for (int i = left + 1; i <= right && i <= 2 * left; i++) {
-            result &= i;
+    public long minOperations(int[][] queries) {
+        long ans = 0;
+        for (int[] q : queries) {
+            int l = q[0], r = q[1];
+            long s = f(r) - f(l - 1);
+            long mx = f(r) - f(r - 1);
+            ans += Math.max((s + 1) / 2, mx);
         }
+        return ans;
+    }
 
-        return result;
+    private long f(long x) {
+        long res = 0;
+        long p = 1;
+        int i = 1;
+        while (p <= x) {
+            long cnt = Math.min(p * 4 - 1, x) - p + 1;
+            res += cnt * i;
+            i++;
+            p *= 4;
+        }
+        return res;
     }
 }

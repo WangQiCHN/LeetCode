@@ -24,18 +24,18 @@
 | ~~126~~ | **~~Word Ladder II~~** | Hard |  |
 | ~~128~~ | **~~Longest Consecutive Sequence~~** | Normal | It is easy, but the space has some |
 | ~~132~~ | **~~Palindrome Partitioning II~~** | Hard |  |
-| ~~135~~ | **Candy** | Hard | Scan twices, but I don't know how to do it in scan |
+| ~~135~~ | **~~Candy~~** | Hard | Scan twices, but I don't know how to do it in scan |
 | ~~148~~ | **~~Sort List~~** | Normal | Merge sort and find middle node, set the slow.next to null |
 | ~~149~~ | **~~Max Points on a Line~~** | Hard | Using multiple to calculate to 'a' |
-| ~~166~~ | **~~Fraction to Recurring Decimal~~** | Normal | insert and length function int StringBuilder |
+!!!!!| ~~166~~ | **~~Fraction to Recurring Decimal~~** | Normal | insert and length function int StringBuilder |
 | ~~201~~ | **~~Bitwise AND of Numbers Range~~** | Normal | Right bit shift and compare two numbers |
 | ~~202~~ | **~~Happy Number~~** | Easy | The max number of sum is 729 |
-
 | ~~204~~ | **~~Count Primes~~** | Normal | Using i * i and j = j + i to calcuate not prime |
 | ~~212~~ | **~~Word Search II~~** | Hard | Don't use map as visited |
 | ~~214~~ | **~~Shortest Palindrome~~** | Hard | It is the KMP, I learned it in 2000 |
 | ~~218~~ | **~~The Skyline Problem~~** | Hard | The sort is important and a good solution |
 | ~~221~~ | **~~Maximal Square~~** | Normal | Using dp is so easy |
+
 | ~~223~~ | **~~Rectangle Area~~** | Normal | When I know the method, it is so easy |
 | ~~224~~ | **~~Basic Calculator~~** | Hard | I resolve it by my solution |
 | ~~233~~ | **~~Number of Digit One~~** | Hard | I don't understand after analyzing it |
@@ -75,7 +75,11 @@
 | 149 | **Max Points on a Line** | Success |
 | 201 | **Bitwise AND of Numbers Range** | Success |
 | 202 | **Happy Number** | Success |
-
+| 204 | **Count Primes** | Success |
+| 212 | **Word Search II** | Success |
+| 214 | **Shortest Palindrome** | Fail |
+| 218 | **The Skyline Problem** | Success |
+| 221 | **Maximal Square** | Success |
 
 
 
@@ -87,3 +91,4 @@
 | 3027 | **Find the Number of Ways to Place People II** | Success |
 | 3516 | **Find Closest Person** | Success |
 | 2749 | **Minimum Operations to Make the Integer Zero** | Fail |
+| 3495 | **Minimum Operations to Make Array Elements Zero** | Fail |
