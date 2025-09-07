@@ -44,5 +44,10 @@ public class UnfamiliarCode {
 
         // Lambda 简化
         Arrays.sort(ps, (a, b) -> a[0] - b[0]);
+
+        StringBuilder sb = new StringBuilder();
+        // 在sb中插入一个字符
+        int index = 2;
+        sb.insert(index, '(');
     }
 }
