@@ -5,61 +5,100 @@ import java.util.List;
 
 public class Solution {
     void main() {
-        // int ax1 = -2, ay1 = -2, ax2 = 2, ay2 = 2, bx1 = -1, by1 = 4, bx2 = 1, by2 = 6;
-        int result = calculate("(1+(4+5+2)-3)+(6+8)");
+        String s = "232";
+        int target = 8;
+        List<String> result = addOperators(s, target);
         System.out.println(result);
     }
-    private int lastIndex = -1;
-    public int calculate(String s) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("(");
-        sb.append(s);
-        sb.append(")");
+    private List<String> result = new ArrayList<>();
+    private List<Integer> nums = new ArrayList<>();
+    private List<Character> ops = new ArrayList<>();
+    public List<String> addOperators(String num, int target) {
+        char[] cnums = num.toCharArray();
+        analyze(cnums, 0, target);
 
-        String news = sb.toString();
-
-        char[] cs = news.toCharArray();
-
-        return calculate(cs, 0);   
+        return result;
     }
 
-    private int calculate(char[] array, int index) {
+    private void analyze(char[] cnums, int s, int target) {
         int cnt = 0;
-        List<Integer> nums = new ArrayList<>();
-        List<Character> operators = new ArrayList<>();
-        for (int i = index; i < array.length; i++) {
-            char c = array[i];
-            if (c == '(') {
-                cnt = calculate(array, index + 1);
-                i = lastIndex;
-            } else if (c == ')') {
-                lastIndex = i;
-                break;
-            } else if (c == ' ') {
-                continue;
-            } else if (c == '+' || c == '-') {
-                nums.add(cnt);
-                operators.add(c);
-                cnt = 0;
+        int sz = cnums.length;
+
+        for (int i = s; i < sz; i++) {
+            char c = cnums[i];
+            cnt = cnt * 10 + (int)(c - '0');
+            nums.add(cnt);
+            
+            if (i != sz -1) {
+                ops.add('+');
+                analyze(cnums, i + 1, target);
+                ops.remove(ops.size() - 1);
+                ops.add('-');
+                analyze(cnums, i + 1, target);
+                ops.remove(ops.size() - 1);
+                ops.add('*');
+                analyze(cnums, i + 1, target);
+                ops.remove(ops.size() - 1);
             } else {
-                cnt = cnt * 10 + (c - '0');
-            }
-        }
-        nums.add(cnt);
-
-        if (nums.size() == 1) return nums.get(0);
-        else {
-            cnt = nums.get(0);
-            for (int i = 0; i < operators.size(); i++) {
-                char c = operators.get(i);
-                if (c == '+') {
-                    cnt += nums.get(i + 1);
-                } else {
-                    cnt -= nums.get(i + 1);
-                }
+                calculate(target);
             }
 
-            return cnt;
+            nums.remove(nums.size() - 1);
+            
+
+            if (i == s && c == '0') break;
         }
+    }
+
+    private void calculate(int target) {
+        int v = calculate();
+        if (v == target) {
+            result.add(genExpr());
+        }
+    }
+
+    private int calculate() {
+        int sz = nums.size();
+        int cnt = nums.get(0);
+        if (sz == 1) return cnt;
+        List<Integer> tnums = new ArrayList<>();
+        List<Character> tops = new ArrayList<>();
+        for (int i = 0; i < sz - 1; i++) {
+            char c = ops.get(i);
+            if (c == '+' || c == '-') {
+                tnums.add(cnt);
+                tops.add(c);
+                cnt = nums.get(i + 1);
+            } else {
+                cnt *= nums.get(i + 1);
+            }
+        }
+        tnums.add(cnt);
+        sz = tnums.size();
+        cnt = tnums.get(0);
+        if (sz == 1) return cnt;
+
+        for (int i = 0; i < sz - 1; i++) {
+            char c = tops.get(i);
+            if (c == '+') {
+                cnt += tnums.get(i + 1);
+            } else {
+                cnt -= tnums.get(i + 1);
+            }
+        }
+
+        return cnt;
+    }
+
+    private String genExpr() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < nums.size(); i++) {
+            sb.append(nums.get(i));
+            if (i != nums.size() - 1) {
+                sb.append(ops.get(i));
+            }
+        }
+
+        return sb.toString();
     }
 }

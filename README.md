@@ -39,7 +39,6 @@
 | ~~224~~ | **~~Basic Calculator~~** | Hard | I resolve it by my solution |
 | ~~233~~ | **~~Number of Digit One~~** | Hard | I don't understand after analyzing it |
 | ~~240~~ | **~~Search a 2D Matrix II~~** | Normal | Transfer it from top right |
-
 | ~~241~~ | **~~Different Ways to Add Parentheses~~** | Normal | Building one tree to calculate it |
 | ~~264~~ | **~~Ugly Number II~~** | Normal | I find the method to calcuate by previous result |
 | ~~282~~ | **~~Expression Add Operators~~** | Hard | Analyze the expression |
@@ -49,7 +48,7 @@
 
 
 
-# The second round
+# The second round 28:12
 | 4  | **Median of Two Sorted Arrays** | Failed |
 | 29 | **Divide Two Integers** | Success |
 | 30 | **Substring with Concatenation** | Success |
@@ -60,7 +59,7 @@
 | 41 | **First Missing Positive** | Failed |
 | 48 | **Rotate Image** | Success |
 | 50 | **Pow(x, n)** | Failed |
-| 84 | **Largest Rectangle in Histogram** | Fail |
+| 84 | **Largest Rectangle in Histogram** | Failed |
 | 85 | **Maximal Rectangle** | Success |
 | 87 | **Scramble String** | Success |
 | 95 | **Unique Binary Search Trees** | Success |
@@ -78,14 +77,18 @@
 | 202 | **Happy Number** | Success |
 | 204 | **Count Primes** | Success |
 | 212 | **Word Search II** | Success |
-| 214 | **Shortest Palindrome** | Fail |
+| 214 | **Shortest Palindrome** | Failed |
 | 218 | **The Skyline Problem** | Success |
 | 221 | **Maximal Square** | Success |
 | 223 | **Rectangle Area** | Success |
 | 224 | **Basic Calculator** | Success |
-| 233 | **Number of Digit One** | Fail |
+| 233 | **Number of Digit One** | Failed |
 | 240 | **Search a 2D Matrix II** | Success |
-
+| 241 | **Different Ways to Add Parentheses** | Success |
+| 264 | **Ugly Number II** | Success |
+| 282 | **Expression Add Operators** | Success |
+| 284 | **Peeking Iterator** | Success |
+| 295 | **Find Median from Data Stream** | Success |
 
 
 
@@ -97,3 +100,5 @@
 | 3516 | **Find Closest Person** | Success |
 | 2749 | **Minimum Operations to Make the Integer Zero** | Fail |
 | 3495 | **Minimum Operations to Make Array Elements Zero** | Fail |
+| 1304 | **Find N Unique Integers Sum up to Zero** | Success |
+| 1317 | **Convert Integer to the Sum of Two No-Zero Integers** | Success |
