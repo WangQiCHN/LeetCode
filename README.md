@@ -50,51 +50,24 @@
 
 # The second round 28:12
 | 4  | **Median of Two Sorted Arrays** | Failed |
-| 29 | **Divide Two Integers** | Success |
-| 30 | **Substring with Concatenation** | Success |
 | 31 | **Next Permutation** | Failed |
-| 32 | **Longest Valid Parentheses** | Success |
-| 33 | **Search in Rotated Sorted** | Success |
 | 37 | **Sudoku Solver** | Failed |
 | 41 | **First Missing Positive** | Failed |
-| 48 | **Rotate Image** | Success |
+
 | 50 | **Pow(x, n)** | Failed |
 | 84 | **Largest Rectangle in Histogram** | Failed |
-| 85 | **Maximal Rectangle** | Success |
-| 87 | **Scramble String** | Success |
-| 95 | **Unique Binary Search Trees** | Success |
-| 99 | **Recovver Binary Search Trees** | Success |
 | 123 | **Best Time to Buy and Sell Stock III** | Failed |
 | 124 | **Binary Tree Maximum Path Sum** | Failed | I resolve it but too complicated
-| 126 | **Word Ladder II** | Success | So complicated!!!!
 | 128 | **Longest Consecutive Sequence** | Failed |
 | 132 | **Palindrome Partitioning II** | Failed |
-| 135 | **Candy** | Success |
-| 148 | **Sort List** | Success |
-| 149 | **Max Points on a Line** | Success |
-| 166 | **Fraction to Recurring Decimal** | Success |
-| 201 | **Bitwise AND of Numbers Range** | Success |
-| 202 | **Happy Number** | Success |
-| 204 | **Count Primes** | Success |
-| 212 | **Word Search II** | Success |
 | 214 | **Shortest Palindrome** | Failed |
-| 218 | **The Skyline Problem** | Success |
-| 221 | **Maximal Square** | Success |
-| 223 | **Rectangle Area** | Success |
-| 224 | **Basic Calculator** | Success |
 | 233 | **Number of Digit One** | Failed |
-| 240 | **Search a 2D Matrix II** | Success |
-| 241 | **Different Ways to Add Parentheses** | Success |
-| 264 | **Ugly Number II** | Success |
-| 282 | **Expression Add Operators** | Success |
-| 284 | **Peeking Iterator** | Success |
-| 295 | **Find Median from Data Stream** | Success |
 
 
 
 
 # Daily
-| 1792 | **Maximum Average Pass Ratio** | Failed |
+| 1792 | **Maximum Average Pass Ratio** | Fail |
 | 3025 | **Find the Number of Ways to Place People I** | Success |
 | 3027 | **Find the Number of Ways to Place People II** | Success |
 | 3516 | **Find Closest Person** | Success |
@@ -102,3 +75,4 @@
 | 3495 | **Minimum Operations to Make Array Elements Zero** | Fail |
 | 1304 | **Find N Unique Integers Sum up to Zero** | Success |
 | 1317 | **Convert Integer to the Sum of Two No-Zero Integers** | Success |
+| 2327 | **Number of People Aware of a Secret** | Fail |
