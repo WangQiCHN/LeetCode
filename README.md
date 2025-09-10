@@ -59,7 +59,6 @@
 | 124 | **Binary Tree Maximum Path Sum** | Failed | I resolve it but too complicated
 | 128 | **Longest Consecutive Sequence** | Failed |
 | 132 | **Palindrome Partitioning II** | Failed |
-
 | 214 | **Shortest Palindrome** | Failed |
 | 233 | **Number of Digit One** | Failed |
 
