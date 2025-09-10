@@ -1,104 +1,40 @@
 package code;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Solution {
     void main() {
-        String s = "232";
-        int target = 8;
-        List<String> result = addOperators(s, target);
+        String s =  "aabb";
+        int result = minCut(s);
         System.out.println(result);
     }
-    private List<String> result = new ArrayList<>();
-    private List<Integer> nums = new ArrayList<>();
-    private List<Character> ops = new ArrayList<>();
-    public List<String> addOperators(String num, int target) {
-        char[] cnums = num.toCharArray();
-        analyze(cnums, 0, target);
 
-        return result;
-    }
-
-    private void analyze(char[] cnums, int s, int target) {
-        int cnt = 0;
-        int sz = cnums.length;
-
-        for (int i = s; i < sz; i++) {
-            char c = cnums[i];
-            cnt = cnt * 10 + (int)(c - '0');
-            nums.add(cnt);
-            
-            if (i != sz -1) {
-                ops.add('+');
-                analyze(cnums, i + 1, target);
-                ops.remove(ops.size() - 1);
-                ops.add('-');
-                analyze(cnums, i + 1, target);
-                ops.remove(ops.size() - 1);
-                ops.add('*');
-                analyze(cnums, i + 1, target);
-                ops.remove(ops.size() - 1);
-            } else {
-                calculate(target);
-            }
-
-            nums.remove(nums.size() - 1);
-            
-
-            if (i == s && c == '0') break;
+    public int minCut(String s) {
+        int n = s.length();
+        int[] dp = new int[n + 1];
+        for (int i = 0; i <= n; i++) {
+            dp[i] = i - 1;
         }
-    }
 
-    private void calculate(int target) {
-        int v = calculate();
-        if (v == target) {
-            result.add(genExpr());
-        }
-    }
-
-    private int calculate() {
-        int sz = nums.size();
-        int cnt = nums.get(0);
-        if (sz == 1) return cnt;
-        List<Integer> tnums = new ArrayList<>();
-        List<Character> tops = new ArrayList<>();
-        for (int i = 0; i < sz - 1; i++) {
-            char c = ops.get(i);
-            if (c == '+' || c == '-') {
-                tnums.add(cnt);
-                tops.add(c);
-                cnt = nums.get(i + 1);
-            } else {
-                cnt *= nums.get(i + 1);
-            }
-        }
-        tnums.add(cnt);
-        sz = tnums.size();
-        cnt = tnums.get(0);
-        if (sz == 1) return cnt;
-
-        for (int i = 0; i < sz - 1; i++) {
-            char c = tops.get(i);
-            if (c == '+') {
-                cnt += tnums.get(i + 1);
-            } else {
-                cnt -= tnums.get(i + 1);
+        boolean[][] isValid = new boolean[n][n];
+        for (int t = 0; t < n; t++) {
+            for (int f = 0; f <= t; f++) {
+                if (s.charAt(t) == s.charAt(f)) {
+                    if (t - f <= 2 || isValid[f + 1][t - 1]) {
+                        isValid[f][t] = true;
+                    }
+                }
             }
         }
 
-        return cnt;
-    }
-
-    private String genExpr() {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < nums.size(); i++) {
-            sb.append(nums.get(i));
-            if (i != nums.size() - 1) {
-                sb.append(ops.get(i));
+        for (int t = 1; t <= n; t++) {
+            for (int f = 0; f < t; f++) {
+                if (isValid[f][t - 1]) {
+                    dp[t] = Math.min(dp[t], dp[f] + 1);
+                }
             }
         }
 
-        return sb.toString();
+        return dp[n];
     }
 }

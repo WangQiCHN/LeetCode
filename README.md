@@ -53,13 +53,13 @@
 | 31 | **Next Permutation** | Failed |
 | 37 | **Sudoku Solver** | Failed |
 | 41 | **First Missing Positive** | Failed |
-
 | 50 | **Pow(x, n)** | Failed |
 | 84 | **Largest Rectangle in Histogram** | Failed |
 | 123 | **Best Time to Buy and Sell Stock III** | Failed |
 | 124 | **Binary Tree Maximum Path Sum** | Failed | I resolve it but too complicated
 | 128 | **Longest Consecutive Sequence** | Failed |
 | 132 | **Palindrome Partitioning II** | Failed |
+
 | 214 | **Shortest Palindrome** | Failed |
 | 233 | **Number of Digit One** | Failed |
 
@@ -76,3 +76,4 @@
 | 1304 | **Find N Unique Integers Sum up to Zero** | Success |
 | 1317 | **Convert Integer to the Sum of Two No-Zero Integers** | Success |
 | 2327 | **Number of People Aware of a Secret** | Fail |
+| 1733 | **Minimum Number of People to Teach** | Fail |
