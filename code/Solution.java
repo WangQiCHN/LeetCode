@@ -3,7 +3,7 @@ package code;
 public class Solution {
     void main() {
         // int n = 6;
-        for (int i = 100; i <= 109; i++) {
+        for (int i = 200; i <= 209; i++) {
             countDigitOne(i);
         }
         // System.out.println(result);

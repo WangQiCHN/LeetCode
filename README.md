@@ -76,3 +76,4 @@
 | 1317 | **Convert Integer to the Sum of Two No-Zero Integers** | Success |
 | 2327 | **Number of People Aware of a Secret** | Fail |
 | 1733 | **Minimum Number of People to Teach** | Fail |
+| 2785 | **Sort Vowels in a String** | Success |
