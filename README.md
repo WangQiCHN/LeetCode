@@ -49,12 +49,12 @@
 
 
 # The second round 28:12
-| 4  | **Median of Two Sorted Arrays** | Failed |
-| 31 | **Next Permutation** | Failed |
-| 37 | **Sudoku Solver** | Failed |
-| 41 | **First Missing Positive** | Failed |
-| 50 | **Pow(x, n)** | Failed |
-| 84 | **Largest Rectangle in Histogram** | Failed |
+| 4  | **Median of Two Sorted Arrays** | Success |
+| 31 | **Next Permutation** | Success |
+| 37 | **Sudoku Solver** | Success |
+| 41 | **First Missing Positive** | Success |
+| 50 | **Pow(x, n)** | Success |
+| 84 | **Largest Rectangle in Histogram** | Success |
 | 123 | **Best Time to Buy and Sell Stock III** | Failed |
 | 124 | **Binary Tree Maximum Path Sum** | Failed | I resolve it but too complicated
 | 128 | **Longest Consecutive Sequence** | Failed |
@@ -77,3 +77,4 @@
 | 2327 | **Number of People Aware of a Secret** | Fail |
 | 1733 | **Minimum Number of People to Teach** | Fail |
 | 2785 | **Sort Vowels in a String** | Success |
+| 3227 | **Vowels Game in a String** | Success |
