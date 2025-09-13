@@ -55,11 +55,11 @@
 | 41 | **First Missing Positive** | Success |
 | 50 | **Pow(x, n)** | Success |
 | 84 | **Largest Rectangle in Histogram** | Success |
-| 123 | **Best Time to Buy and Sell Stock III** | Failed |
-| 124 | **Binary Tree Maximum Path Sum** | Failed | I resolve it but too complicated
-| 128 | **Longest Consecutive Sequence** | Failed |
-| 132 | **Palindrome Partitioning II** | Failed |
-| 214 | **Shortest Palindrome** | Failed |
+| 123 | **Best Time to Buy and Sell Stock III** | Success |
+| 124 | **Binary Tree Maximum Path Sum** | Success | I resolve it but too complicated
+| 128 | **Longest Consecutive Sequence** | Success |
+| 132 | **Palindrome Partitioning II** | Success |
+| 214 | **Shortest Palindrome** | Success |
 | 233 | **Number of Digit One** | Failed |
 
 
@@ -78,3 +78,4 @@
 | 1733 | **Minimum Number of People to Teach** | Fail |
 | 2785 | **Sort Vowels in a String** | Success |
 | 3227 | **Vowels Game in a String** | Success |
+| 3541 | **Find Most Frequent Vowel and Consonant** | Success |
