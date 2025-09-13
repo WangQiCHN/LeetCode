@@ -60,7 +60,7 @@
 | 128 | **Longest Consecutive Sequence** | Success |
 | 132 | **Palindrome Partitioning II** | Success |
 | 214 | **Shortest Palindrome** | Success |
-| 233 | **Number of Digit One** | Failed |
+| 233 | **Number of Digit One** | Success |
 
 
 
@@ -79,3 +79,4 @@
 | 2785 | **Sort Vowels in a String** | Success |
 | 3227 | **Vowels Game in a String** | Success |
 | 3541 | **Find Most Frequent Vowel and Consonant** | Success |
+| 966 | **Vowel Spellchecker** | Success |
