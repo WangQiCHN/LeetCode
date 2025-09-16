@@ -80,3 +80,5 @@
 | 3227 | **Vowels Game in a String** | Success |
 | 3541 | **Find Most Frequent Vowel and Consonant** | Success |
 | 966 | **Vowel Spellchecker** | Success |
+| 1935 | **Maximum Number of Words You Can Type** | Success |
+| 2197 | **Replace Non-Coprime Numbers in Array** | Fail |
