@@ -1,25 +1,47 @@
 package code;
 
-public class Solution {
+class Solution {
     void main() {
-        int n = 13;
-        double result = countDigitOne(n);
-        System.out.println(result);
+        int num1 = 112577768;
+        int num2 = -501662198;
+        System.out.println(makeTheIntegerZero(num1, num2));
     }
+    // public int makeTheIntegerZero(int num1, int num2) {
+    //     // Handle edge cases where num1 cannot be reduced to zero
+    //     if (num1 < num2) return -1;
+        
+    //     // Iterate over possible number of operations (k)
+    //     for (int k = 0; k <= 60; k++) {
+    //         long t = (long) num1 - (long) k * num2; // Compute num1 - k * num2
+    //         if (t < 0) break; // If t becomes negative, further k values will also be negative
+            
+    //         // Count number of 1s in binary representation of t
+    //         int popcount = Long.bitCount(t);
+            
+    //         // Check if t can be represented as sum of k powers of 2
+    //         // Conditions: popcount <= k (can combine powers of 2) and t >= k (sum of k powers of 2 is at least k)
+    //         if (popcount <= k && t >= k) {
+    //             return k; // k is the minimum number of operations
+    //         }
+    //     }
+        
+    //     return -1; // No valid k found
+    // }
 
-    public int countDigitOne(int n) {
-        long count = 0, i = 1;
+    public int makeTheIntegerZero(int num1, int num2) {
+        if (num1 < num2) return -1;
 
-        while (i <= n) {
-            long div = i * 10;
-            long first = n / div * i;
-            long second = n % div - i + 1;
-            long third = Math.max(Math.min(second, 0), i);
+        for (int k = 0; k <= 60; k++) {
+            // long t = (long)num1 - (long)(k * num2);
+            long t = (long) num1 - (long) k * num2; // Compute num1 - k * num2
+            if (t < 0) break;
+            long count = Long.bitCount(t);
 
-            count += (first + third);
-            i = div;
+            if (count <= k && k <= t) {
+                return k;
+            }
         }
 
-        return (int)count;
+        return -1;
     }
 }

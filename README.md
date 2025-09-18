@@ -70,8 +70,8 @@
 | 3025 | **Find the Number of Ways to Place People I** | Success |
 | 3027 | **Find the Number of Ways to Place People II** | Success |
 | 3516 | **Find Closest Person** | Success |
-
 | 2749 | **Minimum Operations to Make the Integer Zero** | Fail |
+
 | 3495 | **Minimum Operations to Make Array Elements Zero** | Fail |
 | 1304 | **Find N Unique Integers Sum up to Zero** | Success |
 | 1317 | **Convert Integer to the Sum of Two No-Zero Integers** | Success |
@@ -84,3 +84,4 @@
 | 1935 | **Maximum Number of Words You Can Type** | Success |
 | 2197 | **Replace Non-Coprime Numbers in Array** | Fail |
 | 2349 | **Design a Number Container System** | Success | 到时候再写一下，如果过了就可以了
+| 3408 | **Design Task Manager** | Success |
