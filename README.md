@@ -71,10 +71,10 @@
 | 3027 | **Find the Number of Ways to Place People II** | Success |
 | 3516 | **Find Closest Person** | Success |
 | 2749 | **Minimum Operations to Make the Integer Zero** | Fail |
-
 | 3495 | **Minimum Operations to Make Array Elements Zero** | Fail |
 | 1304 | **Find N Unique Integers Sum up to Zero** | Success |
 | 1317 | **Convert Integer to the Sum of Two No-Zero Integers** | Success |
+
 | 2327 | **Number of People Aware of a Secret** | Fail |
 | 1733 | **Minimum Number of People to Teach** | Fail |
 | 2785 | **Sort Vowels in a String** | Success |

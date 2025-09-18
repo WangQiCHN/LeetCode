@@ -2,46 +2,30 @@ package code;
 
 class Solution {
     void main() {
-        int num1 = 112577768;
-        int num2 = -501662198;
-        System.out.println(makeTheIntegerZero(num1, num2));
+        int[][] q = {{2, 6}};
+        System.out.println(minOperations(q));
     }
-    // public int makeTheIntegerZero(int num1, int num2) {
-    //     // Handle edge cases where num1 cannot be reduced to zero
-    //     if (num1 < num2) return -1;
-        
-    //     // Iterate over possible number of operations (k)
-    //     for (int k = 0; k <= 60; k++) {
-    //         long t = (long) num1 - (long) k * num2; // Compute num1 - k * num2
-    //         if (t < 0) break; // If t becomes negative, further k values will also be negative
-            
-    //         // Count number of 1s in binary representation of t
-    //         int popcount = Long.bitCount(t);
-            
-    //         // Check if t can be represented as sum of k powers of 2
-    //         // Conditions: popcount <= k (can combine powers of 2) and t >= k (sum of k powers of 2 is at least k)
-    //         if (popcount <= k && t >= k) {
-    //             return k; // k is the minimum number of operations
-    //         }
-    //     }
-        
-    //     return -1; // No valid k found
-    // }
-
-    public int makeTheIntegerZero(int num1, int num2) {
-        if (num1 < num2) return -1;
-
-        for (int k = 0; k <= 60; k++) {
-            // long t = (long)num1 - (long)(k * num2);
-            long t = (long) num1 - (long) k * num2; // Compute num1 - k * num2
-            if (t < 0) break;
-            long count = Long.bitCount(t);
-
-            if (count <= k && k <= t) {
-                return k;
-            }
+    public long minOperations(int[][] queries) {
+        long ans = 0;
+        for (int[] q : queries) {
+            int l = q[0], r = q[1];
+            long s = f(r) - f(l - 1);
+            long mx = f(r) - f(r - 1);
+            ans += Math.max((s + 1) / 2, mx);
         }
+        return ans;
+    }
 
-        return -1;
+    public long f(long x) {
+        long res = 0;
+        long p = 1;
+        int i = 1;
+        while (p <= x) {
+            long cnt = Math.min(p * 4 - 1, x) - p + 1;
+            res += cnt * i;
+            i++;
+            p *= 4;
+        }
+        return res;
     }
 }
