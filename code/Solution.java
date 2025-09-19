@@ -2,30 +2,31 @@ package code;
 
 class Solution {
     void main() {
-        int[][] q = {{2, 6}};
-        System.out.println(minOperations(q));
+        int n = 6, delay = 2, forget = 4;
+        System.out.println(peopleAwareOfSecret(n, delay, forget));
     }
-    public long minOperations(int[][] queries) {
-        long ans = 0;
-        for (int[] q : queries) {
-            int l = q[0], r = q[1];
-            long s = f(r) - f(l - 1);
-            long mx = f(r) - f(r - 1);
-            ans += Math.max((s + 1) / 2, mx);
-        }
-        return ans;
-    }
+    private static final int MOD = 1_000_000_007;
 
-    public long f(long x) {
-        long res = 0;
-        long p = 1;
-        int i = 1;
-        while (p <= x) {
-            long cnt = Math.min(p * 4 - 1, x) - p + 1;
-            res += cnt * i;
-            i++;
-            p *= 4;
+    public int peopleAwareOfSecret(int n, int delay, int forget) {
+        // dp[i] represents the number of new people who learn the secret on day i
+        long[] dp = new long[n + 1];
+        dp[1] = 1; // On day 1, one person knows the secret
+        
+        // For each day, compute how many new people learn the secret
+        for (int i = 1; i <= n; i++) {
+            // People who learned the secret on day i share it with others after 'delay' days
+            for (int j = i + delay; j < Math.min(n + 1, i + forget); j++) {
+                dp[j] = (dp[j] + dp[i]) % MOD;
+            }
         }
-        return res;
+        
+        // Sum the number of people who are aware of the secret on day n
+        // People who learned the secret from day (n - forget + 1) to day n are still aware
+        long result = 0;
+        for (int i = Math.max(1, n - forget + 1); i <= n; i++) {
+            result = (result + dp[i]) % MOD;
+        }
+        
+        return (int) result;
     }
 }
