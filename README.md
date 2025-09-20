@@ -75,13 +75,15 @@
 | 1304 | **Find N Unique Integers Sum up to Zero** | Success |
 | 1317 | **Convert Integer to the Sum of Two No-Zero Integers** | Success |
 | 2327 | **Number of People Aware of a Secret** | Fail |
-
-| 1733 | **Minimum Number of People to Teach** | Fail |
+| 1733 | **Minimum Number of People to Teach** | Fail | 我自己搞错了，它的意思是就教一门，看看要多少人
 | 2785 | **Sort Vowels in a String** | Success |
 | 3227 | **Vowels Game in a String** | Success |
 | 3541 | **Find Most Frequent Vowel and Consonant** | Success |
 | 966 | **Vowel Spellchecker** | Success |
 | 1935 | **Maximum Number of Words You Can Type** | Success |
+
 | 2197 | **Replace Non-Coprime Numbers in Array** | Fail |
 | 2349 | **Design a Number Container System** | Success | 到时候再写一下，如果过了就可以了
 | 3408 | **Design Task Manager** | Success |
+| 3484 | **Design Spreadsheet** | Success |
+| 3508 | **Implement Router** | Fail |
