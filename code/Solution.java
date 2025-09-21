@@ -1,67 +1,56 @@
 package code;
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 class Solution {
-  void main() {
-    int n = 2;
-    int[][] languages = { { 2 }, { 1 }, { 2, 1 }, { 1 }, { 1, 2 }, { 1 }, { 2 }, { 1 }, { 1 }, { 2 }, { 1, 2 },
-        { 1, 2 }, { 1, 2 }, { 2, 1 }, { 1 }, { 2 }, { 1, 2 } };
-    int[][] friendships = { { 15, 16 }, { 4, 13 }, { 3, 16 }, { 5, 14 }, { 1, 7 }, { 2, 11 }, { 3, 15 }, { 4, 16 },
-        { 7, 9 }, { 6, 13 }, { 6, 16 }, { 4, 10 }, { 6, 9 }, { 5, 6 }, { 7, 12 }, { 6, 12 }, { 3, 7 }, { 4, 7 },
-        { 8, 10 } };
-
-    System.out.println(minimumTeachings(n, languages, friendships));
-  }
-
-  public int minimumTeachings(int n, int[][] languages, int[][] friendships) {
-    List<Set<Integer>> dict = new ArrayList<>();
-    for (int[] lan : languages) {
-      Set<Integer> set = new HashSet<>();
-      for (int l : lan) {
-        set.add(l);
-      }
-      dict.add(set);
+    public List<Integer> replaceNonCoprimes(int[] nums) {
+        List<Integer> stack = new ArrayList<>();
+        
+        // Process each number in the array
+        for (int num : nums) {
+            stack.add(num);
+            // Check and replace non-coprime pairs
+            while (stack.size() >= 2) {
+                int n1 = stack.get(stack.size() - 1); // Top
+                int n2 = stack.get(stack.size() - 2); // Second from top
+                int gcd = gcd(n1, n2);
+                if (gcd == 1) break; // Coprime, no replacement needed
+                // Replace with LCM
+                stack.remove(stack.size() - 1);
+                stack.remove(stack.size() - 1);
+                stack.add(lcm(n1, n2, gcd));
+            }
+        }
+        
+        // Final pass to ensure no adjacent non-coprime numbers remain
+        for (int i = stack.size() - 2; i >= 0; i--) {
+            int n1 = stack.get(i);
+            int n2 = stack.get(i + 1);
+            int gcd = gcd(n1, n2);
+            if (gcd != 1) {
+                // Replace with LCM
+                stack.set(i, lcm(n1, n2, gcd));
+                stack.remove(i + 1);
+                // Re-check from the modified position
+                i = Math.min(i + 1, stack.size() - 2);
+            }
+        }
+        
+        return stack;
     }
-
-    List<int[]> problems = new ArrayList<>();
-    for (int[] friend : friendships) {
-      int l = friend[0] - 1;
-      int r = friend[1] - 1;
-      Set<Integer> first = dict.get(l);
-      Set<Integer> second = dict.get(r);
-
-      Set<Integer> intersection = new HashSet<>(first);
-      intersection.retainAll(second); // 取交集
-      if (intersection.isEmpty()) {
-        problems.add(friend);
-      }
+    
+    // Compute GCD using Euclidean algorithm
+    private int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
     }
-
-    if (problems.isEmpty()) {
-      return 0;
+    
+    // Compute LCM using GCD
+    private int lcm(int a, int b, int gcd) {
+        return (int) ((long) a * b / gcd);
     }
-
-    int result = n;
-    for (int k = 1; k <= n; k++) {
-      Set<Integer> tmp = new HashSet<>();
-      for (int[] p : problems) {
-        int l = p[0] - 1;
-        int r = p[1] - 1;
-        Set<Integer> first = dict.get(l);
-        Set<Integer> second = dict.get(r);
-
-        if (!first.contains(k))
-          tmp.add(l);
-        if (!second.contains(k))
-          tmp.add(r);
-      }
-      result = Math.min(result, tmp.size());
-    }
-
-    return result;
-  }
 }

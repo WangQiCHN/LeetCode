@@ -81,9 +81,10 @@
 | 3541 | **Find Most Frequent Vowel and Consonant** | Success |
 | 966 | **Vowel Spellchecker** | Success |
 | 1935 | **Maximum Number of Words You Can Type** | Success |
-
 | 2197 | **Replace Non-Coprime Numbers in Array** | Fail |
-| 2349 | **Design a Number Container System** | Success | 到时候再写一下，如果过了就可以了
+| 2349 | **Design a Number Container System** | Success |
 | 3408 | **Design Task Manager** | Success |
 | 3484 | **Design Spreadsheet** | Success |
+
 | 3508 | **Implement Router** | Fail |
+| 1912 | **Design Movie Rental System** | Success |
