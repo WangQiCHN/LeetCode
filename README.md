@@ -71,10 +71,10 @@
 | 3027 | **Find the Number of Ways to Place People II** | Success |
 | 3516 | **Find Closest Person** | Success |
 | 2749 | **Minimum Operations to Make the Integer Zero** | Fail |
-| 3495 | **Minimum Operations to Make Array Elements Zero** | Fail |
+| 3495 | **Minimum Operations to Make Array Elements Zero** | Success |
 | 1304 | **Find N Unique Integers Sum up to Zero** | Success |
 | 1317 | **Convert Integer to the Sum of Two No-Zero Integers** | Success |
-| 2327 | **Number of People Aware of a Secret** | Fail |
+| 2327 | **Number of People Aware of a Secret** | Success |
 | 1733 | **Minimum Number of People to Teach** | Fail | 我自己搞错了，它的意思是就教一门，看看要多少人
 | 2785 | **Sort Vowels in a String** | Success |
 | 3227 | **Vowels Game in a String** | Success |
@@ -88,3 +88,9 @@
 
 | 3508 | **Implement Router** | Fail |
 | 1912 | **Design Movie Rental System** | Success |
+| 3005 | **Count Elements With Maximum Frequency** | Success |
+
+
+
+# Daily Remaining
+| 2749 | **Minimum Operations to Make the Integer Zero** | Fail |
