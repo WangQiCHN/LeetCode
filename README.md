@@ -70,27 +70,23 @@
 | 3025 | **Find the Number of Ways to Place People I** | Success |
 | 3027 | **Find the Number of Ways to Place People II** | Success |
 | 3516 | **Find Closest Person** | Success |
-| 2749 | **Minimum Operations to Make the Integer Zero** | Fail |
+| 2749 | **Minimum Operations to Make the Integer Zero** | Success |
 | 3495 | **Minimum Operations to Make Array Elements Zero** | Success |
 | 1304 | **Find N Unique Integers Sum up to Zero** | Success |
 | 1317 | **Convert Integer to the Sum of Two No-Zero Integers** | Success |
 | 2327 | **Number of People Aware of a Secret** | Success |
-| 1733 | **Minimum Number of People to Teach** | Fail | 我自己搞错了，它的意思是就教一门，看看要多少人
+| 1733 | **Minimum Number of People to Teach** | Success |
 | 2785 | **Sort Vowels in a String** | Success |
 | 3227 | **Vowels Game in a String** | Success |
 | 3541 | **Find Most Frequent Vowel and Consonant** | Success |
 | 966 | **Vowel Spellchecker** | Success |
 | 1935 | **Maximum Number of Words You Can Type** | Success |
-| 2197 | **Replace Non-Coprime Numbers in Array** | Fail |
+| 2197 | **Replace Non-Coprime Numbers in Array** | Success |
 | 2349 | **Design a Number Container System** | Success |
 | 3408 | **Design Task Manager** | Success |
 | 3484 | **Design Spreadsheet** | Success |
-| 3508 | **Implement Router** | Fail | 还是要关注二叉搜索
+| 3508 | **Implement Router** | Success |
 | 1912 | **Design Movie Rental System** | Success |
 | 3005 | **Count Elements With Maximum Frequency** | Success |
 | 165 | **Compare Version Numbers** | Success |
-
-
-
-# Daily Remaining
-| 2749 | **Minimum Operations to Make the Integer Zero** | Fail |
+| 166 | **Fraction to Recurring Decimal** | Success |

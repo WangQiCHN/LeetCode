@@ -49,5 +49,8 @@ public class UnfamiliarCode {
         // 在sb中插入一个字符
         int index = 2;
         sb.insert(index, '(');
+
+        // 在hashmap中如果有直接插入，没有新建在插入
+        destTimStamps.computeIfAbsent(destination, k -> new ArrayList<>()).add(timestamp);
     }
 }
