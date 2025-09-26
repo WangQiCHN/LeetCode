@@ -84,6 +84,16 @@ type B = IsString<number>; // false
 
    这里 `infer R` 推断出函数的返回值类型 `R`，并在条件成立时返回该类型。
 
+   高级应用
+
+   ```typescript
+   const Button = (props: { text: string; onClick: () => void }) => {
+     return <button onClick={props.onClick}>{props.text}</button>;
+   };
+   type ButtonProps = typeof Button extends (props: infer P) => any ? P : never;
+   // 等同于: { text: string; onClick: () => void; }
+   ```
+
 4. **类型转换**：
    条件类型可以用来转换类型。例如，将联合类型中的特定类型替换为其他类型：
 
