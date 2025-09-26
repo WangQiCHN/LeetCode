@@ -90,6 +90,8 @@
 | 3005 | **Count Elements With Maximum Frequency** | Success |
 | 165 | **Compare Version Numbers** | Success |
 | 166 | **Fraction to Recurring Decimal** | Success |
+| 120 | **Triangle** | Success |
+| 611 | **Valid Triangle Number** | Success |
 
 
 # Error
