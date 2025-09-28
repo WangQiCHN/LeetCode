@@ -92,9 +92,12 @@
 | 166 | **Fraction to Recurring Decimal** | Success |
 | 120 | **Triangle** | Success |
 | 611 | **Valid Triangle Number** | Success |
+| 812 | **Largest Triangle Area** | Success |
+| 976 | **Largest Triangle Perimeter** | Success |
 
 
 # Error
 
 307
 310
+321
