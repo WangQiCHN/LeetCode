@@ -94,6 +94,8 @@
 | 611 | **Valid Triangle Number** | Success |
 | 812 | **Largest Triangle Area** | Success |
 | 976 | **Largest Triangle Perimeter** | Success |
+| 1039 | **Minimum Score Triangulaion of Polygon** | Fail |
+| 2221 | **Find Triangular Sum of an Array** | Success |
 
 
 # Error
