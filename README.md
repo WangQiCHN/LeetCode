@@ -1,3 +1,15 @@
+# October
+
+| No. | Name | Diff. | Status |
+|:--|:----|------|-----------:|
+| 1518 | **Water Bottles** | Easy | Success |
+
+
+
+
+
+
+
 # I want to record all hard subjects I try to resolve
 
 ## I spend 20 mins but no hope to resolve it
