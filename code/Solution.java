@@ -1,33 +1,34 @@
 // package code;
 
-import java.util.Arrays;
-import java.util.PriorityQueue;
-
 class Solution {
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[] values = {1, 3, 1, 4, 1, 5};
-        System.out.println(solution.minScoreTriangulation(values));
+        Solution sol = new Solution();
+        int numBootles = 13;
+        int numExchange = 6;
+        int res = sol.maxBottlesDrunk(numBootles, numExchange);
+        System.out.println(res);
     }
-    public int minScoreTriangulation(int[] values) {
-        Arrays.sort(values);
-        int len = values.length, total = 0;
-        PriorityQueue<Integer> queue = new PriorityQueue<>();
 
-        for (int i = 0; i < len - 2; i++) {
-            for (int j = i + 1; j < len - 1; j++) {
-                for (int k = j + 1; k < len; k++) {
-                    int cnt = values[i] * values[j] * values[k];
-                    queue.offer(cnt);
-                }
+    public int maxBottlesDrunk(int numBottles, int numExchange) {
+        int full = numBottles;
+        int empty = 0;
+        int total = 0;
+
+        while (full + empty >= numExchange) {
+            if (empty >= numExchange) {
+                empty -= numExchange;
+                full++;
+                numExchange++;
+            } else {
+                total += full;
+                empty += full;
+                full = 0;
             }
         }
-
-        for (int i = 0; i < len - 2; i++) {
-            total += queue.poll();
+        if (full > 0) {
+            total += full;
         }
 
         return total;
     }
-
 }
