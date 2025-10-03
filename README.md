@@ -4,7 +4,9 @@
 |:--|:----|------|-----------:|
 | 1518 | **Water Bottles** | Easy | Success |
 | 3100 | **Water Bottles II** | Normal | Success |
+| 407 | **Trapping Rain Water II** | Hard | Fail |
 
+1. look at 42 also
 
 
 
