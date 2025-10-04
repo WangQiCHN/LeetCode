@@ -7,8 +7,6 @@
 | 407 | **Trapping Rain Water II** | Hard | Fail |
 | 11 | **Container With Most Water** | Normal | Success |
 
-1. look at 42 also
-
 
 
 
