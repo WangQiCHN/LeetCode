@@ -2,44 +2,53 @@ package code;
 
 class Solution {
     public static void main(String[] args) {
-        int[][] matrix = {{7,7,5},{2,4,6},{8,2,0}};
-        System.out.println(new Solution().longestIncreasingPath(matrix));
+        int[][] grid = {{0,2},{1,3}};
+        System.out.println(new Solution().swimInWater(grid));
     }
-    private int[][] memo;
-    public int longestIncreasingPath(int[][] matrix) {
-        int m = matrix.length;
-        int n = matrix[0].length;
-        memo = new int[m][n];
-        int max = 0;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                int route = calculate(matrix, i, j, 0);
-                max = Math.max(max, route);
-            }
-        }
+    private boolean[][] visited;
+    public int swimInWater(int[][] grid) {
+        int m = grid.length;
+        int n = grid[0].length;
 
-        return max;
+        int[][] dp = new int[m][n];
+        visited = new boolean[m][n];
+        visited[0][0] = true;
+        calculate(grid, dp, 1, 0, m, n);
+        calculate(grid, dp, 0, 1, m, n);
+        
+
+        return dp[m - 1][n - 1];
     }
 
-    private int calculate(int[][] matrix, int i, int j, int preV) {
-        if (i < 0 || j < 0 || i == matrix.length || j == matrix[0].length) {
-            return 0;
-        } else {
-            int cnt = matrix[i][j];
-            if (cnt > preV) {
-                if (memo[i][j] != 0) return memo[i][j];
-                else {
-                    int v1 = calculate(matrix, i + 1, j, cnt);
-                    int v2 = calculate(matrix, i - 1, j, cnt);
-                    int v3 = calculate(matrix, i, j + 1, cnt);
-                    int v4 = calculate(matrix, i, j - 1, cnt);
-                    int v = Math.max(v1, Math.max(v2, Math.max(v3, v4)));
-                    memo[i][j] = 1 + v;
-                    return memo[i][j];
-                }
-            } else {
-                return 0;
-            }
+    private int calculate(int[][] grid, int[][] dp, int i, int j, int m, int n) {
+        if (i == m || j == n || i < 0 || j < 0) return Integer.MAX_VALUE;
+        else if (visited[i][j]) return Integer.MAX_VALUE;
+        else if (i == m - 1 && j == n - 1) {
+            dp[i][j] = grid[i][j];
+            return dp[i][j];
         }
+        else {
+            if (dp[i][j] != 0) return dp[i][j];
+            visited[i][j] = true;
+            int v1 = calculate(grid, dp, i - 1, j, m, n);
+            int v2 = calculate(grid, dp, i + 1, j, m, n);
+            int v3 = calculate(grid, dp, i, j - 1, m, n);
+            int v4 = calculate(grid, dp, i, j + 1, m, n);
+            int v5 = grid[i][j];
+            visited[i][j] = false;
+            dp[i][j] = Math.min(v1, Math.min(v2, Math.min(v3, Math.min(v4, v5))));
+
+            return dp[i][j];
+        }
+        // else {
+        //     if (dp[i][j] == 0) {
+        //         int v1 = calculate(grid, dp, i + 1, j, m, n);
+        //         int v2 = calculate(grid, dp, i, j + 1, m, n);
+        //         int v3 = grid[i][j];
+        //         dp[i][j] = Math.max(v1, Math.max(v2, v3));
+        //     }
+        //     return dp[i][j];
+        // }
+
     }
 }
