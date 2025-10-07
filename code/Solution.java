@@ -1,54 +1,36 @@
 package code;
 
+import java.util.*;
+
 class Solution {
+
     public static void main(String[] args) {
-        int[][] grid = {{0,2},{1,3}};
-        System.out.println(new Solution().swimInWater(grid));
+        Solution solution = new Solution();
+        // int[][] grid = {{0,1,2,3,4},{24,23,22,21,5},{12,13,14,15,18},{11,17,18,19,20},{10,9,8,7,6}};
+        int[][] grid = {{0,5},{5,4}};
+        System.out.println(solution.swimInWater(grid)); // Output: 4
     }
-    private boolean[][] visited;
     public int swimInWater(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-
-        int[][] dp = new int[m][n];
-        visited = new boolean[m][n];
-        visited[0][0] = true;
-        calculate(grid, dp, 1, 0, m, n);
-        calculate(grid, dp, 0, 1, m, n);
-        
-
-        return dp[m - 1][n - 1];
-    }
-
-    private int calculate(int[][] grid, int[][] dp, int i, int j, int m, int n) {
-        if (i == m || j == n || i < 0 || j < 0) return Integer.MAX_VALUE;
-        else if (visited[i][j]) return Integer.MAX_VALUE;
-        else if (i == m - 1 && j == n - 1) {
-            dp[i][j] = grid[i][j];
-            return dp[i][j];
+        int n = grid.length;
+        int[][] D = new int[][]{{-1, 0}, {0, -1}, {0, 1}, {1, 0}};
+        PriorityQueue<int[]> PQ = new PriorityQueue<>((a, b) -> a[2] - b[2]);
+        PQ.add(new int[]{0, 0, grid[0][0]});
+        grid[0][0] = -1;
+        while (true) {
+            int[] item = PQ.poll();
+            int i = item[0];
+            int j = item[1];
+            int time = item[2];
+            if (i == n - 1 && j == n - 1) return time;
+            for (int[] d: D) {
+                int x = i + d[0];
+                int y = j + d[1];
+                if (x == -1 || x == n) continue;
+                if (y == -1 || y == n) continue;
+                if (grid[x][y] == -1) continue;
+                PQ.add(new int[]{x, y, Math.max(grid[x][y], time)});
+                grid[x][y] = -1;
+            }
         }
-        else {
-            if (dp[i][j] != 0) return dp[i][j];
-            visited[i][j] = true;
-            int v1 = calculate(grid, dp, i - 1, j, m, n);
-            int v2 = calculate(grid, dp, i + 1, j, m, n);
-            int v3 = calculate(grid, dp, i, j - 1, m, n);
-            int v4 = calculate(grid, dp, i, j + 1, m, n);
-            int v5 = grid[i][j];
-            visited[i][j] = false;
-            dp[i][j] = Math.min(v1, Math.min(v2, Math.min(v3, Math.min(v4, v5))));
-
-            return dp[i][j];
-        }
-        // else {
-        //     if (dp[i][j] == 0) {
-        //         int v1 = calculate(grid, dp, i + 1, j, m, n);
-        //         int v2 = calculate(grid, dp, i, j + 1, m, n);
-        //         int v3 = grid[i][j];
-        //         dp[i][j] = Math.max(v1, Math.max(v2, v3));
-        //     }
-        //     return dp[i][j];
-        // }
-
     }
 }

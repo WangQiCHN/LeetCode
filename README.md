@@ -8,6 +8,7 @@
 | 11 | **Container With Most Water** | Normal | Success |
 | 417 | **Pacific Atlantic Water Flow** | Normal | Fail |
 | 778 | **Swim in Rising Water** | Hard | Fail |
+| 1488 | **Avoid Flood in The City** | Noral | Success |
 
 
 
