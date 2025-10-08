@@ -9,6 +9,7 @@
 | 417 | **Pacific Atlantic Water Flow** | Normal | Fail |
 | 778 | **Swim in Rising Water** | Hard | Fail |
 | 1488 | **Avoid Flood in The City** | Noral | Success |
+| 2300 | **Successful Pairs of Spells and Potions** | Noral | Success |
 
 
 
@@ -120,5 +121,5 @@
 307 - done
 310 - done
 321 - done
-327
+327 - ok
 330
