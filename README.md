@@ -6,11 +6,12 @@
 | 3100 | **Water Bottles II** | Normal | Success |
 | 407* | **Trapping Rain Water II** | Hard | Success |
 | 11 | **Container With Most Water** | Normal | Success |
-| 417 | **Pacific Atlantic Water Flow** | Normal | Fail |
+| 417* | **Pacific Atlantic Water Flow** | Normal | Success |
 | 778 | **Swim in Rising Water** | Hard | Fail |
 | 1488 | **Avoid Flood in The City** | Noral | Success |
 | 2300 | **Successful Pairs of Spells and Potions** | Noral | Success |
 | 3494 | **Find the Minimum Amount of Time to Brew Potions** | Noral | Fail |
+| 3147 | **Taking Maximum Energy From the Mystic Dungeon** | Noral | Success |
 
 
 
