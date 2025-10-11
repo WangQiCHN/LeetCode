@@ -12,6 +12,7 @@
 | 2300 | **Successful Pairs of Spells and Potions** | Noral | Success |
 | 3494 | **Find the Minimum Amount of Time to Brew Potions** | Noral | Fail |
 | 3147 | **Taking Maximum Energy From the Mystic Dungeon** | Noral | Success |
+| 3186 | **Maximum Total Damage With Spell Casting** | Noral | Fail |
 
 
 
@@ -124,4 +125,4 @@
 310 - done
 321 - done
 327 - ok
-330 - ok
+330 - done
