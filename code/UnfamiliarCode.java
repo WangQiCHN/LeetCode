@@ -62,6 +62,10 @@ public class UnfamiliarCode {
 
         // 在hashmap中如果有直接插入，没有新建在插入
         // destTimStamps.computeIfAbsent(destination, k -> new ArrayList<>()).add(timestamp);
+        // 在hashmap中如果有直接更新，没有添加默认值更新
+        // count.put(p, count.getOrDefault(p, 0) + 1);
+        // map的函数好多啊
+        // sums.merge(p, 1, Integer::sum);
         // 直接计算三个点的面积
         // int area = Math.abs(p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y));
     }
