@@ -1,39 +1,32 @@
 package code;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int[] power = {1,1,3,4};
-        System.out.println(sol.maximumTotalDamage(power));
+        int[] power = {1,5,2,4};
+        int[] mana = {5,1,4,2};
+        System.out.println(sol.minTime(power, mana));
     }
-    public long maximumTotalDamage(int[] power) {
-        Map<Integer, Integer> cnt = new HashMap<>();
-        for (int x : power) {
-            cnt.merge(x, 1, Integer::sum); // cnt[x]++
+    public long minTime(int[] skill, int[] mana) {
+        int n = skill.length;
+        int m = mana.length;
+
+        int[] amount = new int[n];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (j == 0) {
+                    amount[j] += skill[j] * mana[i];
+                } else {
+                    amount[j] = Math.max(amount[j - 1], amount[j]) + skill[j] * mana[i];
+                }
+            }
+
+            for (int j = n - 2; j >= 0; j--) {
+                amount[j] = amount[j + 1] - skill[j + 1] * mana[i];
+            }
         }
 
-        int n = cnt.size();
-        int[] a = new int[n];
-        int k = 0;
-        for (int x : cnt.keySet()) {
-            a[k++] = x;
-        }
-        Arrays.sort(a);
-        
-        long[] f = new long[n + 1];
-        int j = 0;
-        for (int i = 0; i < n; i++) {
-            int x = a[i];
-            while (a[j] < x - 2) {
-                j++;
-            }
-            System.out.println("i=" + i + ", j=" + j + ", x=" + x + ", cnt=" + x * cnt.get(x));
-            f[i + 1] = Math.max(f[i], f[j] + (long) x * cnt.get(x));
-        }
-        return f[n];
+        return amount[n - 1];
     }
 }

@@ -10,11 +10,12 @@
 | 778 | **Swim in Rising Water** | Hard | Fail |
 | 1488 | **Avoid Flood in The City** | Noral | Success |
 | 2300 | **Successful Pairs of Spells and Potions** | Noral | Success |
-| 3494 | **Find the Minimum Amount of Time to Brew Potions** | Noral | Fail |
+| 3494* | **Find the Minimum Amount of Time to Brew Potions** | Noral | Success |
 | 3147 | **Taking Maximum Energy From the Mystic Dungeon** | Noral | Success |
 | 3186 | **Maximum Total Damage With Spell Casting** | Noral | Fail |
+| 3539 | **Find Sum of Array Product of Magical Sequences** | Hard | Fail |
 
-
+3539 我都没看明白
 
 
 
