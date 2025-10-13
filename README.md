@@ -12,7 +12,7 @@
 | 2300 | **Successful Pairs of Spells and Potions** | Noral | Success |
 | 3494* | **Find the Minimum Amount of Time to Brew Potions** | Noral | Success |
 | 3147 | **Taking Maximum Energy From the Mystic Dungeon** | Noral | Success |
-| 3186 | **Maximum Total Damage With Spell Casting** | Noral | Fail |
+| 3186* | **Maximum Total Damage With Spell Casting** | Noral | Success |
 | 3539 | **Find Sum of Array Product of Magical Sequences** | Hard | Fail |
 | 3539 | **Find Resultant Array After Removing Anagrams** | Easy | Success |
 
