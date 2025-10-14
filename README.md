@@ -14,7 +14,8 @@
 | 3147 | **Taking Maximum Energy From the Mystic Dungeon** | Noral | Success |
 | 3186* | **Maximum Total Damage With Spell Casting** | Noral | Success |
 | 3539 | **Find Sum of Array Product of Magical Sequences** | Hard | Fail |
-| 3539 | **Find Resultant Array After Removing Anagrams** | Easy | Success |
+| 2273 | **Find Resultant Array After Removing Anagrams** | Easy | Success |
+| 3349 | **Adjacent Increasing Subarrays Detection I** | Easy | Success |
 
 3539 我都没看明白
 
