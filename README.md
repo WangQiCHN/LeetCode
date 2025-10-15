@@ -17,6 +17,7 @@
 | 3539- | **Find Sum of Array Product of Magical Sequences** | Hard | Success |
 | 2273 | **Find Resultant Array After Removing Anagrams** | Easy | Success |
 | 3349 | **Adjacent Increasing Subarrays Detection I** | Easy | Success |
+| 3350 | **Adjacent Increasing Subarrays Detection II** | Normal | Success |
 
 
 
