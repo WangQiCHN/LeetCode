@@ -20,6 +20,7 @@
 | 3350 | **Adjacent Increasing Subarrays Detection II** | Normal | Success |
 | 2598* | **Smallest Missing Non-negative Integer After Operations** | Normal | Success |
 | 3003 | **Maximize the Number of Partitions After Operations** | Hard | Fail |
+| 3397 | **Maximum Number of Distinct Elements After Operations** | Normal | Success |
 
 
 
