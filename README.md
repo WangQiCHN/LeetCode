@@ -22,6 +22,7 @@
 | 3003 | **Maximize the Number of Partitions After Operations** | Hard | Fail |
 | 3397 | **Maximum Number of Distinct Elements After Operations** | Normal | Success |
 | 1625 | **Lexicographically Smallest String After Applying Operations** | Normal | Fail |
+| 2011 | **Final Value of Variable After Performing Operations** | Easy | Success |
 
 
 
