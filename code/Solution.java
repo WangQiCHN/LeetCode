@@ -17,31 +17,16 @@ class Solution {
         int[] min = getArray(s, len);
         for (int i = 0; i < rotate; i++) {
             int[] newNums = rotateN(nums, b * i, len);
-            for (int j = 0; j < 10; j++) {
-                int[] item = addN(newNums, j * a, len);
-                if (b % 2 == 1) {
-                    for (int k = 0; k < 10; k++) {
-                        int[] newItem = addN2(item, k * a, len);
-                        if (isSmaller(newItem, min, len)) {
-                            min = newItem;
-                        }
-                    }
-                } else {
-                    if (isSmaller(item, min, len)) {
-                        min = item;
-                    }
-                }
+            addN(newNums, a, len, 1);
+            if (b % 2 == 1) {
+                addN(newNums, a, len, 0);
+            }
+            if (isSmaller(newNums, min, len)) {
+                min = newNums;
             }
         }
 
         return generateS(min);
-    }
-
-    private void print(int[] nums) {
-        for (int n : nums) {
-            System.out.print(n);
-        }
-        System.out.println();
     }
 
     private int gcd(int a, int b) {
@@ -70,30 +55,19 @@ class Solution {
         return result;
     }
 
-    private int[] addN(int[] nums, int N, int n) {
-        int[] result = new int[n];
-        for (int i = 0; i < n; i++) {
-            if (i % 2 == 0) {
-                result[i] = nums[i];
-            } else {
-                result[i] = (nums[i] + N) % 10;
+    private void addN(int[] nums, int N, int n, int start) {
+        int times = 0, min = 9;
+        for (int i = 0; i <= 9; i++) {
+            int tmp = (nums[start] + N * i) % 10;
+            if (tmp < min) {
+                min = tmp;
+                times = i;
             }
         }
 
-        return result;
-    }
-
-    private int[] addN2(int[] nums, int N, int n) {
-        int[] result = new int[n];
-        for (int i = 0; i < n; i++) {
-            if (i % 2 != 0) {
-                result[i] = nums[i];
-            } else {
-                result[i] = (nums[i] + N) % 10;
-            }
+        for (int i = start; i < n; i += 2) {
+            nums[i] = (nums[i] + N * times) % 10;
         }
-
-        return result;
     }
 
     private boolean isSmaller(int[] nums1, int[] nums2, int n) {
