@@ -1,67 +1,40 @@
 package code;
 
-public class Solution {
+class Solution {
     public static void main(String[] args) {
-        Solution sol = new Solution();
-        String s = "aabc";
-        int k = 1;
-        System.out.println(sol.maxPartitionsAfterOperations(s, k));
+        Solution solution = new Solution();
+        String s = "43987654";
+        int a = 7;
+        int b = 3;
+        String res = solution.findLexSmallestString(s, a, b);
+        System.out.println(res);
     }
-    public int maxPartitionsAfterOperations(String s, int k) {
+    public String findLexSmallestString(String s, int a, int b) {
         int n = s.length();
-        int[][] left = new int[n][3];
-        int[][] right = new int[n][3];
-
-        int num = 0, mask = 0, count = 0;
-        for (int i = 0; i < n - 1; i++) {
-            int binary = 1 << (s.charAt(i) - 'a');
-            if ((mask & binary) == 0) {
-                count++;
-                if (count <= k) {
-                    mask |= binary;
-                } else {
-                    num++;
-                    mask = binary;
-                    count = 1;
+        boolean[] vis = new boolean[n];
+        String res = s;
+        // 将 s 延长一倍，方便截取轮转后的字符串 t
+        s = s + s;
+        for (int i = 0; !vis[i]; i = (i + b) % n) {
+            vis[i] = true;
+            for (int j = 0; j < 10; j++) {
+                int kLimit = b % 2 == 0 ? 0 : 9;
+                for (int k = 0; k <= kLimit; k++) {
+                    // 每次进行累加之前，重新截取 t
+                    char[] t = s.substring(i, i + n).toCharArray();
+                    for (int p = 1; p < n; p += 2) {
+                        t[p] = (char) ('0' + (t[p] - '0' + j * a) % 10);
+                    }
+                    for (int p = 0; p < n; p += 2) {
+                        t[p] = (char) ('0' + (t[p] - '0' + k * a) % 10);
+                    }
+                    String tStr = new String(t);
+                    if (tStr.compareTo(res) < 0) {
+                        res = tStr;
+                    }
                 }
             }
-            left[i + 1][0] = num; // 切割数量
-            left[i + 1][1] = mask; // 包含字母，通过bit表示26个字母的位置
-            left[i + 1][2] = count; // 包含字母数量
         }
-
-        num = 0;
-        mask = 0;
-        count = 0;
-        for (int i = n - 1; i > 0; i--) {
-            int binary = 1 << (s.charAt(i) - 'a');
-            if ((mask & binary) == 0) {
-                count++;
-                if (count <= k) {
-                    mask |= binary;
-                } else {
-                    num++;
-                    mask = binary;
-                    count = 1;
-                }
-            }
-            right[i - 1][0] = num;
-            right[i - 1][1] = mask;
-            right[i - 1][2] = count;
-        }
-
-        int maxVal = 0;
-        for (int i = 0; i < n; i++) {
-            int seg = left[i][0] + right[i][0] + 2;
-            int totMask = left[i][1] | right[i][1];
-            int totCount = Integer.bitCount(totMask);
-            if (left[i][2] == k && right[i][2] == k && totCount < 26) {
-                seg++;
-            } else if (Math.min(totCount + 1, 26) <= k) {
-                seg--;
-            }
-            maxVal = Math.max(maxVal, seg);
-        }
-        return maxVal;
+        return res;
     }
 }
