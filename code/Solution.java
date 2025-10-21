@@ -1,68 +1,60 @@
 package code;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Solution {
     public static void main(String[] args) {
-        Solution sol = new Solution();
-        String s = "abbba";
-        int k = 2;
-        int result = sol.maxPartitionsAfterOperations(s, k);
-        System.out.println("Max partitions: " + result);
+        Solution s = new Solution();
+        int[] nums = {25,75,49};
+        int k = 13;
+        int numOperations = 1;
+        System.out.println(s.maxFrequency(nums, k, numOperations));
     }
-    public int maxPartitionsAfterOperations(String s, int k) {
-        int n = s.length();
-        int[][] left = new int[n][3];
-        int[][] right = new int[n][3];
-
-        int num = 0, mask = 0, count = 0;
-        for (int i = 0; i < n - 1; i++) {
-            int binary = 1 << (s.charAt(i) - 'a');
-            if ((mask & binary) == 0) {
-                count++;
-                if (count <= k) {
-                    mask |= binary;
-                } else {
-                    num++;
-                    mask = binary;
-                    count = 1;
-                }
-            }
-            left[i + 1][0] = num;
-            left[i + 1][1] = mask;
-            left[i + 1][2] = count;
+    public int maxFrequency(int[] nums, int k, int numOperations) {
+        Arrays.sort(nums);
+        int len = nums.length;
+        // TreeMap<Integer, Integer> map = new TreeMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int n : nums) {
+            map.merge(n, 1, Integer::sum);
+        }
+        // int start = map.firstKey(), end = map.lastKey();
+        int start = nums[0], end = nums[len - 1];
+        int max = 0;
+        for (int i = start; i <= end; i++) {
+            int left = leftBound(nums, 0, len - 1, i - k);
+            int right = rightBound(nums, 0, len - 1, i + k);
+            int count = map.containsKey(i) ? map.get(i) : 0;
+            max = Math.max(max, Math.min(right - left + 1 - count, numOperations) + count);
         }
 
-        num = 0;
-        mask = 0;
-        count = 0;
-        for (int i = n - 1; i > 0; i--) {
-            int binary = 1 << (s.charAt(i) - 'a');
-            if ((mask & binary) == 0) {
-                count++;
-                if (count <= k) {
-                    mask |= binary;
-                } else {
-                    num++;
-                    mask = binary;
-                    count = 1;
-                }
+        return max;
+    }
+
+    private int leftBound(int[] nums, int left, int right, int target) {
+        while (left <= right) {
+            int m = (left + right) >> 1;
+            if (nums[m] >= target) {
+                right = m - 1;
+            } else {
+                left = m + 1;
             }
-            right[i - 1][0] = num;
-            right[i - 1][1] = mask;
-            right[i - 1][2] = count;
         }
 
-        int maxVal = 0;
-        for (int i = 0; i < n; i++) {
-            int seg = left[i][0] + right[i][0] + 2;
-            int totMask = left[i][1] | right[i][1];
-            int totCount = Integer.bitCount(totMask);
-            if (left[i][2] == k && right[i][2] == k && totCount < 26) {
-                seg++;
-            } else if (Math.min(totCount + 1, 26) <= k) {
-                seg--;
+        return left;
+    }
+    private int rightBound(int[] nums, int left, int right, int target) {
+        while (left <= right) {
+            int m = (left + right) >> 1;
+            if (nums[m] > target) {
+                right = m - 1;
+            } else {
+                left = m + 1;
             }
-            maxVal = Math.max(maxVal, seg);
         }
-        return maxVal;
+
+        return right;
     }
 }
