@@ -24,6 +24,7 @@
 | 1625 | **Lexicographically Smallest String After Applying Operations** | Normal | Fail |
 | 2011 | **Final Value of Variable After Performing Operations** | Easy | Success |
 | 3346 | **Maximum Frequency of an Element After Performing Operations I** | Normal | Fail |
+| 3347 | **Maximum Frequency of an Element After Performing Operations II** | Hard | Fail |
 
 
 
