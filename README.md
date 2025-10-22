@@ -21,7 +21,7 @@
 | 2598* | **Smallest Missing Non-negative Integer After Operations** | Normal | Success |
 | 3003 | **Maximize the Number of Partitions After Operations** | Hard | Fail |
 | 3397 | **Maximum Number of Distinct Elements After Operations** | Normal | Success |
-| 1625 | **Lexicographically Smallest String After Applying Operations** | Normal | Fail |
+| 1625* | **Lexicographically Smallest String After Applying Operations** | Normal | Success |
 | 2011 | **Final Value of Variable After Performing Operations** | Easy | Success |
 | 3346 | **Maximum Frequency of an Element After Performing Operations I** | Normal | Fail |
 | 3347 | **Maximum Frequency of an Element After Performing Operations II** | Hard | Fail |

@@ -1,60 +1,63 @@
 package code;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Solution {
     public static void main(String[] args) {
         Solution s = new Solution();
-        int[] nums = {25,75,49};
-        int k = 13;
-        int numOperations = 1;
+        int[] nums = {1,2,4,5};
+        int k = 2;
+        int numOperations = 4;
         System.out.println(s.maxFrequency(nums, k, numOperations));
     }
+
     public int maxFrequency(int[] nums, int k, int numOperations) {
         Arrays.sort(nums);
-        int len = nums.length;
-        // TreeMap<Integer, Integer> map = new TreeMap<>();
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int n : nums) {
-            map.merge(n, 1, Integer::sum);
+        int maximumFrequencyInNums = maxFrequencyInNums(nums, k, numOperations);
+        if (maximumFrequencyInNums >= numOperations) {
+            return maximumFrequencyInNums;
         }
-        // int start = map.firstKey(), end = map.lastKey();
-        int start = nums[0], end = nums[len - 1];
-        int max = 0;
-        for (int i = start; i <= end; i++) {
-            int left = leftBound(nums, 0, len - 1, i - k);
-            int right = rightBound(nums, 0, len - 1, i + k);
-            int count = map.containsKey(i) ? map.get(i) : 0;
-            max = Math.max(max, Math.min(right - left + 1 - count, numOperations) + count);
-        }
-
-        return max;
+        int maximumFrequencyNotInNums = maxFrequencyNotInNums(nums, k, numOperations);
+        return Math.max(maximumFrequencyInNums, maximumFrequencyNotInNums);
     }
 
-    private int leftBound(int[] nums, int left, int right, int target) {
-        while (left <= right) {
-            int m = (left + right) >> 1;
-            if (nums[m] >= target) {
-                right = m - 1;
-            } else {
-                left = m + 1;
+    public int maxFrequencyInNums(int[] nums, int k, int numOperations) {
+        int maximumFrequency = 0;
+        int n = nums.length;
+        int start = 0, end = 0;
+        int targetIndex = 0;
+        int targetFrequency = 0;
+        while (targetIndex < n) {
+            int target = nums[targetIndex];
+            targetFrequency = 1;
+            while (targetIndex + 1 < n && nums[targetIndex + 1] == target) {
+                targetIndex++;
+                targetFrequency++;
             }
+            while (nums[start] < target - k) {
+                start++;
+            }
+            while (end + 1 < n && nums[end + 1] <= target + k) {
+                end++;
+            }
+            int cnt = Math.min(end - start + 1, targetFrequency + numOperations);
+            maximumFrequency = Math.max(maximumFrequency, cnt);
+            targetIndex++;
         }
-
-        return left;
+        return maximumFrequency;
     }
-    private int rightBound(int[] nums, int left, int right, int target) {
-        while (left <= right) {
-            int m = (left + right) >> 1;
-            if (nums[m] > target) {
-                right = m - 1;
-            } else {
-                left = m + 1;
-            }
-        }
 
-        return right;
+    public int maxFrequencyNotInNums(int[] nums, int k, int numOperations) {
+        int maximumFrequency = 0;
+        int n = nums.length;
+        int start = 0, end = 0;
+        while (end < n) {
+            while (nums[end] - nums[start] > 2 * k) {
+                start++;
+            }
+            maximumFrequency = Math.max(maximumFrequency, Math.min(end - start + 1, numOperations));
+            end++;
+        }
+        return maximumFrequency;
     }
 }
