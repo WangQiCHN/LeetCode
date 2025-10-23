@@ -25,6 +25,7 @@
 | 2011 | **Final Value of Variable After Performing Operations** | Easy | Success |
 | 3346 | **Maximum Frequency of an Element After Performing Operations I** | Normal | Fail |
 | 3347 | **Maximum Frequency of an Element After Performing Operations II** | Hard | Fail |
+| 3461 | **Check If Digits Are Equal in String After Operations I** | Easy | Success |
 
 
 
