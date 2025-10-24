@@ -26,6 +26,7 @@
 | 3346 | **Maximum Frequency of an Element After Performing Operations I** | Normal | Fail |
 | 3347 | **Maximum Frequency of an Element After Performing Operations II** | Hard | Fail |
 | 3461 | **Check If Digits Are Equal in String After Operations I** | Easy | Success |
+| 2048 | **Next Greater Numerically Balanced** | Normal | Success |
 
 
 
