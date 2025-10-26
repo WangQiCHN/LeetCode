@@ -28,6 +28,7 @@
 | 3461 | **Check If Digits Are Equal in String After Operations I** | Easy | Success |
 | 2048 | **Next Greater Numerically Balanced** | Normal | Success |
 | 2043 | **Simple Bank System** | Normal | Success |
+| 2125 | **Number of Laser Beams in a Bank** | Normal | Success |
 
 
 
