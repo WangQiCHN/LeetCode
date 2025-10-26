@@ -24,9 +24,10 @@
 | 1625* | **Lexicographically Smallest String After Applying Operations** | Normal | Success |
 | 2011 | **Final Value of Variable After Performing Operations** | Easy | Success |
 | 3346* | **Maximum Frequency of an Element After Performing Operations I** | Normal | Success |
-| 3347 | **Maximum Frequency of an Element After Performing Operations II** | Hard | Fail |
+| 3347* | **Maximum Frequency of an Element After Performing Operations II** | Hard | Success |
 | 3461 | **Check If Digits Are Equal in String After Operations I** | Easy | Success |
 | 2048 | **Next Greater Numerically Balanced** | Normal | Success |
+| 2043 | **Simple Bank System** | Normal | Success |
 
 
 
