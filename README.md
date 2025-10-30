@@ -30,6 +30,8 @@
 | 2043 | **Simple Bank System** | Normal | Success |
 | 2125 | **Number of Laser Beams in a Bank** | Normal | Success |
 | 3354 | **Make Array Elements Equal to Zero** | Easy | Success |
+| 1526 | **Minimum Number of Increments on Subarrays to Form a Target Array** | Hard | Fail |
+
 
 
 
@@ -141,3 +143,5 @@
 321 - done
 327 - done
 330 - done
+332 - error
+334 - error
