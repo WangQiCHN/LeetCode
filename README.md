@@ -27,10 +27,13 @@
 | 3347* | **Maximum Frequency of an Element After Performing Operations II** | Hard | Success |
 | 3461 | **Check If Digits Are Equal in String After Operations I** | Easy | Success |
 | 2048 | **Next Greater Numerically Balanced** | Normal | Success |
+| 1716 | **Calculate Money in Leetcode Bank** | Easy | Success |
 | 2043 | **Simple Bank System** | Normal | Success |
 | 2125 | **Number of Laser Beams in a Bank** | Normal | Success |
 | 3354 | **Make Array Elements Equal to Zero** | Easy | Success |
+| 3370 | **Smallest Number With All Set Bits** | Easy | Success |
 | 1526 | **Minimum Number of Increments on Subarrays to Form a Target Array** | Hard | Fail |
+| 3289 | **The Two Sneaky Numbers of Digitville** | Easy | Success |
 
 
 
