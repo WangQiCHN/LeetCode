@@ -1,3 +1,12 @@
+# November
+
+| No. | Name | Diff. | Status |
+|:--|:----|------|-----------:|
+| 3217 | **Delete Nodes From Linked List Present in Array** | Normal | Success |
+
+
+
+
 # October
 -- 3539 我都没看明白
 
@@ -146,7 +155,7 @@
 321 - done
 327 - done
 330 - done
-332 - error
-334 - error
-335 - error
+332 - done
+334 - done
+335 - error - part
 336 - error
