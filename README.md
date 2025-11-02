@@ -2,7 +2,8 @@
 
 | No. | Name | Diff. | Status |
 |:--|:----|------|-----------:|
-| 3217 | **Delete Nodes From Linked List Present in Array** | Normal | Success |
+| 3217 | **Delete Nodes From Linked List Present in Array** | Normal | OK |
+| 2257 | **Count Unguarded Cells in the Grid** | Normal | OK |
 
 
 
@@ -41,7 +42,7 @@
 | 2125 | **Number of Laser Beams in a Bank** | Normal | Success |
 | 3354 | **Make Array Elements Equal to Zero** | Easy | Success |
 | 3370 | **Smallest Number With All Set Bits** | Easy | Success |
-| 1526 | **Minimum Number of Increments on Subarrays to Form a Target Array** | Hard | Fail |
+| 1526* | **Minimum Number of Increments on Subarrays to Form a Target Array** | Hard | Success |
 | 3289 | **The Two Sneaky Numbers of Digitville** | Easy | Success |
 
 
