@@ -5,6 +5,7 @@
 | 3217 | **Delete Nodes From Linked List Present in Array** | Normal | OK |
 | 2257 | **Count Unguarded Cells in the Grid** | Normal | OK |
 | 1578 | **Minimum Time to Make Rope Colorful** | Normal | OK |
+| 3318 | **Find X-Sum of All K-Long Subarrays I** | Easy | OK |
 
 
 
