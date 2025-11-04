@@ -1,34 +1,57 @@
 package code;
 
+import java.util.*;
+
 public class Solution {
     public static void main(String[] args) {
         Solution s = new Solution();
-        int count = s.countNumbersWithUniqueDigits(1);
+        int[][] matrix = {{1,3,5},{6,7,12},{11,14,14}};
+        int k = 6;
+        int count = s.kthSmallest(matrix, k);
 
         System.out.println(count);
     }
+    public int kthSmallest(int[][] matrix, int k) {
+        int m = matrix.length;
+        int n = matrix[0].length;
+        boolean[][] visited = new boolean[m][n];
+        PriorityQueue<Item> queue = new PriorityQueue<>((a, b) -> {
+            if (a.v == b.v) return a.x - b.x;
+            else return a.v - b.v;
+        });
+        queue.offer(new Item(0, 0, matrix[0][0]));
+        visited[0][0] = true;
 
-    public int countNumbersWithUniqueDigits(int n) {
-        int total = 0;
-        for (int i = 0; i <= n; i++) {
-            int cnt = calculate(i);
-            total += cnt;
+        while (k >= 1) {
+            Item item = queue.poll();
+            if (k == 1) return item.v;
+            else {
+                int x = item.x;
+                int y = item.y;
+                if (x < m - 1 && !visited[x + 1][y]) {
+                    queue.offer(new Item(x + 1, y, matrix[x + 1][y]));
+                    visited[x + 1][y] = true;
+                }
+                if (y < n - 1 && !visited[x][y + 1]) {
+                    queue.offer(new Item(x, y + 1, matrix[x][y + 1]));
+                    visited[x][y + 1] = true;
+                }
+            }
+            k--;
         }
-        return total;
+
+        return 0;
     }
+}
 
-    private int calculate(int n) {
-        switch (n) {
-            case 0: return 1;
-            case 1: return 9;
-            case 2: return 9 * 9;
-            case 3: return 9 * 9 * 8;
-            case 4: return 9 * 9 * 8 * 7;
-            case 5: return 9 * 9 * 8 * 7 * 6;
-            case 6: return 9 * 9 * 8 * 7 * 6 * 5;
-            case 7: return 9 * 9 * 8 * 7 * 6 * 5 * 4;
-            case 8: return 9 * 9 * 8 * 7 * 6 * 5 * 4 * 3;
-            default: return 0;
-        }
+class Item {
+    int x;
+    int y;
+    int v;
+
+    public Item(int x, int y, int v) {
+        this.x = x;
+        this.y = y;
+        this.v = v;
     }
 }
