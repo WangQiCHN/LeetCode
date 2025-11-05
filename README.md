@@ -6,6 +6,7 @@
 | 2257 | **Count Unguarded Cells in the Grid** | Normal | OK |
 | 1578 | **Minimum Time to Make Rope Colorful** | Normal | OK |
 | 3318 | **Find X-Sum of All K-Long Subarrays I** | Easy | OK |
+| 3321 | **Find X-Sum of All K-Long Subarrays II** | Hard | FAIL |
 
 
 
