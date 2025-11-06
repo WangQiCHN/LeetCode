@@ -7,6 +7,7 @@
 | 1578 | **Minimum Time to Make Rope Colorful** | Normal | OK |
 | 3318 | **Find X-Sum of All K-Long Subarrays I** | Easy | OK |
 | 3321 | **Find X-Sum of All K-Long Subarrays II** | Hard | FAIL |
+| 3607 | **Power Grid Maintenance** | Normal | FAIL |
 
 
 
