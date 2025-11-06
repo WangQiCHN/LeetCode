@@ -1,72 +1,33 @@
 package code;
 
-import java.util.*;
-
 class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int c = 4;
-        int[][] connections = {{4,3},{3,1},{4,2},{3,2},{4,1}};
-        int[][] queries = {{2,3},{1,2},{2,4},{1,1},{2,2},{1,2},{1,2},{2,2},{1,3},{2,3},{2,4},{2,3},{2,4},{1,2},{1,1}};
-        int[] result = sol.processQueries(c, connections, queries);
+        int a = 2;
+        int[] b = { 1, 3 };
+        int result = sol.superPow(a, b);
         System.out.println(result);
     }
-    public int[] processQueries(int c, int[][] connections, int[][] queries) {
-        Station[] map = new Station[c];
-        for (int i = 0; i < c; i++) {
-            map[i] = new Station();
-        }
 
-        for (int[] link : connections) {
-            int u = link[0];
-            int v = link[1];
-            map[u - 1].linkedStations.add(v - 1);
-            map[v - 1].linkedStations.add(u - 1);
-        }
+    // private static final int MOD = 1337;
 
-        for (int i = 0; i < c; i++) {
-            List<Integer> stations = map[i].linkedStations;
-            Collections.sort(stations);
+    public int superPow(int a, int[] b) {
+        int ans = 1;
+        for (int e : b) {
+            ans = (int) ((long) pow(ans, 10) * pow(a, e));
         }
-
-        List<Integer> temp = new ArrayList<>();
-        for (int[] q : queries) {
-            int operate = q[0];
-            int id = q[1];
-            if (operate == 2) {
-                map[id - 1].isOnline = false;
-            } else {
-                int r = checkStation(map, id - 1);
-                temp.add(r);
-            }
-        }
-
-        int[] result = new int[temp.size()];
-        for (int i = 0; i < temp.size(); i++) {
-            result[i] = temp.get(i);
-        }
-
-        return result;
+        return ans;
     }
 
-    private int checkStation(Station[] map, int id) {
-        if (map[id].isOnline) return id + 1;
-        else {
-            List<Integer> stations = map[id].linkedStations;
-            for (int sId : stations) {
-                if (map[sId].isOnline) return sId + 1;
+    public int pow(int x, int n) {
+        int res = 1;
+        while (n != 0) {
+            if (n % 2 != 0) {
+                res = (int) ((long) res * x);
             }
-            return -1;
+            x = (int) ((long) x * x);
+            n /= 2;
         }
-    }
-}
-
-class Station {
-    boolean isOnline;
-    List<Integer> linkedStations;
-
-    public Station() {
-        this.isOnline = true;
-        this.linkedStations = new ArrayList<>();
+        return res;
     }
 }
