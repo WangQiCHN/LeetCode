@@ -2,130 +2,104 @@ package code;
 
 import java.util.*;
 
-class Helper {
-    private int x;
-    private long result;
-    private TreeSet<Pair> large, small;
-    private Map<Integer, Integer> occ;
-
-    private static class Pair implements Comparable<Pair> {
-        int first;
-        int second;
-
-        Pair(int first, int second) {
-            this.first = first;
-            this.second = second;
-        }
-
-        @Override
-        public int compareTo(Pair other) {
-            if (this.first != other.first) {
-                return Integer.compare(this.first, other.first);
-            }
-            return Integer.compare(this.second, other.second);
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if (this == obj)
-                return true;
-            if (obj == null || getClass() != obj.getClass())
-                return false;
-            Pair pair = (Pair) obj;
-            return first == pair.first && second == pair.second;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(first, second);
-        }
-    }
-
-    public Helper(int x) {
-        this.x = x;
-        this.result = 0;
-        this.large = new TreeSet<>();
-        this.small = new TreeSet<>();
-        this.occ = new HashMap<>();
-    }
-
-    public void insert(int num) {
-        if (occ.containsKey(num) && occ.get(num) > 0) {
-            internalRemove(new Pair(occ.get(num), num));
-        }
-        occ.put(num, occ.getOrDefault(num, 0) + 1);
-        internalInsert(new Pair(occ.get(num), num));
-    }
-
-    public void remove(int num) {
-        internalRemove(new Pair(occ.get(num), num));
-        occ.put(num, occ.get(num) - 1);
-        if (occ.get(num) > 0) {
-            internalInsert(new Pair(occ.get(num), num));
-        }
-    }
-
-    public long get() {
-        return result;
-    }
-
-    private void internalInsert(Pair p) {
-        if (large.size() < x || p.compareTo(large.first()) > 0) {
-            result += (long) p.first * p.second;
-            large.add(p);
-            if (large.size() > x) {
-                Pair toRemove = large.first();
-                result -= (long) toRemove.first * toRemove.second;
-                large.remove(toRemove);
-                small.add(toRemove);
-            }
-        } else {
-            small.add(p);
-        }
-    }
-
-    private void internalRemove(Pair p) {
-        if (p.compareTo(large.first()) >= 0) {
-            result -= (long) p.first * p.second;
-            large.remove(p);
-            if (!small.isEmpty()) {
-                Pair toAdd = small.last();
-                result += (long) toAdd.first * toAdd.second;
-                small.remove(toAdd);
-                large.add(toAdd);
-            }
-        } else {
-            small.remove(p);
-        }
-    }
-}
-
 public class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int[] nums = { 1, 1, 2, 2, 3, 4, 2, 3 };
-        int k = 6;
+        int[] nums = {3,8,7,8,7,5};
+        int k = 2;
         int x = 2;
         long[] result = sol.findXSum(nums, k, x);
-        for (long v : result) {
-            System.out.println(v);
+        for (long r : result) {
+            System.out.println(r);
         }
     }
-
+    private static final long OCC_KEY = 1000000001L;
     public long[] findXSum(int[] nums, int k, int x) {
-        Helper helper = new Helper(x);
-        List<Long> ans = new ArrayList<>();
+        Map<Integer, Integer> occurence = new HashMap<>();
+        TreeSet<Long> min = new TreeSet<>();
+        TreeSet<Long> max = new TreeSet<>((a, b) -> b.compareTo(a));
+        long total = 0;
 
+        List<Long> result = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
-            helper.insert(nums[i]);
-            if (i >= k) {
-                helper.remove(nums[i - k]);
+            int num = nums[i];
+            if (!occurence.containsKey(num)) {
+                occurence.put(num, 1);
+                long key = OCC_KEY + num;
+                if (min.size() < x) {
+                    min.add(key);
+                    total += ((long)num);
+                } else {
+                    max.add(key);
+                }
+            } else {
+                int cnt = occurence.get(num);
+                occurence.put(num, cnt + 1);
+                long key = OCC_KEY * cnt + num;
+                if (min.contains(key)) {
+                    min.remove(key);
+                    min.add(key + OCC_KEY);
+                    total += ((long)num);
+                } else {
+                    max.remove(key);
+                    max.add(key + OCC_KEY);
+                }
             }
-            if (i >= k - 1) {
-                ans.add(helper.get());
+
+            if (i >= k) {
+                num = nums[i - k];
+                int cnt = occurence.get(num);
+                long key = OCC_KEY * cnt + num;
+                if (cnt == 1) {
+                    occurence.remove(num);
+                } else {
+                    occurence.put(num, cnt - 1);
+                }
+                if (min.contains(key)) {
+                    min.remove(key);
+                    if (cnt != 1) {
+                        min.add(key - OCC_KEY);
+                    }
+                    total -= num;
+                } else {
+                    max.remove(key);
+                    if (cnt != 1) {
+                        max.add(key - OCC_KEY);
+                    }
+                }
+            }
+
+            if (min.size() == x - 1 && max.size() > 0) {
+                long key = max.first();
+                min.add(key);
+                max.remove(key);
+                total += (key % OCC_KEY) * (key / OCC_KEY);
+            } else if (min.size() == x && max.size() > 0) {
+                long maxKey = max.first();
+                long minKey = min.first();
+                if (maxKey > minKey) {
+                    total -= (minKey % OCC_KEY) * (minKey / OCC_KEY);
+                    total += (maxKey % OCC_KEY) * (maxKey / OCC_KEY);
+                    max.remove(maxKey);
+                    min.remove(minKey);
+                    max.add(minKey);
+                    min.add(maxKey);
+                }
+            }
+            if (i + 1 >= k) {
+                result.add(total);
             }
         }
 
-        return ans.stream().mapToLong(Long::longValue).toArray();
+        return toLong(result);
+    }
+
+    private long[] toLong(List<Long> result) {
+        long[] answer = new long[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            answer[i] = result.get(i);
+        }
+
+        return answer;
     }
 }
