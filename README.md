@@ -8,6 +8,7 @@
 | 3318 | **Find X-Sum of All K-Long Subarrays I** | Easy | OK |
 | 3321 | **Find X-Sum of All K-Long Subarrays II** | Hard | FAIL |
 | 3607 | **Power Grid Maintenance** | Normal | FAIL |
+| 2528 | **Maximize the Minimum Powered City** | Hard | FAIL |
 
 
 
