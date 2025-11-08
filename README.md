@@ -7,8 +7,9 @@
 | 1578 | **Minimum Time to Make Rope Colorful** | Normal | OK |
 | 3318 | **Find X-Sum of All K-Long Subarrays I** | Easy | OK |
 | 3321 | **Find X-Sum of All K-Long Subarrays II** | Hard | FAIL |
-| 3607 | **Power Grid Maintenance** | Normal | FAIL |
+| 3607* | **Power Grid Maintenance** | Normal | Success |
 | 2528 | **Maximize the Minimum Powered City** | Hard | FAIL |
+| 1611 | **Minimum One Bit Operations to Make Integers Zero** | Hard | FAIL |
 
 
 
@@ -166,6 +167,6 @@
 335 - done
 336 - done
 371 - done -- 这题也就这样了
-372 - error -- 这有点无用啊
-373 - error -- 懂了，一开始添加那个很有作用 -- ok
+372 - done -- 这有点无用啊
+373 - done -- 懂了，一开始添加那个很有作用 -- ok
 375 - done
