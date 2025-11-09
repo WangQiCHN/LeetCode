@@ -10,6 +10,7 @@
 | 3607* | **Power Grid Maintenance** | Normal | Success |
 | 2528 | **Maximize the Minimum Powered City** | Hard | FAIL |
 | 1611 | **Minimum One Bit Operations to Make Integers Zero** | Hard | FAIL |
+| 2169 | **Count Operations to Obtain Zero** | Easy | OK |
 
 
 
