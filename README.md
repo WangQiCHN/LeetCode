@@ -11,6 +11,7 @@
 | 2528 | **Maximize the Minimum Powered City** | Hard | FAIL |
 | 1611 | **Minimum One Bit Operations to Make Integers Zero** | Hard | FAIL |
 | 2169 | **Count Operations to Obtain Zero** | Easy | OK |
+| 3542 | **Mininum Operations to Convert All Elements to Zero** | Normal | FAIL |
 
 
 
