@@ -13,6 +13,7 @@
 | 2169 | **Count Operations to Obtain Zero** | Easy | OK |
 | 3542 | **Mininum Operations to Convert All Elements to Zero** | Normal | FAIL |
 | 474 | **Ones and Zeroes** | Normal | OK |
+| 2654 | **Minimum Number of Operations to Make All Array Elements Equal to 1** | Normal | OK |
 
 
 
