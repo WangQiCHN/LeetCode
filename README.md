@@ -15,6 +15,7 @@
 | 474 | **Ones and Zeroes** | Normal | OK |
 | 2654 | **Minimum Number of Operations to Make All Array Elements Equal to 1** | Normal | OK |
 | 3228 | **Maximum Number of Operations to Move Ones to the End** | Normal | OK |
+| 2536 | **Increment Submatrices by One** | Normal | FAIL |
 
 
 
