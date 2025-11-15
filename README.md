@@ -17,6 +17,7 @@
 | 3228 | **Maximum Number of Operations to Move Ones to the End** | Normal | OK |
 | 2536* | **Increment Submatrices by One** | Normal | OK |
 | 3234 | **Count the Number of Substrings With Dominant Ones** | Normal | FAIL |
+| 1513 | **Number of Substrings With Only 1s** | Normal | OK |
 
 
 
