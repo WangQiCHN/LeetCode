@@ -9,13 +9,14 @@
 | 3321* | **Find X-Sum of All K-Long Subarrays II** | Hard | OK |
 | 3607* | **Power Grid Maintenance** | Normal | OK |
 | 2528* | **Maximize the Minimum Powered City** | Hard | OK |
-| 1611 | **Minimum One Bit Operations to Make Integers Zero** | Hard | FAIL |
+| 1611* | **Minimum One Bit Operations to Make Integers Zero** | Hard | OK |
 | 2169 | **Count Operations to Obtain Zero** | Easy | OK |
 | 3542* | **Mininum Operations to Convert All Elements to Zero** | Normal | OK |
 | 474 | **Ones and Zeroes** | Normal | OK |
 | 2654 | **Minimum Number of Operations to Make All Array Elements Equal to 1** | Normal | OK |
 | 3228 | **Maximum Number of Operations to Move Ones to the End** | Normal | OK |
-| 2536 | **Increment Submatrices by One** | Normal | FAIL |
+| 2536* | **Increment Submatrices by One** | Normal | OK |
+| 3234 | **Count the Number of Substrings With Dominant Ones** | Normal | FAIL |
 
 
 
