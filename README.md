@@ -18,6 +18,7 @@
 | 2536* | **Increment Submatrices by One** | Normal | OK |
 | 3234 | **Count the Number of Substrings With Dominant Ones** | Normal | FAIL |
 | 1513 | **Number of Substrings With Only 1s** | Normal | OK |
+| 1437 | **Check If All 1's Are at Least Length K Places Away** | Easy | OK |
 
 
 
