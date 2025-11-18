@@ -16,9 +16,10 @@
 | 2654 | **Minimum Number of Operations to Make All Array Elements Equal to 1** | Normal | OK |
 | 3228 | **Maximum Number of Operations to Move Ones to the End** | Normal | OK |
 | 2536* | **Increment Submatrices by One** | Normal | OK |
-| 3234 | **Count the Number of Substrings With Dominant Ones** | Normal | FAIL |
+| 3234* | **Count the Number of Substrings With Dominant Ones** | Normal | OK |
 | 1513 | **Number of Substrings With Only 1s** | Normal | OK |
 | 1437 | **Check If All 1's Are at Least Length K Places Away** | Easy | OK |
+| 717 | **1-bit and 2-bit Characters** | Easy | OK |
 
 
 
