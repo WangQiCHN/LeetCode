@@ -20,6 +20,7 @@
 | 1513 | **Number of Substrings With Only 1s** | Normal | OK |
 | 1437 | **Check If All 1's Are at Least Length K Places Away** | Easy | OK |
 | 717 | **1-bit and 2-bit Characters** | Easy | OK |
+| 2154 | **Keep Multiplying Found Values by Two** | Easy | OK |
 
 
 
