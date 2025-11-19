@@ -1,42 +1,55 @@
 package code;
 
+import java.util.*;
+
 public class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        String s = "101101";
+String s = "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext";
         // String s = "00011";
         // String s = "1";
-        int result = sol.numberOfSubstrings(s);
+        int result = sol.lengthLongestPath(s);
         System.out.println(result);
     }
-    public int numberOfSubstrings(String s) {
-        int n = s.length();
-        int[] preZero = new int[n + 1];
-        preZero[0] = -1;
-        for (int i = 0; i < n; i++) {
-            if (s.charAt(i) == '0') {
-                preZero[i + 1] = i;
-            } else {
-                preZero[i + 1] = preZero[i];
-            }
-        }
-        
-
-        int res = 0;
-        for (int i = 0; i < n; i++) {
-            int cnt0 = (s.charAt(i) == '0' ? 1 : 0);
-            int j = i;
-            int mul = cnt0 * cnt0;
-            while (j != -1 && mul <= i) {
-                int cnt1 = i - preZero[j] - cnt0;
-                if (mul <= cnt1) {
-                    res += Math.min(j - preZero[j], cnt1 - mul + 1);
+    public int lengthLongestPath(String input) {
+        List<String> routes = new ArrayList<>();
+        StringBuilder sb = new StringBuilder();
+        int tabNum = 0;
+        boolean isFile = false;
+        int result = 0;
+        for (char c : input.toCharArray()) {
+            if (c == '\n') {
+                List<String> temp = new ArrayList<>();
+                for (int i = 0; i < tabNum; i++) {
+                    temp.add(routes.get(i));
                 }
-                j = preZero[j];
-                cnt0++;
-                mul = cnt0 * cnt0;
+                temp.add(sb.toString());
+                if (isFile) {
+                    int len = getLength(temp);
+                    result = Math.max(len, result);
+                }
+                routes = temp;
+                tabNum = 0;
+                isFile = false;
+                sb = new StringBuilder();
+            } else if (c == '\t') {
+                tabNum++;
+            } else if (c == '.') {
+                isFile = true;
+            } else {
+                sb.append(c);
             }
         }
-        return res;
+
+        return result;
+    }
+
+    private int getLength(List<String> list) {
+        int result = 0;
+        for (int i = 0; i < list.size(); i++) {
+            result += (list.get(i).length());
+        }
+
+        return result;
     }
 }
