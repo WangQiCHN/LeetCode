@@ -62,6 +62,7 @@
 | 3370 | **Smallest Number With All Set Bits** | Easy | Success |
 | 1526* | **Minimum Number of Increments on Subarrays to Form a Target Array** | Hard | Success |
 | 3289 | **The Two Sneaky Numbers of Digitville** | Easy | Success |
+| 757 | **Set Intersection Size At Least Two** | Hard | Fail |
 
 
 
@@ -183,3 +184,4 @@
 373 - done -- 懂了，一开始添加那个很有作用 -- ok
 375 - done
 390
+395
