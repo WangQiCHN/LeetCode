@@ -1,55 +1,45 @@
 package code;
 
-import java.util.*;
-
 public class Solution {
+    private int lastIndex = -1;
     public static void main(String[] args) {
         Solution sol = new Solution();
-String s = "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext";
-        // String s = "00011";
-        // String s = "1";
-        int result = sol.lengthLongestPath(s);
+        String n = "3[a2[c]]";
+        String result = sol.decodeString(n);
         System.out.println(result);
     }
-    public int lengthLongestPath(String input) {
-        List<String> routes = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
-        int tabNum = 0;
-        boolean isFile = false;
-        int result = 0;
-        for (char c : input.toCharArray()) {
-            if (c == '\n') {
-                List<String> temp = new ArrayList<>();
-                for (int i = 0; i < tabNum; i++) {
-                    temp.add(routes.get(i));
-                }
-                temp.add(sb.toString());
-                if (isFile) {
-                    int len = getLength(temp);
-                    result = Math.max(len, result);
-                }
-                routes = temp;
-                tabNum = 0;
-                isFile = false;
-                sb = new StringBuilder();
-            } else if (c == '\t') {
-                tabNum++;
-            } else if (c == '.') {
-                isFile = true;
-            } else {
-                sb.append(c);
-            }
-        }
-
-        return result;
+    public String decodeString(String s) {
+        return decodeString(s, 0);
     }
 
-    private int getLength(List<String> list) {
-        int result = 0;
-        for (int i = 0; i < list.size(); i++) {
-            result += (list.get(i).length());
+    private String decodeString(String s, int start) {
+        StringBuilder sb = new StringBuilder();
+        StringBuilder temp = new StringBuilder();
+        int l = start;
+        int num = 0;
+        while (l < s.length()) {
+            char c = s.charAt(l);
+            if (c >= '0' && c <= '9') {
+                num = num * 10 + (c - '0');
+                if (temp.length() != 0) {
+                    sb.append(temp.toString());
+                    temp = new StringBuilder();
+                }
+            } else if (c >= 'a' && c <= 'z') {
+                temp.append(c);
+            } else if (c == '[') {
+                String v = decodeString(s, l + 1);
+                for (int i = 0; i < num; i++) {
+                    sb.append(v);
+                }
+                num = 0;
+                l = lastIndex;
+            } else if (c == ']') {
+                lastIndex = l;
+                return temp.toString();
+            }
+            l++;
         }
-
-        return result;
+        return sb.toString();
     }
 }
