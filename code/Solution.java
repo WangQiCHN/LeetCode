@@ -1,73 +1,51 @@
 package code;
 
-import java.util.List;
-import java.util.ArrayList;
-
 public class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        String s = "aabca";
-        int result = sol.countPalindromicSubsequence(s);
+        String s = "aaaaaaaaabbbcccccddddd";
+        int k = 5;
+        int result = sol.longestSubstring(s, k);
         System.out.println(result);
     }
-    public int countPalindromicSubsequence(String s) {
-        List<List<Integer>> dict = new ArrayList<>();
-        for (int i = 0; i < 26; i++) {
-            dict.add(new ArrayList<>());
-        }
-        for (int i = 0; i < s.length(); i++) {
-            int index = s.charAt(i) - 'a';
-            dict.get(index).add(i);
+    public int longestSubstring(String s, int k) {
+        if (k > s.length()) return 0;
+        int[] win = new int[26];
+        int n = s.length();
+        for (char c : s.toCharArray()) {
+            win[c - 'a']++;
         }
 
-        int count = 0;
-        for (int i = 0; i < 26; i++) {
-            if (dict.get(i).size() >= 3) count++;
-        }
-        for (int i = 0; i < 25; i++) {
-            List<Integer> is = dict.get(i);
-            if (is.size() == 0) continue;
-            for (int j = i + 1; j < 26; j++) {
-                List<Integer> js = dict.get(j);
-                count += calculate(is, js);
+        if (isValid(win, k) == 1) return n;
+
+        int l = 0, r = 0;
+        int result = 0;
+        while (r < n) {
+            int index = s.charAt(r) - 'a';
+            r++;
+            if (win[index] >= k) {
+                continue;
+            } else {
+                result = Math.max(result, longestSubstring(s.substring(l, r - 1), k));
+                l = r;
             }
         }
+        result = Math.max(result, longestSubstring(s.substring(l, r), k));
 
-        return count;
+        return result;
     }
 
-    private int calculate(List<Integer> first, List<Integer> second) {
-        if (second.size() == 0) return 0;
-        if (second.size() == 1 && first.size() == 1) return 0;
-        
-        int total = 0;
-        int current = 0; // 1 means first, -1 means second
-        int i = 0, j = 0;
-        for (; i < first.size() && j < second.size();) {
-            if (first.get(i) > second.get(j)) {
-                if (current == 0 || current == 1) {
-                    current = -1;
-                    total++;
-                }
-                j++;
-            } else {
-                if (current == 0 || current == -1) {
-                    current = 1;
-                    total++;
-                }
-                i++;
-            }
-            if (total == 4) return 2;
+    // -1 means useless, 0 means analyze it, 1 means satisfy
+    private int isValid(int[] win, int k) {
+        boolean hasValid = false, hasProblem = false;
+        for (int i = 0; i < 26; i++) {
+            if (win[i] == 0) continue;
+            else if (win[i] >= k) hasValid = true;
+            else hasProblem = true;
         }
 
-        if (i < first.size() && current == -1) {
-            total++;
-        } else if (j < second.size() && current == 1) {
-            total++;
-        }
-
-        if (total == 3) return 1;
-        else if (total == 4) return 2;
-        else return 0;
+        if (hasValid && !hasProblem) return 1;
+        else if (hasValid && hasProblem) return 0;
+        else return -1;
     }
 }
