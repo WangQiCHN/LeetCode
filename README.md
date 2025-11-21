@@ -22,6 +22,7 @@
 | 717 | **1-bit and 2-bit Characters** | Easy | OK |
 | 2154 | **Keep Multiplying Found Values by Two** | Easy | OK |
 | 757 | **Set Intersection Size At Least Two** | Hard | Fail |
+| 1930 | **Unique Length-3 Palindromic Subsequences** | Normal | Success |
 
 
 
@@ -62,8 +63,6 @@
 | 3370 | **Smallest Number With All Set Bits** | Easy | Success |
 | 1526* | **Minimum Number of Increments on Subarrays to Form a Target Array** | Hard | Success |
 | 3289 | **The Two Sneaky Numbers of Digitville** | Easy | Success |
-| 757 | **Set Intersection Size At Least Two** | Hard | Fail |
-| 1930 | **Unique Length-3 Palindromic Subsequences** | Normal | Success |
 
 
 
