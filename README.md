@@ -23,6 +23,7 @@
 | 2154 | **Keep Multiplying Found Values by Two** | Easy | OK |
 | 757 | **Set Intersection Size At Least Two** | Hard | Fail |
 | 1930 | **Unique Length-3 Palindromic Subsequences** | Normal | Success |
+| 3190 | **Find Minimum Operations to Make All Elements Divisible by Three** | Easy | Success |
 
 
 
