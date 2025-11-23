@@ -24,6 +24,7 @@
 | 757 | **Set Intersection Size At Least Two** | Hard | Fail |
 | 1930 | **Unique Length-3 Palindromic Subsequences** | Normal | Success |
 | 3190 | **Find Minimum Operations to Make All Elements Divisible by Three** | Easy | Success |
+| 1262 | **Greatest Sum Divisible by Three** | Normal | Success |
 
 
 
@@ -185,6 +186,6 @@
 373 - done -- 懂了，一开始添加那个很有作用 -- ok
 375 - done
 390 - done
-391 - 绝大部分对了,自己写了一遍对了
-395 - 差不多了
+391 - done - 绝大部分对了,自己写了一遍对了
+395 - done - 差不多了
 399 - 果然是那个思路，就是权重计算+路径压缩比较麻烦，搞定了
