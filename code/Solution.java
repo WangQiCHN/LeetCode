@@ -2,9 +2,7 @@ package code;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Solution {
     public static void main(String[] args) {
@@ -15,7 +13,7 @@ public class Solution {
         equations.add(Arrays.asList("a", "aa"));
         // equations.add(Arrays.asList("bc", "cd"));
         // double[] values = { 1.5, 2.5, 5.0 };
-        double[] values = { 3.0, 2.0, 2.0 };
+        // double[] values = { 3.0, 2.0, 2.0 };
         List<List<String>> queries = new ArrayList<>();
         // [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
         queries.add(Arrays.asList("ff", "a"));
