@@ -7,60 +7,39 @@ import java.util.List;
 public class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        List<List<String>> equations = new ArrayList<>();
-        equations.add(Arrays.asList("dd", "ff"));
-        equations.add(Arrays.asList("aa", "dd"));
-        equations.add(Arrays.asList("a", "aa"));
-        // equations.add(Arrays.asList("bc", "cd"));
-        // double[] values = { 1.5, 2.5, 5.0 };
-        // double[] values = { 3.0, 2.0, 2.0 };
-        List<List<String>> queries = new ArrayList<>();
-        // [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
-        queries.add(Arrays.asList("ff", "a"));
-        // queries.add(Arrays.asList("bc", "cd"));
-        // queries.add(Arrays.asList("cd", "bc"));
-        String s = "aaabb";
-        int k = 3;
-        int result = sol.longestSubstring(s, k);
+        int[][] intervals = { { 1, 2 }, { 2, 3 }, { 2, 4 }, { 4, 5 } };
+        int result = sol.intersectionSizeTwo(intervals);
         System.out.println(result);
     }
-
-    public int longestSubstring(String s, int k) {
-        int n = s.length();
-        if (n < k) return 0;
-
-        int[] win = new int[26];
-        for (char c : s.toCharArray()) {
-            win[c - 'a']++;
-        }
-
-        if (isSatisfy(win, k)) {
-            return n;
-        }
-
-        int l = 0, r = 0;
-        int max = 0;
-        while (r < n) {
-            char c = s.charAt(r);
-            if (win[c - 'a'] >= k) {
-                continue;
-            } else {
-                max = Math.max(max, longestSubstring(s.substring(l, r), k));
-                l = r + 1;
+    public int intersectionSizeTwo(int[][] intervals) {
+        int n = intervals.length;
+        int res = 0;
+        int m = 2;
+        Arrays.sort(intervals, (a, b) -> {
+            if (a[0] == b[0]) {
+                return b[1] - a[1];
             }
-            r++;
+            return a[0] - b[0];
+        });
+        List<Integer>[] temp = new List[n];
+        for (int i = 0; i < n; i++) {
+            temp[i] = new ArrayList<Integer>();
         }
-        max = Math.max(max, longestSubstring(s.substring(l, r), k));
-
-        return max;
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = intervals[i][0], k = temp[i].size(); k < m; j++, k++) {
+                res++;
+                help(intervals, temp, i - 1, j);
+            }
+        }
+        return res;
     }
 
-    private boolean isSatisfy(int[] win, int k) {
-        for (int n : win) {
-            if (n == 0 || n >= k) continue;
-            else return false;
+    public void help(int[][] intervals, List<Integer>[] temp, int pos, int num) {
+        for (int i = pos; i >= 0; i--) {
+            if (intervals[i][1] < num) {
+                break;
+            }
+            temp[i].add(num);
         }
-
-        return true;
     }
 }

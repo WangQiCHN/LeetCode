@@ -25,6 +25,7 @@
 | 1930 | **Unique Length-3 Palindromic Subsequences** | Normal | Success |
 | 3190 | **Find Minimum Operations to Make All Elements Divisible by Three** | Easy | Success |
 | 1262 | **Greatest Sum Divisible by Three** | Normal | Success |
+| 1018 | **Binary Prefix Divisible By 5** | Easy | Success |
 
 
 
