@@ -26,6 +26,7 @@
 | 3190 | **Find Minimum Operations to Make All Elements Divisible by Three** | Easy | Success |
 | 1262 | **Greatest Sum Divisible by Three** | Normal | Success |
 | 1018 | **Binary Prefix Divisible By 5** | Easy | Success |
+| 1015 | **Smallest Integer Divisible by K** | Normal | Success |
 
 
 
@@ -189,4 +190,4 @@
 390 - done
 391 - done - 绝大部分对了,自己写了一遍对了
 395 - done - 差不多了
-399 - 果然是那个思路，就是权重计算+路径压缩比较麻烦，搞定了
+399 - done - 从我做的结果看，还是那个等式最难
