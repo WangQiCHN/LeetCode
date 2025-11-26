@@ -21,12 +21,13 @@
 | 1437 | **Check If All 1's Are at Least Length K Places Away** | Easy | OK |
 | 717 | **1-bit and 2-bit Characters** | Easy | OK |
 | 2154 | **Keep Multiplying Found Values by Two** | Easy | OK |
-| 757 | **Set Intersection Size At Least Two** | Hard | Fail |
+| 757* | **Set Intersection Size At Least Two** | Hard | OK |
 | 1930 | **Unique Length-3 Palindromic Subsequences** | Normal | Success |
 | 3190 | **Find Minimum Operations to Make All Elements Divisible by Three** | Easy | Success |
 | 1262 | **Greatest Sum Divisible by Three** | Normal | Success |
 | 1018 | **Binary Prefix Divisible By 5** | Easy | Success |
 | 1015 | **Smallest Integer Divisible by K** | Normal | Success |
+| 2435 | **Paths in Matrix Whose Sum Is Divisible by K** | Hard | Fail |
 
 
 
