@@ -1,45 +1,37 @@
 package code;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int[][] intervals = { { 1, 2 }, { 2, 3 }, { 2, 4 }, { 4, 5 } };
-        int result = sol.intersectionSizeTwo(intervals);
+        int[][] grid = { { 5, 2, 4 }, { 3, 0, 5 }, { 0, 7, 2 } };
+        int k = 3;
+        int result = sol.numberOfPaths(grid, k);
         System.out.println(result);
     }
-    public int intersectionSizeTwo(int[][] intervals) {
-        int n = intervals.length;
-        int res = 0;
-        int m = 2;
-        Arrays.sort(intervals, (a, b) -> {
-            if (a[0] == b[0]) {
-                return b[1] - a[1];
-            }
-            return a[0] - b[0];
-        });
-        List<Integer>[] temp = new List[n];
-        for (int i = 0; i < n; i++) {
-            temp[i] = new ArrayList<Integer>();
-        }
-        for (int i = n - 1; i >= 0; i--) {
-            for (int j = intervals[i][0], k = temp[i].size(); k < m; j++, k++) {
-                res++;
-                help(intervals, temp, i - 1, j);
-            }
-        }
-        return res;
-    }
 
-    public void help(int[][] intervals, List<Integer>[] temp, int pos, int num) {
-        for (int i = pos; i >= 0; i--) {
-            if (intervals[i][1] < num) {
-                break;
+    private static final int MOD = 1000000007;
+
+    public int numberOfPaths(int[][] grid, int k) {
+        int m = grid.length;
+        int n = grid[0].length;
+
+        long[][][] dp = new long[m + 1][n + 1][k];
+
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == 1 && j == 1) {
+                    dp[i][j][grid[0][0] % k] = 1;
+                    continue;
+                }
+
+                int value = grid[i - 1][j - 1] % k;
+                for (int r = 0; r < k; r++) {
+                    int prevMod = (r - value + k) % k;
+                    dp[i][j][r] = (dp[i - 1][j][prevMod] + dp[i][j - 1][prevMod]) % MOD;
+                }
             }
-            temp[i].add(num);
         }
+
+        return (int) dp[m][n][0];
     }
 }
