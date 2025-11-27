@@ -28,6 +28,7 @@
 | 1018 | **Binary Prefix Divisible By 5** | Easy | Success |
 | 1015 | **Smallest Integer Divisible by K** | Normal | Success |
 | 2435 | **Paths in Matrix Whose Sum Is Divisible by K** | Hard | Fail |
+| 3381 | **Maximum SubArray Sum With Length Divisible by K** | Normal | Fail |
 
 
 
