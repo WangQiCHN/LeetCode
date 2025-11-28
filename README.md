@@ -22,13 +22,14 @@
 | 717 | **1-bit and 2-bit Characters** | Easy | OK |
 | 2154 | **Keep Multiplying Found Values by Two** | Easy | OK |
 | 757* | **Set Intersection Size At Least Two** | Hard | OK |
-| 1930 | **Unique Length-3 Palindromic Subsequences** | Normal | Success |
-| 3190 | **Find Minimum Operations to Make All Elements Divisible by Three** | Easy | Success |
-| 1262 | **Greatest Sum Divisible by Three** | Normal | Success |
-| 1018 | **Binary Prefix Divisible By 5** | Easy | Success |
-| 1015 | **Smallest Integer Divisible by K** | Normal | Success |
-| 2435 | **Paths in Matrix Whose Sum Is Divisible by K** | Hard | Fail |
+| 1930 | **Unique Length-3 Palindromic Subsequences** | Normal | OK |
+| 3190 | **Find Minimum Operations to Make All Elements Divisible by Three** | Easy | OK |
+| 1262 | **Greatest Sum Divisible by Three** | Normal | OK |
+| 1018 | **Binary Prefix Divisible By 5** | Easy | OK |
+| 1015 | **Smallest Integer Divisible by K** | Normal | OK |
+| 2435* | **Paths in Matrix Whose Sum Is Divisible by K** | Hard | OK |
 | 3381 | **Maximum SubArray Sum With Length Divisible by K** | Normal | Fail |
+| 2872 | **Maximum Number of K-Divisible Components** | Hard | Fail |
 
 
 
