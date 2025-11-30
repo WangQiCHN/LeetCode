@@ -1,32 +1,40 @@
 package code;
 
-import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int[] grid = { -1, -2, -3, -4, -5 };
-        int k = 4;
+        int[] grid = { 3, 1, 4, 2 };
+        int k = 6;
         // int[] grid = { 1, 2 };
         // int k = 1;
-        long result = sol.maxSubarraySum(grid, k);
+        int result = sol.minSubarray(grid, k);
         System.out.println(result);
     }
 
-    public long maxSubarraySum(int[] nums, int k) {
-        int n = nums.length;
-        long[] remains = new long[k];
-        long max = Long.MIN_VALUE;
-        long total = 0;
-        Arrays.fill(remains, Long.MAX_VALUE / 2);
-        remains[k - 1] = 0;
-
-        for (int i = 0; i < n; i++) {
-            total += nums[i];
-            max = Math.max(max, total - remains[i % k]);
-            remains[i % k] = Math.min(remains[i % k], total);
+    public int minSubarray(int[] nums, int p) {
+        long lx = 0;
+        for (int n : nums) {
+            lx += n;
         }
 
-        return max;
+        int x = (int) (lx % p);
+        if (x == 0)
+            return 0;
+
+        Map<Integer, Integer> map = new HashMap<>();
+        int v = 0, answer = nums.length;
+        for (int i = 0; i < nums.length; i++) {
+            v = (v + nums[i]) % p;
+            map.put(v, i);
+            int mod = (v - x + p) % p;
+            if (map.containsKey(mod)) {
+                answer = Math.min(answer, i + 1 - map.get(mod));
+            }
+        }
+
+        return answer;
     }
 }
