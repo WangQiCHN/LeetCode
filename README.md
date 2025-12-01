@@ -28,8 +28,8 @@
 | 1018 | **Binary Prefix Divisible By 5** | Easy | OK |
 | 1015 | **Smallest Integer Divisible by K** | Normal | OK |
 | 2435* | **Paths in Matrix Whose Sum Is Divisible by K** | Hard | OK |
-| 3381 | **Maximum SubArray Sum With Length Divisible by K** | Normal | Fail |
-| 2872 | **Maximum Number of K-Divisible Components** | Hard | Fail |
+| 3381* | **Maximum SubArray Sum With Length Divisible by K** | Normal | OK |
+| 2872* | **Maximum Number of K-Divisible Components** | Hard | OK |
 | 3512 | **Minimum Operations to Make Array Sum Divisible by K** | Easy | OK |
 | 1590 | **Make Sum Divisible by P** | Normal | Fail |
 
