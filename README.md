@@ -31,7 +31,7 @@
 | 3381* | **Maximum SubArray Sum With Length Divisible by K** | Normal | OK |
 | 2872* | **Maximum Number of K-Divisible Components** | Hard | OK |
 | 3512 | **Minimum Operations to Make Array Sum Divisible by K** | Easy | OK |
-| 1590 | **Make Sum Divisible by P** | Normal | Fail |
+| 1590* | **Make Sum Divisible by P** | Normal | OK |
 
 
 
