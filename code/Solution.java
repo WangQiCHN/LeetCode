@@ -1,61 +1,71 @@
 package code;
 
-import java.util.Set;
-import java.util.HashSet;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Solution {
-    public static void main(String[] args) {
+class Solution {
+    static final int MOD = 1000000007;
+
+    public static void main(String[] argvs) {
         Solution sol = new Solution();
-        // int[] grid = { 8, 32, 31, 18, 34, 20, 21, 13, 1, 27, 23, 22, 11, 15, 30, 4, 2
-        // };
-        // int p = 148;
-        int[] grid = { 0, 1, 3, 6, 10, 13, 15, 18 };
-        String result = sol.toHex(-1);
-        System.out.print(result);
+        int n = 1;
+        int ans = sol.numOfWays(n);
+        System.out.println(ans);
     }
 
-    public String toHex(int num) {
-        int[] buffer = new int[32];
-        int i = 0;
-        for (i = 0; i < 32; i++) {
-            buffer[i] = (num & ( << i));
-        }
-
-        StringBuilder sb = new StringBuilder();
-        for (i = 0; i < 8; i++) {
-            char c = getChar(buffer[32 - i * 4 - 1], buffer[32 - i * 4 - 2], buffer[32 - i * 4 - 3], buffer[32 - i * 4 - 4]);
-            if (c == '0' && sb.length() == 0) {
-                continue;
-            } else {
-                sb.append(c);
+    public int numOfWays(int n) {
+        // 预处理出所有满足条件的 type
+        List<Integer> types = new ArrayList<Integer>();
+        for (int i = 0; i < 3; ++i) {
+            for (int j = 0; j < 3; ++j) {
+                for (int k = 0; k < 3; ++k) {
+                    if (i != j && j != k) {
+                        // 只要相邻的颜色不相同就行
+                        // 将其以十进制的形式存储
+                        types.add(i * 9 + j * 3 + k);
+                    }
+                }
             }
         }
-
-        return sb.toString();
-    }
-
-    private char getChar(int a, int b, int c, int d) {
-        int v = a * 8 + b * 4 + c * 2 + d;
-        switch(v) {
-            case 0: return '0';
-            case 1: return '1';
-            case 2: return '2';
-            case 3: return '3';
-            case 4: return '4';
-            case 5: return '5';
-            case 6: return '6';
-            case 7: return '7';
-            case 8: return '8';
-            case 9: return '9';
-            case 10: return 'a';
-            case 11: return 'b';
-            case 12: return 'c';
-            case 13: return 'd';
-            case 14: return 'e';
-            case 15: return 'f';
-            default: return '0';
+        int typeCnt = types.size();
+        // 预处理出所有可以作为相邻行的 type 对
+        int[][] related = new int[typeCnt][typeCnt];
+        for (int i = 0; i < typeCnt; ++i) {
+            // 得到 types[i] 三个位置的颜色
+            int x1 = types.get(i) / 9, x2 = types.get(i) / 3 % 3, x3 = types.get(i) % 3;
+            for (int j = 0; j < typeCnt; ++j) {
+                // 得到 types[j] 三个位置的颜色
+                int y1 = types.get(j) / 9, y2 = types.get(j) / 3 % 3, y3 = types.get(j) % 3;
+                // 对应位置不同色，才能作为相邻的行
+                if (x1 != y1 && x2 != y2 && x3 != y3) {
+                    related[i][j] = 1;
+                }
+            }
         }
+        // 递推数组
+        int[][] f = new int[n + 1][typeCnt];
+        // 边界情况，第一行可以使用任何 type
+        for (int i = 0; i < typeCnt; ++i) {
+            f[1][i] = 1;
+        }
+        for (int i = 2; i <= n; ++i) {
+            for (int j = 0; j < typeCnt; ++j) {
+                for (int k = 0; k < typeCnt; ++k) {
+                    // f[i][j] 等于所有 f[i - 1][k] 的和
+                    // 其中 k 和 j 可以作为相邻的行
+                    if (related[k][j] != 0) {
+                        f[i][j] += f[i - 1][k];
+                        f[i][j] %= MOD;
+                    }
+                }
+            }
+        }
+        // 最终所有的 f[n][...] 之和即为答案
+        int ans = 0;
+        for (int i = 0; i < typeCnt; ++i) {
+            ans += f[n][i];
+            ans %= MOD;
+        }
+        return ans;
     }
 }
