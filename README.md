@@ -8,3 +8,4 @@
 | 66 | **Plus One** | Easy | OK |
 | 961 | **N-Repeated Element in Size 2N Array** | Easy | OK |
 | 1411 | **Number of Ways to Paint N * 3 Grid** | Hard | Fail |
+| 1390 | **Four Divisors** | Normal | OK |
