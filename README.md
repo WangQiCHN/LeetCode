@@ -12,3 +12,4 @@
 | 1411 | **Number of Ways to Paint N * 3 Grid** | Hard | Fail |
 | 1390 | **Four Divisors** | Normal | OK |
 | 1975 | **Maximum Matrix Sum** | Normal | OK |
+| 1161 | **Maximum Level Sum of a Binary Tree** | Normal | OK |
