@@ -1,7 +1,7 @@
 # 做到430 休息了，以后只是daily
 
 ## 我希望可以在动态规划中找点题目做做，这一块我想加强一下
-2435
+2435, 1458
 
 ## January
 
@@ -14,3 +14,4 @@
 | 1975 | **Maximum Matrix Sum** | Normal | OK |
 | 1161 | **Maximum Level Sum of a Binary Tree** | Normal | OK |
 | 1339 | **Maximum Product of Splitted Binary Tree** | Normal | OK |
+| 1458 | **Max Dot Product of Two Subsequences** | Hard | Fail |
