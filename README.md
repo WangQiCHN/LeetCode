@@ -15,3 +15,4 @@
 | 1161 | **Maximum Level Sum of a Binary Tree** | Normal | OK |
 | 1339 | **Maximum Product of Splitted Binary Tree** | Normal | OK |
 | 1458 | **Max Dot Product of Two Subsequences** | Hard | Fail |
+| 865 | **Smallest Subtree with all the Deepest Nodes** | Normal | OK |
