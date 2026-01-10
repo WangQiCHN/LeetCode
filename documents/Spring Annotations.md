@@ -65,13 +65,12 @@
 @Scope
 @Service -- Spring框架中专门用于标记业务逻辑层组件的注解
 @ServletComponentScan -- 注解用于扫描并注册Servlet、Filter和Listener组件
-@SonTransactional
-@SpringBootApplication
-@SpringBootConfiguration
-@Timed
-@Transactional
-@Valid
-@Value
-@WebFilter
-@WebListener
-@WebServlet
+@SpringBootApplication -- Spring Boot应用的核心注解，它是一个组合注解，主要包含三个核心功能：@SpringBootConfiguration将当前类标记为配置类，允许通过@Bean定义组件；@EnableAutoConfiguration启用自动配置机制，根据类路径依赖自动配置应用组件；@ComponentScan自动扫描当前类所在包及其子包中的组件并注册为Spring Bean
+@SpringBootConfiguration -- 是@Configuration的变体，用于标记当前类为配置类，可以在其中定义Bean和其他配置。它封装了@Configuration注解的功能，使类具备配置文件的作用
+@Timed -- 主要用于监控方法的执行时间和调用次数，通常与Micrometer和Spring Boot Actuator集成。该注解能够自动收集方法执行的性能数据并上报到监控系统（如Prometheus、Graphite等）。使用时需要添加相应的依赖，然后在需要监控的方法上添加注解即可
+@Transactional -- 用于声明式事务管理，标记方法或类需要事务支持。从Spring5.0开始，该注解还可以在接口上声明。它支持配置事务的传播行为（如PROPAGATION_REQUIRED）、隔离级别等属性，确保工作单元的原子性。Spring通过@EnableTransactionManagement注解开启声明式事务支持后，会自动扫描带有@Transactional的方法和类
+@Valid -- 注解主要用于方法参数校验，能够触发基于JSR-303/BeanValidation规范的自动验证逻辑。它通常应用于Controller层的入参对象上，配合字段级别的校验注解（如@NotNull、@Size、@Email等）实现声明式的数据验证
+@Value -- 注解是Spring中用于属性赋值的核心注解，支持从配置文件读取值、SpEL表达式计算以及直接字面量注入。该注解可以作用于字段、方法、构造函数参数等多种元素
+@WebFilter -- 用于将一个类声明为过滤器，在Servlet3.0之后替代了web.xml中的<filter>配置
+@WebListener -- 注解用于声明Web监听器，监听ServletContext、HttpSession和ServletRequest等对象的生命周期事件
+@WebServlet -- 是Servlet3.0的核心注解，用于替代web.xml中的<servlet>和<servlet-mapping>配置
