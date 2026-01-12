@@ -14,7 +14,8 @@
 | 1975 | **Maximum Matrix Sum** | Normal | OK |
 | 1161 | **Maximum Level Sum of a Binary Tree** | Normal | OK |
 | 1339 | **Maximum Product of Splitted Binary Tree** | Normal | OK |
-| 1458 | **Max Dot Product of Two Subsequences** | Hard | Fail |
+| 1458 | **Max Dot Product of Two Subsequences** | Hard | Fix |
 | 865 | **Smallest Subtree with all the Deepest Nodes** | Normal | OK |
 | 712 | **Minimum ASCII Delete Sum for Two Strings** | Normal | OK |
-| 85 | **Maximal Rectangle** | Hard | Fail |
+| 85 | **Maximal Rectangle** | Hard | Fix |
+| 1266 | **Minimum Time Visiting All Points** | Easy | OK |
