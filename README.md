@@ -9,12 +9,12 @@
 |:--|:----|------|-----------:|
 | 66 | **Plus One** | Easy | OK |
 | 961 | **N-Repeated Element in Size 2N Array** | Easy | OK |
-| 1411 | **Number of Ways to Paint N * 3 Grid** | Hard | Fix |
+| 1411* | **Number of Ways to Paint N * 3 Grid** | Hard | OK |
 | 1390 | **Four Divisors** | Normal | OK |
 | 1975 | **Maximum Matrix Sum** | Normal | OK |
 | 1161 | **Maximum Level Sum of a Binary Tree** | Normal | OK |
 | 1339 | **Maximum Product of Splitted Binary Tree** | Normal | OK |
-| 1458 | **Max Dot Product of Two Subsequences** | Hard | Fix |
+| 1458* | **Max Dot Product of Two Subsequences** | Hard | OK |
 | 865 | **Smallest Subtree with all the Deepest Nodes** | Normal | OK |
 | 712 | **Minimum ASCII Delete Sum for Two Strings** | Normal | OK |
 | 85 | **Maximal Rectangle** | Hard | Fix |
