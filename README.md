@@ -19,3 +19,4 @@
 | 712 | **Minimum ASCII Delete Sum for Two Strings** | Normal | OK |
 | 85 | **Maximal Rectangle** | Hard | Fix |
 | 1266 | **Minimum Time Visiting All Points** | Easy | OK |
+| 3453 | **Separate Squares I** | Normal | OK |
