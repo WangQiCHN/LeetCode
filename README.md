@@ -17,6 +17,7 @@
 | 1458* | **Max Dot Product of Two Subsequences** | Hard | OK |
 | 865 | **Smallest Subtree with all the Deepest Nodes** | Normal | OK |
 | 712 | **Minimum ASCII Delete Sum for Two Strings** | Normal | OK |
-| 85 | **Maximal Rectangle** | Hard | Fix |
+| 85* | **Maximal Rectangle** | Hard | OK |
 | 1266 | **Minimum Time Visiting All Points** | Easy | OK |
 | 3453 | **Separate Squares I** | Normal | OK |
+| 3454 | **Separate Squares II** | Hard | Fail |
