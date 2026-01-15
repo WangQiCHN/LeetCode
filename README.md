@@ -21,3 +21,4 @@
 | 1266 | **Minimum Time Visiting All Points** | Easy | OK |
 | 3453 | **Separate Squares I** | Normal | OK |
 | 3454 | **Separate Squares II** | Hard | Fail |
+| 2943 | **Maximize Area of Square Hole in Grid** | Normal | OK |
