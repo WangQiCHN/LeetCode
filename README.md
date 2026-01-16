@@ -22,3 +22,4 @@
 | 3453 | **Separate Squares I** | Normal | OK |
 | 3454 | **Separate Squares II** | Hard | Fail |
 | 2943 | **Maximize Area of Square Hole in Grid** | Normal | OK |
+| 2975 | **Maximize Square Area by Removing Fences From a Field** | Normal | OK |
