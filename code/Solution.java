@@ -50,7 +50,7 @@ class SegmentTree {
 public class Solution {
     public static void main(String[] argvs) {
         Solution sol = new Solution();
-        int[][] squares = { { 0, 0, 3 }, { 1, 1, 3 }, { 2, 2, 3 } };
+        int[][] squares = { { 0, 0, 3 }, { 2, 1, 3 }, { 4, 0, 3 } };
         double ans = sol.separateSquares(squares);
         System.out.println(ans);
     }
@@ -89,7 +89,7 @@ public class Solution {
             segTree.update(xl, xr, delta);
             // 记录前缀和和宽度
             psum.add(totalArea);
-            widths.add(segTree.query());
+                widths.add(segTree.query());
             prev = y;
         }
 
