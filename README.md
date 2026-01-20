@@ -26,3 +26,4 @@
 | 3047 | **Find the Largest Area of Square Inside Two Rectangles** | Normal | OK |
 | 1895 | **Largest Magic Square** | Normal | OK |
 | 1292 | **Maximum Side Length of a Square with Sum Less than or Equal to Threshold** | Normal | OK |
+| 3314 | **Construct the Minimum Bitwise Array I** | Easy | OK |
