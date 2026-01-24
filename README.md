@@ -20,10 +20,13 @@
 | 85* | **Maximal Rectangle** | Hard | OK |
 | 1266 | **Minimum Time Visiting All Points** | Easy | OK |
 | 3453 | **Separate Squares I** | Normal | OK |
-| 3454 | **Separate Squares II** | Hard | Fail |
+| 3454 | **Separate Squares II** | Hard | Fix |
 | 2943 | **Maximize Area of Square Hole in Grid** | Normal | OK |
 | 2975 | **Maximize Square Area by Removing Fences From a Field** | Normal | OK |
 | 3047 | **Find the Largest Area of Square Inside Two Rectangles** | Normal | OK |
 | 1895 | **Largest Magic Square** | Normal | OK |
 | 1292 | **Maximum Side Length of a Square with Sum Less than or Equal to Threshold** | Normal | OK |
 | 3314 | **Construct the Minimum Bitwise Array I** | Easy | OK |
+| 3315 | **Construct the Minimum Bitwise Array II** | Normal | OK |
+| 3307 | **Minimum Pair Removal to Sort Array I** | Easy | OK |
+| 3510 | **Minimum Pair Removal to Sort Array II** | Hard | Fail |
