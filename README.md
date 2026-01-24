@@ -30,3 +30,4 @@
 | 3315 | **Construct the Minimum Bitwise Array II** | Normal | OK |
 | 3307 | **Minimum Pair Removal to Sort Array I** | Easy | OK |
 | 3510 | **Minimum Pair Removal to Sort Array II** | Hard | Fail |
+| 1877 | **Minimize Maximum Pair Sum in Array** | Normal | OK |

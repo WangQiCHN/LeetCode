@@ -2,122 +2,104 @@ package code;
 
 import java.util.*;
 
-class SegmentTree {
-    private int[] count;
-    private int[] covered; // 最近一条x的距离
-    private int[] xs;
-    private int n;
+class Node {
+    long value;
+    int left;
+    Node prev;
+    Node next;
 
-    public SegmentTree(int[] xs_) {
-        xs = xs_;
-        n = xs.length - 1;
-        count = new int[4 * n];
-        covered = new int[4 * n];
+    Node(int value, int left) {
+        this.value = value;
+        this.left = left;
+    }
+}
+
+class PQItem implements Comparable<PQItem> {
+    Node first;
+    Node second;
+    long cost;
+
+    PQItem(Node first, Node second, long cost) {
+        this.first = first;
+        this.second = second;
+        this.cost = cost;
     }
 
-    private void modify(int qleft, int qright, int qval, int left, int right, int pos) {
-        if (xs[right + 1] <= qleft || xs[left] >= qright) {
-            return;
+    @Override
+    public int compareTo(PQItem other) {
+        if (this.cost == other.cost) {
+            return this.first.left - other.first.left;
         }
-        if (qleft <= xs[left] && xs[right + 1] <= qright) {
-            count[pos] += qval;
-        } else {
-            int mid = (left + right) / 2;
-            modify(qleft, qright, qval, left, mid, pos * 2 + 1);
-            modify(qleft, qright, qval, mid + 1, right, pos * 2 + 2);
-        }
-
-        if (count[pos] > 0) {
-            covered[pos] = xs[right + 1] - xs[left];
-        } else {
-            if (left == right) {
-                covered[pos] = 0;
-            } else {
-                covered[pos] = covered[pos * 2 + 1] + covered[pos * 2 + 2];
-            }
-        }
-    }
-
-    public void update(int qleft, int qright, int qval) {
-        modify(qleft, qright, qval, 0, n - 1, 0);
-    }
-
-    public int query() {
-        return covered[0];
+        return this.cost < other.cost ? -1 : 1;
     }
 }
 
 public class Solution {
-    public static void main(String[] argvs) {
-        Solution sol = new Solution();
-        int[][] squares = { { 0, 0, 3 }, { 2, 1, 3 }, { 4, 0, 3 } };
-        double ans = sol.separateSquares(squares);
-        System.out.println(ans);
-    }
+    public int minimumPairRemoval(int[] nums) {
+        PriorityQueue<PQItem> pq = new PriorityQueue<>();
+        boolean[] merged = new boolean[nums.length];
 
-    public double separateSquares(int[][] squares) {
-        // 存储事件: (y坐标, 类型, 左边界, 右边界)
-        List<int[]> events = new ArrayList<>();
-        Set<Integer> xsSet = new TreeSet<>();
+        int decreaseCount = 0;
+        int count = 0;
+        Node head = new Node(nums[0], 0);
+        Node current = head;
 
-        for (int[] sq : squares) {
-            int x = sq[0], y = sq[1], l = sq[2];
-            int xr = x + l;
-            events.add(new int[] { y, 1, x, xr });
-            events.add(new int[] { y + l, -1, x, xr });
-            xsSet.add(x);
-            xsSet.add(xr);
-        }
-
-        // 按y坐标排序事件
-        events.sort((a, b) -> Integer.compare(a[0], b[0]));
-        // 离散化坐标
-        int[] xs = xsSet.stream().mapToInt(i -> i).toArray();
-        // 初始化线段树
-        SegmentTree segTree = new SegmentTree(xs);
-
-        List<Long> psum = new ArrayList<>();
-        List<Integer> widths = new ArrayList<>();
-        long totalArea = 0L;
-        int prev = events.get(0)[0];
-
-        // 扫描：计算总面积和记录中间状态
-        for (int[] event : events) {
-            int y = event[0], delta = event[1], xl = event[2], xr = event[3];
-            int len = segTree.query();
-            totalArea += (long) len * (y - prev);
-            segTree.update(xl, xr, delta);
-            // 记录前缀和和宽度
-            psum.add(totalArea);
-                widths.add(segTree.query());
-            prev = y;
-        }
-
-        // 计算目标面积（向上取整的一半）
-        long target = (long) (totalArea + 1) / 2;
-        // 二分查找
-        int i = binarySearch(psum, target);
-        double area = psum.get(i);
-        // 获取对应的面积、宽度和高度
-        int width = widths.get(i), height = events.get(i)[0];
-
-        return height + (totalArea - area * 2) / (width * 2.0);
-    }
-
-    private int binarySearch(List<Long> list, long target) {
-        int left = 0;
-        int right = list.size() - 1;
-        int result = 0;
-
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (list.get(mid) < target) {
-                result = mid;
-                left = mid + 1;
-            } else {
-                right = mid - 1;
+        for (int i = 1; i < nums.length; i++) {
+            Node newNode = new Node(nums[i], i);
+            current.next = newNode;
+            newNode.prev = current;
+            pq.offer(new PQItem(current, newNode, current.value + newNode.value));
+            if (nums[i - 1] > nums[i]) {
+                decreaseCount++;
             }
+            current = newNode;
         }
-        return result;
+
+        while (decreaseCount > 0) {
+            PQItem item = pq.poll();
+            Node first = item.first;
+            Node second = item.second;
+            long cost = item.cost;
+
+            if (merged[first.left] || merged[second.left] || first.value + second.value != cost) {
+                continue;
+            }
+            count++;
+            if (first.value > second.value) {
+                decreaseCount--;
+            }
+
+            Node prevNode = first.prev;
+            Node nextNode = second.next;
+            first.next = nextNode;
+            if (nextNode != null) {
+                nextNode.prev = first;
+            }
+
+            if (prevNode != null) {
+                if (prevNode.value > first.value && prevNode.value <= cost) {
+                    decreaseCount--;
+                } else if (prevNode.value <= first.value && prevNode.value > cost) {
+                    decreaseCount++;
+                }
+
+                pq.offer(new PQItem(prevNode, first, prevNode.value + cost));
+            }
+
+            if (nextNode != null) {
+                if (second.value > nextNode.value && cost <= nextNode.value) {
+                    decreaseCount--;
+                } else if (second.value <= nextNode.value && cost > nextNode.value) {
+                    decreaseCount++;
+                }
+
+                pq.offer(new PQItem(first, nextNode, cost + nextNode.value));
+            }
+
+            first.value = cost;
+            merged[second.left] = true;
+        }
+
+        return count;
     }
 }
