@@ -3,10 +3,10 @@ package code;
 import java.util.*;
 
 class Node {
-    long value;
-    int left;
-    Node prev;
-    Node next;
+    long value; // 值
+    int left; // 坐标
+    Node prev; // 前驱节点
+    Node next; // 后驱节点
 
     Node(int value, int left) {
         this.value = value;
@@ -15,9 +15,9 @@ class Node {
 }
 
 class PQItem implements Comparable<PQItem> {
-    Node first;
-    Node second;
-    long cost;
+    Node first; // 左边
+    Node second; // 右边
+    long cost; // 两数和
 
     PQItem(Node first, Node second, long cost) {
         this.first = first;
@@ -35,6 +35,13 @@ class PQItem implements Comparable<PQItem> {
 }
 
 public class Solution {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[] nums = { 5, 2, 3, 1 };
+        int v = sol.minimumPairRemoval(nums);
+        System.out.println(v);
+    }
+
     public int minimumPairRemoval(int[] nums) {
         PriorityQueue<PQItem> pq = new PriorityQueue<>();
         boolean[] merged = new boolean[nums.length];
