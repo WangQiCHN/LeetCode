@@ -31,3 +31,4 @@
 | 3307 | **Minimum Pair Removal to Sort Array I** | Easy | OK |
 | 3510 | **Minimum Pair Removal to Sort Array II** | Hard | Fail |
 | 1877 | **Minimize Maximum Pair Sum in Array** | Normal | OK |
+| 1984 | **Minimum Difference Between Highest and Lowest of K Scores** | Easy | OK |
