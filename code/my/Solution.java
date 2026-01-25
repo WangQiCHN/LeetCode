@@ -1,4 +1,4 @@
-package code;
+package code.my;
 
 import java.util.PriorityQueue;
 
@@ -37,10 +37,11 @@ class PQItem implements Comparable<PQItem> {
     }
 }
 
-public class Solution2 {
+public class Solution {
     public static void main(String[] args) {
-        Solution2 sol = new Solution2();
+        Solution sol = new Solution();
         int[] nums = { 5, 2, 3, 1 };
+        // int[] nums = {2,2,-1,3,-2,2,1,1,1,0,-1};
         int v = sol.minimumPairRemoval(nums);
         System.out.println(v);
     }
@@ -77,12 +78,12 @@ public class Solution2 {
             if (first.value > second.value) {
                 decreaseCount--;
             }
-
+            first.next = nextNode;
             if (prevNode != null) {
                 if (prevNode.value <= first.value && prevNode.value > item.total) {
-                    decreaseCount--;
-                } else if (prevNode.value > first.value && prevNode.value <= item.total) {
                     decreaseCount++;
+                } else if (prevNode.value > first.value && prevNode.value <= item.total) {
+                    decreaseCount--;
                 }
                 queue.offer(new PQItem(prevNode, first, prevNode.value + item.total));
             }
