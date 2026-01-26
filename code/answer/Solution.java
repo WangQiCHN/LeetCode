@@ -38,7 +38,8 @@ public class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
         // int[] nums = { 5, 2, 3, 1 };
-        int[] nums = {2,2,-1,3,-2,2,1,1,1,0,-1};
+        // int[] nums = {2,2,-1,3,-2,2,1,1,1,0,-1};
+        int[] nums = { -7, -2, -4, 4, 8, -6, 0, 0, 4, 5, 1, -8 };
         int v = sol.minimumPairRemoval(nums);
         System.out.println(v);
     }

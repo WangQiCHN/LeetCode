@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 
 class Node {
     int index;
-    int value;
+    long value;
     Node prev;
     Node next;
 
@@ -19,9 +19,9 @@ class Node {
 class PQItem implements Comparable<PQItem> {
     Node first;
     Node second;
-    int total;
+    long total;
 
-    public PQItem(Node first, Node second, int total) {
+    public PQItem(Node first, Node second, long total) {
         this.first = first;
         this.second = second;
         this.total = total;
@@ -40,8 +40,9 @@ class PQItem implements Comparable<PQItem> {
 public class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int[] nums = { 5, 2, 3, 1 };
+        // int[] nums = { 5, 2, 3, 1 };
         // int[] nums = {2,2,-1,3,-2,2,1,1,1,0,-1};
+        int[] nums = { -7, -2, -4, 4, 8, -6, 0, 0, 4, 5, 1, -8 };
         int v = sol.minimumPairRemoval(nums);
         System.out.println(v);
     }
@@ -79,6 +80,9 @@ public class Solution {
                 decreaseCount--;
             }
             first.next = nextNode;
+            if (nextNode != null) {
+                nextNode.prev = first;
+            }
             if (prevNode != null) {
                 if (prevNode.value <= first.value && prevNode.value > item.total) {
                     decreaseCount++;
@@ -97,7 +101,7 @@ public class Solution {
                 queue.offer(new PQItem(first, nextNode, item.total + nextNode.value));
             }
 
-            first.value = count;
+            first.value = item.total;
             merged[second.index] = true;
         }
         return count;
