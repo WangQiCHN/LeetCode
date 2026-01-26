@@ -29,6 +29,7 @@
 | 3314 | **Construct the Minimum Bitwise Array I** | Easy | OK |
 | 3315 | **Construct the Minimum Bitwise Array II** | Normal | OK |
 | 3307 | **Minimum Pair Removal to Sort Array I** | Easy | OK |
-| 3510 | **Minimum Pair Removal to Sort Array II** | Hard | Fail |
+| 3510 | **Minimum Pair Removal to Sort Array II** | Hard | Fix |
 | 1877 | **Minimize Maximum Pair Sum in Array** | Normal | OK |
 | 1984 | **Minimum Difference Between Highest and Lowest of K Scores** | Easy | OK |
+| 1200 | **Minimum Absolute Difference** | Easy | OK |
