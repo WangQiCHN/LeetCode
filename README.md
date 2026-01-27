@@ -33,3 +33,4 @@
 | 1877 | **Minimize Maximum Pair Sum in Array** | Normal | OK |
 | 1984 | **Minimum Difference Between Highest and Lowest of K Scores** | Easy | OK |
 | 1200 | **Minimum Absolute Difference** | Easy | OK |
+| 3650 | **Minimize Cost Path with Edge Reversals** | Normal | Fix |
