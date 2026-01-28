@@ -20,7 +20,7 @@
 | 85* | **Maximal Rectangle** | Hard | OK |
 | 1266 | **Minimum Time Visiting All Points** | Easy | OK |
 | 3453 | **Separate Squares I** | Normal | OK |
-| 3454 | **Separate Squares II** | Hard | Fix |
+| 3454* | **Separate Squares II** | Hard | OK |
 | 2943 | **Maximize Area of Square Hole in Grid** | Normal | OK |
 | 2975 | **Maximize Square Area by Removing Fences From a Field** | Normal | OK |
 | 3047 | **Find the Largest Area of Square Inside Two Rectangles** | Normal | OK |
