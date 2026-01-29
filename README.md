@@ -35,3 +35,4 @@
 | 1200 | **Minimum Absolute Difference** | Easy | OK |
 | 3650 | **Minimum Cost Path with Edge Reversals** | Normal | Fix |
 | 3651 | **Minimum Cost Path with Teleportations** | Hard | Fail |
+| 3651 | **Minimum Cost to Convert String I** | Normal | OK |
