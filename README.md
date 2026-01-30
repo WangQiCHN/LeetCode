@@ -38,3 +38,4 @@
 | 28. | 3651   | **Minimum Cost Path with Teleportations**                                    | Hard   |    Fix |
 | 29. | 3651   | **Minimum Cost to Convert String I**                                         | Normal |     OK |
 | 30. | 3652   | **Minimum Cost to Convert String II**                                        | Hard   |    Fail|
+| 31. | 744    | **Find Smallest Letter Greater Than Target**                                 | Easy   |     OK |
