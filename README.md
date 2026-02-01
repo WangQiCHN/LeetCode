@@ -36,6 +36,6 @@
 | 26. | 1200   | **Minimum Absolute Difference**                                              | Easy   |     OK |
 | 27. | 3650*  | **Minimum Cost Path with Edge Reversals**                                    | Normal |     OK |
 | 28. | 3651   | **Minimum Cost Path with Teleportations**                                    | Hard   |    Fix |
-| 29. | 3651   | **Minimum Cost to Convert String I**                                         | Normal |     OK |
-| 30. | 3652   | **Minimum Cost to Convert String II**                                        | Hard   |    Fix |
+| 29. | 2976   | **Minimum Cost to Convert String I**                                         | Normal |     OK |
+| 30. | 2977   | **Minimum Cost to Convert String II**                                        | Hard   |    Fix |
 | 31. | 744    | **Find Smallest Letter Greater Than Target**                                 | Easy   |     OK |
