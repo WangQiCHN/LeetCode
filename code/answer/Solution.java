@@ -1,102 +1,75 @@
 package code.answer;
 
-/*
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     public static void main(String[] args) {
-        Solution sol = new Solution();
-        int n = 13, k = 6;
-        int ans = sol.findKthNumber(n, k);
-        System.out.println(ans);
-    }
-    public int findKthNumber(int n, int k) {
-        int curr = 1;
-        k--;
-        while (k > 0) {
-            int steps = getSteps(curr, n);
-            if (steps <= k) {
-                k -= steps;
-                curr++;
-            } else {
-                curr = curr * 10;
-                k--;
-            }
-        }
-        return curr;
+        String s1 = "baba";
+        String s2 = "baab";
+        int n1 = 11;
+        int n2 = 1;
+        System.out.println(new Solution().getMaxRepetitions(s1, n1, s2, n2));
     }
 
-    public int getSteps(int curr, long n) {
-        int steps = 0;
-        long first = curr;
-        long last = curr;
-        while (first <= n) {
-            steps += Math.min(last, n) - first + 1;
-            first = first * 10;
-            last = last * 10 + 9;
-        }
-        return steps;
-    }
-}
-    */
-import java.util.*;
-class Solution {
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        int maxChoosableInteger = 18;
-        int desiredTotal = 300;
-        boolean ans = sol.canIWin(maxChoosableInteger, desiredTotal);
-        System.out.println(ans);
-    }
-    private boolean[] visited;
-    private Map<String, Boolean> memo = new HashMap<>();
-    public boolean canIWin(int maxChoosableInteger, int desiredTotal) {
-        int total = (maxChoosableInteger + 1) * maxChoosableInteger / 2;
-        if (total < desiredTotal) return false;
-
-        visited = new boolean[maxChoosableInteger];
-
-        return dfs(maxChoosableInteger, desiredTotal, 0);
-    }
-
-    private boolean dfs(int maxChoosableInteger, int desiredTotal, int currentTotal) {
-        String key = getKey();
-        boolean res = false;
-        if (!memo.containsKey(key)) {
-            for (int i = 0; i < maxChoosableInteger; i++) {
-                if (!visited[i] && i + 1 + currentTotal >= desiredTotal) {
-                    res = true;
-                    break;
-                }
-            }
-            if (!res) {
-                for (int i = 0; i < maxChoosableInteger; i++) {
-                    if (visited[i]) continue;
-                    else {
-                        visited[i] = true;
-                        if (!dfs(maxChoosableInteger, desiredTotal, currentTotal + i + 1)) {
-                            res = true;
-                        }
-                        visited[i] = false;
-                        if (res) {
-                            break;
-                        }
+    public int getMaxRepetitions(String s1, int n1, String s2, int n2) {
+        int s1Cnt = 0, s2Cnt = 0;
+        int j = 0;
+        Record diff, prev;
+        Map<Integer, Record> dict = new HashMap<>();
+        while (true) {
+            s1Cnt++;
+            for (int i = 0; i < s1.length(); i++) {
+                char c1 = s1.charAt(i);
+                if (c1 == s2.charAt(j)) {
+                    j++;
+                    if (j == s2.length()) {
+                        s2Cnt++;
+                        j = 0;
                     }
                 }
             }
-            memo.put(key, res);
-        }
-        return memo.get(key);
-    }
 
-    private String getKey() {
-        StringBuilder sb = new StringBuilder();
-        for (boolean v : visited) {
-            if (v) {
-                sb.append(1);
+            if (s1Cnt == n1) {
+                return s2Cnt / n2;
+            }
+
+            if (dict.containsKey(j)) {
+                prev = dict.get(j);
+                diff = new Record(s1Cnt - prev.s1Cnt, s2Cnt - prev.s2Cnt);
+                break;
             } else {
-                sb.append(0);
+                dict.put(j, new Record(s1Cnt, s2Cnt));
             }
         }
 
-        return sb.toString();
+        int answer = prev.s2Cnt + (n1 - prev.s1Cnt) / diff.s1Cnt * diff.s2Cnt;
+
+        int rest = (n1 - prev.s1Cnt) % diff.s1Cnt;
+        int k = j;
+        for (int i = 0; i < rest; i++) {
+            for (j = 0; j < s1.length(); j++) {
+                char c1 = s1.charAt(j);
+                if (c1 == s2.charAt(k)) {
+                    k++;
+                    if (k == s2.length()) {
+                        answer++;
+                        k = 0;
+                    }
+                }
+            }
+        }
+
+        return answer / n2;
+    }
+}
+
+class Record {
+    int s1Cnt;
+    int s2Cnt;
+
+    public Record(int s1Cnt, int s2Cnt) {
+        this.s1Cnt = s1Cnt;
+        this.s2Cnt = s2Cnt;
     }
 }
