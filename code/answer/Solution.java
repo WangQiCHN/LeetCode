@@ -5,9 +5,9 @@ import java.util.HashMap;
 
 class Solution {
     public static void main(String[] args) {
-        String s1 = "baba";
-        String s2 = "baab";
-        int n1 = 11;
+        String s1 = "aaa";
+        String s2 = "aaaaa";
+        int n1 = 20;
         int n2 = 1;
         System.out.println(new Solution().getMaxRepetitions(s1, n1, s2, n2));
     }
