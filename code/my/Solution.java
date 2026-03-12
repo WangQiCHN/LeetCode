@@ -1,56 +1,36 @@
 package code.my;
 
-import java.util.*;
-
 public class Solution {
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 1, 1, 1, 1 };
-        System.out.println(new Solution().findSubsequences(nums));
+        // int[][] nums = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        int[][] nums = { { 3 }, { 2 } };
+        System.out.println(new Solution().findDiagonalOrder(nums));
     }
 
-    List<List<Integer>> result = new ArrayList<>();
-    Set<String> set = new HashSet<>();
-
-    public List<List<Integer>> findSubsequences(int[] nums) {
-        LinkedList<Integer> list = new LinkedList<>();
-        int n = nums.length;
-        for (int i = 0; i < n; i++) {
-            if (i == 0 || nums[i] != nums[i - 1]) {
-                list.add(nums[i]);
-                bfs(nums, i + 1, list);
-                list.removeLast();
+    public int[] findDiagonalOrder(int[][] mat) {
+        int m = mat.length;
+        int n = mat[0].length;
+        int[] result = new int[m * n];
+        int index = 0;
+        boolean flag = true; // true - 从左下向右上；false - 从右上向左下
+        for (int total = 0; total < m + n - 1; total++) {
+            if (flag) {
+                int bottom = total < m ? total : m - 1;
+                int left = total - bottom;
+                for (; left < n && bottom >= 0; left++, bottom--) {
+                    result[index] = mat[bottom][left];
+                    index++;
+                }
+            } else {
+                int right = total < n ? total : n - 1;
+                int top = total - right;
+                for (; right >= 0 && top < m; right--, top++) {
+                    result[index] = mat[top][right];
+                    index++;
+                }
             }
+            flag = !flag;
         }
         return result;
-    }
-
-    private void bfs(int[] nums, int start, LinkedList<Integer> list) {
-        if (list.size() >= 2) {
-            ArrayList<Integer> arrayList = new ArrayList<>();
-            arrayList.addAll(list);
-            String key = getKey(arrayList);
-            if (!set.contains(key)) {
-                result.add(arrayList);
-                set.add(key);
-            }
-        }
-        int n = nums.length;
-        for (int i = start; i < n; i++) {
-            if (nums[i] >= list.peekLast() && (i == start || nums[i] != nums[i - 1])) {
-                list.add(nums[i]);
-                bfs(nums, i + 1, list);
-                list.removeLast();
-            }
-        }
-    }
-
-    private String getKey(ArrayList<Integer> arrayList) {
-        StringBuffer sb = new StringBuffer();
-        for (int v : arrayList) {
-            sb.append(v);
-            sb.append('#');
-        }
-
-        return sb.toString();
     }
 }
