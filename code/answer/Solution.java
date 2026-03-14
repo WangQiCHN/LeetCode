@@ -1,83 +1,26 @@
 package code.answer;
 
 import java.util.Map;
+import java.util.Arrays;
 import java.util.HashMap;
 
 class Solution {
     public static void main(String[] args) {
-        String s1 = "aaa";
-        String s2 = "aaaaa";
-        int n1 = 20;
-        int n2 = 1;
-        System.out.println(new Solution().getMaxRepetitions(s1, n1, s2, n2));
-    }
-
-    public int getMaxRepetitions(String s1, int n1, String s2, int n2) {
-        if (n1 == 0) {
-            return 0;
-        }
-        int s1cnt = 0, index = 0, s2cnt = 0;
-        // recall 是我们用来找循环节的变量，它是一个哈希映射
-        // 我们如何找循环节？假设我们遍历了 s1cnt 个 s1，此时匹配到了第 s2cnt 个 s2 中的第 index 个字符
-        // 如果我们之前遍历了 s1cnt' 个 s1 时，匹配到的是第 s2cnt' 个 s2 中同样的第 index 个字符，那么就有循环节了
-        // 我们用 (s1cnt', s2cnt', index) 和 (s1cnt, s2cnt, index) 表示两次包含相同 index 的匹配结果
-        // 那么哈希映射中的键就是 index，值就是 (s1cnt', s2cnt') 这个二元组
-        // 循环节就是；
-        // - 前 s1cnt' 个 s1 包含了 s2cnt' 个 s2
-        // - 以后的每 (s1cnt - s1cnt') 个 s1 包含了 (s2cnt - s2cnt') 个 s2
-        // 那么还会剩下 (n1 - s1cnt') % (s1cnt - s1cnt') 个 s1, 我们对这些与 s2 进行暴力匹配
-        // 注意 s2 要从第 index 个字符开始匹配
-        Map<Integer, int[]> recall = new HashMap<Integer, int[]>();
-        int[] preLoop = new int[2];
-        int[] inLoop = new int[2];
-        while (true) {
-            // 我们多遍历一个 s1，看看能不能找到循环节
-            ++s1cnt;
-            for (int i = 0; i < s1.length(); ++i) {
-                char ch = s1.charAt(i);
-                if (ch == s2.charAt(index)) {
-                    index += 1;
-                    if (index == s2.length()) {
-                        ++s2cnt;
-                        index = 0;
-                    }
-                }
-            }
-            // 还没有找到循环节，所有的 s1 就用完了
-            if (s1cnt == n1) {
-                return s2cnt / n2;
-            }
-            // 出现了之前的 index，表示找到了循环节
-            if (recall.containsKey(index)) {
-                int[] value = recall.get(index);
-                int s1cntPrime = value[0];
-                int s2cntPrime = value[1];
-                // 前 s1cnt' 个 s1 包含了 s2cnt' 个 s2
-                preLoop = new int[] { s1cntPrime, s2cntPrime };
-                // 以后的每 (s1cnt - s1cnt') 个 s1 包含了 (s2cnt - s2cnt') 个 s2
-                inLoop = new int[] { s1cnt - s1cntPrime, s2cnt - s2cntPrime };
-                break;
+        String[] words = {
+            "gfve","qfpd","lqdqrrcrwdnxeuo","hbsfyfv","ife","feclhbvfuk","ngbqqmbxqcqp","khhqr","dwfcayssyoqc","omwufbdfxu","ilebxwbcto","ta","hbuxhwadlpto","tpvo","phckcyufdqml","lfz","tgygdt","nhcvpf","shwywshtdgmb","bkkxcvg","monmwvytby","qtg","cwkuzyamnerp","ye","tfsrptug","gama","nberblt","mf","gttxwpuk","xbrtspfttota","qxru","phknqtsdtwxcktmw","pbqurqfxgqlojmws","hdkbdxqg","ge","ukmcowoe","xdnnl","yjyssbsoc","uvouaghhcyvmlk","pbcnmhf","qmmidmvkn","xmywegmtuno","vuzygv","uxtrdsdfzfssmel","eqrswgkaaaohxx","ocedkt","qghoy","wsx","glafbwzdd","ryp","nvybsfrxtlfmp","upmsoxftumyxifyu","xucubv","fctkqlroq","ppvs","nwedtubynsb","repgcx","gsfomhvpmy","kdohe","llkmagl","thkglauzgkeuly","paeurdvexqlw","akdt","rqdll","mumbh","br","fso","qnebmfl","lq","xbhkkfg","ax","gqgsomonv","reqqzzpw","rlbskqgfvn","lfvobeyolyy","mwrvel","ogwilaswn","yw","egdgye","yaqgault","dtlg","iddymnl","evxtehxtbthq","brxpfymuvfvs","rv","udvmara","fecd","dfuydrtbfypbn","cypqodxr","vkmxys","wvpfyfpkvgthq","av","vwduwmjpblqo","xwnbcuggl","flhyfac","mqrbq","pstsxhplrrmbeddv","hnegtuxx","bhhlovgcx","had","aysulvk","potn","os","np","lhv","uzvgyeette","tp","wtsbhgkd","eouxbldsxzm","xhnlcrldtfthul","xhflc","rlaks","phouoyhvls","dqhqats","koat","pybf","po","wygsnxk","kqlima","fgxnuohrnhg","wnnbq","mdtrgv","nkq","agylw","vomtuy","vtdxwrclpspcn","rdrls","yxfeoh","myctacn","fdnor","qfzwuwe","svo","dc","odknlbvxrs","hwc","erpbaxq","rrklkb","wlrwyuy","yyhga","xwdbycdu","htedgvsrhchox","wr","suhesetv","qcagsyqggcf","wljmg","npdbamofynykqv","lmq","oyjmeqvhcrvgm","nxtsnason","gbndakaq","hrtbfnq","fguvomeepxoffg","mat","onlvy","cwcchvsasdylb","dphbfaal","mabkapuoud","vl","ffjfb","svthrfmkoxbho","cvet","ucgqyvopafyttrh","vruh","ukffmudygjavem","dccamymhp","kmm","sc","soqlh","gcdqbcdwbwa","gadgt","pgowefka","cpdxf","sox","fq","lfnrhgsxkhx","loc","fkglorkkvx","ggk","nraoenhd","rrbhfwohfv","yoifoyg","ahmv","byyvhgh","hyw","kedhvwy","rglnpxfqwu","su","mbntqrlwyampdg","jfymrbafmyoc","rhymsno","rkbdlchs","ocbbwwd","exlwulswtvot","tlnc","eo","ua","khxkdxflwxme","kk","cw","pxnktxkm","aa","ngrwqpoh","rwuvd","eruffmlg","bxzovyew","hyfrdngjf","ly","pfgsp","akyprzzphew","ubheeqt","rmbxlcmn","apsbu","khwnykughmwrlk","mvndmua","nlwpw","btgcpqwovwp","sfzdknoxzassc","fg","vhfsf","tyff","blolplosqnfcwx","uwkl","puenodlvotb","naefganqo","cymbrl","wrxw","htknfa","wfrvxqdkhbwwef","vqsghhhutdget","wpccoa","nx","bilt","wqqatye","bwsezd","ww","ss","jmruuqscwjp","nxbk","wd","cfq","gubqavlqffhrzz","caybc","dhaccuualacyl","mtkewbprs","oncggqvr","sqqoffmwkplsgbrp","afumtqugec","nxlbkak","fd","ueolqk","esfmqgvxwfy","npbep","yqssxzsydgllfzmo","tovdtkr","hdykehkefp","ordxzm","dutnbetocxylcey","cr","ngzdc","fxyfqbeoktcc","walsx","brdeumb","dnrrgmem","gvyhnchlimsxc","qe","qm","lt","utqfcqyrrwm","wtelvsqrru","qmqxceuohpiffaq","pmxttqftypfexlv","tg","qa","tccvslp","coqs","oa","lxu","ykbcn","hesvnctfvdsp","ku","at","sxlngbtxmqr","wqrom","krvnaf","hfl","typttkrpfvx","nxqmxr","dhthp","eyelg","npsoqsw","reogbmveofvusdsx","yu","pknt","ckorgrm","bpoaboylced","dmoerc","bhopoqdsref","tmnm","cre","vlrfcsftapyujmw","bcxw","eaum","dybjywyaodsyw","lmu","eocfru","fump","oxpmplpcg","qevdyd","gmuyytguexnyc","lmg","lplrsxznfkoklxlv","twn","bhqultkyfq","saeq","xbuw","kng","uoay","kfykd","armuwp","gtghfxf","pbdrx","adoshnx","rqyex","ng","sid","re","vep","ebwrcpafxzhb","opvrnx","vubuucilxyh","rlcnvnuuqfvhw","goabwrqdoudf","wuznnlyd","vfelxvtggkkk","mxlwbkbklbwfsvr","advraqovan","smkln","kddxywvgqxo","syxngevs","mwo","vg","bpeohsufree","lucidbnlysamvy","urbrmmadea","hghv","gu","uztnpqhdl","rfuyp","xbspa","cnumquohlcgt","tdtuquartspkotm","ugrloq","fkyvqguqq","yy","pwlumocnyuoume","goblttgvmndkqgg","lcblwidhjpu","kbu","pey","bc","lqs","xzluwbtmoxokk","lehdfnr","wruqc","wcbm"
+        };
+        Arrays.sort(words, (s1, s2) -> {
+            int n1 = s1.length();
+            int n2 = s2.length();
+            if (n1 == n2) {
+                return s1.compareTo(s2);
             } else {
-                recall.put(index, new int[] { s1cnt, s2cnt });
+                return n1 - n2;
             }
+        });
+        for (String w : words) {
+            System.out.println(w);
         }
-        // ans 存储的是 S1 包含的 s2 的数量，考虑的之前的 preLoop 和 inLoop
-        int ans = preLoop[1] + (n1 - preLoop[0]) / inLoop[0] * inLoop[1];
-        // S1 的末尾还剩下一些 s1，我们暴力进行匹配
-        int rest = (n1 - preLoop[0]) % inLoop[0];
-        for (int i = 0; i < rest; ++i) {
-            for (int j = 0; j < s1.length(); ++j) {
-                char ch = s1.charAt(j);
-                if (ch == s2.charAt(index)) {
-                    ++index;
-                    if (index == s2.length()) {
-                        ++ans;
-                        index = 0;
-                    }
-                }
-            }
-        }
-        // S1 包含 ans 个 s2，那么就包含 ans / n2 个 S2
-        return ans / n2;
+        System.out.println(words.length);
     }
 }
