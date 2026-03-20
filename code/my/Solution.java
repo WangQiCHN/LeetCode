@@ -1,54 +1,46 @@
 package code.my;
 
+import java.util.Arrays;
+
 class Solution {
   public static void main(String[] args) {
-    int[] nums = { 2, 4, 3, 5, 1 };
-    System.out.println(new Solution().reversePairs(nums));
+    int[][] grid = { { 0, 0, 1 }, { 1, 1, 1 }, { 1, 0, 1 } };
+    System.out.println(new Solution().largestSubmatrix(grid));
   }
 
-  public int reversePairs(int[] nums) {
-    // it is a merge sort
-    if (nums.length == 0) {
-      return 0;
+  public int largestSubmatrix(int[][] matrix) {
+    int m = matrix.length;
+    int n = matrix[0].length;
+    int maxArea = 0;
+
+    for (int i = 1; i < m; i++) {
+      for (int j = 0; j < n; j++) {
+        if (matrix[i][j] == 1) {
+          matrix[i][j] += matrix[i - 1][j];
+        }
+      }
     }
-    int result = reverseMergeSort(nums, 0, nums.length - 1);
-    return result;
+
+    for (int i = 0; i < m; i++) {
+      Arrays.sort(matrix[i]);
+      reverse(matrix[i]);
+      for (int j = 0; j < n; j++) {
+        maxArea = Math.max(maxArea, (j + 1) * matrix[i][j]);
+      }
+    }
+
+    return maxArea;
   }
 
-  private int reverseMergeSort(int[] nums, int s, int e) {
-    if (s == e)
-      return 0;
-    int m = (s + e) / 2;
-    int n1 = reverseMergeSort(nums, s, m);
-    int n2 = reverseMergeSort(nums, m + 1, e);
-
-    int[] sorted = new int[e - s + 1];
-    int l = s, r = m + 1, i = 0;
-    while (l <= m && r <= e) {
-      if (nums[l] < nums[r]) {
-        sorted[i] = nums[l];
-        l++;
-      } else {
-        sorted[i] = nums[r];
-        r++;
-      }
-      i++;
+  private void reverse(int[] arr) {
+    int left = 0;
+    int right = arr.length - 1;
+    while (left < right) {
+      int temp = arr[left];
+      arr[left] = arr[right];
+      arr[right] = temp;
+      left++;
+      right--;
     }
-    if (l > m) {
-      while (r <= e) {
-        sorted[i++] = nums[r++];
-      }
-    }
-    if (r > e) {
-      while (l <= m) {
-        sorted[i++] = nums[l++];
-      }
-    }
-
-    for (i = s; i <= e; i++) {
-      nums[i] = sorted[i - s];
-    }
-
-    return n1 + n2;
   }
 }
