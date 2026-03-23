@@ -1,59 +1,51 @@
 package code.answer;
 
+import java.util.Arrays;
+
 class Solution {
     public static void main(String[] args) {
-        int[] nums = { 1,3,2,3,1 };
-        System.out.println(new Solution().reversePairs(nums));
+        int zero = 3, one = 3, limit = 2;
+        int result = new Solution().numberOfStableArrays(zero, one, limit);
+        System.out.println(result);
+    }
+    static final int MOD = 1000000007;
+    int[][][] memo;
+    int limit;
+
+    public int numberOfStableArrays(int zero, int one, int limit) {
+        this.memo = new int[zero + 1][one + 1][2];
+        for (int i = 0; i <= zero; i++) {
+            for (int j = 0; j <= one; j++) {
+                Arrays.fill(memo[i][j], -1);
+            }
+        }
+        this.limit = limit;
+        int result = (dp(zero, one, 0) + dp(zero, one, 1)) % MOD;
+        return result;
     }
 
-    public int reversePairs(int[] nums) {
-        if (nums.length == 0) {
-            return 0;
+    public int dp(int zero, int one, int lastBit) {
+        if (zero == 0) {
+            return (lastBit == 0 || one > limit) ? 0 : 1;
+        } else if (one == 0) {
+            return (lastBit == 1 || zero > limit) ? 0 : 1;
         }
-        return reversePairsRecursive(nums, 0, nums.length - 1);
-    }
 
-    public int reversePairsRecursive(int[] nums, int left, int right) {
-        if (left == right) {
-            return 0;
-        } else {
-            int mid = (left + right) / 2;
-            int n1 = reversePairsRecursive(nums, left, mid);
-            int n2 = reversePairsRecursive(nums, mid + 1, right);
-            int ret = n1 + n2;
-
-            // 首先统计下标对的数量
-            int i = left;
-            int j = mid + 1;
-            while (i <= mid) {
-                while (j <= right && (long) nums[i] > 2 * (long) nums[j]) {
-                    j++;
+        if (memo[zero][one][lastBit] == -1) {
+            int res = 0;
+            if (lastBit == 0) {
+                res = (dp(zero - 1, one, 0) + dp(zero - 1, one, 1))% MOD;
+                if (zero > limit) {
+                    res = (res - dp(zero - limit - 1, one, 1) + MOD) % MOD;
                 }
-                ret += j - mid - 1;
-                i++;
-            }
-
-            // 随后合并两个排序数组
-            int[] sorted = new int[right - left + 1];
-            int p1 = left, p2 = mid + 1;
-            int p = 0;
-            while (p1 <= mid || p2 <= right) {
-                if (p1 > mid) {
-                    sorted[p++] = nums[p2++];
-                } else if (p2 > right) {
-                    sorted[p++] = nums[p1++];
-                } else {
-                    if (nums[p1] < nums[p2]) {
-                        sorted[p++] = nums[p1++];
-                    } else {
-                        sorted[p++] = nums[p2++];
-                    }
+            } else {
+                res = (dp(zero, one - 1, 0) + dp(zero, one - 1, 1)) % MOD;
+                if (one > limit) {
+                    res = (res - dp(zero, one - limit - 1, 0) + MOD) % MOD;
                 }
             }
-            for (int k = 0; k < sorted.length; k++) {
-                nums[left + k] = sorted[k];
-            }
-            return ret;
+            memo[zero][one][lastBit] = res % MOD;
         }
+        return memo[zero][one][lastBit];
     }
 }
